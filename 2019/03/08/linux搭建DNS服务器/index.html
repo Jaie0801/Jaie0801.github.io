@@ -15,15 +15,30 @@
   </script>
 
   
-  <title>Archives | Jaie</title>
+  <title>linux搭建DNS服务器 | Jaie</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Jaie">
-<meta property="og:url" content="http://yoursite.com/archives/index.html">
+  <meta name="description" content="一.远程登陆&amp;amp;配置yum源下载xshell  安装打开,输入虚拟机ip地址,默认端口号22,然后填账号(root),密码,登陆成功. 配置yum源cd /etc/yum.repos.d/     //进入/etc/repo目录 vim web163.repo       //新建yum源文件 配置的网易的yum源(可粘贴复制)32位的系统选这个 [wed163] name=wed base">
+<meta name="keywords" content="linux">
+<meta property="og:type" content="article">
+<meta property="og:title" content="linux搭建DNS服务器">
+<meta property="og:url" content="http://yoursite.com/2019/03/08/linux搭建DNS服务器/index.html">
 <meta property="og:site_name" content="Jaie">
+<meta property="og:description" content="一.远程登陆&amp;amp;配置yum源下载xshell  安装打开,输入虚拟机ip地址,默认端口号22,然后填账号(root),密码,登陆成功. 配置yum源cd /etc/yum.repos.d/     //进入/etc/repo目录 vim web163.repo       //新建yum源文件 配置的网易的yum源(可粘贴复制)32位的系统选这个 [wed163] name=wed base">
 <meta property="og:locale" content="default">
+<meta property="og:image" content="https://dns-1256725437.cos.ap-guangzhou.myqcloud.com/dns%E4%B8%BB%E9%85%8D%E7%BD%AE.png">
+<meta property="og:image" content="https://dns-1256725437.cos.ap-guangzhou.myqcloud.com/%E6%B7%BB%E5%8A%A0%E6%AD%A3%E5%90%91%E9%85%8D%E7%BD%AE.png">
+<meta property="og:image" content="https://dns-1256725437.cos.ap-guangzhou.myqcloud.com/%E6%B7%BB%E5%8A%A0%E6%AD%A3%E5%90%91%E9%85%8D%E7%BD%AE2.png">
+<meta property="og:image" content="https://dns-1256725437.cos.ap-guangzhou.myqcloud.com/%E6%AD%A3%E5%90%91%E5%8C%BA%E5%9F%9F%E6%95%B0%E6%8D%AE%E5%BA%93%E6%96%87%E4%BB%B6.png">
+<meta property="og:image" content="https://dns-1256725437.cos.ap-guangzhou.myqcloud.com/dns%E8%A7%A3%E6%9E%90%E8%AE%BE%E7%BD%AE.png">
+<meta property="og:image" content="https://dns-1256725437.cos.ap-guangzhou.myqcloud.com/ping.png">
+<meta property="og:image" content="https://dns-1256725437.cos.ap-guangzhou.myqcloud.com/nslookup%E6%B5%8B%E8%AF%95111.png">
+<meta property="og:image" content="https://dns-1256725437.cos.ap-guangzhou.myqcloud.com/dig%E6%B5%8B%E8%AF%95.png">
+<meta property="og:image" content="https://dns-1256725437.cos.ap-guangzhou.myqcloud.com/web%E6%B5%8B%E8%AF%95.png">
+<meta property="og:updated_time" content="2019-03-10T09:15:58.354Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Jaie">
+<meta name="twitter:title" content="linux搭建DNS服务器">
+<meta name="twitter:description" content="一.远程登陆&amp;amp;配置yum源下载xshell  安装打开,输入虚拟机ip地址,默认端口号22,然后填账号(root),密码,登陆成功. 配置yum源cd /etc/yum.repos.d/     //进入/etc/repo目录 vim web163.repo       //新建yum源文件 配置的网易的yum源(可粘贴复制)32位的系统选这个 [wed163] name=wed base">
+<meta name="twitter:image" content="https://dns-1256725437.cos.ap-guangzhou.myqcloud.com/dns%E4%B8%BB%E9%85%8D%E7%BD%AE.png">
   
     <link rel="alternate" href="/atom.xml" title="Jaie" type="application/atom+xml">
   
@@ -101,396 +116,161 @@
 
   <div id="main-wrap" class="position-relative" style="margin-top: 55px;">
       <div class="main-inner-content">
-          <style>
-    .post-hover:hover {
-        box-shadow: inset 0 0 100px #000;
-        transition: box-shadow .2s;
-    }
+          <!--博文页面-->
 
-    .sub-post-container .post-hover:hover h3 {
-        text-decoration: underline gray;
-    }
-
-
-    .primary-item-main {
-        height: 330px;
+<style>
+    .header-box {
+        height: 370px;
+        filter: blur(10px);
         background-size: cover;
+        background-color: lightsteelblue;
     }
 
-    .primary-container .title,
-    .primary-container .sub-title,
-    .primary-container .post-content-text,
-    .primary-container .date {
-        color: #fff;
+    .post-box {
+        padding: 15px;
+        padding-top: 60px;
+        min-height: 80vh;
+        margin-top: -200px;
+        border-radius: 4px;
+        background-color: rgba(255,255,255,.8);
     }
 
-    .post-content-text {
-        color: #f1f1f1!important;
+    .post-avatar {
+        height: 30px;
+        width: 30px;
+        border-radius: 50%;
     }
 
-    .primary-container .post-hover {
-        background: black;
+    .flow-chart {
+        text-align: center;
     }
 
-    .content-bg-mask {
-        background: rgba(0,0,0,.4);
+    img[alt="post-cover"] {
+        display: none;
     }
-
 </style>
-
-<div style="background: #f5f8f9;">
-    <div id="main-container" class="container" style="padding-top: 20px;">
-        <div class="is-flex main-content justify-center">
-            <section class="column is-9">
-                
-<div class="primary-container content-box is-flex-desktop clear-padding bottom-line" style="margin-bottom: 25px;">
-    <div class="column  is-7-desktop">
-        <a href="/2019/03/08/linux搭建DNS服务器/">
-            <div class="full-height post-hover" style="
-                         background-image: url('https://dns-1256725437.cos.ap-guangzhou.myqcloud.com/dns%E4%B8%BB%E9%85%8D%E7%BD%AE.png');
-                         height: 350px;
-                         background-size: cover;
-                         background-repeat: no-repeat;
-                         ">
-                    <div class=" is-flex flex-column center content has-text-centered full-height has-padding content-bg-mask">
-                        <h1 class="title text-shadow" style="margin-bottom: 15px;">
-                            linux搭建DNS服务器
-                        </h1>
-                        <div>
-                        
-                            `
-                                <span class="tag is-post-tag">linux</span>
-                            
-                        
-                        </div>
-                        <p class="post-content-text is-marginless has-padding text-shadow">
-                            一.远程登陆&amp;配置yum源下载xshell  安装打开,输入虚拟机ip地址,默认端口号22,然后填账号(root),密码,登陆成功.
-配置yum源cd /etc/yum.repos.d/     //进入/etc/repo目录
-..
-                        </p>
-                        <p class="date text-shadow">2019-03-08</p>
-                        <button class="button is-info is-small">Read More</button>
-                    </div>
+<header>
+    <div id="header_box" class="header-box"></div>
+</header>
+<section>
+    <div class="container post-box">
+        <div class="content post-title is-flex center flex-column" style="margin-bottom: 70px; overflow: auto;">
+            <h1 class="has-text-centered" style="padding-bottom: 10px; border-bottom: 3px solid #fff">
+                <strong>linux搭建DNS服务器</strong>
+            </h1>
+            
+            <div class="is-flex align-center">
+                <img class="post-avatar" src="https://cdn2.iconfinder.com/data/icons/rcons-user/32/male-shadow-circle-512.png">
+                <span style="padding:0 10px;"> <span class="sub-title">By</span> Jaie</span>
+                <span class="post-date sub-title">at: 2019-03-08</span>
             </div>
-        </a>
-    </div>
-    <div class="column is-5 is-hidden-touch" style="padding-left: 0;">
-        <div class="full-height is-flex flex-column justify-space-between" style="min-height: 350px;">
             
-                
-<a class="post-hover" href="/2019/03/08/windows密码破解/" style="height: 48.5%">
-    <div class="content is-hidden-touch full-height overflow-hidden" style="background-image: url('https://raw.githubusercontent.com/Jaie0801/temp/master/img/2018.11.23%2018.41-45.png')">
-        <div class="content-bg-mask full-width full-height has-padding">
-            <h3 class="title is-marginless text-shadow">
-                kali破解密码，pe破解密码
-            </h3>
-            
-            
-            <span class="tag is-post-tag">渗透测试</span>
-            
-            
-            <p class="sub-title text-shadow"></p>
-            <p class="is-marginless text-shadow post-content-text">
-                kali破解windows密码1.镜像u盘启动（这里用虚拟机模拟）   windows增加tes..
-            </p>
-            <p class="date text-shadow is-marginless">2019-03-08</p>
-        </div>
-    </div>
-</a>
-            
-            
-                
-<a class="post-hover" href="/2019/03/08/安装双系统kali和window10的几个坑点/" style="height: 48.5%">
-    <div class="content is-hidden-touch full-height overflow-hidden" style="background-image: url('')">
-        <div class="content-bg-mask full-width full-height has-padding">
-            <h3 class="title is-marginless text-shadow">
-                安装双系统kali和window10的几个坑点
-            </h3>
-            
-            
-            <span class="tag is-post-tag">渗透测试</span>
-            
-            
-            <p class="sub-title text-shadow"></p>
-            <p class="is-marginless text-shadow post-content-text">
-                1.制作kaliu盘启动盘的软件选择我一开始是选择软碟通，制作完成，开机安装kali时，却说找不..
-            </p>
-            <p class="date text-shadow is-marginless">2019-03-08</p>
-        </div>
-    </div>
-</a>
+                <div>
+                    
+                         <a class="tag is-post-tag" href="/tags/linux/">linux</a>
+                    
+                </div>
             
         </div>
-    </div>
-    <div class="column is-12 is-hidden-desktop">
-        
-        
-<a class="post-hover" href="/2019/03/08/windows密码破解/" style="height: 48.5%">
-    <div class="content is-hidden-touch full-height overflow-hidden" style="background-image: url('https://raw.githubusercontent.com/Jaie0801/temp/master/img/2018.11.23%2018.41-45.png')">
-        <div class="content-bg-mask full-width full-height has-padding">
-            <h3 class="title is-marginless text-shadow">
-                kali破解密码，pe破解密码
-            </h3>
-            
-            
-            <span class="tag is-post-tag">渗透测试</span>
-            
-            
-            <p class="sub-title text-shadow"></p>
-            <p class="is-marginless text-shadow post-content-text">
-                kali破解windows密码1.镜像u盘启动（这里用虚拟机模拟）   windows增加tes..
-            </p>
-            <p class="date text-shadow is-marginless">2019-03-08</p>
+        <div class="content" style="overflow: auto">
+            <h2 id="一-远程登陆-amp-配置yum源"><a href="#一-远程登陆-amp-配置yum源" class="headerlink" title="一.远程登陆&amp;配置yum源"></a>一.远程登陆&amp;配置yum源</h2><h3 id="下载xshell"><a href="#下载xshell" class="headerlink" title="下载xshell"></a>下载xshell</h3><p>  安装打开,输入虚拟机ip地址,默认端口号22,然后填账号(root),密码,登陆成功.</p>
+<h3 id="配置yum源"><a href="#配置yum源" class="headerlink" title="配置yum源"></a>配置yum源</h3><pre><code>cd /etc/yum.repos.d/     //进入/etc/repo目录
+vim web163.repo       //新建yum源文件
+</code></pre><p>配置的网易的yum源(可粘贴复制)<br>32位的系统选这个</p>
+<pre><code>[wed163]
+name=wed
+baseurl=https://mirrors.163.com/centos/6/os/i386/
+mediaid=1384196515.415715
+metadata_expire=-1
+gpgcheck=1
+cost=500
+enabled=1
+gpgkey=https://mirrors.163.com/centos/6/os/i386/RPM-GPG    -KEY-CentOS-6
+</code></pre><p>64位系统选这个</p>
+<pre><code>[wed163]
+name=wed
+baseurl=https://mirrors.163.com/centos/6/os/x86_64/
+mediaid=1384196515.415715
+metadata_expire=-1
+gpgcheck=1
+cost=500
+enabled=1
+gpgkey=https://mirrors.163.com/centos/6/os/x86_64/RPM-GPG-KEY-CentOS-6
+</code></pre><p>保存退出,下面清理yum缓存且进行测试</p>
+<pre><code>clean yum all           //清除缓存
+clean yum makecache    //重新下载缓存
+yum repolist            //查看yum安装包数量
+</code></pre><h2 id="安装dns-配置dns"><a href="#安装dns-配置dns" class="headerlink" title="安装dns,配置dns"></a>安装dns,配置dns</h2><h3 id="安装dns-安装成功即可进行下一步"><a href="#安装dns-安装成功即可进行下一步" class="headerlink" title="安装dns,安装成功即可进行下一步"></a>安装dns,安装成功即可进行下一步</h3><pre><code>yum install bind -y             //安装dns(即bind),-y确认
+rpm -qa|grep bind               //查看bind是否安装成功有bind的相关
+</code></pre><h3 id="配置dns"><a href="#配置dns" class="headerlink" title="配置dns"></a>配置dns</h3><h4 id="配置主配置文件-named-conf"><a href="#配置主配置文件-named-conf" class="headerlink" title="配置主配置文件 named.conf"></a>配置主配置文件 named.conf</h4><pre><code>cd /etc/            
+ls named*   //查看named相关配置文件 可ka看到named.conf即dns主配置文件
+vim /etc/named.conf      //编辑主配置文件
+</code></pre><p>如下图所示,进行部分修改,把这三项修改就保存退出<br><img src="https://dns-1256725437.cos.ap-guangzhou.myqcloud.com/dns%E4%B8%BB%E9%85%8D%E7%BD%AE.png" alt="此处输入图片的描述"></p>
+<h4 id="配置正向解析区域"><a href="#配置正向解析区域" class="headerlink" title="配置正向解析区域"></a>配置正向解析区域</h4><pre><code>vim /etc/named.rfc1912.zones 
+</code></pre><p>进行添加解析,修改如图所示.在下面的第二图中,我添加的是”jaie32.com”,这里可以修改成你自己喜欢的域名<br><img src="https://dns-1256725437.cos.ap-guangzhou.myqcloud.com/%E6%B7%BB%E5%8A%A0%E6%AD%A3%E5%90%91%E9%85%8D%E7%BD%AE.png" alt="此处输入图片的描述"><br><img src="https://dns-1256725437.cos.ap-guangzhou.myqcloud.com/%E6%B7%BB%E5%8A%A0%E6%AD%A3%E5%90%91%E9%85%8D%E7%BD%AE2.png" alt="此处输入图片的描述"></p>
+<p>####配置正向区域数据库文件</p>
+<pre><code>cd /var/named/          //进入配置目录
+ls                      //查看目录文件
+cp -p named.empty jaie32.com.zone       //完成复制named.empty文件命名jaie32.com 
+vim jaie32.com.zone         //编辑文件,并进行一些修改改如下图所示,完成保持退出
+</code></pre><p><strong>这里的IP地址是自己主机地址,使用ifconfig命令可查看</strong><br><img src="https://dns-1256725437.cos.ap-guangzhou.myqcloud.com/%E6%AD%A3%E5%90%91%E5%8C%BA%E5%9F%9F%E6%95%B0%E6%8D%AE%E5%BA%93%E6%96%87%E4%BB%B6.png" alt="此处输入图片的描述"></p>
+<p>###修改主机dns服务器位自己的ip</p>
+<pre><code>vim /etc/resolv.conf        //打开之后修改如下图所示
+</code></pre><p><img src="https://dns-1256725437.cos.ap-guangzhou.myqcloud.com/dns%E8%A7%A3%E6%9E%90%E8%AE%BE%E7%BD%AE.png" alt="此处输入图片的描述"></p>
+<p>####到这里配置基本完成了,下面重启服务</p>
+<pre><code>service named restart           //重启dns服务
+</code></pre><h2 id="测试dns"><a href="#测试dns" class="headerlink" title="测试dns"></a>测试dns</h2><h4 id="方法一-ping自己域名-推荐-简单方便"><a href="#方法一-ping自己域名-推荐-简单方便" class="headerlink" title="方法一:ping自己域名(推荐,简单方便)"></a>方法一:ping自己域名(推荐,简单方便)</h4><pre><code>ping www.jaie32.com         //可以看到自己的ip,ping通即成功
+</code></pre><p><img src="https://dns-1256725437.cos.ap-guangzhou.myqcloud.com/ping.png" alt="此处输入图片的描述"></p>
+<h4 id="方法二-nslookup命令"><a href="#方法二-nslookup命令" class="headerlink" title="方法二:nslookup命令"></a>方法二:nslookup命令</h4><pre><code>nslookup            //输入nslookup,然后输入自己的域名如图所示
+</code></pre><p><img src="https://dns-1256725437.cos.ap-guangzhou.myqcloud.com/nslookup%E6%B5%8B%E8%AF%95111.png" alt="此处输入图片的描述"></p>
+<h3 id="方法三-dig命令测试"><a href="#方法三-dig命令测试" class="headerlink" title="方法三:dig命令测试"></a>方法三:dig命令测试</h3><pre><code>dig www.jaie32.com      //dig 域名
+</code></pre><p><img src="https://dns-1256725437.cos.ap-guangzhou.myqcloud.com/dig%E6%B5%8B%E8%AF%95.png" alt="此处输入图片的描述"></p>
+<h3 id="安装web服务器测试"><a href="#安装web服务器测试" class="headerlink" title="安装web服务器测试"></a>安装web服务器测试</h3><pre><code>yum install httpd -y     //安装web服务器包
+service httpd start      //启动web服务
+</code></pre><p>然后再打开虚拟机服务器,打开浏览器,输入域名.结果如图所示<br><img src="https://dns-1256725437.cos.ap-guangzhou.myqcloud.com/web%E6%B5%8B%E8%AF%95.png" alt="此处输入图片的描述"></p>
+
         </div>
-    </div>
-</a>
-        
-        
-        
-<a class="post-hover" href="/2019/03/08/安装双系统kali和window10的几个坑点/" style="height: 48.5%">
-    <div class="content is-hidden-touch full-height overflow-hidden" style="background-image: url('')">
-        <div class="content-bg-mask full-width full-height has-padding">
-            <h3 class="title is-marginless text-shadow">
-                安装双系统kali和window10的几个坑点
-            </h3>
+        <div class="post-reply">
             
+                <!-- 来必力City版安装代码 -->
+                <div id="lv-container" data-id="city" data-uid="MTAyMC80MzA1OC8xOTYwNA==">
+                    <script type="text/javascript">
+                        (function(d, s) {
+                            var j, e = d.getElementsByTagName(s)[0];
+
+                            if (typeof LivereTower === 'function') { return; }
+
+                            j = d.createElement(s);
+                            j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+                            j.async = true;
+
+                            e.parentNode.insertBefore(j, e);
+                        })(document, 'script');
+                    </script>
+                    <noscript> 为正常使用来必力评论功能请激活JavaScript</noscript>
+                </div>
+                <!-- City版安装代码已完成 -->
             
-            <span class="tag is-post-tag">渗透测试</span>
-            
-            
-            <p class="sub-title text-shadow"></p>
-            <p class="is-marginless text-shadow post-content-text">
-                1.制作kaliu盘启动盘的软件选择我一开始是选择软碟通，制作完成，开机安装kali时，却说找不..
-            </p>
-            <p class="date text-shadow is-marginless">2019-03-08</p>
-        </div>
-    </div>
-</a>
-        
-    </div>
-</div>
-
-                    
-                    
-                
-                    
-                        <div class="content-box  is-hidden-desktop" style="margin-bottom: 27px;">
-                            <a class="post-hover" href="/2019/03/08/windows密码破解/">
-                            <div class="columns" style="min-height: 230px;">
-                                
-                                    <div class="column is-4-desktop is-5-tablet post-avatar is-hidden-mobile" style="margin: 10px; background-size: cover;background-image: url('https://raw.githubusercontent.com/Jaie0801/temp/master/img/2018.11.23%2018.41-45.png')">
-                                    </div>
-                                
-                                <div class="column is-8-desktop post-content is-flex align-center">
-                                    <div class="content">
-                                        <h3>kali破解密码，pe破解密码</h3>
-                                        
-                                        <p>
-                                            
-                                                <span class="tag is-post-tag">渗透测试</span>
-                                            
-                                        </p>
-                                        <p>
-                                            kali破解windows密码1.镜像u盘启动（这里用虚拟机模拟）   windows增加test用户设置密码，iso镜像：kali  2.BOIS启动，在bois引导中把cd/rom方式置顶。F10保持退出，进入kali安装界面显示，选第一，进入kali。
-
-挂载WINDOW的c盘，破解密码
-
-
-fdilk -l查看磁盘!并挂载C盘
-使用samdump..
-                                        </p>
-                                        <p>2019-03-08</p>
-                                        <button class="button is-small">Read More</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                        </div>
-                    
-                
-                    
-                        <div class="content-box  is-hidden-desktop" style="margin-bottom: 27px;">
-                            <a class="post-hover" href="/2019/03/08/安装双系统kali和window10的几个坑点/">
-                            <div class="columns" style="min-height: 230px;">
-                                
-                                <div class="column is-8-desktop post-content is-flex align-center">
-                                    <div class="content">
-                                        <h3>安装双系统kali和window10的几个坑点</h3>
-                                        
-                                        <p>
-                                            
-                                                <span class="tag is-post-tag">渗透测试</span>
-                                            
-                                        </p>
-                                        <p>
-                                            1.制作kaliu盘启动盘的软件选择我一开始是选择软碟通，制作完成，开机安装kali时，却说找不到u盘。百度google查找下，说是拔出u盘重试，或换个u盘接口，我试了不下10遍，完全没有用。再然后换了个制作U盘的软件rufus，尝试下也不行，然后换了个制作软件u盘软件win32diskimager，发现成功，可以探寻到u盘了，至于为什么只有win32d..
-                                        </p>
-                                        <p>2019-03-08</p>
-                                        <button class="button is-small">Read More</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                        </div>
-                    
-                
-                    
-                        <div class="content-box  " style="margin-bottom: 27px;">
-                            <a class="post-hover" href="/2019/03/06/theharvester的使用/">
-                            <div class="columns" style="min-height: 230px;">
-                                
-                                <div class="column is-8-desktop post-content is-flex align-center">
-                                    <div class="content">
-                                        <h3>theharvester的使用</h3>
-                                        
-                                        <p>
-                                            
-                                                <span class="tag is-post-tag">渗透测试</span>
-                                            
-                                        </p>
-                                        <p>
-                                            TheHarvester能够收集电子邮件账号、用户名、主机名和子域名等信息。它通过Google、Bing、PGP、LinkedIn、Baidu、Yandex、People123、Jigsaw、Shodan等公开资源整理收集这些信息。这些信息将在后期的渗透测试阶段发挥巨大的作用。
-
-d 参数制定目标域
--l 参数制定数量
--b 参数指定接口
--s 制定起始..
-                                        </p>
-                                        <p>2019-03-06</p>
-                                        <button class="button is-small">Read More</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                        </div>
-                    
-                
-                    
-                        <div class="content-box  " style="margin-bottom: 27px;">
-                            <a class="post-hover" href="/2019/03/06/Metagoofil的使用/">
-                            <div class="columns" style="min-height: 230px;">
-                                
-                                    <div class="column is-4-desktop is-5-tablet post-avatar is-hidden-mobile" style="margin: 10px; background-size: cover;background-image: url('http://jdownload.club/Gallery/2019.01.08%2021.27-25.png')">
-                                    </div>
-                                
-                                <div class="column is-8-desktop post-content is-flex align-center">
-                                    <div class="content">
-                                        <h3>Metagoofil</h3>
-                                        
-                                        <p>
-                                            
-                                                <span class="tag is-post-tag">渗透测试</span>
-                                            
-                                        </p>
-                                        <p>
-                                            Metagoofil是由Christian Martorella编写的功能强大的元数据手机工具。它可以自动在搜素引擎中检索和分析文件，还具有提供Mac地址，用户名列表等其他功能。  
-参数    描述，
-
--d    所搜寻的域名。
--t    要下载的文档类型（pdf，doc，docx，ppt，xls，ods等）
--l    搜索结果限制（默认200个..
-                                        </p>
-                                        <p>2019-03-06</p>
-                                        <button class="button is-small">Read More</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                        </div>
-                    
-                
-                    
-                        <div class="content-box  " style="margin-bottom: 27px;">
-                            <a class="post-hover" href="/2019/03/06/重装系统及相关知识/">
-                            <div class="columns" style="min-height: 230px;">
-                                
-                                <div class="column is-8-desktop post-content is-flex align-center">
-                                    <div class="content">
-                                        <h3>重装系统及相关知识点</h3>
-                                        
-                                        <p>
-                                            
-                                                <span class="tag is-post-tag">计算机应用</span>
-                                            
-                                        </p>
-                                        <p>
-                                            1.iso镜像直接安装在下个OSI镜像后,双击打开安装,在选择期间,可以选择把是否把用户数据删除,不用删除也可以安装,当然你想来个完全全新的系统,可以选择删除数据.,再等电脑重启就好了
-2.ghost 安装（美国赛门铁克公司旗下的硬盘备份还原工具）s  Ghost系统是指通过赛门铁克公司（Symantec Corporation）出品的Ghost在装好的..
-                                        </p>
-                                        <p>2019-03-06</p>
-                                        <button class="button is-small">Read More</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                        </div>
-                    
-                
-                    
-                        <div class="content-box  " style="margin-bottom: 27px;">
-                            <a class="post-hover" href="/2019/03/06/proxychans的使用/">
-                            <div class="columns" style="min-height: 230px;">
-                                
-                                <div class="column is-8-desktop post-content is-flex align-center">
-                                    <div class="content">
-                                        <h3>proxychans的使用</h3>
-                                        
-                                        <p>
-                                            
-                                                <span class="tag is-post-tag">linux</span>
-                                            
-                                        </p>
-                                        <p>
-                                            vim /etc/proxychains.conf  //编辑proxychansdai  在配置内容最后一行保持退出
-# proxychains.conf  VER 3.1
-#
-#        HTTP, SOCKS4, SOCKS5 tunneling proxifier with DNS.
-#    
-
-# The option below id..
-                                        </p>
-                                        <p>2019-03-06</p>
-                                        <button class="button is-small">Read More</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                        </div>
-                    
-                
-                    
-                        <div class="content-box  " style="margin-bottom: 27px;">
-                            <a class="post-hover" href="/2019/03/06/hello-world/">
-                            <div class="columns" style="min-height: 230px;">
-                                
-                                <div class="column is-8-desktop post-content is-flex align-center">
-                                    <div class="content">
-                                        <h3>Hello World</h3>
-                                        
-                                        <p>
-                                            
-                                        </p>
-                                        <p>
-                                            Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can a..
-                                        </p>
-                                        <p>2019-03-06</p>
-                                        <button class="button is-small">Read More</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                        </div>
-                    
-                
-                <!--翻頁-->
-                <nav class="pagination is-flex" style="justify-content: flex-end">
-                    
-                </nav>
-            </section>
             
         </div>
     </div>
-</div>
+</section>
+<script>
+    // 获取第一张图, 用以当封面背景图
+    var img = document.querySelectorAll('img')[1]
+
+    if (img) {
+        var header_box = document.querySelector('#header_box')
+        header_box.style.backgroundImage = 'url('+ img.src +')'
+    }
+</script>
+
+<!-- for code block highlight --> 
+<!-- theme.block_highlight -->
+<!-- we do not guarantee the char sequences spell right, usr himself do it -->
+<link rel="stylesheet" href="/css/highlight_rainbow.css">
+<script src="/js/highlight.min.js"></script>
+<script type="text/javascript"> hljs.initHighlightingOnLoad();</script>
 
       </div>
   </div>
