@@ -15,15 +15,27 @@
   </script>
 
   
-  <title>Archives: 2019/3 | Jaie</title>
+  <title>nmap扫描 | Jaie</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Jaie">
-<meta property="og:url" content="http://yoursite.com/archives/2019/03/index.html">
+  <meta name="description" content="nmap是一款开源免费的网络发现和安全审计工具，扫描端口、操作系统的版本、端口对应运行的服务等等。 zenmap是nmap官方提供的图形界面工具    nmap XXX.XXX.XXX.XXX 完整扫描  nmap -v XXX.XXX.XXX.XXX 打印每一步扫描  nmap -f XXX.XXX.XXX.XXX 扫描常见的端口  nmap -sV XXX.XXX.XXX.XXX 检测服务详细">
+<meta name="keywords" content="渗透测试">
+<meta property="og:type" content="article">
+<meta property="og:title" content="nmap扫描">
+<meta property="og:url" content="http://yoursite.com/2019/03/11/nmap扫描/index.html">
 <meta property="og:site_name" content="Jaie">
+<meta property="og:description" content="nmap是一款开源免费的网络发现和安全审计工具，扫描端口、操作系统的版本、端口对应运行的服务等等。 zenmap是nmap官方提供的图形界面工具    nmap XXX.XXX.XXX.XXX 完整扫描  nmap -v XXX.XXX.XXX.XXX 打印每一步扫描  nmap -f XXX.XXX.XXX.XXX 扫描常见的端口  nmap -sV XXX.XXX.XXX.XXX 检测服务详细">
 <meta property="og:locale" content="default">
+<meta property="og:image" content="http://yoursite.com/2019/03/11/nmap扫描/img-jaie.test.upcdn.net/20190311122720.png">
+<meta property="og:image" content="http://yoursite.com/2019/03/11/nmap扫描/img-jaie.test.upcdn.net/20190311122812.png">
+<meta property="og:image" content="http://yoursite.com/2019/03/11/nmap扫描/img-jaie.test.upcdn.net/20190311122934.png">
+<meta property="og:image" content="http://yoursite.com/2019/03/11/nmap扫描/img-jaie.test.upcdn.net/20190311123041.png">
+<meta property="og:image" content="http://yoursite.com/2019/03/11/nmap扫描/img-jaie.test.upcdn.net/20190311123121.png">
+<meta property="og:image" content="http://yoursite.com/2019/03/11/nmap扫描/img-jaie.test.upcdn.net/20190311130102.png">
+<meta property="og:updated_time" content="2019-03-11T05:13:10.816Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Jaie">
+<meta name="twitter:title" content="nmap扫描">
+<meta name="twitter:description" content="nmap是一款开源免费的网络发现和安全审计工具，扫描端口、操作系统的版本、端口对应运行的服务等等。 zenmap是nmap官方提供的图形界面工具    nmap XXX.XXX.XXX.XXX 完整扫描  nmap -v XXX.XXX.XXX.XXX 打印每一步扫描  nmap -f XXX.XXX.XXX.XXX 扫描常见的端口  nmap -sV XXX.XXX.XXX.XXX 检测服务详细">
+<meta name="twitter:image" content="http://yoursite.com/2019/03/11/nmap扫描/img-jaie.test.upcdn.net/20190311122720.png">
   
     <link rel="alternate" href="/atom.xml" title="Jaie" type="application/atom+xml">
   
@@ -101,430 +113,129 @@
 
   <div id="main-wrap" class="position-relative" style="margin-top: 55px;">
       <div class="main-inner-content">
-          <style>
-    .post-hover:hover {
-        box-shadow: inset 0 0 100px #000;
-        transition: box-shadow .2s;
-    }
+          <!--博文页面-->
 
-    .sub-post-container .post-hover:hover h3 {
-        text-decoration: underline gray;
-    }
-
-
-    .primary-item-main {
-        height: 330px;
+<style>
+    .header-box {
+        height: 370px;
+        filter: blur(10px);
         background-size: cover;
+        background-color: lightsteelblue;
     }
 
-    .primary-container .title,
-    .primary-container .sub-title,
-    .primary-container .post-content-text,
-    .primary-container .date {
-        color: #fff;
+    .post-box {
+        padding: 15px;
+        padding-top: 60px;
+        min-height: 80vh;
+        margin-top: -200px;
+        border-radius: 4px;
+        background-color: rgba(255,255,255,.8);
     }
 
-    .post-content-text {
-        color: #f1f1f1!important;
+    .post-avatar {
+        height: 30px;
+        width: 30px;
+        border-radius: 50%;
     }
 
-    .primary-container .post-hover {
-        background: black;
+    .flow-chart {
+        text-align: center;
     }
 
-    .content-bg-mask {
-        background: rgba(0,0,0,.4);
+    img[alt="post-cover"] {
+        display: none;
     }
-
 </style>
-
-<div style="background: #f5f8f9;">
-    <div id="main-container" class="container" style="padding-top: 20px;">
-        <div class="is-flex main-content justify-center">
-            <section class="column is-9">
-                
-<div class="primary-container content-box is-flex-desktop clear-padding bottom-line" style="margin-bottom: 25px;">
-    <div class="column  is-7-desktop">
-        <a href="/2019/03/11/nmap扫描/">
-            <div class="full-height post-hover" style="
-                         background-image: url('img-jaie.test.upcdn.net/20190311122720.png');
-                         height: 350px;
-                         background-size: cover;
-                         background-repeat: no-repeat;
-                         ">
-                    <div class=" is-flex flex-column center content has-text-centered full-height has-padding content-bg-mask">
-                        <h1 class="title text-shadow" style="margin-bottom: 15px;">
-                            nmap扫描
-                        </h1>
-                        <div>
-                        
-                            `
-                                <span class="tag is-post-tag">渗透测试</span>
-                            
-                        
-                        </div>
-                        <p class="post-content-text is-marginless has-padding text-shadow">
-                            nmap是一款开源免费的网络发现和安全审计工具，扫描端口、操作系统的版本、端口对应运行的服务等等。 zenmap是nmap官方提供的图形界面工具  
-
-nmap XXX.XXX.XXX.XXX 完整扫描 
-nmap -v XXX.XXX..
-                        </p>
-                        <p class="date text-shadow">2019-03-11</p>
-                        <button class="button is-info is-small">Read More</button>
-                    </div>
+<header>
+    <div id="header_box" class="header-box"></div>
+</header>
+<section>
+    <div class="container post-box">
+        <div class="content post-title is-flex center flex-column" style="margin-bottom: 70px; overflow: auto;">
+            <h1 class="has-text-centered" style="padding-bottom: 10px; border-bottom: 3px solid #fff">
+                <strong>nmap扫描</strong>
+            </h1>
+            
+            <div class="is-flex align-center">
+                <img class="post-avatar" src="https://cdn2.iconfinder.com/data/icons/rcons-user/32/male-shadow-circle-512.png">
+                <span style="padding:0 10px;"> <span class="sub-title">By</span> Jaie</span>
+                <span class="post-date sub-title">at: 2019-03-11</span>
             </div>
-        </a>
-    </div>
-    <div class="column is-5 is-hidden-touch" style="padding-left: 0;">
-        <div class="full-height is-flex flex-column justify-space-between" style="min-height: 350px;">
             
-                
-<a class="post-hover" href="/2019/03/08/linux搭建DNS服务器/" style="height: 48.5%">
-    <div class="content is-hidden-touch full-height overflow-hidden" style="background-image: url('https://dns-1256725437.cos.ap-guangzhou.myqcloud.com/dns%E4%B8%BB%E9%85%8D%E7%BD%AE.png')">
-        <div class="content-bg-mask full-width full-height has-padding">
-            <h3 class="title is-marginless text-shadow">
-                linux搭建DNS服务器
-            </h3>
-            
-            
-            <span class="tag is-post-tag">linux</span>
-            
-            
-            <p class="sub-title text-shadow"></p>
-            <p class="is-marginless text-shadow post-content-text">
-                一.远程登陆&amp;配置yum源下载xshell  安装打开,输入虚拟机ip地址,默认端口号2..
-            </p>
-            <p class="date text-shadow is-marginless">2019-03-08</p>
-        </div>
-    </div>
-</a>
-            
-            
-                
-<a class="post-hover" href="/2019/03/08/windows密码破解/" style="height: 48.5%">
-    <div class="content is-hidden-touch full-height overflow-hidden" style="background-image: url('https://raw.githubusercontent.com/Jaie0801/temp/master/img/2018.11.23%2018.41-45.png')">
-        <div class="content-bg-mask full-width full-height has-padding">
-            <h3 class="title is-marginless text-shadow">
-                kali破解密码，pe破解密码
-            </h3>
-            
-            
-            <span class="tag is-post-tag">渗透测试</span>
-            
-            
-            <p class="sub-title text-shadow"></p>
-            <p class="is-marginless text-shadow post-content-text">
-                kali破解windows密码1.镜像u盘启动（这里用虚拟机模拟）   windows增加tes..
-            </p>
-            <p class="date text-shadow is-marginless">2019-03-08</p>
-        </div>
-    </div>
-</a>
+                <div>
+                    
+                         <a class="tag is-post-tag" href="/tags/渗透测试/">渗透测试</a>
+                    
+                </div>
             
         </div>
-    </div>
-    <div class="column is-12 is-hidden-desktop">
-        
-        
-<a class="post-hover" href="/2019/03/08/linux搭建DNS服务器/" style="height: 48.5%">
-    <div class="content is-hidden-touch full-height overflow-hidden" style="background-image: url('https://dns-1256725437.cos.ap-guangzhou.myqcloud.com/dns%E4%B8%BB%E9%85%8D%E7%BD%AE.png')">
-        <div class="content-bg-mask full-width full-height has-padding">
-            <h3 class="title is-marginless text-shadow">
-                linux搭建DNS服务器
-            </h3>
-            
-            
-            <span class="tag is-post-tag">linux</span>
-            
-            
-            <p class="sub-title text-shadow"></p>
-            <p class="is-marginless text-shadow post-content-text">
-                一.远程登陆&amp;配置yum源下载xshell  安装打开,输入虚拟机ip地址,默认端口号2..
-            </p>
-            <p class="date text-shadow is-marginless">2019-03-08</p>
+        <div class="content" style="overflow: auto">
+            <p>nmap是一款开源免费的网络发现和安全审计工具，扫描端口、操作系统的版本、端口对应运行的服务等等。 zenmap是nmap官方提供的图形界面工具<br>  </p>
+<ul>
+<li>nmap XXX.XXX.XXX.XXX 完整扫描 <br></li>
+<li>nmap -v XXX.XXX.XXX.XXX 打印每一步扫描 <br></li>
+<li>nmap -f XXX.XXX.XXX.XXX 扫描常见的端口 <br></li>
+<li>nmap -sV XXX.XXX.XXX.XXX 检测服务详细信息 <br></li>
+<li>nmap  -O XXX.XXX.XXX.XXX 检测主机操作系统以及硬件信息 <br></li>
+<li>nmap –script=vuln XXX.XXX.XXX.XXX 扫描目标系统漏洞<br></li>
+<li>namp -sT xxx.xxx.xxx.xxx TCP扫描，这种扫描可能会被目标机系统日志记录<br></li>
+<li>namp -sS tcp syn（半扫描）扫描，一般不会被目标机系统日志记录<br></li>
+<li>namp -sU udp扫描，但是一般不可靠<br></li>
+<li>nmap -v（显示每一条信息） -sn （扫描存活主机，不扫描端口）-PE（通过PE确定机器是否开启） XXX.XXX.XXX.1/24 扫描整个子网 <br></li>
+<li>nmap -v -sn -PE XXX.XXX.XXX.1-5指定范围扫描 <br></li>
+<li>nmap -v -p 135 XXX.XXX.XXX.XXX扫描指定135端口<br>（多个端口逗号分隔）<br></li>
+<li>nmap -sS XXX.XXX.XXX.XXX SYN扫描，隐蔽扫描（不需要创建完整链接）<br>端口：默认情况下，nmap会扫描1000个最有可能开放的tcp端口  </li>
+</ul>
+<ol>
+<li>namp默认（局域网）扫描   11<br><img src="img-jaie.test.upcdn.net/20190311122720.png" alt><br><img src="img-jaie.test.upcdn.net/20190311122812.png" alt></li>
+<li>扫描系统信息<br><img src="img-jaie.test.upcdn.net/20190311122934.png" alt></li>
+<li>扫描系统漏洞<br><img src="img-jaie.test.upcdn.net/20190311123041.png" alt></li>
+<li>局域网扫描<br><img src="img-jaie.test.upcdn.net/20190311123121.png" alt></li>
+<li>指定端口扫描，如果未指定端口默认1-1000<br><img src="img-jaie.test.upcdn.net/20190311130102.png" alt></li>
+</ol>
+
         </div>
-    </div>
-</a>
-        
-        
-        
-<a class="post-hover" href="/2019/03/08/windows密码破解/" style="height: 48.5%">
-    <div class="content is-hidden-touch full-height overflow-hidden" style="background-image: url('https://raw.githubusercontent.com/Jaie0801/temp/master/img/2018.11.23%2018.41-45.png')">
-        <div class="content-bg-mask full-width full-height has-padding">
-            <h3 class="title is-marginless text-shadow">
-                kali破解密码，pe破解密码
-            </h3>
+        <div class="post-reply">
             
+                <!-- 来必力City版安装代码 -->
+                <div id="lv-container" data-id="city" data-uid="MTAyMC80MzA1OC8xOTYwNA==">
+                    <script type="text/javascript">
+                        (function(d, s) {
+                            var j, e = d.getElementsByTagName(s)[0];
+
+                            if (typeof LivereTower === 'function') { return; }
+
+                            j = d.createElement(s);
+                            j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+                            j.async = true;
+
+                            e.parentNode.insertBefore(j, e);
+                        })(document, 'script');
+                    </script>
+                    <noscript> 为正常使用来必力评论功能请激活JavaScript</noscript>
+                </div>
+                <!-- City版安装代码已完成 -->
             
-            <span class="tag is-post-tag">渗透测试</span>
-            
-            
-            <p class="sub-title text-shadow"></p>
-            <p class="is-marginless text-shadow post-content-text">
-                kali破解windows密码1.镜像u盘启动（这里用虚拟机模拟）   windows增加tes..
-            </p>
-            <p class="date text-shadow is-marginless">2019-03-08</p>
-        </div>
-    </div>
-</a>
-        
-    </div>
-</div>
-
-                    
-                    
-                
-                    
-                        <div class="content-box  is-hidden-desktop" style="margin-bottom: 27px;">
-                            <a class="post-hover" href="/2019/03/08/linux搭建DNS服务器/">
-                            <div class="columns" style="min-height: 230px;">
-                                
-                                    <div class="column is-4-desktop is-5-tablet post-avatar is-hidden-mobile" style="margin: 10px; background-size: cover;background-image: url('https://dns-1256725437.cos.ap-guangzhou.myqcloud.com/dns%E4%B8%BB%E9%85%8D%E7%BD%AE.png')">
-                                    </div>
-                                
-                                <div class="column is-8-desktop post-content is-flex align-center">
-                                    <div class="content">
-                                        <h3>linux搭建DNS服务器</h3>
-                                        
-                                        <p>
-                                            
-                                                <span class="tag is-post-tag">linux</span>
-                                            
-                                        </p>
-                                        <p>
-                                            一.远程登陆&amp;配置yum源下载xshell  安装打开,输入虚拟机ip地址,默认端口号22,然后填账号(root),密码,登陆成功.
-配置yum源cd /etc/yum.repos.d/     //进入/etc/repo目录
-vim web163.repo       //新建yum源文件
-配置的网易的yum源(可粘贴复制)32位的系统选这个
-..
-                                        </p>
-                                        <p>2019-03-08</p>
-                                        <button class="button is-small">Read More</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                        </div>
-                    
-                
-                    
-                        <div class="content-box  is-hidden-desktop" style="margin-bottom: 27px;">
-                            <a class="post-hover" href="/2019/03/08/windows密码破解/">
-                            <div class="columns" style="min-height: 230px;">
-                                
-                                    <div class="column is-4-desktop is-5-tablet post-avatar is-hidden-mobile" style="margin: 10px; background-size: cover;background-image: url('https://raw.githubusercontent.com/Jaie0801/temp/master/img/2018.11.23%2018.41-45.png')">
-                                    </div>
-                                
-                                <div class="column is-8-desktop post-content is-flex align-center">
-                                    <div class="content">
-                                        <h3>kali破解密码，pe破解密码</h3>
-                                        
-                                        <p>
-                                            
-                                                <span class="tag is-post-tag">渗透测试</span>
-                                            
-                                        </p>
-                                        <p>
-                                            kali破解windows密码1.镜像u盘启动（这里用虚拟机模拟）   windows增加test用户设置密码，iso镜像：kali  2.BOIS启动，在bois引导中把cd/rom方式置顶。F10保持退出，进入kali安装界面显示，选第一，进入kali。
-
-挂载WINDOW的c盘，破解密码
-
-
-fdilk -l查看磁盘!并挂载C盘
-使用samdump..
-                                        </p>
-                                        <p>2019-03-08</p>
-                                        <button class="button is-small">Read More</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                        </div>
-                    
-                
-                    
-                        <div class="content-box  " style="margin-bottom: 27px;">
-                            <a class="post-hover" href="/2019/03/08/安装双系统kali和window10的几个坑点/">
-                            <div class="columns" style="min-height: 230px;">
-                                
-                                <div class="column is-8-desktop post-content is-flex align-center">
-                                    <div class="content">
-                                        <h3>安装双系统kali和window10的几个坑点</h3>
-                                        
-                                        <p>
-                                            
-                                                <span class="tag is-post-tag">渗透测试</span>
-                                            
-                                        </p>
-                                        <p>
-                                            1.制作kaliu盘启动盘的软件选择我一开始是选择软碟通，制作完成，开机安装kali时，却说找不到u盘。百度google查找下，说是拔出u盘重试，或换个u盘接口，我试了不下10遍，完全没有用。再然后换了个制作U盘的软件rufus，尝试下也不行，然后换了个制作软件u盘软件win32diskimager，发现成功，可以探寻到u盘了，至于为什么只有win32d..
-                                        </p>
-                                        <p>2019-03-08</p>
-                                        <button class="button is-small">Read More</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                        </div>
-                    
-                
-                    
-                        <div class="content-box  " style="margin-bottom: 27px;">
-                            <a class="post-hover" href="/2019/03/06/theharvester的使用/">
-                            <div class="columns" style="min-height: 230px;">
-                                
-                                <div class="column is-8-desktop post-content is-flex align-center">
-                                    <div class="content">
-                                        <h3>theharvester的使用</h3>
-                                        
-                                        <p>
-                                            
-                                                <span class="tag is-post-tag">渗透测试</span>
-                                            
-                                        </p>
-                                        <p>
-                                            TheHarvester能够收集电子邮件账号、用户名、主机名和子域名等信息。它通过Google、Bing、PGP、LinkedIn、Baidu、Yandex、People123、Jigsaw、Shodan等公开资源整理收集这些信息。这些信息将在后期的渗透测试阶段发挥巨大的作用。
-
-d 参数制定目标域
--l 参数制定数量
--b 参数指定接口
--s 制定起始..
-                                        </p>
-                                        <p>2019-03-06</p>
-                                        <button class="button is-small">Read More</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                        </div>
-                    
-                
-                    
-                        <div class="content-box  " style="margin-bottom: 27px;">
-                            <a class="post-hover" href="/2019/03/06/Metagoofil的使用/">
-                            <div class="columns" style="min-height: 230px;">
-                                
-                                    <div class="column is-4-desktop is-5-tablet post-avatar is-hidden-mobile" style="margin: 10px; background-size: cover;background-image: url('http://jdownload.club/Gallery/2019.01.08%2021.27-25.png')">
-                                    </div>
-                                
-                                <div class="column is-8-desktop post-content is-flex align-center">
-                                    <div class="content">
-                                        <h3>Metagoofil</h3>
-                                        
-                                        <p>
-                                            
-                                                <span class="tag is-post-tag">渗透测试</span>
-                                            
-                                        </p>
-                                        <p>
-                                            Metagoofil是由Christian Martorella编写的功能强大的元数据手机工具。它可以自动在搜素引擎中检索和分析文件，还具有提供Mac地址，用户名列表等其他功能。  
-参数    描述，
-
--d    所搜寻的域名。
--t    要下载的文档类型（pdf，doc，docx，ppt，xls，ods等）
--l    搜索结果限制（默认200个..
-                                        </p>
-                                        <p>2019-03-06</p>
-                                        <button class="button is-small">Read More</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                        </div>
-                    
-                
-                    
-                        <div class="content-box  " style="margin-bottom: 27px;">
-                            <a class="post-hover" href="/2019/03/06/重装系统及相关知识/">
-                            <div class="columns" style="min-height: 230px;">
-                                
-                                <div class="column is-8-desktop post-content is-flex align-center">
-                                    <div class="content">
-                                        <h3>重装系统及相关知识点</h3>
-                                        
-                                        <p>
-                                            
-                                                <span class="tag is-post-tag">计算机应用</span>
-                                            
-                                        </p>
-                                        <p>
-                                            1.iso镜像直接安装在下个OSI镜像后,双击打开安装,在选择期间,可以选择把是否把用户数据删除,不用删除也可以安装,当然你想来个完全全新的系统,可以选择删除数据.,再等电脑重启就好了
-2.ghost 安装（美国赛门铁克公司旗下的硬盘备份还原工具）s  Ghost系统是指通过赛门铁克公司（Symantec Corporation）出品的Ghost在装好的..
-                                        </p>
-                                        <p>2019-03-06</p>
-                                        <button class="button is-small">Read More</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                        </div>
-                    
-                
-                    
-                        <div class="content-box  " style="margin-bottom: 27px;">
-                            <a class="post-hover" href="/2019/03/06/proxychans的使用/">
-                            <div class="columns" style="min-height: 230px;">
-                                
-                                <div class="column is-8-desktop post-content is-flex align-center">
-                                    <div class="content">
-                                        <h3>proxychans的使用</h3>
-                                        
-                                        <p>
-                                            
-                                                <span class="tag is-post-tag">linux</span>
-                                            
-                                        </p>
-                                        <p>
-                                            vim /etc/proxychains.conf  //编辑proxychansdai  在配置内容最后一行保持退出
-# proxychains.conf  VER 3.1
-#
-#        HTTP, SOCKS4, SOCKS5 tunneling proxifier with DNS.
-#    
-
-# The option below id..
-                                        </p>
-                                        <p>2019-03-06</p>
-                                        <button class="button is-small">Read More</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                        </div>
-                    
-                
-                    
-                        <div class="content-box  " style="margin-bottom: 27px;">
-                            <a class="post-hover" href="/2019/03/06/hello-world/">
-                            <div class="columns" style="min-height: 230px;">
-                                
-                                <div class="column is-8-desktop post-content is-flex align-center">
-                                    <div class="content">
-                                        <h3>Hello World</h3>
-                                        
-                                        <p>
-                                            
-                                        </p>
-                                        <p>
-                                            Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can a..
-                                        </p>
-                                        <p>2019-03-06</p>
-                                        <button class="button is-small">Read More</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                        </div>
-                    
-                
-                <!--翻頁-->
-                <nav class="pagination is-flex" style="justify-content: flex-end">
-                    
-                </nav>
-            </section>
             
         </div>
     </div>
-</div>
+</section>
+<script>
+    // 获取第一张图, 用以当封面背景图
+    var img = document.querySelectorAll('img')[1]
+
+    if (img) {
+        var header_box = document.querySelector('#header_box')
+        header_box.style.backgroundImage = 'url('+ img.src +')'
+    }
+</script>
+
+<!-- for code block highlight --> 
+<!-- theme.block_highlight -->
+<!-- we do not guarantee the char sequences spell right, usr himself do it -->
+<link rel="stylesheet" href="/css/highlight_rainbow.css">
+<script src="/js/highlight.min.js"></script>
+<script type="text/javascript"> hljs.initHighlightingOnLoad();</script>
 
       </div>
   </div>
