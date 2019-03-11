@@ -25,10 +25,13 @@
 <meta property="og:site_name" content="Jaie">
 <meta property="og:description" content="1.制作kaliu盘启动盘的软件选择我一开始是选择软碟通，制作完成，开机安装kali时，却说找不到u盘。百度google查找下，说是拔出u盘重试，或换个u盘接口，我试了不下10遍，完全没有用。再然后换了个制作U盘的软件rufus，尝试下也不行，然后换了个制作软件u盘软件win32diskimager，发现成功，可以探寻到u盘了，至于为什么只有win32diskimager可以，而软碟通和rufus">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-03-08T12:48:52.192Z">
+<meta property="og:image" content="http://yoursite.com/2019/03/08/安装双系统kali和window10的几个坑点/img-jaie.test.upcdn.net/20190311130102.png">
+<meta property="og:image" content="http://img-jaie.test.upcdn.net/20190311130102.png">
+<meta property="og:updated_time" content="2019-03-11T05:23:29.349Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="安装双系统kali和window10的几个坑点">
 <meta name="twitter:description" content="1.制作kaliu盘启动盘的软件选择我一开始是选择软碟通，制作完成，开机安装kali时，却说找不到u盘。百度google查找下，说是拔出u盘重试，或换个u盘接口，我试了不下10遍，完全没有用。再然后换了个制作U盘的软件rufus，尝试下也不行，然后换了个制作软件u盘软件win32diskimager，发现成功，可以探寻到u盘了，至于为什么只有win32diskimager可以，而软碟通和rufus">
+<meta name="twitter:image" content="http://yoursite.com/2019/03/08/安装双系统kali和window10的几个坑点/img-jaie.test.upcdn.net/20190311130102.png">
   
     <link rel="alternate" href="/atom.xml" title="Jaie" type="application/atom+xml">
   
@@ -164,7 +167,7 @@
         </div>
         <div class="content" style="overflow: auto">
             <h1 id="1-制作kaliu盘启动盘的软件选择"><a href="#1-制作kaliu盘启动盘的软件选择" class="headerlink" title="1.制作kaliu盘启动盘的软件选择"></a>1.制作kaliu盘启动盘的软件选择</h1><p>我一开始是选择软碟通，制作完成，开机安装kali时，却说找不到u盘。百度google查找下，说是拔出u盘重试，或换个u盘接口，我试了不下10遍，完全没有用。再然后换了个制作U盘的软件rufus，尝试下也不行，然后换了个制作软件u盘软件win32diskimager，发现成功，可以探寻到u盘了，至于为什么只有win32diskimager可以，而软碟通和rufus不可以，我也是很不解的，好像kali官方推荐也是win32diskimager，而且有很多教程用软碟通和rufus却可以，也有很多人不可以，还是推荐用win32diskimager比较省心吧，</p>
-<h1 id="2-检测不到固态硬盘"><a href="#2-检测不到固态硬盘" class="headerlink" title="2.检测不到固态硬盘"></a>2.检测不到固态硬盘</h1><p>我的固电脑是全固态的，在安装检测分区时，检测不到我的固态硬盘，却可以检测我的u盘出来，我一开始是怀疑分区表的问题，我的固态分区表是GUID，U盘是MBR，能不成要转换成GUID，可是一转换，windows系统可能要崩。我插上我的移动硬盘（MBR）也可以检测到，问题就出在固态上，我看网上说可能是磁盘类型是动态磁盘，要调为基本磁盘才可行，但是我的磁盘本来就是基本磁盘，所以排除这个想法。另一个是bios中磁盘模式，要改一下，我就进我bios，但是没有发现有磁盘模式这个选择，难受。<br><br>在来通过了解，发现是bios是初始版本，没有这个选项，我就上联想官网下载bios下载更新驱动，然后更新驱动就有磁盘模式的选项，我还是第一次更新bios驱动，然后磁盘模式有RAID和AHCI两种模式可选，默认是RAID的，我选AHCI，kali安装分区可以检测我的固态硬盘了，一路安装下去很顺利，kali安装完成可以开机，但当我选windows开机时发现开不起机，然后bios把磁盘模式调回RAID模式时，windows可以开机了，但kali却开不起机，也就是说</p>
+<h1 id="2-检测不到固态硬盘"><a href="#2-检测不到固态硬盘" class="headerlink" title="2.检测不到固态硬盘"></a>2.检测不到固态硬盘</h1><p>我的固电脑是全固态的，在安装检测分区时，检测不到我的固态硬盘，却可以检测我的u盘出来，我一开始是怀疑分区表的问题，我的固态分区表是GUID，U盘是MBR，能不成要转换成GUID，可是一转换，windows系统可能要崩。我插上我的移动硬盘（MBR）也可以检测到，问题就出在固态上，我看网上说可能是磁盘类型是动态磁盘，要调为基本磁盘才可行，但是我的磁盘本来就是基本磁盘，所以排除这个想法。另一个是bios中磁盘模式，要改一下，我就进我bios，但是没有发现有磁盘模式这个选择，难受。<br><br>在来通过了解，发现是bios是初始版本，没有这个选项，我就上联想官网下载bios下载更新驱动，然后更新驱动就有磁盘模式的选项，我还是第一次更新bios驱动，然后磁盘模式有RAID和AHCI两种模式可选，默认是RAID的，我选AHCI，kali安装分区可以检测我的固态硬盘了，一路安装下去很顺利，kali安装完成可以开机，但当我选windows开机时发现开不起机，然后bios把磁盘模式调回RAID模式时，windows可以开机了，但kali却开不起机，也就是说<br><img src="img-jaie.test.upcdn.net/20190311130102.png" alt><br><img src="http://img-jaie.test.upcdn.net/20190311130102.png" alt></p>
 
         </div>
         <div class="post-reply">
