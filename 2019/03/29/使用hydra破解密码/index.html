@@ -15,20 +15,29 @@
   </script>
 
   
-  <title>安装双系统kali和window10的几个坑点 | Jaie</title>
+  <title>使用hydra破解密码 | Jaie</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="1.制作kaliu盘启动盘的软件选择我一开始是选择软碟通，制作完成，开机安装kali时，却说找不到u盘。百度google查找下，说是拔出u盘重试，或换个u盘接口，我试了不下10遍，完全没有用。再然后换了个制作U盘的软件rufus，尝试下也不行，然后换了个制作软件u盘软件win32diskimager，发现成功，可以探寻到u盘了，至于为什么只有win32diskimager可以，而软碟通和rufus">
+  <meta name="description" content="1.windows密码破解  smb密码破解设置windows账号密码， linux的ssh登陆密码破解    hydra破解ftp登陆账号密码 hydra破解web表单密码，这里是我是dvwa页面破解。这个页面密码破解的特征是密码正确会跳转到index.php页面。使用post方式提交密码。hydra -l admin -P comon.lst 192.168.200.244 http-post">
 <meta name="keywords" content="渗透测试">
 <meta property="og:type" content="article">
-<meta property="og:title" content="安装双系统kali和window10的几个坑点">
-<meta property="og:url" content="http://yoursite.com/2019/03/08/安装双系统kali和window10的几个坑点/index.html">
+<meta property="og:title" content="使用hydra破解密码">
+<meta property="og:url" content="http://yoursite.com/2019/03/29/使用hydra破解密码/index.html">
 <meta property="og:site_name" content="Jaie">
-<meta property="og:description" content="1.制作kaliu盘启动盘的软件选择我一开始是选择软碟通，制作完成，开机安装kali时，却说找不到u盘。百度google查找下，说是拔出u盘重试，或换个u盘接口，我试了不下10遍，完全没有用。再然后换了个制作U盘的软件rufus，尝试下也不行，然后换了个制作软件u盘软件win32diskimager，发现成功，可以探寻到u盘了，至于为什么只有win32diskimager可以，而软碟通和rufus">
+<meta property="og:description" content="1.windows密码破解  smb密码破解设置windows账号密码， linux的ssh登陆密码破解    hydra破解ftp登陆账号密码 hydra破解web表单密码，这里是我是dvwa页面破解。这个页面密码破解的特征是密码正确会跳转到index.php页面。使用post方式提交密码。hydra -l admin -P comon.lst 192.168.200.244 http-post">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-03-29T02:48:53.348Z">
+<meta property="og:image" content="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190325112320.png">
+<meta property="og:image" content="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190325133211.png">
+<meta property="og:image" content="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190325145427.png">
+<meta property="og:image" content="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190325145338.png">
+<meta property="og:image" content="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190329103051.png">
+<meta property="og:image" content="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190329103712.png">
+<meta property="og:image" content="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190329103853.png">
+<meta property="og:image" content="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190325143122.png">
+<meta property="og:updated_time" content="2019-03-29T02:55:51.357Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="安装双系统kali和window10的几个坑点">
-<meta name="twitter:description" content="1.制作kaliu盘启动盘的软件选择我一开始是选择软碟通，制作完成，开机安装kali时，却说找不到u盘。百度google查找下，说是拔出u盘重试，或换个u盘接口，我试了不下10遍，完全没有用。再然后换了个制作U盘的软件rufus，尝试下也不行，然后换了个制作软件u盘软件win32diskimager，发现成功，可以探寻到u盘了，至于为什么只有win32diskimager可以，而软碟通和rufus">
+<meta name="twitter:title" content="使用hydra破解密码">
+<meta name="twitter:description" content="1.windows密码破解  smb密码破解设置windows账号密码， linux的ssh登陆密码破解    hydra破解ftp登陆账号密码 hydra破解web表单密码，这里是我是dvwa页面破解。这个页面密码破解的特征是密码正确会跳转到index.php页面。使用post方式提交密码。hydra -l admin -P comon.lst 192.168.200.244 http-post">
+<meta name="twitter:image" content="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190325112320.png">
   
     <link rel="alternate" href="/atom.xml" title="Jaie" type="application/atom+xml">
   
@@ -146,13 +155,13 @@
     <div class="container post-box">
         <div class="content post-title is-flex center flex-column" style="margin-bottom: 70px; overflow: auto;">
             <h1 class="has-text-centered" style="padding-bottom: 10px; border-bottom: 3px solid #fff">
-                <strong>安装双系统kali和window10的几个坑点</strong>
+                <strong>使用hydra破解密码</strong>
             </h1>
             
             <div class="is-flex align-center">
                 <img class="post-avatar" src="https://cdn2.iconfinder.com/data/icons/rcons-user/32/male-shadow-circle-512.png">
                 <span style="padding:0 10px;"> <span class="sub-title">By</span> Jaie</span>
-                <span class="post-date sub-title">at: 2019-03-08</span>
+                <span class="post-date sub-title">at: 2019-03-29</span>
             </div>
             
                 <div>
@@ -163,8 +172,13 @@
             
         </div>
         <div class="content" style="overflow: auto">
-            <h1 id="1-制作kaliu盘启动盘的软件选择"><a href="#1-制作kaliu盘启动盘的软件选择" class="headerlink" title="1.制作kaliu盘启动盘的软件选择"></a>1.制作kaliu盘启动盘的软件选择</h1><p>我一开始是选择软碟通，制作完成，开机安装kali时，却说找不到u盘。百度google查找下，说是拔出u盘重试，或换个u盘接口，我试了不下10遍，完全没有用。再然后换了个制作U盘的软件rufus，尝试下也不行，然后换了个制作软件u盘软件win32diskimager，发现成功，可以探寻到u盘了，至于为什么只有win32diskimager可以，而软碟通和rufus不可以，我也是很不解的，好像kali官方推荐也是win32diskimager，而且有很多教程用软碟通和rufus却可以，也有很多人不可以，还是推荐用win32diskimager比较省心吧，</p>
-<h1 id="2-检测不到固态硬盘"><a href="#2-检测不到固态硬盘" class="headerlink" title="2.检测不到固态硬盘"></a>2.检测不到固态硬盘</h1><p>我的固电脑是全固态的，在安装检测分区时，检测不到我的固态硬盘，却可以检测我的u盘出来，我一开始是怀疑分区表的问题，我的固态分区表是GUID，U盘是MBR，能不成要转换成GUID，可是一转换，windows系统可能要崩。我插上我的移动硬盘（MBR）也可以检测到，问题就出在固态上，我看网上说可能是磁盘类型是动态磁盘，要调为基本磁盘才可行，但是我的磁盘本来就是基本磁盘，所以排除这个想法。另一个是bios中磁盘模式，要改一下，我就进我bios，但是没有发现有磁盘模式这个选择，难受。<br><br>在来通过了解，发现是bios是初始版本，没有这个选项，我就上联想官网下载bios下载更新驱动，然后更新驱动就有磁盘模式的选项，我还是第一次更新bios驱动，然后磁盘模式有RAID和AHCI两种模式可选，默认是RAID的，我选AHCI，kali安装分区可以检测我的固态硬盘了，一路安装下去很顺利，kali安装完成可以开机，但当我选windows开机时发现开不起机，然后bios把磁盘模式调回RAID模式时，windows可以开机了，但kali却开不起机，也就是说</p>
+            <p>1.windows密码破解</p>
+<ul>
+<li>smb密码破解<br>设置windows账号密码，<br><img src="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190325112320.png" alt><br></li>
+<li>linux的ssh登陆密码破解<br><img src="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190325133211.png" alt>   </li>
+<li>hydra破解ftp登陆账号密码<br><img src="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190325145427.png" alt><br><img src="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190325145338.png" alt></li>
+<li>hydra破解web表单密码，这里是我是dvwa页面破解。这个页面密码破解的特征是密码正确会跳转到index.php页面。使用post方式提交密码。<br><code>hydra -l admin -P comon.lst 192.168.200.244 http-post-form &quot;/dvwa/login.php:username=^USER^&amp;password=^PASS^&amp;Login=L in:S=index.php&quot; -V</code><br><img src="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190329103051.png" alt><br><img src="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190329103712.png" alt><br><img src="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190329103853.png" alt><br>xhydra是hydra的图形界面<br><img src="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190325143122.png" alt>   </li>
+</ul>
 
         </div>
         <div class="post-reply">

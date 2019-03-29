@@ -15,20 +15,15 @@
   </script>
 
   
-  <title>安装双系统kali和window10的几个坑点 | Jaie</title>
+  <title>Archives: 2019/3 | Jaie</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="1.制作kaliu盘启动盘的软件选择我一开始是选择软碟通，制作完成，开机安装kali时，却说找不到u盘。百度google查找下，说是拔出u盘重试，或换个u盘接口，我试了不下10遍，完全没有用。再然后换了个制作U盘的软件rufus，尝试下也不行，然后换了个制作软件u盘软件win32diskimager，发现成功，可以探寻到u盘了，至于为什么只有win32diskimager可以，而软碟通和rufus">
-<meta name="keywords" content="渗透测试">
-<meta property="og:type" content="article">
-<meta property="og:title" content="安装双系统kali和window10的几个坑点">
-<meta property="og:url" content="http://yoursite.com/2019/03/08/安装双系统kali和window10的几个坑点/index.html">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="Jaie">
+<meta property="og:url" content="http://yoursite.com/archives/2019/03/page/2/index.html">
 <meta property="og:site_name" content="Jaie">
-<meta property="og:description" content="1.制作kaliu盘启动盘的软件选择我一开始是选择软碟通，制作完成，开机安装kali时，却说找不到u盘。百度google查找下，说是拔出u盘重试，或换个u盘接口，我试了不下10遍，完全没有用。再然后换了个制作U盘的软件rufus，尝试下也不行，然后换了个制作软件u盘软件win32diskimager，发现成功，可以探寻到u盘了，至于为什么只有win32diskimager可以，而软碟通和rufus">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-03-29T02:48:53.348Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="安装双系统kali和window10的几个坑点">
-<meta name="twitter:description" content="1.制作kaliu盘启动盘的软件选择我一开始是选择软碟通，制作完成，开机安装kali时，却说找不到u盘。百度google查找下，说是拔出u盘重试，或换个u盘接口，我试了不下10遍，完全没有用。再然后换了个制作U盘的软件rufus，尝试下也不行，然后换了个制作软件u盘软件win32diskimager，发现成功，可以探寻到u盘了，至于为什么只有win32diskimager可以，而软碟通和rufus">
+<meta name="twitter:title" content="Jaie">
   
     <link rel="alternate" href="/atom.xml" title="Jaie" type="application/atom+xml">
   
@@ -106,108 +101,99 @@
 
   <div id="main-wrap" class="position-relative" style="margin-top: 55px;">
       <div class="main-inner-content">
-          <!--博文页面-->
+          <style>
+    .post-hover:hover {
+        box-shadow: inset 0 0 100px #000;
+        transition: box-shadow .2s;
+    }
 
-<style>
-    .header-box {
-        height: 370px;
-        filter: blur(10px);
+    .sub-post-container .post-hover:hover h3 {
+        text-decoration: underline gray;
+    }
+
+
+    .primary-item-main {
+        height: 330px;
         background-size: cover;
-        background-color: lightsteelblue;
     }
 
-    .post-box {
-        padding: 15px;
-        padding-top: 60px;
-        min-height: 80vh;
-        margin-top: -200px;
-        border-radius: 4px;
-        background-color: rgba(255,255,255,.8);
+    .primary-container .title,
+    .primary-container .sub-title,
+    .primary-container .post-content-text,
+    .primary-container .date {
+        color: #fff;
     }
 
-    .post-avatar {
-        height: 30px;
-        width: 30px;
-        border-radius: 50%;
+    .post-content-text {
+        color: #f1f1f1!important;
     }
 
-    .flow-chart {
-        text-align: center;
+    .primary-container .post-hover {
+        background: black;
     }
 
-    img[alt="post-cover"] {
-        display: none;
+    .content-bg-mask {
+        background: rgba(0,0,0,.4);
     }
+
 </style>
-<header>
-    <div id="header_box" class="header-box"></div>
-</header>
-<section>
-    <div class="container post-box">
-        <div class="content post-title is-flex center flex-column" style="margin-bottom: 70px; overflow: auto;">
-            <h1 class="has-text-centered" style="padding-bottom: 10px; border-bottom: 3px solid #fff">
-                <strong>安装双系统kali和window10的几个坑点</strong>
-            </h1>
-            
-            <div class="is-flex align-center">
-                <img class="post-avatar" src="https://cdn2.iconfinder.com/data/icons/rcons-user/32/male-shadow-circle-512.png">
-                <span style="padding:0 10px;"> <span class="sub-title">By</span> Jaie</span>
-                <span class="post-date sub-title">at: 2019-03-08</span>
+
+<div style="background: #f5f8f9;">
+    <div id="main-container" class="container" style="padding-top: 20px;">
+        <div class="is-flex main-content justify-center">
+            <section class="column is-9">
+                
+<div class="primary-container content-box is-flex-desktop clear-padding bottom-line" style="margin-bottom: 25px;">
+    <div class="column  is-12">
+        <a href="/2019/03/06/hello-world/">
+            <div class="full-height post-hover" style="
+                         background-image: url('');
+                         height: 350px;
+                         background-size: cover;
+                         background-repeat: no-repeat;
+                         ">
+                    <div class=" is-flex flex-column center content has-text-centered full-height has-padding content-bg-mask">
+                        <h1 class="title text-shadow" style="margin-bottom: 15px;">
+                            Hello World
+                        </h1>
+                        <div>
+                        
+                            
+                        
+                        </div>
+                        <p class="post-content-text is-marginless has-padding text-shadow">
+                            Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using H..
+                        </p>
+                        <p class="date text-shadow">2019-03-06</p>
+                        <button class="button is-info is-small">Read More</button>
+                    </div>
             </div>
-            
-                <div>
-                    
-                         <a class="tag is-post-tag" href="/tags/渗透测试/">渗透测试</a>
-                    
-                </div>
-            
-        </div>
-        <div class="content" style="overflow: auto">
-            <h1 id="1-制作kaliu盘启动盘的软件选择"><a href="#1-制作kaliu盘启动盘的软件选择" class="headerlink" title="1.制作kaliu盘启动盘的软件选择"></a>1.制作kaliu盘启动盘的软件选择</h1><p>我一开始是选择软碟通，制作完成，开机安装kali时，却说找不到u盘。百度google查找下，说是拔出u盘重试，或换个u盘接口，我试了不下10遍，完全没有用。再然后换了个制作U盘的软件rufus，尝试下也不行，然后换了个制作软件u盘软件win32diskimager，发现成功，可以探寻到u盘了，至于为什么只有win32diskimager可以，而软碟通和rufus不可以，我也是很不解的，好像kali官方推荐也是win32diskimager，而且有很多教程用软碟通和rufus却可以，也有很多人不可以，还是推荐用win32diskimager比较省心吧，</p>
-<h1 id="2-检测不到固态硬盘"><a href="#2-检测不到固态硬盘" class="headerlink" title="2.检测不到固态硬盘"></a>2.检测不到固态硬盘</h1><p>我的固电脑是全固态的，在安装检测分区时，检测不到我的固态硬盘，却可以检测我的u盘出来，我一开始是怀疑分区表的问题，我的固态分区表是GUID，U盘是MBR，能不成要转换成GUID，可是一转换，windows系统可能要崩。我插上我的移动硬盘（MBR）也可以检测到，问题就出在固态上，我看网上说可能是磁盘类型是动态磁盘，要调为基本磁盘才可行，但是我的磁盘本来就是基本磁盘，所以排除这个想法。另一个是bios中磁盘模式，要改一下，我就进我bios，但是没有发现有磁盘模式这个选择，难受。<br><br>在来通过了解，发现是bios是初始版本，没有这个选项，我就上联想官网下载bios下载更新驱动，然后更新驱动就有磁盘模式的选项，我还是第一次更新bios驱动，然后磁盘模式有RAID和AHCI两种模式可选，默认是RAID的，我选AHCI，kali安装分区可以检测我的固态硬盘了，一路安装下去很顺利，kali安装完成可以开机，但当我选windows开机时发现开不起机，然后bios把磁盘模式调回RAID模式时，windows可以开机了，但kali却开不起机，也就是说</p>
-
-        </div>
-        <div class="post-reply">
-            
-                <!-- 来必力City版安装代码 -->
-                <div id="lv-container" data-id="city" data-uid="MTAyMC80MzA1OC8xOTYwNA==">
-                    <script type="text/javascript">
-                        (function(d, s) {
-                            var j, e = d.getElementsByTagName(s)[0];
-
-                            if (typeof LivereTower === 'function') { return; }
-
-                            j = d.createElement(s);
-                            j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
-                            j.async = true;
-
-                            e.parentNode.insertBefore(j, e);
-                        })(document, 'script');
-                    </script>
-                    <noscript> 为正常使用来必力评论功能请激活JavaScript</noscript>
-                </div>
-                <!-- City版安装代码已完成 -->
+        </a>
+    </div>
+    <div class="column is-5 is-hidden-touch" style="padding-left: 0;">
+        <div class="full-height is-flex flex-column justify-space-between" style="min-height: 350px;">
             
             
         </div>
     </div>
-</section>
-<script>
-    // 获取第一张图, 用以当封面背景图
-    var img = document.querySelectorAll('img')[1]
+    <div class="column is-12 is-hidden-desktop">
+        
+        
+    </div>
+</div>
 
-    if (img) {
-        var header_box = document.querySelector('#header_box')
-        header_box.style.backgroundImage = 'url('+ img.src +')'
-    }
-</script>
-
-<!-- for code block highlight --> 
-<!-- theme.block_highlight -->
-<!-- we do not guarantee the char sequences spell right, usr himself do it -->
-<link rel="stylesheet" href="/css/highlight_rainbow.css">
-<script src="/js/highlight.min.js"></script>
-<script type="text/javascript"> hljs.initHighlightingOnLoad();</script>
+                    
+                    
+                
+                <!--翻頁-->
+                <nav class="pagination is-flex" style="justify-content: flex-end">
+                    
+                </nav>
+            </section>
+            
+        </div>
+    </div>
+</div>
 
       </div>
   </div>
