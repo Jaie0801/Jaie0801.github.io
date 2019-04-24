@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title><![CDATA[dnschefDNS欺骗]]></title>
+    <url>%2F2019%2F04%2F24%2FDNS%E6%AC%BA%E9%AA%97%2F</url>
+    <content type="text"><![CDATA[dnschef –fakeip=192.168.200.2 –fakedomains=www.baidu.com,www.qq.com –interface 192.168.200.243 -qfackip欺骗到指定的ip，facedomains欺骗域名window修改dns服务器]]></content>
+      <tags>
+        <tag>渗透测试</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[使用john破解密码]]></title>
+    <url>%2F2019%2F04%2F24%2Fjohn%E7%A0%B4%E8%A7%A3%E5%AF%86%E7%A0%81%2F</url>
+    <content type="text"><![CDATA[john Created directory: /root/.john John the Ripper password cracker, version 1.8.0.6-jumbo-1-bleeding [linux-x86-64-avx] Copyright (c) 1996-2015 by Solar Designer and others Homepage: http://www.openwall.com/john/ Usage: john [OPTIONS] [PASSWORD-FILES] --single[=SECTION] &quot;single crack&quot; mode --wordlist[=FILE] --stdin wordlist mode, read words from FILE or stdin --pipe like --stdin, but bulk reads, and allows rules --loopback[=FILE] like --wordlist, but fetch words from a .pot file --dupe-suppression suppress all dupes in wordlist (and force preload) --prince[=FILE] PRINCE mode, read words from FILE --encoding=NAME input encoding (eg. UTF-8, ISO-8859-1). See also doc/ENCODING and --list=hidden-options. --rules[=SECTION] enable word mangling rules for wordlist modes --incremental[=MODE] &quot;incremental&quot; mode [using section MODE] --mask=MASK mask mode using MASK --markov[=OPTIONS] &quot;Markov&quot; mode (see doc/MARKOV) --external=MODE external mode or word filter --stdout[=LENGTH] just output candidate passwords [cut at LENGTH] --restore[=NAME] restore an interrupted session [called NAME] --session=NAME give a new session the NAME --status[=NAME] print status of a session [called NAME] --make-charset=FILE make a charset file. It will be overwritten --show[=LEFT] show cracked passwords [if =LEFT, then uncracked] --test[=TIME] run tests and benchmarks for TIME seconds each --users=[-]LOGIN|UID[,..] [do not] load this (these) user(s) only --groups=[-]GID[,..] load users [not] of this (these) group(s) only --shells=[-]SHELL[,..] load users with[out] this (these) shell(s) only --salts=[-]COUNT[:MAX] load salts with[out] COUNT [to MAX] hashes --save-memory=LEVEL enable memory saving, at LEVEL 1..3 --node=MIN[-MAX]/TOTAL this node&#39;s number range out of TOTAL count --fork=N fork N processes --pot=NAME pot file to use --list=WHAT list capabilities, see --list=help or doc/OPTIONS --format=NAME force hash of type NAME. The supported formats can be seen with --list=formats and --list=subformats 破解linux密码显示已完成破解的密码文件john破解缓存文件夹 john破解windows密码显示破解的密码 john的图形化界面——johnnyjohnny破解linux密码]]></content>
+      <tags>
+        <tag>渗透测试</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[arp攻击]]></title>
+    <url>%2F2019%2F04%2F24%2Farp%E6%94%BB%E5%87%BB%2F</url>
+    <content type="text"><![CDATA[arpspoof -h Version: 2.4 Usage: arpspoof [-i interface] [-c own|host|both] [-t target] [-r] host aspspoof -t 被攻击ip -r 网关ip然后可以看到winows主机的arp表的变化这时所有的windows通过网关都会转到kali上，所以被攻击无网络服务了。kali开启路由转发，echo 1 &gt; /proc/sys/net/ipv4/ip_forward此时windows就可以上网了，但是所有的流量都经过kali进行转发。利用kali网卡wireshark进行抓包driftnet抓取目标机数据图片创建arotemp目录存放数据图片音频信息，driftnet -i eth0 -a -d arptemp -s-i 选择接口 -a 数据存放目录 -d 指定目录-s 抓取音频仅支持MOEG获取目标浏览url信息urlsnarf -i eth0dsniff 对目标密码进行捕获，]]></content>
+      <tags>
+        <tag>渗透测试</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[markdown语法]]></title>
+    <url>%2F2019%2F03%2F29%2Fmarkdown%E8%AF%AD%E6%B3%95%E7%AE%80%E7%95%A5%E6%89%8B%E5%86%8C%2F</url>
+    <content type="text"><![CDATA[1. 斜体和粗体*斜体* //斜体 **粗体** //粗体 2. 分级标题用#——#####以”#”的个数进行逐级分级，1-5级;用h1——h5逐级分级 3. 外链接使用 [描述](链接地址) 为文字增加外链接 5.段落和换行 第一种写法：直接敲两个回车键即可 第二种写法:在写完一段后敲两个空格，然后回车写下一段 第三种写法:&lt;br /&gt;作为换行，然后写下一段6.分隔线&amp;引言` === ` 引言&gt;加___ 还有一种写法就是每一行都用一个 “&gt;” 号&lt;br&gt;&gt; &gt; 另外一种就是嵌套引用 7.列表 无序列表无序列表可以在每行开头用星号、加号、减号来表示，也可以三者混合一起，推荐使用相同的字符，避免混乱 有序列表有序列表用数字接着一个英文句点来表示，数字可无序，但还是推荐使用1.、2.，避免混乱。 8.代码代码块用两个这种符号围住 用`（语言）把代码起始行末尾行围住用tap键 9.更多阅读&lt;!--more--&gt;]]></content>
+      <tags>
+        <tag>item</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[hash_identifier和Hashid猜测识别加密算法]]></title>
+    <url>%2F2019%2F03%2F29%2Fhash_identifier%E5%92%8CHashid%E7%8C%9C%E6%B5%8B%E8%AF%86%E5%88%AB%E5%8A%A0%E5%AF%86%E7%AE%97%E6%B3%95%2F</url>
+    <content type="text"><![CDATA[1.hash-identifier2.hashid]]></content>
+      <tags>
+        <tag>渗透测试</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[使用medusa破解密码]]></title>
+    <url>%2F2019%2F03%2F29%2F%E4%BD%BF%E7%94%A8medusa%E7%A0%B4%E8%A7%A3%E5%AF%86%E7%A0%81%2F</url>
+    <content type="text"><![CDATA[medusa -h查看帮助 主要参数： -h 目标域名或ip-H 包含ip后域名的文件-u 用户名测试-U 包含要测试的用户名的文件-p 密码测试-P 包含要测试的密码的文件-e[n/s/ns] 添加其他密码检查条件 (无密码,密码 = 用户名)-M 要执行的模块的名称 (不包括. mod 扩展)-d 输出所有模块-n 用于非默认 TCP 端口号-s 启用ssl medusa -d 输出所有模块 medusa破解ftp 靶机开启ftp服务，攻击机进行破解medusa -u root -P comon.lst -h 192.168.200.243 -M ftp medusa破解mysqlmedusa -u root -P comon.lst -h 192.168.200.244 -e ns -M mysql mysql无密码 medusa破解sshmedusa -u root -P comon.lst -h 192.168.200.244 -e ns -M ssh]]></content>
+      <tags>
+        <tag>渗透测试</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[pw-inspector筛选字典内容]]></title>
+    <url>%2F2019%2F03%2F29%2Fpw-inspector%E7%AD%9B%E9%80%89%E5%AD%97%E5%85%B8%E5%86%85%E5%AE%B9%2F</url>
+    <content type="text"><![CDATA[pw-inspector -h查看帮助 -i 输入文件-o 输出文件-m 有效密码的最小长度-M 有效密码的最大长度-l 小写字母-u 大学字母-p 可打印的字符 -s 特殊字符-n 数字 pw-inspector -i pass.lst -o up.lst -l筛选pass.lst字典小写字符输出为lp.lst(包含一个小写字母也算) pw-inspector -i pass.lst -o up.lst -l u筛选pass.lst字典小写字符输出为up.lst(包含一个大写字母也算)]]></content>
+      <tags>
+        <tag>渗透测试</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[使用hydra破解密码]]></title>
+    <url>%2F2019%2F03%2F29%2F%E4%BD%BF%E7%94%A8hydra%E7%A0%B4%E8%A7%A3%E5%AF%86%E7%A0%81%2F</url>
+    <content type="text"><![CDATA[1.windows密码破解 smb密码破解设置windows账号密码，linux的ssh登陆密码破解hydra破解ftp登陆账号密码hydra破解表单密码，这里是我是dvwa页面破解。密码破解的特征是密码正确会跳转到index.php页面。使用post方式提交密码。hydra -l admin -P comon.lst 192.168.200.244 http-post-form &quot;/dvwa/login.php:username=^USER^&amp;password=^PASS^&amp;Login=L in:S=index.php&quot; -Vxhydra是hydra的图形界面]]></content>
+      <tags>
+        <tag>渗透测试</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[crunch创建密码字典]]></title>
+    <url>%2F2019%2F03%2F18%2Fcrunch%E5%88%9B%E5%BB%BA%E5%AF%86%E7%A0%81%2F</url>
+    <content type="text"><![CDATA[crunch &lt;min-len&gt; &lt;max-len&gt; [&lt;charset string&gt;] [options] – &lt;charset string&gt;默认是小写字符 crunch 6 6 0123456789 -o START -d 2 -b 1mb / -c 100 – -b 按大小分割字典文件（kb/kib、mb/mib、gb/gib） – -c 每个字典的行数 – 以上两个参数必须与-o START 结合使用 – -d 同一字符连贯出现数量（11 / aaa) /usr/share/crunch/charset.lst crunch 内置字符文件 使用crunch 内置字符文件字符集hex-lower创建字典 crunch 1 1 -p 1234567890 | more -p参数指定字符串对对其所有排序组合列车，此命令意思是对1234567890列出这10个数字所有排列组合。其前面的指定密码长度无效 字典组成规则 – crunch 6 6 -t @,%%^^ | more– @：小写字母 lalpha –— ,：大写字母 ualpha– %:数字 numeric– ^:符号 symbols 输出文件压缩 – crunch 4 4 -t @,%^ -o 1.txt -z 7z –其他压缩格式：gzip、bzip2、lzma – 7z压缩比率最大]]></content>
+      <tags>
+        <tag>渗透测试</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[nmap扫描]]></title>
+    <url>%2F2019%2F03%2F11%2Fnmap%E6%89%AB%E6%8F%8F%2F</url>
+    <content type="text"><![CDATA[nmap是一款开源免费的网络发现和安全审计工具，扫描端口、操作系统的版本、端口对应运行的服务等等。zenmap是nmap官方提供的图形界面工具 nmap XXX.XXX.XXX.XXX 完整扫描 nmap -v XXX.XXX.XXX.XXX 打印每一步扫描 nmap -f XXX.XXX.XXX.XXX 扫描常见的端口 nmap -sV XXX.XXX.XXX.XXX 检测服务详细信息 nmap -O XXX.XXX.XXX.XXX 检测主机操作系统以及硬件信息 nmap –script=vuln XXX.XXX.XXX.XXX 扫描目标系统漏洞 namp -sT xxx.xxx.xxx.xxx TCP扫描，这种扫描可能会被目标机系统日志记录 namp -sS tcp syn（半扫描）扫描，一般不会被目标机系统日志记录 namp -sU udp扫描，但是一般不可靠 nmap -v（显示每一条信息） -sn （扫描存活主机，不扫描端口）-PE（通过PE确定机器是否开启） XXX.XXX.XXX.1/24 扫描整个子网 nmap -v -sn -PE XXX.XXX.XXX.1-5指定范围扫描 nmap -v -p 135 XXX.XXX.XXX.XXX扫描指定135端口（多个端口逗号分隔） nmap -sS XXX.XXX.XXX.XXX SYN扫描，隐蔽扫描（不需要创建完整链接）端口：默认情况下，nmap会扫描1000个最有可能开放的tcp端口 namp默认（局域网）扫描 扫描系统信息 扫描系统漏洞 局域网扫描 指定端口扫描，如果未指定端口默认1-1000]]></content>
+      <tags>
+        <tag>渗透测试</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[linux搭建DNS服务器]]></title>
+    <url>%2F2019%2F03%2F08%2Flinux%E6%90%AD%E5%BB%BADNS%E6%9C%8D%E5%8A%A1%E5%99%A8%2F</url>
+    <content type="text"><![CDATA[一.远程登陆&amp;配置yum源下载xshell 安装打开,输入虚拟机ip地址,默认端口号22,然后填账号(root),密码,登陆成功. 配置yum源cd /etc/yum.repos.d/ //进入/etc/repo目录 vim web163.repo //新建yum源文件 配置的网易的yum源(可粘贴复制)32位的系统选这个 [wed163] name=wed baseurl=https://mirrors.163.com/centos/6/os/i386/ mediaid=1384196515.415715 metadata_expire=-1 gpgcheck=1 cost=500 enabled=1 gpgkey=https://mirrors.163.com/centos/6/os/i386/RPM-GPG -KEY-CentOS-6 64位系统选这个 [wed163] name=wed baseurl=https://mirrors.163.com/centos/6/os/x86_64/ mediaid=1384196515.415715 metadata_expire=-1 gpgcheck=1 cost=500 enabled=1 gpgkey=https://mirrors.163.com/centos/6/os/x86_64/RPM-GPG-KEY-CentOS-6 保存退出,下面清理yum缓存且进行测试 clean yum all //清除缓存 clean yum makecache //重新下载缓存 yum repolist //查看yum安装包数量 安装dns,配置dns安装dns,安装成功即可进行下一步yum install bind -y //安装dns(即bind),-y确认 rpm -qa|grep bind //查看bind是否安装成功有bind的相关 配置dns配置主配置文件 named.confcd /etc/ ls named* //查看named相关配置文件 可ka看到named.conf即dns主配置文件 vim /etc/named.conf //编辑主配置文件 如下图所示,进行部分修改,把这三项修改就保存退出 配置正向解析区域vim /etc/named.rfc1912.zones 进行添加解析,修改如图所示.在下面的第二图中,我添加的是”jaie32.com”,这里可以修改成你自己喜欢的域名 ####配置正向区域数据库文件 cd /var/named/ //进入配置目录 ls //查看目录文件 cp -p named.empty jaie32.com.zone //完成复制named.empty文件命名jaie32.com vim jaie32.com.zone //编辑文件,并进行一些修改改如下图所示,完成保持退出 这里的IP地址是自己主机地址,使用ifconfig命令可查看 ###修改主机dns服务器位自己的ip vim /etc/resolv.conf //打开之后修改如下图所示 ####到这里配置基本完成了,下面重启服务 service named restart //重启dns服务 测试dns方法一:ping自己域名(推荐,简单方便)ping www.jaie32.com //可以看到自己的ip,ping通即成功 方法二:nslookup命令nslookup //输入nslookup,然后输入自己的域名如图所示 方法三:dig命令测试dig www.jaie32.com //dig 域名 安装web服务器测试yum install httpd -y //安装web服务器包 service httpd start //启动web服务 然后再打开虚拟机服务器,打开浏览器,输入域名.结果如图所示]]></content>
+      <tags>
+        <tag>linux</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[kali破解密码，pe破解密码]]></title>
+    <url>%2F2019%2F03%2F08%2Fwindows%E5%AF%86%E7%A0%81%E7%A0%B4%E8%A7%A3%2F</url>
+    <content type="text"><![CDATA[kali破解windows密码1.镜像u盘启动（这里用虚拟机模拟） windows增加test用户设置密码，iso镜像：kali 2.BOIS启动，在bois引导中把cd/rom方式置顶。F10保持退出，进入kali安装界面显示，选第一，进入kali。 挂载WINDOW的c盘，破解密码 fdilk -l查看磁盘!并挂载C盘 使用samdump2合并导出SAM和system数据，cat数据内容，jonh破解密码删除windows密码 chntpw修改SAM!这里选1编辑密码选择修改用对应的ID选择1清除密码成功后选q退出，再选y选择保存 重启入bois选择硬盘引导，进入windows选择test用户会发现无需密码登陆了。 利用pe修改密码 创建一个或多个用户，u盘制作pe，（这里使用微pe软件），虚拟机在设置中添加磁盘代理u盘。在bois中把scsi设为第一引导，然后F10保存退出 在pe中选择windows密码修改软件（NTPWEdit）修改密码，然后把bois引导调回磁盘引导开机，可以发现windows用户密码已修改。]]></content>
+      <tags>
+        <tag>渗透测试</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[安装双系统kali和window10的几个坑点]]></title>
+    <url>%2F2019%2F03%2F08%2F%E5%AE%89%E8%A3%85%E5%8F%8C%E7%B3%BB%E7%BB%9Fkali%E5%92%8Cwindow10%E7%9A%84%E5%87%A0%E4%B8%AA%E5%9D%91%E7%82%B9%2F</url>
+    <content type="text"><![CDATA[1.制作kaliu盘启动盘的软件选择我一开始是选择软碟通，制作完成，开机安装kali时，却说找不到u盘。百度google查找下，说是拔出u盘重试，或换个u盘接口，我试了不下10遍，完全没有用。再然后换了个制作U盘的软件rufus，尝试下也不行，然后换了个制作软件u盘软件win32diskimager，发现成功，可以探寻到u盘了，至于为什么只有win32diskimager可以，而软碟通和rufus不可以，我也是很不解的，好像kali官方推荐也是win32diskimager，而且有很多教程用软碟通和rufus却可以，也有很多人不可以，还是推荐用win32diskimager比较省心吧， 2.检测不到固态硬盘我的固电脑是全固态的，在安装检测分区时，检测不到我的固态硬盘，却可以检测我的u盘出来，我一开始是怀疑分区表的问题，我的固态分区表是GUID，U盘是MBR，能不成要转换成GUID，可是一转换，windows系统可能要崩。我插上我的移动硬盘（MBR）也可以检测到，问题就出在固态上，我看网上说可能是磁盘类型是动态磁盘，要调为基本磁盘才可行，但是我的磁盘本来就是基本磁盘，所以排除这个想法。另一个是bios中磁盘模式，要改一下，我就进我bios，但是没有发现有磁盘模式这个选择，难受。在来通过了解，发现是bios是初始版本，没有这个选项，我就上联想官网下载bios下载更新驱动，然后更新驱动就有磁盘模式的选项，我还是第一次更新bios驱动，然后磁盘模式有RAID和AHCI两种模式可选，默认是RAID的，我选AHCI，kali安装分区可以检测我的固态硬盘了，一路安装下去很顺利，kali安装完成可以开机，但当我选windows开机时发现开不起机，然后bios把磁盘模式调回RAID模式时，windows可以开机了，但kali却开不起机，也就是说]]></content>
+      <tags>
+        <tag>渗透测试</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[theharvester的使用]]></title>
+    <url>%2F2019%2F03%2F06%2Ftheharvester%E7%9A%84%E4%BD%BF%E7%94%A8%2F</url>
+    <content type="text"><![CDATA[TheHarvester能够收集电子邮件账号、用户名、主机名和子域名等信息。它通过Google、Bing、PGP、LinkedIn、Baidu、Yandex、People123、Jigsaw、Shodan等公开资源整理收集这些信息。这些信息将在后期的渗透测试阶段发挥巨大的作用。 d 参数制定目标域 -l 参数制定数量 -b 参数指定接口 -s 制定起始数值theharvester -d qq.com -l 200 -b baidu theharvester -d 163.com -b baidu]]></content>
+      <tags>
+        <tag>渗透测试</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Metagoofil]]></title>
+    <url>%2F2019%2F03%2F06%2FMetagoofil%E7%9A%84%E4%BD%BF%E7%94%A8%2F</url>
+    <content type="text"><![CDATA[Metagoofil是由Christian Martorella编写的功能强大的元数据手机工具。它可以自动在搜素引擎中检索和分析文件，还具有提供Mac地址，用户名列表等其他功能。 参数 描述， -d 所搜寻的域名。 -t 要下载的文档类型（pdf，doc，docx，ppt，xls，ods等） -l 搜索结果限制（默认200个） -h 使用目录中的文档处理（”yes”表示本地分析） -n 文件下载限制 -o 工作目录 -f 输出文件 #metagoofil -d baidu.com -l 20 -t doc,pdf -n 5 -f test.html -o test #metagoofil -d wenku.baidu.com -t doc,xls -l 200 -n 50 -o metafiles -f metaResult.html]]></content>
+      <tags>
+        <tag>渗透测试</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[重装系统及相关知识点]]></title>
+    <url>%2F2019%2F03%2F06%2F%E9%87%8D%E8%A3%85%E7%B3%BB%E7%BB%9F%E5%8F%8A%E7%9B%B8%E5%85%B3%E7%9F%A5%E8%AF%86%2F</url>
+    <content type="text"><![CDATA[1.iso镜像直接安装在下个OSI镜像后,双击打开安装,在选择期间,可以选择把是否把用户数据删除,不用删除也可以安装,当然你想来个完全全新的系统,可以选择删除数据.,再等电脑重启就好了 2.ghost 安装（美国赛门铁克公司旗下的硬盘备份还原工具）s Ghost系统是指通过赛门铁克公司（Symantec Corporation）出品的Ghost在装好的操作系统中进行镜像克隆的版本，通常GHOST用于操作系统的备份，在系统不能正常启动的时候用来进行恢复的。 Ghost重装是最简单最方便的重装系统方式，几乎所有的电脑门店和维修店和非官方的系统光盘都是基于Ghost进行重装的，Ghost重装具有操作方便，重装速度快，方法简单的优点Ghost重装系统是从网上下载的操作系统GHO镜像，然后使用Ghost工具（一般使用Onekey Ghost）进行重装。这些镜像系统文件XP的一般在600多M，Win7一般在3–4G左右，Win8一般在3–4G左右 3.U盘安装U盘装系统是目 前一个较为方便的重装系统的方法，只需下载U盘启动盘制作工具制作U盘启动盘，然后在进入系统时设置U盘启动即可，制作工具可以到网上下载。1.下载ISO镜像 2.使用UltraISO文件将系统ISO写入U盘.3.在BIOS界面上将U盘调整为第一启动项（也可以用电脑U盘启动热键）。4.插入U盘并重启计算机，会自动进入安装程序的安装界面，按照提示安装即可。 4.PE安装PE，Windows PE Windows Preinstallation Environment，Windows预安装环境，Windows预先安装环境（Microsoft Windows Preinstallation Environment，简称Windows PE或WinPE）是简化版的Windows XP、Windows Server 2003、Windows Vista、Windows 7 、Windows 8和Windows 10。WinPE是以光盘或其他可携设备作媒介。WinPE作用是方便大企业作出工作站和服务器的企划、给“原始设备制造商”（OEM）制造自定义的Windows操作系统、取代MS-DOS的磁片。Windows PE可理解为Windows的LiveCD。 UEFI 新型UEFI，全称“统一的可扩展固件接口”(Unified Extensible Firmware Interface)， 是一种详细描述类型接口的标准。这种接口用于操作系统自动从预启动的操作环境，加载到一种操作系统上。 BIOS即Basic Input/Output System，翻成中文是“基本输入/输出系统”，是一种所谓的“固件”，负责在开机时做硬件启动和检测等工作，并且担任操作系统控制硬件时的中介角色。因为硬件发展迅速，传统式（Legacy）BIOS 成为进步的包袱，现在已发展出最新的UEFI（Unified Extensible Firmware Interface）可扩展固件接口，相比传统 BIOS 的来说，未来将是一个“没有特定 BIOS”的电脑时代。 与legacy BIOS 相比，UEFI最大的几个区别在于： 编码99%都是由C语言完成； 一改之前的中断、硬件端口操作的方法，而采用了Driver/protocol的新方式； 将不支持X86实模式，而直接采用Flat mode（也就是不能用DOS了，现在有些 EFI 或 UEFI 能用是因为做了兼容，但实际上这部分不属于UEFI的定义了）； 输出也不再是单纯的二进制code，改为Removable Binary Drivers； OS启动不再是调用Int19，而是直接利用protocol/device Path； 对于第三方的开发，前者基本上做不到，除非参与BIOS的设计，但是还要受到ROM的大小限制，而后者就便利多了。7.弥补BIOS对新硬件的支持不足的问题。BIOS它是一组固化到计算机内主板上一个ROM芯片上的程序，它保存着计算机最重要的基本输入输出的程序、开机后自检程序和系统自启动程序，它可从CMOS中读写系统设置的具体信息。 其主要功能是为计算机提供最底层的、最直接的硬件设置和控制。此外，BIOS还向作业系统提供一些系统参数。系统硬件的变化是由BIOS隐藏，程序使用BIOS功能而不是直接控制硬件。现代作业系统会忽略BIOS提供的抽象层并直接控制硬件组件。 BIOS芯片中主要存放：●自诊断程序：通过读取CMOSRAM中的内容识别硬件配置，并对其进行自检和初始化；● CMOS设置程序：引导过程中，用特殊热键启动，进行设置后，存入CMOS RAM中；● 系统自举装载程序：在自检成功后将磁盘相对0道0扇区上的引导程序装入内存，让其运行以装入DOS系统；● 主要I/O设备的驱动程序和中断服务：由于BIOS直接和系统硬件资源打交道，因此总是针对某一类型的硬件系统，而各种硬件系统又各有不同，所以存在各种不同种类的BIOS，随着硬件技术的发展，同一种BIOS也先后出现了不同的版本，新版本的BIOS比起老版本来说，功能更强。 GRUB(GRand Unified Bootloader) GNU GRUB 和GRUB是GRand Unified Bootloader的缩写，它是一个多重操作系统启动管理器。用来引导不同系统，如windows，linux。在X86架构的机器中，Linux、BSD 或其它Unix类的操作系统中GRUB、LILO 是大家最为常用，应该说是主流。Windows也有类似的工具NTLOADER；比如我们在机器中安装了Windows 98后，我们再安装一个Windows XP ，在机器启动的会有一个菜单让我们选择进入是进入Windows 98 还是进入Windows XP。NTLOADER就是一个多系统启动引导管理器，NTLOADER 同样也能引导Linux，只是极为麻烦罢了。在PowerPC 架构的机器中，如果安装了Linux的Powerpc 版本，大多是用yaboot 多重引导管理器，比如Apple机用的是IBM PowerPC处理器，所以在如果想在Apple机上，安装Macos 和Linux Powerpc 版本，大多是用yaboot来引导多个操作系统。因为X86架构的机器仍是主流， 所以目前GRUB和LILO 仍然是我们最常用的多重操作系统引导管理器。 引导过程由硬盘启动时，BIOS通常是转向第一块硬盘的第一个扇区，即主引导记录(MBR)。装载GRUB和操作系统的过程，包括以下几个操作步骤： 装载记录基本引导装载程序所做的唯一的事情就是装载第二引导装载程序。 装载Grub这第二引导装载程序实际上是引出更高级的功能，以允许用户装载一个特定的操作系统。 装载系统如linux内核。GRUB把机器的控制权移交给操作系统。不同的是，微软操作系统都是使用一种称为链式装载的引导方法来启动的，主引导记录仅仅是简单地指向操作系统所在分区的第一个扇区。 MBR（Main Boot Record）主引导记录（MBR）是位于磁盘最前边的一段引导（Loader）代码。它负责磁盘操作系统(DOS)对磁盘进行读写时分区合法性的判别、分区引导信息的定位，它由磁盘操作系统(DOS)在对硬盘进行初始化时产生的。通常，我们将包含MBR引导代码的扇区称为主引导扇区。因这一扇区中，引导代码占有绝大部分的空间，故而将习惯将该扇区称为MBR扇区（简称MBR）。由于这一扇区承担有不同于磁盘上其他普通存储空间的特殊管理职能，作为管理整个磁盘空间的一个特殊空间，它不属于磁盘上的任何分区，因而分区空间内的格式化命令不能清除主引导记录的任何信息。 MBR结构图主引导扇区由三个部分组成(共占用512个字节)：1.主引导程序即主引导记录（MBR）（占446个字节）可在FDISK程序中找到，它用于硬盘启动时将系统控制转给用户指定的并在分区表中登记了的某个操作系统。2.磁盘分区表项（DPT，Disk Partition Table)由四个分区表项构成（每个16个字节）。负责说明磁盘上的分区情况，其内容由磁盘介质及用户在使用FDISK定义分区时决定。（具体内容略）3.结束标志（占2个字节）其值为AA55，存储时低位在前，高位在后，即看上去是55AA（十六进制）。]]></content>
+      <tags>
+        <tag>计算机应用</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[proxychans的使用]]></title>
+    <url>%2F2019%2F03%2F06%2Fproxychans%E7%9A%84%E4%BD%BF%E7%94%A8%2F</url>
+    <content type="text"><![CDATA[vim /etc/proxychains.conf //编辑proxychansdai 在配置内容最后一行保持退出 # proxychains.conf VER 3.1 # # HTTP, SOCKS4, SOCKS5 tunneling proxifier with DNS. # # The option below identifies how the ProxyList is treated. # only one option should be uncommented at time, # otherwise the last appearing option will be accepted # #dynamic_chain # # Dynamic - Each connection will be done via chained proxies # all proxies chained in the order as they appear in the list # at least one proxy must be online to play in chain # (dead proxies are skipped) # otherwise EINTR is returned to the app # strict_chain # # Strict - Each connection will be done via chained proxies # all proxies chained in the order as they appear in the list # all proxies must be online to play in chain # otherwise EINTR is returned to the app # #random_chain # # Random - Each connection will be done via random proxy # (or proxy chain, see chain_len) from the list. # this option is good to test your IDS :) # Make sense only if random_chain #chain_len = 2 # Quiet mode (no output from library) #quiet_mode # Proxy DNS requests - no leak for DNS data proxy_dns # Some timeouts in milliseconds tcp_read_time_out 15000 tcp_connect_time_out 8000 # ProxyList format # type host port [user pass] # (values separated by &#39;tab&#39; or &#39;blank&#39;) # # # Examples: # # socks5 192.168.67.78 1080 lamer secret # http 192.168.89.3 8080 justu hidden # socks4 192.168.1.49 1080 # http 192.168.39.93 8080 # # # proxy types: http, socks4, socks5 # ( auth types supported: &quot;basic&quot;-http &quot;user/pass&quot;-socks ) # [ProxyList] # add proxy here ... # meanwile # defaults set to &quot;tor&quot; socks5 127.0.0.1 8082 测试代理成功与否 proxychains curl myip.ipip.net //查看当前ip 使用方法就是在每个命令下前加个proxychains.]]></content>
+      <tags>
+        <tag>linux</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Hello World]]></title>
+    <url>%2F2019%2F03%2F06%2Fhello-world%2F</url>
+    <content type="text"><![CDATA[Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick StartCreate a new post$ hexo new &quot;My New Post&quot; More info: Writing Run server$ hexo server More info: Server Generate static files$ hexo generate More info: Generating Deploy to remote sites$ hexo deploy More info: Deployment]]></content>
+  </entry>
+</search>
