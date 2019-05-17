@@ -70,7 +70,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT">
+  <meta name="keywords" content="linux,">
 
 
 
@@ -83,13 +83,29 @@
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="Jaie">
-<meta property="og:url" content="https://jaie.cc/archives/2019/03/index.html">
+<meta name="description" content="用户管理1.删除系统特殊的用户账号和组账号查看系统所有用户名cat /etc/passwd删除用户jaie命令userdel jaie 2.用户密码设置编辑login.defs文件vim /etc/login.defs    3.修改自动注销账户的时间编辑profilevim /etc/profile修改“HISTSIZE”参数的值，即注销等待时间    4.给系统用户名密码存放文件加锁，防止非授">
+<meta name="keywords" content="linux">
+<meta property="og:type" content="article">
+<meta property="og:title" content="linux系统安全配置">
+<meta property="og:url" content="https://jaie.cc/2019/05/17/linux系统安全配置/index.html">
 <meta property="og:site_name" content="Jaie">
+<meta property="og:description" content="用户管理1.删除系统特殊的用户账号和组账号查看系统所有用户名cat /etc/passwd删除用户jaie命令userdel jaie 2.用户密码设置编辑login.defs文件vim /etc/login.defs    3.修改自动注销账户的时间编辑profilevim /etc/profile修改“HISTSIZE”参数的值，即注销等待时间    4.给系统用户名密码存放文件加锁，防止非授">
 <meta property="og:locale" content="default">
+<meta property="og:image" content="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190422211440.png">
+<meta property="og:image" content="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190422212541.png">
+<meta property="og:image" content="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190427213536.png">
+<meta property="og:image" content="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190427214415.png">
+<meta property="og:image" content="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190427214415.png">
+<meta property="og:image" content="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190427220856.png">
+<meta property="og:image" content="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190427215120.png">
+<meta property="og:image" content="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190427220448.png">
+<meta property="og:image" content="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190427221401.png">
+<meta property="og:image" content="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190428201734.png">
+<meta property="og:updated_time" content="2019-05-17T00:47:50.407Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Jaie">
+<meta name="twitter:title" content="linux系统安全配置">
+<meta name="twitter:description" content="用户管理1.删除系统特殊的用户账号和组账号查看系统所有用户名cat /etc/passwd删除用户jaie命令userdel jaie 2.用户密码设置编辑login.defs文件vim /etc/login.defs    3.修改自动注销账户的时间编辑profilevim /etc/profile修改“HISTSIZE”参数的值，即注销等待时间    4.给系统用户名密码存放文件加锁，防止非授">
+<meta name="twitter:image" content="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190422211440.png">
 
 
 
@@ -119,13 +135,13 @@
 
 
 
-  <link rel="canonical" href="https://jaie.cc/archives/2019/03/">
+  <link rel="canonical" href="https://jaie.cc/2019/05/17/linux系统安全配置/">
 
 
 
 
 
-  <title>Archive | Jaie</title>
+  <title>linux系统安全配置 | Jaie</title>
   
 
 
@@ -144,7 +160,7 @@
     
   
 
-  <div class="container sidebar-position-left page-archive">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -290,391 +306,216 @@
           <div id="content" class="content">
             
 
-  
-  
-  
-  <div class="post-block archive">
-    <div id="posts" class="posts-collapse">
-      <span class="archive-move-on"></span>
+  <div id="posts" class="posts-expand">
+    
 
-      <span class="archive-page-counter">
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://jaie.cc/2019/05/17/linux系统安全配置/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Jaie">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190424201847.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Jaie">
+    </span>
+
+    
+      <header class="post-header">
+
         
         
+          <h1 class="post-title" itemprop="name headline">linux系统安全配置</h1>
         
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-05-17T08:42:53+08:00">
+                2019-05-17
+              </time>
+            
+
+            
+
+            
+          </span>
+
           
-        
-        Um..! 22 posts in total. Keep on posting.
-      </span>
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/linux/" itemprop="url" rel="index">
+                    <span itemprop="name">linux</span>
+                  </a>
+                </span>
 
-      
-
-        
-        
-        
-
-        
+                
+                
+              
+            </span>
           
-          <div class="collection-title">
-            <h1 class="archive-year" id="archive-year-2019">2019</h1>
-          </div>
-        
-        
 
-        
+          
+            
+          
 
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+          
+          
 
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2019/03/29/markdown语法简略手册/" itemprop="url">
+          
+
+          
+            <div class="post-wordcount">
               
-                <span itemprop="name">markdown语法</span>
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Words count in article&#58;</span>
+                
+                <span title="Words count in article">
+                  574
+                </span>
               
-            </a>
-        
-      </h2>
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-03-29T16:32:08+08:00" content="2019-03-29">
-          03-29
-        </time>
-      </div>
+              
 
-    </header>
-  </article>
+              
+            </div>
+          
 
+          
 
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2019/03/29/hash_identifier和Hashid猜测识别加密算法/" itemprop="url">
-              
-                <span itemprop="name">hash_identifier和Hashid猜测识别加密算法</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-03-29T16:30:05+08:00" content="2019-03-29">
-          03-29
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
       
 
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2019/03/29/使用medusa破解密码/" itemprop="url">
-              
-                <span itemprop="name">使用medusa破解密码</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-03-29T16:28:26+08:00" content="2019-03-29">
-          03-29
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
+      
+        <h3 id="用户管理"><a href="#用户管理" class="headerlink" title="用户管理"></a>用户管理</h3><h5 id="1-删除系统特殊的用户账号和组账号"><a href="#1-删除系统特殊的用户账号和组账号" class="headerlink" title="1.删除系统特殊的用户账号和组账号"></a>1.删除系统特殊的用户账号和组账号</h5><p>查看系统所有用户名<code>cat /etc/passwd</code><br><img src="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190422211440.png" alt><br>删除用户jaie命令<code>userdel jaie</code></p>
+<h5 id="2-用户密码设置"><a href="#2-用户密码设置" class="headerlink" title="2.用户密码设置"></a>2.用户密码设置</h5><p>编辑login.defs文件<code>vim /etc/login.defs</code><br><img src="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190422212541.png" alt>   </p>
+<h5 id="3-修改自动注销账户的时间"><a href="#3-修改自动注销账户的时间" class="headerlink" title="3.修改自动注销账户的时间"></a>3.修改自动注销账户的时间</h5><p>编辑profile<code>vim /etc/profile</code>修改“HISTSIZE”参数的值，即注销等待时间   <br></p>
+<h5 id="4-给系统用户名密码存放文件加锁，防止非授权用户获得权限"><a href="#4-给系统用户名密码存放文件加锁，防止非授权用户获得权限" class="headerlink" title="4.给系统用户名密码存放文件加锁，防止非授权用户获得权限"></a>4.给系统用户名密码存放文件加锁，防止非授权用户获得权限</h5><p>用chattr命令防止系统中某个关键文件被修改:<code>chattr +i /etc/passwd</code><br><img src="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190427213536.png" alt></p>
+<h3 id="系统管理配置"><a href="#系统管理配置" class="headerlink" title="系统管理配置"></a>系统管理配置</h3><h5 id="1-关闭系统不必要的服务"><a href="#1-关闭系统不必要的服务" class="headerlink" title="1.关闭系统不必要的服务"></a>1.关闭系统不必要的服务</h5><p><code>cd /etc/init.d/</code>目录下，使用mv命令把init.d下改为*.old类的文件名，目的是让系统启动时找不到这个服务的文件<br><img src="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190427214415.png" alt><img src="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190427214415.png" alt></p>
+<h5 id="2-修改init-d目录执行权限，防止修改"><a href="#2-修改init-d目录执行权限，防止修改" class="headerlink" title="2.修改init.d目录执行权限，防止修改"></a>2.修改init.d目录执行权限，防止修改</h5><p><img src="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190427220856.png" alt></p>
+<h5 id="3-给系统服务端口列表文件加锁"><a href="#3-给系统服务端口列表文件加锁" class="headerlink" title="3.给系统服务端口列表文件加锁"></a>3.给系统服务端口列表文件加锁</h5><p>防止未经许可的删除或添加服务<br><img src="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190427215120.png" alt>   </p>
+<h5 id="4-修改ssh服务端口"><a href="#4-修改ssh服务端口" class="headerlink" title="4.修改ssh服务端口"></a>4.修改ssh服务端口</h5><p><code>vi /etc/ssh/ssh_config</code>把port前的#去掉，并修改端口号，保存退出。重启shh服务<br><img src="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190427220448.png" alt></p>
+<h5 id="5-修改部分系统文件的SUID和SGID的权限"><a href="#5-修改部分系统文件的SUID和SGID的权限" class="headerlink" title="5.修改部分系统文件的SUID和SGID的权限"></a>5.修改部分系统文件的SUID和SGID的权限</h5><p>权限为SUID和SGID的执行文件，在程序运行过程中，会给进程所有者权限，如果被黑客利用就会给系统造成危害。修改chage文件的权限<br><img src="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190427221401.png" alt>   </p>
+<h5 id="6-日志管理"><a href="#6-日志管理" class="headerlink" title="6.日志管理"></a>6.日志管理</h5><p>使用dmesg查看系统引导日志<br><img src="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190428201734.png" alt><br><code>cd /var/log/</code>在log中可以看到一些的日志文件，修改这些日志的权限可以防止不相干的人修改。   </p>
+<ul>
+<li>lastlog记录用户最后一次成功登录时间   </li>
+<li>loginlog不良的登录尝试记录   </li>
+<li>messages 记录输出系统主控台以及由syslog系统服务程序产生的消息  </li>
+<li>utmp记录当前当前登录得每个用户</li>
+<li>utmp扩展得utmp</li>
+<li>wtmp 记录每一次用户登陆和注销的历史消息  </li>
+<li>wtmpx 扩展的wtmp</li>
+<li>vold.log记录使用外部介质出现的错误</li>
+<li>xferkig记录ftp的存取情况</li>
+<li>sulog记录su命令的使用情况</li>
+<li>acct记录每个用户使用过的命令 </li>
+<li>aculog拔出移动呼叫记录</li>
+<li>XFree86.0.log记录Xfree86 Xwindows服务器最后一次执行的结果<br>文件数字带有.1,.2,.3…文件为轮询日志文件。数字越大，日志越老   </li>
+</ul>
 
       
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2019/03/29/pw-inspector筛选字典内容/" itemprop="url">
-              
-                <span itemprop="name">pw-inspector筛选字典内容</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-03-29T11:27:52+08:00" content="2019-03-29">
-          03-29
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2019/03/29/使用hydra破解密码/" itemprop="url">
-              
-                <span itemprop="name">使用hydra破解密码</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-03-29T10:49:16+08:00" content="2019-03-29">
-          03-29
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2019/03/18/crunch创建密码/" itemprop="url">
-              
-                <span itemprop="name">crunch创建密码字典</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-03-18T12:50:26+08:00" content="2019-03-18">
-          03-18
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2019/03/11/nmap扫描/" itemprop="url">
-              
-                <span itemprop="name">nmap扫描</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-03-11T13:11:16+08:00" content="2019-03-11">
-          03-11
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2019/03/08/linux搭建DNS服务器/" itemprop="url">
-              
-                <span itemprop="name">linux搭建DNS服务器</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-03-08T23:10:58+08:00" content="2019-03-08">
-          03-08
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2019/03/08/windows密码破解/" itemprop="url">
-              
-                <span itemprop="name">kali破解密码，pe破解密码</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-03-08T22:30:15+08:00" content="2019-03-08">
-          03-08
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2019/03/08/安装双系统kali和window10的几个坑点/" itemprop="url">
-              
-                <span itemprop="name">安装双系统kali和window10的几个坑点</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-03-08T20:35:00+08:00" content="2019-03-08">
-          03-08
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
     </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/linux/" rel="tag"><i class="fa fa-tag"></i> linux</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/04/25/文件遍历漏洞/" rel="next" title="文件遍历漏洞">
+                <i class="fa fa-chevron-left"></i> 文件遍历漏洞
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/05/17/Bugku-web题，ctf模拟题sql注入神奇的登陆框/" rel="prev" title="Bugku-web题，ctf模拟题sql注入神奇的登陆框">
+                Bugku-web题，ctf模拟题sql注入神奇的登陆框 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
-
-  
-  <nav class="pagination">
-    <span class="page-number current">1</span><a class="page-number" href="/archives/2019/03/page/2/">2</a><a class="extend next" rel="next" href="/archives/2019/03/page/2/"><i class="fa fa-angle-right"></i></a>
-  </nav>
+  </article>
 
 
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -682,6 +523,15 @@
 
 
           
+
+  
+    <div class="comments" id="comments">
+      <div id="lv-container" data-id="city" data-uid="MTAyMC80MzA1OC8xOTYwNA=="></div>
+    </div>
+
+  
+
+
 
         </div>
         
@@ -702,8 +552,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -800,6 +659,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#用户管理"><span class="nav-number">1.</span> <span class="nav-text">用户管理</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#1-删除系统特殊的用户账号和组账号"><span class="nav-number">1.0.1.</span> <span class="nav-text">1.删除系统特殊的用户账号和组账号</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-用户密码设置"><span class="nav-number">1.0.2.</span> <span class="nav-text">2.用户密码设置</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#3-修改自动注销账户的时间"><span class="nav-number">1.0.3.</span> <span class="nav-text">3.修改自动注销账户的时间</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#4-给系统用户名密码存放文件加锁，防止非授权用户获得权限"><span class="nav-number">1.0.4.</span> <span class="nav-text">4.给系统用户名密码存放文件加锁，防止非授权用户获得权限</span></a></li></ol></li></ol><li class="nav-item nav-level-3"><a class="nav-link" href="#系统管理配置"><span class="nav-number">2.</span> <span class="nav-text">系统管理配置</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#1-关闭系统不必要的服务"><span class="nav-number">2.0.1.</span> <span class="nav-text">1.关闭系统不必要的服务</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-修改init-d目录执行权限，防止修改"><span class="nav-number">2.0.2.</span> <span class="nav-text">2.修改init.d目录执行权限，防止修改</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#3-给系统服务端口列表文件加锁"><span class="nav-number">2.0.3.</span> <span class="nav-text">3.给系统服务端口列表文件加锁</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#4-修改ssh服务端口"><span class="nav-number">2.0.4.</span> <span class="nav-text">4.修改ssh服务端口</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#5-修改部分系统文件的SUID和SGID的权限"><span class="nav-number">2.0.5.</span> <span class="nav-text">5.修改部分系统文件的SUID和SGID的权限</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#6-日志管理"><span class="nav-number">2.0.6.</span> <span class="nav-text">6.日志管理</span></a></li></ol></li></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -956,6 +831,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
@@ -984,6 +863,17 @@
 
 
 
+  
+    <script type="text/javascript">
+      (function(d, s) {
+        var j, e = d.getElementsByTagName(s)[0];
+        if (typeof LivereTower === 'function') { return; }
+        j = d.createElement(s);
+        j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+        j.async = true;
+        e.parentNode.insertBefore(j, e);
+      })(document, 'script');
+    </script>
   
 
 

