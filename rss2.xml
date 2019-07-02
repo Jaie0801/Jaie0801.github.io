@@ -8,8 +8,46 @@
     <atom:link href="/rss2.xml" rel="self" type="application/rss+xml"/>
     
     <description></description>
-    <pubDate>Fri, 17 May 2019 00:49:24 GMT</pubDate>
+    <pubDate>Tue, 02 Jul 2019 14:59:00 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>修改远程桌面3389端口</title>
+      <link>https://jaie.cc/2019/07/02/%E4%BF%AE%E6%94%B9%E8%BF%9C%E7%A8%8B%E6%A1%8C%E9%9D%A23389%E7%AB%AF%E5%8F%A3/</link>
+      <guid>https://jaie.cc/2019/07/02/%E4%BF%AE%E6%94%B9%E8%BF%9C%E7%A8%8B%E6%A1%8C%E9%9D%A23389%E7%AB%AF%E5%8F%A3/</guid>
+      <pubDate>Tue, 02 Jul 2019 14:55:02 GMT</pubDate>
+      <description>
+      
+        
+        
+          &lt;p&gt;在修改前在防火墙添加修改远程端口的允许通过的策略，或者暂时关闭防火墙，不然修改完端口号远程连接连不上。&lt;br&gt;&lt;br&gt;运行regedit找到注册表&lt;br&gt;[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Termina
+        
+      
+      </description>
+      
+      <content:encoded><![CDATA[<p>在修改前在防火墙添加修改远程端口的允许通过的策略，或者暂时关闭防火墙，不然修改完端口号远程连接连不上。<br><br>运行regedit找到注册表<br>[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Terminal Server\Wds\rdpwd\Tds\tcp] PortNumber位置，点击十进制，修改远程连接的端口号，这里以4567为列。<br><img src="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190702193333.png" alt><br><br> 找到注册表[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Terminal Server\WinStations\RDP-Tcp] 双击右边 PortNumber-点十进制-更改值为：4567<br> 使其注册表生效，这里windows server2008/2012 为例，重启生效，<br> 或者运行service.msc，找到remote desktop service服务管理重启生效<br><br> 这里以windows server2008/2012 为例，像xp、server2003比较旧的系统是没有remote desktop service服务,需要重启才能生效<br><br> <img src="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/Snipaste_2019-07-02_21-38-17.png" alt><br><img src="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190702215102.png" alt><br><img src="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190702215325.png" alt></p>]]></content:encoded>
+      
+      <comments>https://jaie.cc/2019/07/02/%E4%BF%AE%E6%94%B9%E8%BF%9C%E7%A8%8B%E6%A1%8C%E9%9D%A23389%E7%AB%AF%E5%8F%A3/#disqus_thread</comments>
+    </item>
+    
+    <item>
+      <title>windows服务器主机加固</title>
+      <link>https://jaie.cc/2019/06/15/windows%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%BB%E6%9C%BA%E5%8A%A0%E5%9B%BA/</link>
+      <guid>https://jaie.cc/2019/06/15/windows%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%BB%E6%9C%BA%E5%8A%A0%E5%9B%BA/</guid>
+      <pubDate>Sat, 15 Jun 2019 12:07:36 GMT</pubDate>
+      <description>
+      
+        
+        
+          &lt;h4 id=&quot;1-禁用Guest账户和无关账户&quot;&gt;&lt;a href=&quot;#1-禁用Guest账户和无关账户&quot; class=&quot;headerlink&quot; title=&quot;1.禁用Guest账户和无关账户&quot;&gt;&lt;/a&gt;1.禁用Guest账户和无关账户&lt;/h4&gt;&lt;p&gt;Guest账户为黑客入侵打开
+        
+      
+      </description>
+      
+      <content:encoded><![CDATA[<h4 id="1-禁用Guest账户和无关账户"><a href="#1-禁用Guest账户和无关账户" class="headerlink" title="1.禁用Guest账户和无关账户"></a>1.禁用Guest账户和无关账户</h4><p>Guest账户为黑客入侵打开了方便之门，黑客使用Guest账户可以进行提权。禁用Guest账户是最好的选择。<br>操作流程：进入“控制面板-&gt;管理工具-&gt;计算机管理-&gt;本地用户和组-&gt;用户-&gt;Guest”<br>“账户已禁用”打勾启用<br><strong>加固后：</strong><br><img src="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190615152823.png" alt>   </p><h4 id="2-密码策略加强"><a href="#2-密码策略加强" class="headerlink" title="2.密码策略加强"></a>2.密码策略加强</h4><p>  操作系统、用户身份鉴别信息应具有不易被冒用的特点，口令应复杂度要求并定期更换。<br>  操作流程：进入“控制面板-&gt;管理工具-&gt;本地安全策略”，在“帐户策略-&gt;密码策略”;<br></p><blockquote><p>“密码必须符合复杂度要求” 设 置为“启用” <br><br>“密码长度最小值”设置为“8个字符”<br><br>“密码最长使用期限”设置为“90天”<br><br>“强制密码历史”设置为“记住5个密码”<br><br>“用可以还原的加密来存储密码”设置为“禁用”<br>  </p></blockquote><p><strong>加固前：</strong><br><img src="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190615153540.png" alt><br><strong>加固后：</strong><br><img src="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190615153659.png" alt>   </p><h4 id="3-账户锁定策略加强"><a href="#3-账户锁定策略加强" class="headerlink" title="3.账户锁定策略加强"></a>3.账户锁定策略加强</h4><p>对于采用静态口令认证技术的设备，应配置当用户连续认证失败次数超过5 次（不含5 次），锁定该用户使用的账号。<br>操作流程：进入“控制面板-&gt;管理工具-&gt;本地安全策略”，在“帐户策略-&gt;帐户锁定策略”：</p><blockquote><p>“账户额锁定阀值”设置为 5 次<br><br>“账户锁定时间”设置为 15分钟<br><br>“复位账户锁定计数器”设置为 15分钟<br></p></blockquote><p><strong>加固前：</strong><br><img src="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190615153915.png" alt><br><strong>加固后</strong><br><img src="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190615154011.png" alt>   </p><h4 id="4-设置安全审计"><a href="#4-设置安全审计" class="headerlink" title="4.设置安全审计"></a>4.设置安全审计</h4><p>在主机的审核策略上设置日志审核策略<br>操作流程：进入“控制面板-&gt;管理工具-&gt;本地安全策略”，在“本地策略-&gt;审核策略”<br>在主机的审核策略上设置日志审核策略：<br></p><blockquote><p>审计帐户登录事件： 成功，失败 <br><br>审计帐户管理： 成功，失败 <br><br>审计目录服务访问： 成功，失败<br><br>审计登录事件： 成功，失败 <br><br>审计对象访问： 成功，失败 <br><br>审计策略更改： 成功，失败 <br><br>审计特权使用： 成功，失败 <br><br>审计系统事件： 成功，失败<br><br>审计过程追踪： 成功，失败</p></blockquote><p><strong>加固前:</strong><br><img src="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190615154341.png" alt><br><strong>加固后:</strong><br><img src="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190615154347.png" alt></p><h4 id="5-设置不显示上次使用的用户名"><a href="#5-设置不显示上次使用的用户名" class="headerlink" title="5.设置不显示上次使用的用户名"></a>5.设置不显示上次使用的用户名</h4><p>在本地安全设置系统登录时不显示上次使用的用户名。<br>进入“控制面板-&gt;管理工具-&gt;本地安全策略”，在“本地策略-&gt;安全选项”；   </p><blockquote><p>“交互式登录：不显示上次的用户名”设置为“已启用”   </p></blockquote><p><strong>加固前：</strong><br><img src="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190615154607.png" alt><br><strong>加固后：</strong><br><img src="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190615154633.png" alt>   </p><h4 id="6启用主机安全选项的”关机前清除虚拟内存页面”"><a href="#6启用主机安全选项的”关机前清除虚拟内存页面”" class="headerlink" title="6启用主机安全选项的”关机前清除虚拟内存页面”"></a>6启用主机安全选项的”关机前清除虚拟内存页面”</h4><p>启用主机安全选项的“关机前清除虚拟内存页面<br>操作流程:进入“控制面板-&gt;管理工具-&gt;本地安全策略”，在“本地策略-&gt;安全选项   </p><blockquote><p>关机：清除虚拟页面文件内存”设置为“已启用”   </p></blockquote><p><strong>加固前：</strong><br><img src="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190615154913.png" alt><br><strong>加固后：</strong><br><img src="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190615155009.png" alt></p><h4 id="7-配置日志文件大小"><a href="#7-配置日志文件大小" class="headerlink" title="7.配置日志文件大小"></a>7.配置日志文件大小</h4><p>   配置日志文件容量，避免受到未预期的删除、修改或覆盖等<br> 操作流程：进入“控制面板-&gt;管理工具-&gt;计算机管理-&gt;事件查看器-&gt;windows日志”，配置<br><strong>加固前：<br> <img src="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190615155216.png" alt><br>加固后：</strong><br><img src="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190615155337.png" alt><br><img src="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190615155348.png" alt><br><img src="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190615155441.png" alt><br><img src="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190615155449.png" alt>   </p><h4 id="8-磁盘配额配置"><a href="#8-磁盘配额配置" class="headerlink" title="8.磁盘配额配置"></a>8.磁盘配额配置</h4><p>磁盘配额可以限制指定账户能够使用的磁盘空间,这样可以避免因某个用户的过度使用磁盘空间造成其他用户无法正常工作甚至影响系统运行<br>操作流程：进入“我的电脑-&gt;C盘-&gt;属性-&gt;配额”，   </p><blockquote><p>“启用磁盘管理”设置为启用<br><br>“磁盘空间限制为”设置为”90GB”<br><br>“将警告等级设为”设置为”90GB”<br><br>“用户超出配额限制时记录事件（G）”打勾启用<br><br>“用户超过警告等级时记录事件（V）”    打勾启用<br></p></blockquote><p><strong>加固前：</strong><br><img src="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190615155700.png" alt><br><strong>加固后：</strong><br><img src="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190615155707.png" alt></p><h4 id="9-远程会话策略"><a href="#9-远程会话策略" class="headerlink" title="9.远程会话策略"></a>9.远程会话策略</h4><p>默认情况下，远程桌面服务允许用户从远程桌面服务会话开连接，而不用注销和结束会话。启用此策略设置，则达到指定时间后将从服务器中删除已断开连接的会话<br>操作流程：进入“运行-&gt;gpedit.msc-&gt;计算机配置-&gt;管理模板-&gt;wondows组件-&gt;远程服务-&gt;远程桌面会话主机-&gt;会话时间限制”，   </p><blockquote><p>“设置已中断会话的时间限制”设置为“已启用”<br><br>“结束已断开连接的会话”设置为“5分钟”    </p></blockquote><p><strong>加固前：</strong><br><img src="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190615155926.png" alt>   <strong>加固后:</strong><br><img src="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190615160011.png" alt>   </p>]]></content:encoded>
+      
+      <comments>https://jaie.cc/2019/06/15/windows%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%BB%E6%9C%BA%E5%8A%A0%E5%9B%BA/#disqus_thread</comments>
+    </item>
     
     <item>
       <title>Bugku-web题，ctf模拟题sql注入神奇的登陆框</title>
@@ -172,45 +210,6 @@ Usag
       <content:encoded><![CDATA[<h2 id="1-斜体和粗体"><a href="#1-斜体和粗体" class="headerlink" title="1. 斜体和粗体"></a>1. 斜体和粗体</h2><pre><code>*斜体* //斜体**粗体** //粗体</code></pre><h2 id="2-分级标题"><a href="#2-分级标题" class="headerlink" title="2. 分级标题"></a>2. 分级标题</h2><p>用#——#####以”#”的个数进行逐级分级，1-5级;<br>用h1——h5逐级分级</p><h2 id="3-外链接"><a href="#3-外链接" class="headerlink" title="3. 外链接"></a>3. 外链接</h2><pre><code>使用 [描述](链接地址) 为文字增加外链接</code></pre><h2 id="5-段落和换行"><a href="#5-段落和换行" class="headerlink" title="5.段落和换行"></a>5.段落和换行</h2><ul><li>第一种写法：直接敲两个回车键即可<br></li><li>第二种写法:在写完一段后敲两个空格，然后回车写下一段  </li><li>第三种写法:<br><code>&lt;br /&gt;</code>作为换行，然后写下一段<h2 id="6-分隔线-amp-引言"><a href="#6-分隔线-amp-引言" class="headerlink" title="6.分隔线&amp;引言"></a>6.分隔线&amp;引言</h2><code>`</code></li></ul><hr><hr><p>===</p><hr><p><code>`引言</code>&gt;<code>加___  还有一种写法就是每一行都用一个 “&gt;” 号&lt;br&gt;</code>&gt; &gt; <code></code>另外一种就是嵌套引用</p><h2 id="7-列表"><a href="#7-列表" class="headerlink" title="7.列表"></a>7.列表</h2><ul><li>无序列表<br>无序列表可以在每行开头用星号、加号、减号来表示，也可以三者混合一起，推荐使用相同的字符，避免混乱<br></li><li>有序列表<br><br>有序列表用数字接着一个英文句点来表示，数字可无序，但还是推荐使用1.、2.，避免混乱。</li></ul><h2 id="8-代码"><a href="#8-代码" class="headerlink" title="8.代码"></a>8.代码</h2><p>代码块用两个<code>这种符号围住  用`</code>（语言）把代码起始行末尾行围住<br><br>用tap键</p><h2 id="9-更多阅读"><a href="#9-更多阅读" class="headerlink" title="9.更多阅读"></a>9.更多阅读</h2><p><code>&lt;!--more--&gt;</code></p>]]></content:encoded>
       
       <comments>https://jaie.cc/2019/03/29/markdown%E8%AF%AD%E6%B3%95%E7%AE%80%E7%95%A5%E6%89%8B%E5%86%8C/#disqus_thread</comments>
-    </item>
-    
-    <item>
-      <title>hash_identifier和Hashid猜测识别加密算法</title>
-      <link>https://jaie.cc/2019/03/29/hash_identifier%E5%92%8CHashid%E7%8C%9C%E6%B5%8B%E8%AF%86%E5%88%AB%E5%8A%A0%E5%AF%86%E7%AE%97%E6%B3%95/</link>
-      <guid>https://jaie.cc/2019/03/29/hash_identifier%E5%92%8CHashid%E7%8C%9C%E6%B5%8B%E8%AF%86%E5%88%AB%E5%8A%A0%E5%AF%86%E7%AE%97%E6%B3%95/</guid>
-      <pubDate>Fri, 29 Mar 2019 08:30:05 GMT</pubDate>
-      <description>
-      
-        
-        
-          &lt;p&gt;1.hash-identifier&lt;br&gt;&lt;img src=&quot;https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190329110918.png&quot; alt&gt;&lt;br&gt;2.hashid&lt;br&gt;&lt;img src
-        
-      
-      </description>
-      
-      <content:encoded><![CDATA[<p>1.hash-identifier<br><img src="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190329110918.png" alt><br>2.hashid<br><img src="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190329154116.png" alt></p>]]></content:encoded>
-      
-      <comments>https://jaie.cc/2019/03/29/hash_identifier%E5%92%8CHashid%E7%8C%9C%E6%B5%8B%E8%AF%86%E5%88%AB%E5%8A%A0%E5%AF%86%E7%AE%97%E6%B3%95/#disqus_thread</comments>
-    </item>
-    
-    <item>
-      <title>使用medusa破解密码</title>
-      <link>https://jaie.cc/2019/03/29/%E4%BD%BF%E7%94%A8medusa%E7%A0%B4%E8%A7%A3%E5%AF%86%E7%A0%81/</link>
-      <guid>https://jaie.cc/2019/03/29/%E4%BD%BF%E7%94%A8medusa%E7%A0%B4%E8%A7%A3%E5%AF%86%E7%A0%81/</guid>
-      <pubDate>Fri, 29 Mar 2019 08:28:26 GMT</pubDate>
-      <description>
-      
-        
-        
-          &lt;ul&gt;
-&lt;li&gt;&lt;code&gt;medusa -h&lt;/code&gt;查看帮助   &lt;img src=&quot;https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190329154601.png&quot; alt&gt;&lt;br&gt;主要参数： 
-        
-      
-      </description>
-      
-      <content:encoded><![CDATA[<ul><li><code>medusa -h</code>查看帮助   <img src="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190329154601.png" alt><br>主要参数：   <blockquote><p>-h 目标域名或ip<br>-H 包含ip后域名的文件<br>-u 用户名测试<br><br>-U 包含要测试的用户名的文件<br><br>-p 密码测试<br>-P 包含要测试的密码的文件<br>-e[n/s/ns]  添加其他密码检查条件 (无密码,密码 = 用户名)<br>-M 要执行的模块的名称 (不包括. mod 扩展)<br>-d 输出所有模块<br><br>-n 用于非默认 TCP 端口号<br>-s 启用ssl   </p></blockquote></li><li><code>medusa -d</code> 输出所有模块<br><img src="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190329160122.png" alt></li><li>medusa破解ftp <br><br>靶机开启ftp服务，攻击机进行破解<br><code>medusa -u root -P comon.lst -h 192.168.200.243 -M ftp</code><br><img src="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190329160635.png" alt><br><img src="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190329160534.png" alt></li><li>medusa破解mysql<br><code>medusa -u root -P comon.lst -h 192.168.200.244 -e ns -M mysql</code> mysql无密码   <img src="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190329161616.png" alt>   </li><li>medusa破解ssh<br><code>medusa -u root -P comon.lst -h 192.168.200.244 -e ns -M ssh</code><br><img src="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190329162419.png" alt><br><img src="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190329162449.png" alt></li></ul>]]></content:encoded>
-      
-      <comments>https://jaie.cc/2019/03/29/%E4%BD%BF%E7%94%A8medusa%E7%A0%B4%E8%A7%A3%E5%AF%86%E7%A0%81/#disqus_thread</comments>
     </item>
     
   </channel>
