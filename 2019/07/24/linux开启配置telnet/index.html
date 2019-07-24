@@ -70,7 +70,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT">
+  <meta name="keywords" content="linux,">
 
 
 
@@ -83,14 +83,23 @@
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="guestbook">
-<meta property="og:url" content="https://jaie.cc/guestbook/index.html">
+<meta name="description" content="1.安装telnet的必要软件yum install telnet telnet-server xinetd -y下载telnet、telnet、xinetd三个软件.2.修改xinetd配置文件vim /etc/xinetd.d/telnet把disable = no 从yes改为no3.配置允许root登录方法一：vim /etc/pam.d/login把修改 account    requi">
+<meta name="keywords" content="linux">
+<meta property="og:type" content="article">
+<meta property="og:title" content="linux开启配置telnet">
+<meta property="og:url" content="https://jaie.cc/2019/07/24/linux开启配置telnet/index.html">
 <meta property="og:site_name" content="Jaie">
+<meta property="og:description" content="1.安装telnet的必要软件yum install telnet telnet-server xinetd -y下载telnet、telnet、xinetd三个软件.2.修改xinetd配置文件vim /etc/xinetd.d/telnet把disable = no 从yes改为no3.配置允许root登录方法一：vim /etc/pam.d/login把修改 account    requi">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-04-24T12:48:38.487Z">
+<meta property="og:image" content="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190710203750.png">
+<meta property="og:image" content="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190710204100.png">
+<meta property="og:image" content="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190710204346.png">
+<meta property="og:image" content="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190710205716.png">
+<meta property="og:updated_time" content="2019-07-24T15:28:43.776Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="guestbook">
+<meta name="twitter:title" content="linux开启配置telnet">
+<meta name="twitter:description" content="1.安装telnet的必要软件yum install telnet telnet-server xinetd -y下载telnet、telnet、xinetd三个软件.2.修改xinetd配置文件vim /etc/xinetd.d/telnet把disable = no 从yes改为no3.配置允许root登录方法一：vim /etc/pam.d/login把修改 account    requi">
+<meta name="twitter:image" content="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190710203750.png">
 
 
 
@@ -120,13 +129,13 @@
 
 
 
-  <link rel="canonical" href="https://jaie.cc/guestbook/">
+  <link rel="canonical" href="https://jaie.cc/2019/07/24/linux开启配置telnet/">
 
 
 
 
 
-  <title>guestbook | Jaie</title>
+  <title>linux开启配置telnet | Jaie</title>
   
 
 
@@ -293,33 +302,186 @@
 
   <div id="posts" class="posts-expand">
     
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://jaie.cc/2019/07/24/linux开启配置telnet/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Jaie">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190424201847.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Jaie">
+    </span>
+
     
-    
-    <div class="post-block page">
       <header class="post-header">
 
-	<h1 class="post-title" itemprop="name headline">guestbook</h1>
-
-
-
-</header>
-
-      
-      
-      
-      <div class="post-body">
         
         
-           <div class="ds-recent-visitors" data-num-items="28" data-avatar-size="42" id="ds-recent-visitors"></div>
+          <h1 class="post-title" itemprop="name headline">linux开启配置telnet</h1>
         
-      </div>
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-07-24T23:26:17+08:00">
+                2019-07-24
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/linux/" itemprop="url" rel="index">
+                    <span itemprop="name">linux</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Words count in article&#58;</span>
+                
+                <span title="Words count in article">
+                  185
+                </span>
+              
+
+              
+
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
       
       
+
+      
+        <p>1.安装telnet的必要软件<br><code>yum install telnet telnet-server xinetd -y</code>下载telnet、telnet、xinetd三个软件.<br>2.修改xinetd配置文件<br><code>vim /etc/xinetd.d/telnet</code>把disable = no 从yes改为no<br><img src="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190710203750.png" alt><br>3.配置允许root登录<br>方法一：<code>vim /etc/pam.d/login</code>把修改 account    required     pam_nologin.so注释掉<br><img src="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190710204100.png" alt><br>方法二：<code>mv /etc/securetty /etc/securetty.bak</code>移除securetty文件</p>
+<p>验证规则设置在/etc/security文件中，该文件定义root用户只能在tty1-tty6的终端上记录，删除该文件或者将其改名即可避开验证规则实现root用户远程登录。<br>4.重启服务本地测试<br><code>service xinetd restart</code>重新启动xinetd服务<br><img src="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190710204346.png" alt><br>在本机telnet自己，telnet 127.0.0.1 root用户登录成功<br> <code>iptables -F</code>关闭防火墙<br>远程成功登录<br><img src="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190710205716.png" alt></p>
+
       
     </div>
     
     
     
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/linux/" rel="tag"><i class="fa fa-tag"></i> linux</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/07/24/linux opendssh 升级/" rel="next" title="linux opendssh 升级">
+                <i class="fa fa-chevron-left"></i> linux opendssh 升级
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
   </div>
 
 

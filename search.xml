@@ -1,9 +1,42 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[linux开启配置telnet]]></title>
+    <url>%2F2019%2F07%2F24%2Flinux%E5%BC%80%E5%90%AF%E9%85%8D%E7%BD%AEtelnet%2F</url>
+    <content type="text"><![CDATA[1.安装telnet的必要软件yum install telnet telnet-server xinetd -y下载telnet、telnet、xinetd三个软件.2.修改xinetd配置文件vim /etc/xinetd.d/telnet把disable = no 从yes改为no3.配置允许root登录方法一：vim /etc/pam.d/login把修改 account required pam_nologin.so注释掉方法二：mv /etc/securetty /etc/securetty.bak移除securetty文件 验证规则设置在/etc/security文件中，该文件定义root用户只能在tty1-tty6的终端上记录，删除该文件或者将其改名即可避开验证规则实现root用户远程登录。4.重启服务本地测试service xinetd restart重新启动xinetd服务在本机telnet自己，telnet 127.0.0.1 root用户登录成功 iptables -F关闭防火墙远程成功登录]]></content>
+      <categories>
+        <category>linux</category>
+      </categories>
+      <tags>
+        <tag>linux</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[linux opendssh 升级]]></title>
+    <url>%2F2019%2F07%2F24%2Flinux%20opendssh%20%E5%8D%87%E7%BA%A7%2F</url>
+    <content type="text"><![CDATA[1.在工作中遇到openshh升级问题，因为客户那边是内网很难搞，要升级openshh要装依赖，客户那边又不能联网，所以我在自己笔记本本地搭建了一个yum服务器，供客户那边linux下载软件包，然后openssh开启中途可能ssh服务不能用，解决这些问题后，我想到开启telnet服务，以防万一，万一Linux不能连接，客户不得拿刀砍我，， 1.开始工作查看系统版本、查看openssh版本，下载openssh最新包我这里是openshh8.0shh -V查看openssh版本，rpm -qa|grep openssh查看openssh相关包2.安装必要软件cp /etc/init.d/sshd /etc/init.d/sshd.bak备份下sshd文件yum -y install gcc pam pam-devel zlib zlib-devel openssl-devel3.安装openshh卸载旧的openssh rpm -e `rpm -qa | grep openssh` --nodeps解压openssh安装包tar -zxvf openssh-8.0p1.tar_2.gz./configure --prefix=/usr --sysconfdir=/etc/ssh --with-md5-passwords --with-zlib --with-ssl-dir=/usr/local/ssl --with-privsep-path=/var/lib/sshd ```make install 安装完成如果遇到报错chmod 600 /etc/ssh/ssh_host_*输入这些命令`install -v -m755 contrib/ssh-copy-id /usr/bin install -v -m644 contrib/ssh-copy-id.1 /usr/share/man/man1 install -v -m755 -d /usr/share/doc/openssh-8.0p1 install -v -m644 INSTALL LICENCE OVERVIEW README* /usr/share/doc/openssh-8.0p1ssh -V测试一下现在的版本是多少了，openssh 8.0了]]></content>
+      <categories>
+        <category>linux</category>
+      </categories>
+      <tags>
+        <tag>linux</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[搭建本地yum服务器]]></title>
+    <url>%2F2019%2F07%2F24%2F%E6%90%AD%E5%BB%BA%E6%9C%AC%E5%9C%B0yum%E6%9C%8D%E5%8A%A1%E5%99%A8%2F</url>
+    <content type="text"><![CDATA[1.在linux安装apache我这里是拿kali虚拟机自带的apache做中间件。dpkg -L apache2查看apache相关的文件,在/var/www下web网页放置 2.虚拟机挂载cent光盘df -h 列出文件系统、找出光盘的文件系统，mount /dev/sr1 /mnt/cdrom挂载/dev/sr1到/mnt/cdrom 3.将光盘的安装包拷贝到web目录下mkdir /var/www/centos 创建目录 /var/www/centos mkdir /var/www/centos/x86_64创建目录/var/www/centos/x86_64mkdir /var/www/centos/extra创建目录/var/www/centos/extramkdir /var/www/centos/update创建目录/var/www/centos/updatecd /mnt/cdrom/ls进入挂载光盘的目录 查看光盘文件cp Packages/* /var/www/centos/x86_64/ 把 Packages/下的软件包复制到/var/www/centos/x86_64/目录下，apt-get install -y createrepo下载createrepo，目的是生成repodata目录createrepo -pdo /var/www/centos/x86_64 /var/www/centos/x86_64createrepo -pdo /var/www/centos/extra /var/www/centos/extracreaterepo -pdo /var/www/centos/update /var/www/centos/eupdate重启一下apache服务service apache2 restart测试访问web网页，ip为虚拟机的4.客户端配置访问yum源服务器vim /etc/yum.repos.d/CentOS-Base.repoyum clean all 清除所有缓存yum makecache 重新下载缓存可以发现已经可以了，现在测试一下，下载一个tree包试一下yum install tree -y可能cdrom里面的包不够多，我们同步一下163远程的包，用rsync协议rsync -avrt --delete rsync://mirrors.163.com/centos/6/updates/x86_ 64/Packages/ /var/www/centos/update]]></content>
+      <categories>
+        <category>linux</category>
+      </categories>
+      <tags>
+        <tag>linux</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[修改远程桌面3389端口]]></title>
     <url>%2F2019%2F07%2F02%2F%E4%BF%AE%E6%94%B9%E8%BF%9C%E7%A8%8B%E6%A1%8C%E9%9D%A23389%E7%AB%AF%E5%8F%A3%2F</url>
-    <content type="text"><![CDATA[在修改前在防火墙添加修改远程端口的允许通过的策略，或者暂时关闭防火墙，不然修改完端口号远程连接连不上。运行regedit找到注册表[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Terminal Server\Wds\rdpwd\Tds\tcp] PortNumber位置，点击十进制，修改远程连接的端口号，这里以4567为列。 找到注册表[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Terminal Server\WinStations\RDP-Tcp] 双击右边 PortNumber-点十进制-更改值为：4567 使其注册表生效，这里windows server2008/2012 为例，重启生效， 或者运行service.msc，找到remote desktop service服务管理重启生效 这里以windows server2008/2012 为例，像xp、server2003比较旧的系统是没有remote desktop service服务,需要重启才能生效]]></content>
+    <content type="text"><![CDATA[在修改前在防火墙添加修改远程端口的允许通过的策略，或者暂时关闭防火墙，不然修改完端口号远程连接不上。运行regedit找到注册表[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Terminal Server\Wds\rdpwd\Tds\tcp] PortNumber位置，点击十进制，修改远程连接的端口号，这里以4567为列。 找到注册表[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Terminal Server\WinStations\RDP-Tcp] 双击右边 PortNumber-点十进制-更改值为：4567 使其注册表生效，这里windows server2008/2012 为例，重启生效， 或者运行service.msc，找到remote desktop service服务管理重启生效 这里以windows server2008/2012 为例，像xp、server2003比较旧的系统是没有remote desktop service服务,需要重启才能生效]]></content>
       <categories>
         <category>windows</category>
       </categories>

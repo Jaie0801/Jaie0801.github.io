@@ -70,7 +70,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT">
+  <meta name="keywords" content="linux,">
 
 
 
@@ -83,14 +83,24 @@
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="guestbook">
-<meta property="og:url" content="https://jaie.cc/guestbook/index.html">
+<meta name="description" content="1.在工作中遇到openshh升级问题，因为客户那边是内网很难搞，要升级openshh要装依赖，客户那边又不能联网，所以我在自己笔记本本地搭建了一个yum服务器，供客户那边linux下载软件包，然后openssh开启中途可能ssh服务不能用，解决这些问题后，我想到开启telnet服务，以防万一，万一Linux不能连接，客户不得拿刀砍我，， 1.开始工作查看系统版本、查看openssh版本，下载op">
+<meta name="keywords" content="linux">
+<meta property="og:type" content="article">
+<meta property="og:title" content="linux opendssh 升级">
+<meta property="og:url" content="https://jaie.cc/2019/07/24/linux opendssh 升级/index.html">
 <meta property="og:site_name" content="Jaie">
+<meta property="og:description" content="1.在工作中遇到openshh升级问题，因为客户那边是内网很难搞，要升级openshh要装依赖，客户那边又不能联网，所以我在自己笔记本本地搭建了一个yum服务器，供客户那边linux下载软件包，然后openssh开启中途可能ssh服务不能用，解决这些问题后，我想到开启telnet服务，以防万一，万一Linux不能连接，客户不得拿刀砍我，， 1.开始工作查看系统版本、查看openssh版本，下载op">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-04-24T12:48:38.487Z">
+<meta property="og:image" content="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190719164633.png">
+<meta property="og:image" content="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190710205953.png">
+<meta property="og:image" content="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190710210938.png">
+<meta property="og:image" content="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190710210724.png">
+<meta property="og:image" content="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190710213013.png">
+<meta property="og:updated_time" content="2019-07-24T15:28:12.523Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="guestbook">
+<meta name="twitter:title" content="linux opendssh 升级">
+<meta name="twitter:description" content="1.在工作中遇到openshh升级问题，因为客户那边是内网很难搞，要升级openshh要装依赖，客户那边又不能联网，所以我在自己笔记本本地搭建了一个yum服务器，供客户那边linux下载软件包，然后openssh开启中途可能ssh服务不能用，解决这些问题后，我想到开启telnet服务，以防万一，万一Linux不能连接，客户不得拿刀砍我，， 1.开始工作查看系统版本、查看openssh版本，下载op">
+<meta name="twitter:image" content="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190719164633.png">
 
 
 
@@ -120,13 +130,13 @@
 
 
 
-  <link rel="canonical" href="https://jaie.cc/guestbook/">
+  <link rel="canonical" href="https://jaie.cc/2019/07/24/linux opendssh 升级/">
 
 
 
 
 
-  <title>guestbook | Jaie</title>
+  <title>linux opendssh 升级 | Jaie</title>
   
 
 
@@ -293,33 +303,196 @@
 
   <div id="posts" class="posts-expand">
     
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://jaie.cc/2019/07/24/linux opendssh 升级/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Jaie">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190424201847.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Jaie">
+    </span>
+
     
-    
-    <div class="post-block page">
       <header class="post-header">
 
-	<h1 class="post-title" itemprop="name headline">guestbook</h1>
-
-
-
-</header>
-
-      
-      
-      
-      <div class="post-body">
         
         
-           <div class="ds-recent-visitors" data-num-items="28" data-avatar-size="42" id="ds-recent-visitors"></div>
+          <h1 class="post-title" itemprop="name headline">linux opendssh 升级</h1>
         
-      </div>
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-07-24T23:26:07+08:00">
+                2019-07-24
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/linux/" itemprop="url" rel="index">
+                    <span itemprop="name">linux</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Words count in article&#58;</span>
+                
+                <span title="Words count in article">
+                  326
+                </span>
+              
+
+              
+
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
       
       
+
+      
+        <p>1.在工作中遇到openshh升级问题，因为客户那边是内网很难搞，要升级openshh要装依赖，客户那边又不能联网，所以我在自己笔记本本地搭建了一个yum服务器，供客户那边linux下载软件包，然后openssh开启中途可能ssh服务不能用，解决这些问题后，我想到开启telnet服务，以防万一，万一Linux不能连接，客户不得拿刀砍我，，<br><img src="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190719164633.png" alt></p>
+<h5 id="1-开始工作"><a href="#1-开始工作" class="headerlink" title="1.开始工作"></a>1.开始工作</h5><p>查看系统版本、查看openssh版本，下载openssh最新包我这里是openshh8.0<br><code>shh -V</code>查看openssh版本，<br><code>rpm -qa|grep openssh</code>查看openssh相关包<br><img src="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190710205953.png" alt><br>2.安装必要软件<br><code>cp /etc/init.d/sshd /etc/init.d/sshd.bak</code>备份下sshd文件<br><code>yum -y install gcc pam pam-devel zlib zlib-devel openssl-devel</code><br><img src="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190710210938.png" alt><br>3.安装openshh<br>卸载旧的openssh  <code>rpm -e `rpm -qa | grep openssh` --nodeps</code><br>解压openssh安装包<code>tar -zxvf openssh-8.0p1.tar_2.gz</code><br><br><img src="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190710210724.png" alt><br><code>./configure    --prefix=/usr  --sysconfdir=/etc/ssh  --with-md5-passwords --with-zlib --with-ssl-dir=/usr/local/ssl --with-privsep-path=/var/lib/sshd</code>   </p>
+<pre><code class="make```">```make install
+</code></pre>
+<p>安装完成<br><br>如果遇到报错chmod 600 /etc/ssh/ssh_host_*<br>输入这些命令<br><code>`</code>install -v -m755 contrib/ssh-copy-id /usr/bin</p>
+<p>install -v -m644 contrib/ssh-copy-id.1 /usr/share/man/man1</p>
+<p>install -v -m755 -d /usr/share/doc/openssh-8.0p1</p>
+<p>install -v -m644 INSTALL LICENCE OVERVIEW README* /usr/share/doc/openssh-8.0p1<br><code>ssh -V</code>测试一下现在的版本是多少了，openssh  8.0了<br><img src="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190710213013.png" alt></p>
+
       
     </div>
     
     
     
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/linux/" rel="tag"><i class="fa fa-tag"></i> linux</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/07/24/搭建本地yum服务器/" rel="next" title="搭建本地yum服务器">
+                <i class="fa fa-chevron-left"></i> 搭建本地yum服务器
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/07/24/linux开启配置telnet/" rel="prev" title="linux开启配置telnet">
+                linux开启配置telnet <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
   </div>
 
 
@@ -357,8 +530,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -455,6 +637,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-5"><a class="nav-link" href="#1-开始工作"><span class="nav-number">1.</span> <span class="nav-text">1.开始工作</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       

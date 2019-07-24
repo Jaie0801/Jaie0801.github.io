@@ -70,7 +70,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT">
+  <meta name="keywords" content="linux,">
 
 
 
@@ -83,14 +83,29 @@
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="guestbook">
-<meta property="og:url" content="https://jaie.cc/guestbook/index.html">
+<meta name="description" content="1.在linux安装apache我这里是拿kali虚拟机自带的apache做中间件。dpkg  -L apache2查看apache相关的文件,在/var/www下web网页放置   2.虚拟机挂载cent光盘df -h 列出文件系统、找出光盘的文件系统，mount /dev/sr1 /mnt/cdrom挂载/dev/sr1到/mnt/cdrom 3.将光盘的安装包拷贝到web目录下mkdir /">
+<meta name="keywords" content="linux">
+<meta property="og:type" content="article">
+<meta property="og:title" content="搭建本地yum服务器">
+<meta property="og:url" content="https://jaie.cc/2019/07/24/搭建本地yum服务器/index.html">
 <meta property="og:site_name" content="Jaie">
+<meta property="og:description" content="1.在linux安装apache我这里是拿kali虚拟机自带的apache做中间件。dpkg  -L apache2查看apache相关的文件,在/var/www下web网页放置   2.虚拟机挂载cent光盘df -h 列出文件系统、找出光盘的文件系统，mount /dev/sr1 /mnt/cdrom挂载/dev/sr1到/mnt/cdrom 3.将光盘的安装包拷贝到web目录下mkdir /">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-04-24T12:48:38.487Z">
+<meta property="og:image" content="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190710202523.png">
+<meta property="og:image" content="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190710220103.png">
+<meta property="og:image" content="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190710220701.png">
+<meta property="og:image" content="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190710222523.png">
+<meta property="og:image" content="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190710221216.png">
+<meta property="og:image" content="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190710223500.png">
+<meta property="og:image" content="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190710223704.png">
+<meta property="og:image" content="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190710231018.png">
+<meta property="og:image" content="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190719170252.png">
+<meta property="og:image" content="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190710234653.png">
+<meta property="og:updated_time" content="2019-07-24T15:29:20.032Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="guestbook">
+<meta name="twitter:title" content="搭建本地yum服务器">
+<meta name="twitter:description" content="1.在linux安装apache我这里是拿kali虚拟机自带的apache做中间件。dpkg  -L apache2查看apache相关的文件,在/var/www下web网页放置   2.虚拟机挂载cent光盘df -h 列出文件系统、找出光盘的文件系统，mount /dev/sr1 /mnt/cdrom挂载/dev/sr1到/mnt/cdrom 3.将光盘的安装包拷贝到web目录下mkdir /">
+<meta name="twitter:image" content="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190710202523.png">
 
 
 
@@ -120,13 +135,13 @@
 
 
 
-  <link rel="canonical" href="https://jaie.cc/guestbook/">
+  <link rel="canonical" href="https://jaie.cc/2019/07/24/搭建本地yum服务器/">
 
 
 
 
 
-  <title>guestbook | Jaie</title>
+  <title>搭建本地yum服务器 | Jaie</title>
   
 
 
@@ -293,33 +308,191 @@
 
   <div id="posts" class="posts-expand">
     
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://jaie.cc/2019/07/24/搭建本地yum服务器/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Jaie">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190424201847.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Jaie">
+    </span>
+
     
-    
-    <div class="post-block page">
       <header class="post-header">
 
-	<h1 class="post-title" itemprop="name headline">guestbook</h1>
-
-
-
-</header>
-
-      
-      
-      
-      <div class="post-body">
         
         
-           <div class="ds-recent-visitors" data-num-items="28" data-avatar-size="42" id="ds-recent-visitors"></div>
+          <h1 class="post-title" itemprop="name headline">搭建本地yum服务器</h1>
         
-      </div>
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-07-24T23:25:33+08:00">
+                2019-07-24
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/linux/" itemprop="url" rel="index">
+                    <span itemprop="name">linux</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Words count in article&#58;</span>
+                
+                <span title="Words count in article">
+                  342
+                </span>
+              
+
+              
+
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
       
       
+
+      
+        <h5 id="1-在linux安装apache"><a href="#1-在linux安装apache" class="headerlink" title="1.在linux安装apache"></a>1.在linux安装apache</h5><p>我这里是拿kali虚拟机自带的apache做中间件。<br><code>dpkg  -L apache2</code>查看apache相关的文件,在/var/www下web网页放置<br><img src="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190710202523.png" alt>  </p>
+<h5 id="2-虚拟机挂载cent光盘"><a href="#2-虚拟机挂载cent光盘" class="headerlink" title="2.虚拟机挂载cent光盘"></a>2.虚拟机挂载cent光盘</h5><p><img src="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190710220103.png" alt><br><code>df -h</code> 列出文件系统、找出光盘的文件系统，<br><code>mount /dev/sr1 /mnt/cdrom</code>挂载/dev/sr1到/mnt/cdrom<br><img src="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190710220701.png" alt></p>
+<h5 id="3-将光盘的安装包拷贝到web目录下"><a href="#3-将光盘的安装包拷贝到web目录下" class="headerlink" title="3.将光盘的安装包拷贝到web目录下"></a>3.将光盘的安装包拷贝到web目录下</h5><p><code>mkdir /var/www/centos</code> 创建目录 /var/www/centos <br><br><code>mkdir /var/www/centos/x86_64</code>创建目录/var/www/centos/x86_64<br><br><code>mkdir /var/www/centos/extra</code>创建目录/var/www/centos/extra<br><br><code>mkdir /var/www/centos/update</code>创建目录/var/www/centos/update<br><br><img src="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190710222523.png" alt><br><br><code>cd /mnt/cdrom/</code><br><br><code>ls</code>进入挂载光盘的目录  查看光盘文件<br><code>cp Packages/* /var/www/centos/x86_64/</code> 把 Packages/下的软件包复制到/var/www/centos/x86_64/目录下，<br><img src="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190710221216.png" alt><br><code>apt-get install -y createrepo</code>下载createrepo，目的是生成repodata目录<br><br><code>createrepo -pdo /var/www/centos/x86_64 /var/www/centos/x86_64</code><br><br><code>createrepo -pdo /var/www/centos/extra /var/www/centos/extra</code><br><br><code>createrepo -pdo /var/www/centos/update /var/www/centos/eupdate</code><br><br>重启一下apache服务<code>service apache2 restart</code><br><br>测试访问web网页，ip为虚拟机的<br><img src="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190710223500.png" alt><br><img src="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190710223704.png" alt><br><img src="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190710231018.png" alt><br><br>4.客户端配置访问yum源服务器<br><code>vim /etc/yum.repos.d/CentOS-Base.repo</code><br><img src="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190719170252.png" alt><br><code>yum clean all</code> 清除所有缓存<br><code>yum makecache</code> 重新下载缓存<br>可以发现已经可以了，现在测试一下，下载一个tree包试一下<br><code>yum install tree -y</code><br><br>可能cdrom里面的包不够多，我们同步一下163远程的包，用rsync协议<br><code>rsync -avrt --delete rsync://mirrors.163.com/centos/6/updates/x86_ 64/Packages/ /var/www/centos/update</code><br><img src="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190710234653.png" alt></p>
+
       
     </div>
     
     
     
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/linux/" rel="tag"><i class="fa fa-tag"></i> linux</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/07/02/修改远程桌面3389端口/" rel="next" title="修改远程桌面3389端口">
+                <i class="fa fa-chevron-left"></i> 修改远程桌面3389端口
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/07/24/linux opendssh 升级/" rel="prev" title="linux opendssh 升级">
+                linux opendssh 升级 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
   </div>
 
 
@@ -357,8 +530,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -455,6 +637,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-5"><a class="nav-link" href="#1-在linux安装apache"><span class="nav-number">1.</span> <span class="nav-text">1.在linux安装apache</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-虚拟机挂载cent光盘"><span class="nav-number">2.</span> <span class="nav-text">2.虚拟机挂载cent光盘</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#3-将光盘的安装包拷贝到web目录下"><span class="nav-number">3.</span> <span class="nav-text">3.将光盘的安装包拷贝到web目录下</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       

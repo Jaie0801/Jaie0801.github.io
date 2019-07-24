@@ -8,8 +8,65 @@
     <atom:link href="/rss2.xml" rel="self" type="application/rss+xml"/>
     
     <description></description>
-    <pubDate>Tue, 02 Jul 2019 14:59:00 GMT</pubDate>
+    <pubDate>Wed, 24 Jul 2019 15:28:43 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>linux开启配置telnet</title>
+      <link>https://jaie.cc/2019/07/24/linux%E5%BC%80%E5%90%AF%E9%85%8D%E7%BD%AEtelnet/</link>
+      <guid>https://jaie.cc/2019/07/24/linux%E5%BC%80%E5%90%AF%E9%85%8D%E7%BD%AEtelnet/</guid>
+      <pubDate>Wed, 24 Jul 2019 15:26:17 GMT</pubDate>
+      <description>
+      
+        
+        
+          &lt;p&gt;1.安装telnet的必要软件&lt;br&gt;&lt;code&gt;yum install telnet telnet-server xinetd -y&lt;/code&gt;下载telnet、telnet、xinetd三个软件.&lt;br&gt;2.修改xinetd配置文件&lt;br&gt;&lt;code&gt;vim /etc
+        
+      
+      </description>
+      
+      <content:encoded><![CDATA[<p>1.安装telnet的必要软件<br><code>yum install telnet telnet-server xinetd -y</code>下载telnet、telnet、xinetd三个软件.<br>2.修改xinetd配置文件<br><code>vim /etc/xinetd.d/telnet</code>把disable = no 从yes改为no<br><img src="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190710203750.png" alt><br>3.配置允许root登录<br>方法一：<code>vim /etc/pam.d/login</code>把修改 account    required     pam_nologin.so注释掉<br><img src="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190710204100.png" alt><br>方法二：<code>mv /etc/securetty /etc/securetty.bak</code>移除securetty文件</p><p>验证规则设置在/etc/security文件中，该文件定义root用户只能在tty1-tty6的终端上记录，删除该文件或者将其改名即可避开验证规则实现root用户远程登录。<br>4.重启服务本地测试<br><code>service xinetd restart</code>重新启动xinetd服务<br><img src="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190710204346.png" alt><br>在本机telnet自己，telnet 127.0.0.1 root用户登录成功<br> <code>iptables -F</code>关闭防火墙<br>远程成功登录<br><img src="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190710205716.png" alt></p>]]></content:encoded>
+      
+      <comments>https://jaie.cc/2019/07/24/linux%E5%BC%80%E5%90%AF%E9%85%8D%E7%BD%AEtelnet/#disqus_thread</comments>
+    </item>
+    
+    <item>
+      <title>linux opendssh 升级</title>
+      <link>https://jaie.cc/2019/07/24/linux%20opendssh%20%E5%8D%87%E7%BA%A7/</link>
+      <guid>https://jaie.cc/2019/07/24/linux%20opendssh%20%E5%8D%87%E7%BA%A7/</guid>
+      <pubDate>Wed, 24 Jul 2019 15:26:07 GMT</pubDate>
+      <description>
+      
+        
+        
+          &lt;p&gt;1.在工作中遇到openshh升级问题，因为客户那边是内网很难搞，要升级openshh要装依赖，客户那边又不能联网，所以我在自己笔记本本地搭建了一个yum服务器，供客户那边linux下载软件包，然后openssh开启中途可能ssh服务不能用，解决这些问题后，我想到开启tel
+        
+      
+      </description>
+      
+      <content:encoded><![CDATA[<p>1.在工作中遇到openshh升级问题，因为客户那边是内网很难搞，要升级openshh要装依赖，客户那边又不能联网，所以我在自己笔记本本地搭建了一个yum服务器，供客户那边linux下载软件包，然后openssh开启中途可能ssh服务不能用，解决这些问题后，我想到开启telnet服务，以防万一，万一Linux不能连接，客户不得拿刀砍我，，<br><img src="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190719164633.png" alt></p><h5 id="1-开始工作"><a href="#1-开始工作" class="headerlink" title="1.开始工作"></a>1.开始工作</h5><p>查看系统版本、查看openssh版本，下载openssh最新包我这里是openshh8.0<br><code>shh -V</code>查看openssh版本，<br><code>rpm -qa|grep openssh</code>查看openssh相关包<br><img src="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190710205953.png" alt><br>2.安装必要软件<br><code>cp /etc/init.d/sshd /etc/init.d/sshd.bak</code>备份下sshd文件<br><code>yum -y install gcc pam pam-devel zlib zlib-devel openssl-devel</code><br><img src="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190710210938.png" alt><br>3.安装openshh<br>卸载旧的openssh  <code>rpm -e `rpm -qa | grep openssh` --nodeps</code><br>解压openssh安装包<code>tar -zxvf openssh-8.0p1.tar_2.gz</code><br><br><img src="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190710210724.png" alt><br><code>./configure    --prefix=/usr  --sysconfdir=/etc/ssh  --with-md5-passwords --with-zlib --with-ssl-dir=/usr/local/ssl --with-privsep-path=/var/lib/sshd</code>   </p><pre><code class="make```">```make install</code></pre><p>安装完成<br><br>如果遇到报错chmod 600 /etc/ssh/ssh_host_*<br>输入这些命令<br><code>`</code>install -v -m755 contrib/ssh-copy-id /usr/bin</p><p>install -v -m644 contrib/ssh-copy-id.1 /usr/share/man/man1</p><p>install -v -m755 -d /usr/share/doc/openssh-8.0p1</p><p>install -v -m644 INSTALL LICENCE OVERVIEW README* /usr/share/doc/openssh-8.0p1<br><code>ssh -V</code>测试一下现在的版本是多少了，openssh  8.0了<br><img src="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190710213013.png" alt></p>]]></content:encoded>
+      
+      <comments>https://jaie.cc/2019/07/24/linux%20opendssh%20%E5%8D%87%E7%BA%A7/#disqus_thread</comments>
+    </item>
+    
+    <item>
+      <title>搭建本地yum服务器</title>
+      <link>https://jaie.cc/2019/07/24/%E6%90%AD%E5%BB%BA%E6%9C%AC%E5%9C%B0yum%E6%9C%8D%E5%8A%A1%E5%99%A8/</link>
+      <guid>https://jaie.cc/2019/07/24/%E6%90%AD%E5%BB%BA%E6%9C%AC%E5%9C%B0yum%E6%9C%8D%E5%8A%A1%E5%99%A8/</guid>
+      <pubDate>Wed, 24 Jul 2019 15:25:33 GMT</pubDate>
+      <description>
+      
+        
+        
+          &lt;h5 id=&quot;1-在linux安装apache&quot;&gt;&lt;a href=&quot;#1-在linux安装apache&quot; class=&quot;headerlink&quot; title=&quot;1.在linux安装apache&quot;&gt;&lt;/a&gt;1.在linux安装apache&lt;/h5&gt;&lt;p&gt;我这里是拿kali虚拟机自带
+        
+      
+      </description>
+      
+      <content:encoded><![CDATA[<h5 id="1-在linux安装apache"><a href="#1-在linux安装apache" class="headerlink" title="1.在linux安装apache"></a>1.在linux安装apache</h5><p>我这里是拿kali虚拟机自带的apache做中间件。<br><code>dpkg  -L apache2</code>查看apache相关的文件,在/var/www下web网页放置<br><img src="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190710202523.png" alt>  </p><h5 id="2-虚拟机挂载cent光盘"><a href="#2-虚拟机挂载cent光盘" class="headerlink" title="2.虚拟机挂载cent光盘"></a>2.虚拟机挂载cent光盘</h5><p><img src="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190710220103.png" alt><br><code>df -h</code> 列出文件系统、找出光盘的文件系统，<br><code>mount /dev/sr1 /mnt/cdrom</code>挂载/dev/sr1到/mnt/cdrom<br><img src="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190710220701.png" alt></p><h5 id="3-将光盘的安装包拷贝到web目录下"><a href="#3-将光盘的安装包拷贝到web目录下" class="headerlink" title="3.将光盘的安装包拷贝到web目录下"></a>3.将光盘的安装包拷贝到web目录下</h5><p><code>mkdir /var/www/centos</code> 创建目录 /var/www/centos <br><br><code>mkdir /var/www/centos/x86_64</code>创建目录/var/www/centos/x86_64<br><br><code>mkdir /var/www/centos/extra</code>创建目录/var/www/centos/extra<br><br><code>mkdir /var/www/centos/update</code>创建目录/var/www/centos/update<br><br><img src="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190710222523.png" alt><br><br><code>cd /mnt/cdrom/</code><br><br><code>ls</code>进入挂载光盘的目录  查看光盘文件<br><code>cp Packages/* /var/www/centos/x86_64/</code> 把 Packages/下的软件包复制到/var/www/centos/x86_64/目录下，<br><img src="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190710221216.png" alt><br><code>apt-get install -y createrepo</code>下载createrepo，目的是生成repodata目录<br><br><code>createrepo -pdo /var/www/centos/x86_64 /var/www/centos/x86_64</code><br><br><code>createrepo -pdo /var/www/centos/extra /var/www/centos/extra</code><br><br><code>createrepo -pdo /var/www/centos/update /var/www/centos/eupdate</code><br><br>重启一下apache服务<code>service apache2 restart</code><br><br>测试访问web网页，ip为虚拟机的<br><img src="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190710223500.png" alt><br><img src="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190710223704.png" alt><br><img src="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190710231018.png" alt><br><br>4.客户端配置访问yum源服务器<br><code>vim /etc/yum.repos.d/CentOS-Base.repo</code><br><img src="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190719170252.png" alt><br><code>yum clean all</code> 清除所有缓存<br><code>yum makecache</code> 重新下载缓存<br>可以发现已经可以了，现在测试一下，下载一个tree包试一下<br><code>yum install tree -y</code><br><br>可能cdrom里面的包不够多，我们同步一下163远程的包，用rsync协议<br><code>rsync -avrt --delete rsync://mirrors.163.com/centos/6/updates/x86_ 64/Packages/ /var/www/centos/update</code><br><img src="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190710234653.png" alt></p>]]></content:encoded>
+      
+      <comments>https://jaie.cc/2019/07/24/%E6%90%AD%E5%BB%BA%E6%9C%AC%E5%9C%B0yum%E6%9C%8D%E5%8A%A1%E5%99%A8/#disqus_thread</comments>
+    </item>
     
     <item>
       <title>修改远程桌面3389端口</title>
@@ -20,12 +77,12 @@
       
         
         
-          &lt;p&gt;在修改前在防火墙添加修改远程端口的允许通过的策略，或者暂时关闭防火墙，不然修改完端口号远程连接连不上。&lt;br&gt;&lt;br&gt;运行regedit找到注册表&lt;br&gt;[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Termina
+          &lt;p&gt;在修改前在防火墙添加修改远程端口的允许通过的策略，或者暂时关闭防火墙，不然修改完端口号远程连接不上。&lt;br&gt;&lt;br&gt;运行regedit找到注册表&lt;br&gt;[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Terminal
         
       
       </description>
       
-      <content:encoded><![CDATA[<p>在修改前在防火墙添加修改远程端口的允许通过的策略，或者暂时关闭防火墙，不然修改完端口号远程连接连不上。<br><br>运行regedit找到注册表<br>[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Terminal Server\Wds\rdpwd\Tds\tcp] PortNumber位置，点击十进制，修改远程连接的端口号，这里以4567为列。<br><img src="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190702193333.png" alt><br><br> 找到注册表[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Terminal Server\WinStations\RDP-Tcp] 双击右边 PortNumber-点十进制-更改值为：4567<br> 使其注册表生效，这里windows server2008/2012 为例，重启生效，<br> 或者运行service.msc，找到remote desktop service服务管理重启生效<br><br> 这里以windows server2008/2012 为例，像xp、server2003比较旧的系统是没有remote desktop service服务,需要重启才能生效<br><br> <img src="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/Snipaste_2019-07-02_21-38-17.png" alt><br><img src="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190702215102.png" alt><br><img src="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190702215325.png" alt></p>]]></content:encoded>
+      <content:encoded><![CDATA[<p>在修改前在防火墙添加修改远程端口的允许通过的策略，或者暂时关闭防火墙，不然修改完端口号远程连接不上。<br><br>运行regedit找到注册表<br>[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Terminal Server\Wds\rdpwd\Tds\tcp] PortNumber位置，点击十进制，修改远程连接的端口号，这里以4567为列。<br><img src="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190702193333.png" alt><br><br> 找到注册表[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Terminal Server\WinStations\RDP-Tcp] 双击右边 PortNumber-点十进制-更改值为：4567<br> 使其注册表生效，这里windows server2008/2012 为例，重启生效，<br> 或者运行service.msc，找到remote desktop service服务管理重启生效<br><br> 这里以windows server2008/2012 为例，像xp、server2003比较旧的系统是没有remote desktop service服务,需要重启才能生效<br><br> <img src="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/Snipaste_2019-07-02_21-38-17.png" alt><br><img src="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190702215102.png" alt><br><img src="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190702215325.png" alt></p>]]></content:encoded>
       
       <comments>https://jaie.cc/2019/07/02/%E4%BF%AE%E6%94%B9%E8%BF%9C%E7%A8%8B%E6%A1%8C%E9%9D%A23389%E7%AB%AF%E5%8F%A3/#disqus_thread</comments>
     </item>
@@ -145,71 +202,6 @@
       <content:encoded><![CDATA[<p>dnschef –fakeip=192.168.200.2 –fakedomains=<a href="http://www.baidu.com,www.qq.com" target="_blank" rel="noopener">www.baidu.com,www.qq.com</a> –interface 192.168.200.243 -q<br>fackip欺骗到指定的ip，facedomains欺骗域名<br><img src="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190419162125.png" alt><br>window修改dns服务器<br><img src="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190419162027.png" alt></p>]]></content:encoded>
       
       <comments>https://jaie.cc/2019/04/24/DNS%E6%AC%BA%E9%AA%97/#disqus_thread</comments>
-    </item>
-    
-    <item>
-      <title>使用john破解密码</title>
-      <link>https://jaie.cc/2019/04/24/john%E7%A0%B4%E8%A7%A3%E5%AF%86%E7%A0%81/</link>
-      <guid>https://jaie.cc/2019/04/24/john%E7%A0%B4%E8%A7%A3%E5%AF%86%E7%A0%81/</guid>
-      <pubDate>Wed, 24 Apr 2019 07:38:36 GMT</pubDate>
-      <description>
-      
-        
-        
-          &lt;pre&gt;&lt;code&gt; john
-Created directory: /root/.john
-John the Ripper password cracker, version 1.8.0.6-jumbo-1-bleeding [linux-x86-64-avx]
-Copyri
-        
-      
-      </description>
-      
-      <content:encoded><![CDATA[<pre><code> johnCreated directory: /root/.johnJohn the Ripper password cracker, version 1.8.0.6-jumbo-1-bleeding [linux-x86-64-avx]Copyright (c) 1996-2015 by Solar Designer and othersHomepage: http://www.openwall.com/john/Usage: john [OPTIONS] [PASSWORD-FILES]--single[=SECTION]        &quot;single crack&quot; mode   --wordlist[=FILE] --stdin wordlist mode, read words from FILE or stdin                  --pipe  like --stdin, but bulk reads, and allows rules--loopback[=FILE]         like --wordlist, but fetch words from a .pot file--dupe-suppression        suppress all dupes in wordlist (and force preload)--prince[=FILE]           PRINCE mode, read words from FILE--encoding=NAME           input encoding (eg. UTF-8, ISO-8859-1). See also                          doc/ENCODING and --list=hidden-options.--rules[=SECTION]         enable word mangling rules for wordlist modes--incremental[=MODE]      &quot;incremental&quot; mode [using section MODE]--mask=MASK               mask mode using MASK--markov[=OPTIONS]        &quot;Markov&quot; mode (see doc/MARKOV)--external=MODE           external mode or word filter--stdout[=LENGTH]         just output candidate passwords [cut at LENGTH]--restore[=NAME]          restore an interrupted session [called NAME]--session=NAME            give a new session the NAME--status[=NAME]           print status of a session [called NAME]--make-charset=FILE       make a charset file. It will be overwritten--show[=LEFT]             show cracked passwords [if =LEFT, then uncracked]--test[=TIME]             run tests and benchmarks for TIME seconds each--users=[-]LOGIN|UID[,..] [do not] load this (these) user(s) only--groups=[-]GID[,..]      load users [not] of this (these) group(s) only--shells=[-]SHELL[,..]    load users with[out] this (these) shell(s) only--salts=[-]COUNT[:MAX]    load salts with[out] COUNT [to MAX] hashes--save-memory=LEVEL       enable memory saving, at LEVEL 1..3--node=MIN[-MAX]/TOTAL    this node&#39;s number range out of TOTAL count--fork=N                  fork N processes--pot=NAME                pot file to use--list=WHAT               list capabilities, see --list=help or doc/OPTIONS--format=NAME             force hash of type NAME. The supported formats can                          be seen with --list=formats and --list=subformats</code></pre><h4 id="破解linux密码"><a href="#破解linux密码" class="headerlink" title="破解linux密码"></a>破解linux密码</h4><p><img src="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190416202809.png" alt><br>显示已完成破解的密码文件<br><img src="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190416203204.png" alt><br>john破解缓存文件夹<br><img src="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190416203451.png" alt><br><img src="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190416203556.png" alt>   </p><h4 id="john破解windows密码"><a href="#john破解windows密码" class="headerlink" title="john破解windows密码"></a>john破解windows密码</h4><p><img src="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190416204211.png" alt><br>显示破解的密码<br><img src="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190416204506.png" alt></p><h4 id="john的图形化界面——johnny"><a href="#john的图形化界面——johnny" class="headerlink" title="john的图形化界面——johnny"></a>john的图形化界面——johnny</h4><p>johnny破解linux密码<br><img src="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190416205352.png" alt>   </p>]]></content:encoded>
-      
-      <comments>https://jaie.cc/2019/04/24/john%E7%A0%B4%E8%A7%A3%E5%AF%86%E7%A0%81/#disqus_thread</comments>
-    </item>
-    
-    <item>
-      <title>arp攻击</title>
-      <link>https://jaie.cc/2019/04/24/arp%E6%94%BB%E5%87%BB/</link>
-      <guid>https://jaie.cc/2019/04/24/arp%E6%94%BB%E5%87%BB/</guid>
-      <pubDate>Wed, 24 Apr 2019 07:35:42 GMT</pubDate>
-      <description>
-      
-        
-        
-          &lt;p&gt;&lt;img src=&quot;https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190418162924.png&quot; alt&gt;&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;arpspoof -h
-Version: 2.4
-Usag
-        
-      
-      </description>
-      
-      <content:encoded><![CDATA[<p><img src="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190418162924.png" alt></p><pre><code>arpspoof -hVersion: 2.4Usage: arpspoof [-i interface] [-c own|host|both] [-t target] [-r] host</code></pre><p>aspspoof -t 被攻击ip -r 网关ip<br><img src="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190418163045.png" alt><br>然后可以看到winows主机的arp表的变化<br><img src="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190418163203.png" alt><br>这时所有的windows通过网关都会转到kali上，所以被攻击无网络服务了。<br><img src="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190418163339.png" alt><br>kali开启路由转发，<code>echo 1 &gt; /proc/sys/net/ipv4/ip_forward</code>此时windows就可以上网了，但是所有的流量都经过kali进行转发。<br>利用kali网卡wireshark进行抓包<br><img src="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190418164821.png" alt><br>driftnet抓取目标机数据图片<br><img src="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190418165355.png" alt><br>创建arotemp目录存放数据图片音频信息，<code>driftnet -i eth0 -a -d arptemp -s</code>-i 选择接口 -a 数据存放目录 -d 指定目录<br>-s 抓取音频仅支持MOEG<br><img src="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190419134908.png" alt><br>获取目标浏览url信息<code>urlsnarf -i eth0</code><br><img src="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190419135649.png" alt><br>dsniff 对目标密码进行捕获，<br><img src="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190419141843.png" alt></p>]]></content:encoded>
-      
-      <comments>https://jaie.cc/2019/04/24/arp%E6%94%BB%E5%87%BB/#disqus_thread</comments>
-    </item>
-    
-    <item>
-      <title>markdown语法</title>
-      <link>https://jaie.cc/2019/03/29/markdown%E8%AF%AD%E6%B3%95%E7%AE%80%E7%95%A5%E6%89%8B%E5%86%8C/</link>
-      <guid>https://jaie.cc/2019/03/29/markdown%E8%AF%AD%E6%B3%95%E7%AE%80%E7%95%A5%E6%89%8B%E5%86%8C/</guid>
-      <pubDate>Fri, 29 Mar 2019 08:32:08 GMT</pubDate>
-      <description>
-      
-        
-        
-          &lt;h2 id=&quot;1-斜体和粗体&quot;&gt;&lt;a href=&quot;#1-斜体和粗体&quot; class=&quot;headerlink&quot; title=&quot;1. 斜体和粗体&quot;&gt;&lt;/a&gt;1. 斜体和粗体&lt;/h2&gt;&lt;pre&gt;&lt;code&gt;*斜体* //斜体
-**粗体** //粗体
-&lt;/code&gt;&lt;/pre&gt;&lt;h2 i
-        
-      
-      </description>
-      
-      <content:encoded><![CDATA[<h2 id="1-斜体和粗体"><a href="#1-斜体和粗体" class="headerlink" title="1. 斜体和粗体"></a>1. 斜体和粗体</h2><pre><code>*斜体* //斜体**粗体** //粗体</code></pre><h2 id="2-分级标题"><a href="#2-分级标题" class="headerlink" title="2. 分级标题"></a>2. 分级标题</h2><p>用#——#####以”#”的个数进行逐级分级，1-5级;<br>用h1——h5逐级分级</p><h2 id="3-外链接"><a href="#3-外链接" class="headerlink" title="3. 外链接"></a>3. 外链接</h2><pre><code>使用 [描述](链接地址) 为文字增加外链接</code></pre><h2 id="5-段落和换行"><a href="#5-段落和换行" class="headerlink" title="5.段落和换行"></a>5.段落和换行</h2><ul><li>第一种写法：直接敲两个回车键即可<br></li><li>第二种写法:在写完一段后敲两个空格，然后回车写下一段  </li><li>第三种写法:<br><code>&lt;br /&gt;</code>作为换行，然后写下一段<h2 id="6-分隔线-amp-引言"><a href="#6-分隔线-amp-引言" class="headerlink" title="6.分隔线&amp;引言"></a>6.分隔线&amp;引言</h2><code>`</code></li></ul><hr><hr><p>===</p><hr><p><code>`引言</code>&gt;<code>加___  还有一种写法就是每一行都用一个 “&gt;” 号&lt;br&gt;</code>&gt; &gt; <code></code>另外一种就是嵌套引用</p><h2 id="7-列表"><a href="#7-列表" class="headerlink" title="7.列表"></a>7.列表</h2><ul><li>无序列表<br>无序列表可以在每行开头用星号、加号、减号来表示，也可以三者混合一起，推荐使用相同的字符，避免混乱<br></li><li>有序列表<br><br>有序列表用数字接着一个英文句点来表示，数字可无序，但还是推荐使用1.、2.，避免混乱。</li></ul><h2 id="8-代码"><a href="#8-代码" class="headerlink" title="8.代码"></a>8.代码</h2><p>代码块用两个<code>这种符号围住  用`</code>（语言）把代码起始行末尾行围住<br><br>用tap键</p><h2 id="9-更多阅读"><a href="#9-更多阅读" class="headerlink" title="9.更多阅读"></a>9.更多阅读</h2><p><code>&lt;!--more--&gt;</code></p>]]></content:encoded>
-      
-      <comments>https://jaie.cc/2019/03/29/markdown%E8%AF%AD%E6%B3%95%E7%AE%80%E7%95%A5%E6%89%8B%E5%86%8C/#disqus_thread</comments>
     </item>
     
   </channel>
