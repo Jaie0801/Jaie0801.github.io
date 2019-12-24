@@ -12,7 +12,7 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[攻防时间misc新手区wp]]></title>
+    <title><![CDATA[攻防世界misc新手区wp]]></title>
     <url>%2F2019%2F12%2F24%2F%E6%94%BB%E9%98%B2%E4%B8%96%E7%95%8Cmisc%E6%96%B0%E6%89%8B%E5%8C%BAwp%2F</url>
     <content type="text"><![CDATA[1.this_is_flag标线即为flag值 2.ext3下载文件后放进linux，flie命令查看是什么文件，可以看到是磁盘文件，将其挂载 可以查看flag文本文件，cat查看得base64的编码，进行转换得flag值 3.give_you_flag下载后是一张gif有一副二维码的图片，用Stegsolve保存二维码的图片 用ps软件修复二维码图片，二维码扫出来即为flag值 4.pdf下载后是一个pdf文件，将pdf转换word文件，我这里用wps自带转换 打开转换的word，删除图片或移动缩小图片，即可看见图片下藏着flag值 5.stegano将pdf用浏览器打开选择全选，复制到记事本里去，可以发现AABB的一段文字，是摩斯电码，A是点，B是划等到-.-. — -. –. .-. .- - ..- .-.. .- - .. — -. … –..– ..-. .-.. .- –. —… .—- -. …- .—- ….. .—- -… .-.. …– – …– ….. ….. ….- –. …–转化成字母即为flag flag格式是flag{1nv151bl3m3554g3} 6.SimpleRAR下载后是一个压缩包，用winhex查看一下，可以secret.png文件，把A8 3C 7A修改为A8 3C 74,这个是RAR对png文件头的编码.解压可以看到一张png图片，显示空白 再用winhex打开png图片，可以看到GIF文件头，GIF (gif)，文件头：47494638，把png文件格式改为gif 把gif发到stesolve跑一下，只弄出来一半。 再把gif丢进ps里，是两个图层的，导出另一图层的一张，再丢进stegsolve跑下，跑出二维码破碎的上部分 再报这两张图片丢进ps，ps修复一下，flag{yanji4n_bu_we1shi} 7.坚持60s用jd-gui 打开下载的java程序，搜索关键字flag，得到是base64编码进行转化 8.gif下载是个压缩包，进行解压时一堆黑白的图片，可以联想二进制，白是0，黑是1二进制转换成字符串，得flag值 9.掀桌子 每两个一组，将16进制转换为10进制，减去128以后输出 ascii 10.如来十三掌打开是与佛论禅，到http://keyfc.net/bbs/tools/tudoucode.aspx解密，佛了。 解 rot-13 ，得到ZmxhZ3tiZHNjamhia3ptbmZyZGhidmNraWpuZHNrdmJramRzYWJ9在base64解码flag{bdscjhbkzmnfrdhbvckijndskvbkjdsab} 11.base64stego下载来一个解压包，需要密码，伪加密来着，用winrar修复功能修复一下就可以打开了，打开一大串base64，应该是吧，直接解解不出来 参考https://www.tr0y.wang/2017/06/14/Base64steg/使用脚本处理一下 12.功夫再高也怕菜刀下载下来是个流量包，binwalk跑一下，里面还包含一个zip，foremost分离文件 ，zip包需要密码，不是弱密码 分析流量包，搜索flag.txt关键字，在1150行，追踪tcp流量流，发现jpg十六进制加密，还原jpg图片，图片文字即压缩包密码， flag值为：]]></content>
       <categories>
