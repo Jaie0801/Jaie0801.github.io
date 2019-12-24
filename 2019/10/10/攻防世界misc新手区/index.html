@@ -70,7 +70,7 @@
 
 
 
-  <meta name="keywords" content="windows,">
+  <meta name="keywords" content="ctf,">
 
 
 
@@ -83,23 +83,48 @@
 
 
 
-<meta name="description" content="在修改前在防火墙添加修改远程端口的允许通过的策略，或者暂时关闭防火墙，不然修改完端口号远程连接不上。运行regedit找到注册表[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Terminal Server\Wds\rdpwd\Tds\tcp] PortNumber位置，点击十进制，修改远程连接的端口号，这里以4567为列。 找到注册表[H">
-<meta name="keywords" content="windows">
+<meta name="description" content="1.this_is_flag标线即为flag值  2.ext3下载文件后放进linux，flie命令查看是什么文件，可以看到是磁盘文件，将其挂载  可以查看flag文本文件，cat查看得base64的编码，进行转换得flag值    3.give_you_flag下载后是一张gif有一副二维码的图片，用Stegsolve保存二维码的图片  用ps软件修复二维码图片，二维码扫出来即为flag值  4">
+<meta name="keywords" content="ctf">
 <meta property="og:type" content="article">
-<meta property="og:title" content="修改远程桌面3389端口">
-<meta property="og:url" content="https://jaie.cc/2019/07/02/修改远程桌面3389端口/index.html">
+<meta property="og:title" content="攻防世界misc新手区writeup">
+<meta property="og:url" content="https://jaie.cc/2019/10/10/攻防世界misc新手区/index.html">
 <meta property="og:site_name" content="Jaie">
-<meta property="og:description" content="在修改前在防火墙添加修改远程端口的允许通过的策略，或者暂时关闭防火墙，不然修改完端口号远程连接不上。运行regedit找到注册表[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Terminal Server\Wds\rdpwd\Tds\tcp] PortNumber位置，点击十进制，修改远程连接的端口号，这里以4567为列。 找到注册表[H">
+<meta property="og:description" content="1.this_is_flag标线即为flag值  2.ext3下载文件后放进linux，flie命令查看是什么文件，可以看到是磁盘文件，将其挂载  可以查看flag文本文件，cat查看得base64的编码，进行转换得flag值    3.give_you_flag下载后是一张gif有一副二维码的图片，用Stegsolve保存二维码的图片  用ps软件修复二维码图片，二维码扫出来即为flag值  4">
 <meta property="og:locale" content="default">
-<meta property="og:image" content="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190702193333.png">
-<meta property="og:image" content="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/Snipaste_2019-07-02_21-38-17.png">
-<meta property="og:image" content="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190702215102.png">
-<meta property="og:image" content="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190702215325.png">
-<meta property="og:updated_time" content="2019-07-02T15:01:19.799Z">
+<meta property="og:image" content="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190925193107.png">
+<meta property="og:image" content="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190925192125.png">
+<meta property="og:image" content="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/1569410688357.png">
+<meta property="og:image" content="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190925192912.png">
+<meta property="og:image" content="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190925193015.png">
+<meta property="og:image" content="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/1569411485042.png">
+<meta property="og:image" content="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190925204440.png">
+<meta property="og:image" content="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190925205144.png">
+<meta property="og:image" content="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190925205403.png">
+<meta property="og:image" content="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190925210906.png">
+<meta property="og:image" content="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190925211421.png">
+<meta property="og:image" content="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/1569417314520.png">
+<meta property="og:image" content="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190927152141.png">
+<meta property="og:image" content="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190927152912.png">
+<meta property="og:image" content="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190927165900.png">
+<meta property="og:image" content="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190927165340.png">
+<meta property="og:image" content="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/1569575056008.png">
+<meta property="og:image" content="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190925215533.png">
+<meta property="og:image" content="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190925220606.png">
+<meta property="og:image" content="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190925220759.png">
+<meta property="og:image" content="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190925221346.png">
+<meta property="og:image" content="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190925221212.png">
+<meta property="og:image" content="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190925231312.png">
+<meta property="og:image" content="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190925231346.png">
+<meta property="og:image" content="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20191008195850.png">
+<meta property="og:image" content="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20191008200132.png">
+<meta property="og:image" content="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190927103452.png">
+<meta property="og:image" content="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190927115637.png">
+<meta property="og:image" content="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190927115842.png">
+<meta property="og:updated_time" content="2019-10-10T11:26:08.987Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="修改远程桌面3389端口">
-<meta name="twitter:description" content="在修改前在防火墙添加修改远程端口的允许通过的策略，或者暂时关闭防火墙，不然修改完端口号远程连接不上。运行regedit找到注册表[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Terminal Server\Wds\rdpwd\Tds\tcp] PortNumber位置，点击十进制，修改远程连接的端口号，这里以4567为列。 找到注册表[H">
-<meta name="twitter:image" content="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190702193333.png">
+<meta name="twitter:title" content="攻防世界misc新手区writeup">
+<meta name="twitter:description" content="1.this_is_flag标线即为flag值  2.ext3下载文件后放进linux，flie命令查看是什么文件，可以看到是磁盘文件，将其挂载  可以查看flag文本文件，cat查看得base64的编码，进行转换得flag值    3.give_you_flag下载后是一张gif有一副二维码的图片，用Stegsolve保存二维码的图片  用ps软件修复二维码图片，二维码扫出来即为flag值  4">
+<meta name="twitter:image" content="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190925193107.png">
 
 
 
@@ -129,13 +154,13 @@
 
 
 
-  <link rel="canonical" href="https://jaie.cc/2019/07/02/修改远程桌面3389端口/">
+  <link rel="canonical" href="https://jaie.cc/2019/10/10/攻防世界misc新手区/">
 
 
 
 
 
-  <title>修改远程桌面3389端口 | Jaie</title>
+  <title>攻防世界misc新手区writeup | Jaie</title>
   
 
 
@@ -314,7 +339,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://jaie.cc/2019/07/02/修改远程桌面3389端口/">
+    <link itemprop="mainEntityOfPage" href="https://jaie.cc/2019/10/10/攻防世界misc新手区/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Jaie">
@@ -331,7 +356,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">修改远程桌面3389端口</h1>
+          <h1 class="post-title" itemprop="name headline">攻防世界misc新手区writeup</h1>
         
 
         <div class="post-meta">
@@ -343,8 +368,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-07-02T22:55:02+08:00">
-                2019-07-02
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-10-10T19:24:19+08:00">
+                2019-10-10
               </time>
             
 
@@ -366,8 +391,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/windows/" itemprop="url" rel="index">
-                    <span itemprop="name">windows</span>
+                  <a href="/categories/ctf/" itemprop="url" rel="index">
+                    <span itemprop="name">ctf</span>
                   </a>
                 </span>
 
@@ -397,7 +422,7 @@
                   <span class="post-meta-item-text">Words count in article&#58;</span>
                 
                 <span title="Words count in article">
-                  186
+                  676
                 </span>
               
 
@@ -422,7 +447,57 @@
       
 
       
-        <p>在修改前在防火墙添加修改远程端口的允许通过的策略，或者暂时关闭防火墙，不然修改完端口号远程连接不上。<br><br>运行regedit找到注册表<br>[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Terminal Server\Wds\rdpwd\Tds\tcp] PortNumber位置，点击十进制，修改远程连接的端口号，这里以4567为列。<br><img src="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190702193333.png" alt><br><br> 找到注册表[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Terminal Server\WinStations\RDP-Tcp] 双击右边 PortNumber-点十进制-更改值为：4567<br> 使其注册表生效，这里windows server2008/2012 为例，重启生效，<br> 或者运行service.msc，找到remote desktop service服务管理重启生效<br><br> 这里以windows server2008/2012 为例，像xp、server2003比较旧的系统是没有remote desktop service服务,需要重启才能生效<br><br> <img src="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/Snipaste_2019-07-02_21-38-17.png" alt><br><img src="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190702215102.png" alt><br><img src="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190702215325.png" alt></p>
+        <h5 id="1-this-is-flag"><a href="#1-this-is-flag" class="headerlink" title="1.this_is_flag"></a>1.this_is_flag</h5><p>标线即为flag值</p>
+<p><img src="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190925193107.png" alt></p>
+<h5 id="2-ext3"><a href="#2-ext3" class="headerlink" title="2.ext3"></a>2.ext3</h5><p>下载文件后放进linux，flie命令查看是什么文件，可以看到是磁盘文件，将其挂载</p>
+<p><img src="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190925192125.png" alt></p>
+<p>可以查看flag文本文件，cat查看得base64的编码，进行转换得flag值</p>
+<p><img src="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/1569410688357.png" alt></p>
+<p><img src="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190925192912.png" alt></p>
+<p><img src="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190925193015.png" alt></p>
+<h5 id="3-give-you-flag"><a href="#3-give-you-flag" class="headerlink" title="3.give_you_flag"></a>3.give_you_flag</h5><p>下载后是一张gif有一副二维码的图片，用Stegsolve保存二维码的图片</p>
+<p><img src="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/1569411485042.png" alt></p>
+<p>用ps软件修复二维码图片，二维码扫出来即为flag值</p>
+<p><img src="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190925204440.png" alt></p>
+<h5 id="4-pdf"><a href="#4-pdf" class="headerlink" title="4.pdf"></a>4.pdf</h5><p>下载后是一个pdf文件，将pdf转换word文件，我这里用wps自带转换</p>
+<p><img src="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190925205144.png" alt></p>
+<p>打开转换的word，删除图片或移动缩小图片，即可看见图片下藏着flag值</p>
+<p><img src="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190925205403.png" alt></p>
+<h5 id="5-stegano"><a href="#5-stegano" class="headerlink" title="5.stegano"></a>5.stegano</h5><p>将pdf用浏览器打开选择全选，复制到记事本里去，可以发现AABB的一段文字，是摩斯电码，A是点，B是划<br>等到-.-. — -. –. .-. .- - ..- .-.. .- - .. — -. … –..– ..-. .-.. .- –. —… .—- -. …- .—- ….. .—- -… .-.. …– – …– ….. ….. ….- –. …–转化成字母即为flag</p>
+<p><img src="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190925210906.png" alt></p>
+<p><img src="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190925211421.png" alt></p>
+<p><img src="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/1569417314520.png" alt></p>
+<p>flag格式是flag{1nv151bl3m3554g3}</p>
+<h5 id="6-SimpleRAR"><a href="#6-SimpleRAR" class="headerlink" title="6.SimpleRAR"></a>6.SimpleRAR</h5><p>下载后是一个压缩包，用winhex查看一下，可以secret.png文件，把A8 3C 7A修改为A8 3C 74,这个是RAR对png文件头的编码.解压可以看到一张png图片，显示空白</p>
+<p><img src="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190927152141.png" alt></p>
+<p>再用winhex打开png图片，可以看到GIF文件头，GIF (gif)，文件头：47494638，把png文件格式改为gif</p>
+<p><img src="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190927152912.png" alt></p>
+<p>把gif发到stesolve跑一下，只弄出来一半。</p>
+<p><img src="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190927165900.png" alt></p>
+<p>再把gif丢进ps里，是两个图层的，导出另一图层的一张，再丢进stegsolve跑下，跑出二维码破碎的上部分</p>
+<p><img src="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190927165340.png" alt></p>
+<p>再报这两张图片丢进ps，ps修复一下，flag{yanji4n_bu_we1shi}</p>
+<p><img src="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/1569575056008.png" alt></p>
+<h5 id="7-坚持60s"><a href="#7-坚持60s" class="headerlink" title="7.坚持60s"></a>7.坚持60s</h5><p>用jd-gui 打开下载的java程序，搜索关键字flag，得到是base64编码进行转化</p>
+<p><img src="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190925215533.png" alt></p>
+<h5 id="8-gif"><a href="#8-gif" class="headerlink" title="8.gif"></a>8.gif</h5><p>下载是个压缩包，进行解压时一堆黑白的图片，可以联想二进制，白是0，黑是1二进制转换成字符串，得flag值</p>
+<p><img src="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190925220606.png" alt></p>
+<h5 id><a href="#" class="headerlink" title></a><img src="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190925220759.png" alt></h5><h5 id="9-掀桌子"><a href="#9-掀桌子" class="headerlink" title="9.掀桌子"></a>9.掀桌子</h5><p><img src="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190925221346.png" alt></p>
+<p>每两个一组，将16进制转换为10进制，减去128以后输出 ascii</p>
+<p><img src="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190925221212.png" alt></p>
+<h5 id="10-如来十三掌"><a href="#10-如来十三掌" class="headerlink" title="10.如来十三掌"></a>10.如来十三掌</h5><p>打开是与佛论禅，到<a href="http://keyfc.net/bbs/tools/tudoucode.aspx解密，佛了。" target="_blank" rel="noopener">http://keyfc.net/bbs/tools/tudoucode.aspx解密，佛了。</a></p>
+<p><img src="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190925231312.png" alt></p>
+<p>解 rot-13 ，得到ZmxhZ3tiZHNjamhia3ptbmZyZGhidmNraWpuZHNrdmJramRzYWJ9<br>在base64解码flag{bdscjhbkzmnfrdhbvckijndskvbkjdsab}</p>
+<p><img src="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190925231346.png" alt></p>
+<h5 id="11-base64stego"><a href="#11-base64stego" class="headerlink" title="11.base64stego"></a>11.base64stego</h5><p>下载来一个解压包，需要密码，伪加密来着，用winrar修复功能修复一下就可以打开了，打开一大串base64，应该是吧，直接解解不出来</p>
+<p><img src="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20191008195850.png" alt></p>
+<p>参考<a href="https://www.tr0y.wang/2017/06/14/Base64steg/" target="_blank" rel="noopener">https://www.tr0y.wang/2017/06/14/Base64steg/</a>使用脚本处理一下</p>
+<p><img src="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20191008200132.png" alt></p>
+<h5 id="12-功夫再高也怕菜刀"><a href="#12-功夫再高也怕菜刀" class="headerlink" title="12.功夫再高也怕菜刀"></a>12.功夫再高也怕菜刀</h5><p>下载下来是个流量包，binwalk跑一下，里面还包含一个zip，foremost分离文件  ，zip包需要密码，不是弱密码</p>
+<p><img src="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190927103452.png" alt></p>
+<p>分析流量包，搜索flag.txt关键字，在1150行，追踪tcp流量流，发现jpg十六进制加密，还原jpg图片，图片文字即压缩包密码，</p>
+<p><img src="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190927115637.png" alt></p>
+<p>flag值为：<img src="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190927115842.png" alt></p>
 
       
     </div>
@@ -440,7 +515,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/windows/" rel="tag"><i class="fa fa-tag"></i> windows</a>
+            <a href="/tags/ctf/" rel="tag"><i class="fa fa-tag"></i> ctf</a>
           
         </div>
       
@@ -453,8 +528,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/06/15/windows服务器主机加固/" rel="next" title="windows服务器主机加固">
-                <i class="fa fa-chevron-left"></i> windows服务器主机加固
+              <a href="/2019/07/24/linux开启配置telnet/" rel="next" title="linux开启配置telnet">
+                <i class="fa fa-chevron-left"></i> linux开启配置telnet
               </a>
             
           </div>
@@ -462,10 +537,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/07/24/搭建本地yum服务器/" rel="prev" title="搭建本地yum服务器">
-                搭建本地yum服务器 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -522,8 +593,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -540,7 +620,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">27</span>
+                  <span class="site-state-item-count">28</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -621,6 +701,22 @@
       </section>
 
       
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-5"><a class="nav-link" href="#1-this-is-flag"><span class="nav-number">1.</span> <span class="nav-text">1.this_is_flag</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-ext3"><span class="nav-number">2.</span> <span class="nav-text">2.ext3</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#3-give-you-flag"><span class="nav-number">3.</span> <span class="nav-text">3.give_you_flag</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#4-pdf"><span class="nav-number">4.</span> <span class="nav-text">4.pdf</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#5-stegano"><span class="nav-number">5.</span> <span class="nav-text">5.stegano</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#6-SimpleRAR"><span class="nav-number">6.</span> <span class="nav-text">6.SimpleRAR</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#7-坚持60s"><span class="nav-number">7.</span> <span class="nav-text">7.坚持60s</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#8-gif"><span class="nav-number">8.</span> <span class="nav-text">8.gif</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#"><span class="nav-number">9.</span> <span class="nav-text"></span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#9-掀桌子"><span class="nav-number">10.</span> <span class="nav-text">9.掀桌子</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#10-如来十三掌"><span class="nav-number">11.</span> <span class="nav-text">10.如来十三掌</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#11-base64stego"><span class="nav-number">12.</span> <span class="nav-text">11.base64stego</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#12-功夫再高也怕菜刀"><span class="nav-number">13.</span> <span class="nav-text">12.功夫再高也怕菜刀</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
 
       
 
@@ -648,7 +744,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">9.4k</span>
+    <span title="Site words total count">10.1k</span>
   
 </div>
 
