@@ -1,0 +1,1447 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang>
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+  <meta name="google-site-verification" content="1gKDAfjMjYT38fOTFSyhEOLm7-FQlmNHxLM5SNpSFAc">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="ctf,">
+
+
+
+
+
+  <link rel="alternate" href="/rss2.xml" title="Jaie" type="application/atom+xml">
+
+
+
+
+
+
+<meta name="description" content="1.easycap下载下来是一个流量包，用wireshark打开，搜索关键字flag，第二行追踪tcp流，  2.Avatar下载下来是一张图片，这里考察outguess算法，在kali下载outguess，apt-get install outguess, “We should blow up the bridge at midnight”即为flag。  3.What-is-this下载个解压">
+<meta name="keywords" content="ctf">
+<meta property="og:type" content="article">
+<meta property="og:title" content="攻防世界misc高手区wp">
+<meta property="og:url" content="https://jaie.cc/2020/03/23/攻防世界部分misc高手区题/index.html">
+<meta property="og:site_name" content="Jaie">
+<meta property="og:description" content="1.easycap下载下来是一个流量包，用wireshark打开，搜索关键字flag，第二行追踪tcp流，  2.Avatar下载下来是一张图片，这里考察outguess算法，在kali下载outguess，apt-get install outguess, “We should blow up the bridge at midnight”即为flag。  3.What-is-this下载个解压">
+<meta property="og:locale" content="default">
+<meta property="og:image" content="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190927172016.png">
+<meta property="og:image" content="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190929114956.png">
+<meta property="og:image" content="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190929121704.png">
+<meta property="og:image" content="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190929193904.png">
+<meta property="og:image" content="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190929202956.png">
+<meta property="og:image" content="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20191003125150.png">
+<meta property="og:image" content="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20191003133442.png">
+<meta property="og:image" content="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20191003133722.png">
+<meta property="og:image" content="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20191003134935.png">
+<meta property="og:image" content="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20191008192551.png">
+<meta property="og:image" content="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/1570082923435.png">
+<meta property="og:image" content="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20191003141523.png">
+<meta property="og:image" content="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20191003143315.png">
+<meta property="og:image" content="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20191003143244.png">
+<meta property="og:image" content="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20191003164704.png">
+<meta property="og:image" content="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20191003165044.png">
+<meta property="og:image" content="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20191003165229.png">
+<meta property="og:image" content="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/1570093716744.png">
+<meta property="og:image" content="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20191005225719.png">
+<meta property="og:image" content="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/1570289583797.png">
+<meta property="og:image" content="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/PNG格式示例.png">
+<meta property="og:image" content="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20191005233704.png">
+<meta property="og:image" content="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/1570290876572.png">
+<meta property="og:image" content="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20191006000010.png">
+<meta property="og:image" content="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20191006174305.png">
+<meta property="og:image" content="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20191006174223.png">
+<meta property="og:image" content="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20191006175636.png">
+<meta property="og:image" content="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20191008194236.png">
+<meta property="og:image" content="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20191006222959.png">
+<meta property="og:image" content="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20191006222544.png">
+<meta property="og:image" content="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20191006223109.png">
+<meta property="og:image" content="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20191006230247.png">
+<meta property="og:image" content="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20191006230727.png">
+<meta property="og:image" content="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20191006230704.png">
+<meta property="og:image" content="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20191006234837.png">
+<meta property="og:image" content="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20191006235042.png">
+<meta property="og:image" content="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20191007002722.png">
+<meta property="og:image" content="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20191007003212.png">
+<meta property="og:image" content="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20191007003510.png">
+<meta property="og:image" content="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20191007193401.png">
+<meta property="og:image" content="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20191007194111.png">
+<meta property="og:image" content="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20191007194315.png">
+<meta property="og:image" content="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20191007195624.png">
+<meta property="og:image" content="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/1570449539291.png">
+<meta property="og:image" content="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20191007202130.png">
+<meta property="og:image" content="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20191007232726.png">
+<meta property="og:image" content="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/1570463479080.png">
+<meta property="og:image" content="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20191008112038.png">
+<meta property="og:image" content="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20191008112324.png">
+<meta property="og:image" content="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20191008113237.png">
+<meta property="og:image" content="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20191008112959.png">
+<meta property="og:image" content="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20191008114338.png">
+<meta property="og:image" content="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20191008115502.png">
+<meta property="og:image" content="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20191008115831.png">
+<meta property="og:image" content="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20191008120202.png">
+<meta property="og:image" content="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20191008121201.png">
+<meta property="og:image" content="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20191008130618.png">
+<meta property="og:image" content="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20191008130947.png">
+<meta property="og:image" content="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20191008173443.png">
+<meta property="og:image" content="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20191008173905.png">
+<meta property="og:image" content="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20191008174623.png">
+<meta property="og:image" content="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20191008191503.png">
+<meta property="og:updated_time" content="2020-03-23T15:07:20.424Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="攻防世界misc高手区wp">
+<meta name="twitter:description" content="1.easycap下载下来是一个流量包，用wireshark打开，搜索关键字flag，第二行追踪tcp流，  2.Avatar下载下来是一张图片，这里考察outguess算法，在kali下载outguess，apt-get install outguess, “We should blow up the bridge at midnight”即为flag。  3.What-is-this下载个解压">
+<meta name="twitter:image" content="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190927172016.png">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://jaie.cc/2020/03/23/攻防世界部分misc高手区题/">
+
+
+
+
+
+  <title>攻防世界misc高手区wp | Jaie</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="default">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Jaie</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
+            
+            About
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            Tags
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
+            
+            Categories
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            Archives
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-留言板">
+          <a href="/guestbook" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-newspaper-o"></i> <br>
+            
+            留言板
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>
+            
+            Search
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off" placeholder="Searching..." spellcheck="false" type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://jaie.cc/2020/03/23/攻防世界部分misc高手区题/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Jaie">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190424201847.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Jaie">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">攻防世界misc高手区wp</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-03-23T22:49:44+08:00">
+                2020-03-23
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/ctf/" itemprop="url" rel="index">
+                    <span itemprop="name">ctf</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Words count in article&#58;</span>
+                
+                <span title="Words count in article">
+                  2.4k
+                </span>
+              
+
+              
+
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h5 id="1-easycap"><a href="#1-easycap" class="headerlink" title="1.easycap"></a>1.easycap</h5><p>下载下来是一个流量包，用wireshark打开，搜索关键字flag，第二行追踪tcp流，</p>
+<p><img src="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190927172016.png" alt></p>
+<h5 id="2-Avatar"><a href="#2-Avatar" class="headerlink" title="2.Avatar"></a>2.Avatar</h5><p>下载下来是一张图片，这里考察outguess算法，在kali下载outguess，<code>apt-get install outguess</code>,</p>
+<p>“We should blow up the bridge at midnight”即为flag。</p>
+<p><img src="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190929114956.png" alt></p>
+<h5 id="3-What-is-this"><a href="#3-What-is-this" class="headerlink" title="3.What-is-this"></a>3.What-is-this</h5><p>下载个解压包，解压后是两张图片，用stegsolve打开其中一张，用image combiner进行xor运算，AZADI TOWER即为flag</p>
+<p><img src="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190929121704.png" alt></p>
+<h5 id="4-Get-the-key-txt"><a href="#4-Get-the-key-txt" class="headerlink" title="4.Get-the-key.txt"></a>4.Get-the-key.txt</h5><p>下载来一个解压包，解压后的文件不知道是什么，用file命令查看一下，是磁盘文件，那就先挂载下</p>
+<p><img src="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190929193904.png" alt></p>
+<p>下载后有一大堆乱七八糟，用grep命令查找关键字“key.txt”，在1文件，cat查看是乱码，file查看是什么文件，是压缩文件，gunzip查看flag</p>
+<p><img src="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190929202956.png" alt></p>
+<h5 id="5-签到题"><a href="#5-签到题" class="headerlink" title="5.签到题"></a>5.签到题</h5><p>将<code>Z2dRQGdRMWZxaDBvaHRqcHRfc3d7Z2ZoZ3MjfQ==</code>base64转码为<code>ggQ@gQ1fqh0ohtjpt_sw{gfhgs&amp;#35;35;}</code>,是凯撒+栅栏，解题关键是flag格式<code>ssctf{}</code>，所以先凯撒得到 <code>ssC@sC1rct0atfvbf_ei{srtse#35;}</code>栅栏得到<code>ssctf{ssCtf_seC10ver#35;@rabit}</code></p>
+<h5 id="6-Training-Stegano-1"><a href="#6-Training-Stegano-1" class="headerlink" title="6.Training-Stegano-1"></a>6.Training-Stegano-1</h5><p>下载是一张图片，记事本打开，文本显示”passwd:steganoI”,flag即为steganoI </p>
+<h5 id="7-Test-flag-please-ignore"><a href="#7-Test-flag-please-ignore" class="headerlink" title="7.Test-flag-please-ignore"></a>7.Test-flag-please-ignore</h5><p>将<code>666c61677b68656c6c6f5f776f726c647d</code>转换为16进制字符串<code>flag{hello_world}</code></p>
+<h5 id="8-Excaliflag"><a href="#8-Excaliflag" class="headerlink" title="8.Excaliflag"></a>8.Excaliflag</h5><p>下载图片后，用stegSolve打开图片</p>
+<p><img src="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20191003125150.png" alt></p>
+<h5 id="9-glance-50"><a href="#9-glance-50" class="headerlink" title="9.glance-50"></a>9.glance-50</h5><p>下载来是一张gif图片，分解gif，使用convert命令分解，<code>convert 33e3d14fb67a44f4ad1378149fff1d9a.gif flag.png</code>共分解出200张图片</p>
+<p><img src="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20191003133442.png" alt></p>
+<p>连接这些图片，使用montage 命令，<code>montage flag*.png -tile x1 -geometry +0+0 flag.png</code></p>
+<p>-tile是拼接时每行和每列的图片数，这里用x1，就是只一行</p>
+<p>-geometry是首选每个图和边框尺寸，我们边框为0，图照原始尺寸即可</p>
+<p><img src="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20191003133722.png" alt></p>
+<p>这里参考了：<a href="https://blog.csdn.net/zz_Caleb/article/details/89490494" target="_blank" rel="noopener">https://blog.csdn.net/zz_Caleb/article/details/89490494</a></p>
+<h5 id="10-4-2"><a href="#10-4-2" class="headerlink" title="10.4-2"></a>10.4-2</h5><p>下载后是一个txt文件，里面是不知道是什么，到这个网站<a href="https://quipqiup.com/" target="_blank" rel="noopener">https://quipqiup.com/</a>进行词频分析，flag即为<code>flag{classical-cipher_is_not_security_hs}</code></p>
+<p><img src="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20191003134935.png" alt></p>
+<h5 id="11-misc1"><a href="#11-misc1" class="headerlink" title="11.misc1"></a>11.misc1</h5><p><img src="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20191008192551.png" alt></p>
+<p>猜测16进制转换字符串，直接转失败转不出来，flag为<code>DDCTF{9af3c9d377b61d269b11337f330c935f}</code></p>
+<pre><code>string=&quot;d4e8e1f4a0f7e1f3a0e6e1f3f4a1a0d4e8e5a0e6ece1e7a0e9f3baa0c4c4c3d4c6fbb9e1e6b3e3b9e4b3b7b7e2b6b1e4b2b6b9e2b1b1b3b3b7e6b3b3b0e3b9b3b5e6fd&quot;
+flag=&quot;&quot;
+for i in range (0,len(string),2):
+    s = &quot;0x&quot; + string[i] + string[i+1]
+    flag += chr(int(s,16) -128)
+print(flag)
+</code></pre><h5 id="12-eczmbarrass"><a href="#12-eczmbarrass" class="headerlink" title="12.eczmbarrass"></a>12.eczmbarrass</h5><p>下载压缩包解压后是一个流量包，用wireshark打开，搜索关键词flag后，追踪tcp流，在里面搜索flag，可以看到flag</p>
+<p><img src="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/1570082923435.png" alt></p>
+<h5 id="13-肥宅快乐题"><a href="#13-肥宅快乐题" class="headerlink" title="13.肥宅快乐题"></a>13.肥宅快乐题</h5><p>下载后是一个swf文件，是一个游戏，用potplayer打开定位57帧，出现对话里面有U1lDe0YzaVpoYWlfa3U0aWxlX1QxMTF9，base64解码后为<code>SYC{F3iZhai_ku4ile_T111}</code>，即为flag</p>
+<p><img src="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20191003141523.png" alt></p>
+<h5 id="14-小小的PDF"><a href="#14-小小的PDF" class="headerlink" title="14.小小的PDF"></a>14.小小的PDF</h5><p>下载后是pdf文件，用binwalk分析，有点东西，用foremost分解东西，flag藏在分解的图片里</p>
+<p><img src="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20191003143315.png" alt></p>
+<p><img src="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20191003143244.png" alt></p>
+<h5 id="15-Cephalopod"><a href="#15-Cephalopod" class="headerlink" title="15.Cephalopod"></a>15.Cephalopod</h5><p>下载后是一个流量包，用wireshark打开，flag关键字找到flag.png，但是却弄不出来图片。用binwalk看一下有点东西，foremost搞不出来图片</p>
+<p><img src="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20191003164704.png" alt></p>
+<p>了解到有tcpxtract这个工具，Tcpxtract是一种基于文件签名从网络流量中提取文件的工具。安装tcpxtract，并使用分离图片出来，flag值出来了</p>
+<p><img src="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20191003165044.png" alt></p>
+<p><img src="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20191003165229.png" alt></p>
+<h5 id="16-hit-the-core"><a href="#16-hit-the-core" class="headerlink" title="16.hit-the-core"></a>16.hit-the-core</h5><p>下载后是.core文件，.core文件是Linux的文件，用strings命令查看，看到一段特殊的文段</p>
+<p><img src="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/1570093716744.png" alt></p>
+<h5 id="17-pure-color"><a href="#17-pure-color" class="headerlink" title="17.pure_color"></a>17.pure_color</h5><p>下载后是一张图片，用stegsolve打开调试几下，即可看到flag</p>
+<p><img src="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20191005225719.png" alt></p>
+<h5 id="18-2-1"><a href="#18-2-1" class="headerlink" title="18.2-1"></a>18.2-1</h5><p>下载后是一张png图片，打开错误，用winhex打开，发现png文件头错误进行修正后发现还是打不开。</p>
+<p><img src="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/1570289583797.png" alt><br>这里涉及了png文件格式</p>
+<p><img src="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/PNG格式示例.png" alt></p>
+<ul>
+<li><p>（固定）八个字节89 50 4E 47 0D 0A 1A 0A为png的文件头</p>
+</li>
+<li><p>（固定）四个字节00 00 00 0D（即为十进制的13）代表数据块的长度为13</p>
+</li>
+<li><p>（固定）四个字节49 48 44 52（即为ASCII码的IHDR）是文件头数据块的标示（IDCH）</p>
+</li>
+<li><p>（可变）13位数据块（IHDR)</p>
+<ul>
+<li>前四个字节代表该图片的宽</li>
+<li>后四个字节代表该图片的高</li>
+<li>后五个字节依次为：<br>Bit depth、ColorType、Compression method、Filter method、Interlace method</li>
+</ul>
+</li>
+<li><p>（可变）剩余四字节为该png的CRC检验码，由从IDCH到IHDR的十七位字节进行crc计算得到。</p>
+<p>使用tweakpng这个工具计算crc校验码</p>
+<p><img src="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20191005233704.png" alt></p>
+</li>
+</ul>
+<p>使用脚本跑出正确的宽709，在windex修改成十六进制为02c5。</p>
+<p><img src="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/1570290876572.png" alt></p>
+<p><img src="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20191006000010.png" alt></p>
+<h5 id="19-Janos-the-Ripper"><a href="#19-Janos-the-Ripper" class="headerlink" title="19.Janos-the-Ripper"></a>19.Janos-the-Ripper</h5><p>下载压缩吧解压后不知道是什么文件，用file命令查看下是zip文件，改文件后缀名zip，解压需要密码，进行密码爆破为flag，flag为<code>flag{ev3n::y0u::bru7us?!}</code></p>
+<h5 id="20-2017-Dating-in-Singapore"><a href="#20-2017-Dating-in-Singapore" class="headerlink" title="20.2017_Dating_in_Singapore"></a>20.2017_Dating_in_Singapore</h5><p>题目为新加坡2017日历，附件解压打开时一张2017新加坡的日历，根据给出的数字进行连线，可得flag</p>
+<p><img src="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20191006174305.png" alt></p>
+<p><img src="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20191006174223.png" alt></p>
+<h5 id="21神奇的Modbus"><a href="#21神奇的Modbus" class="headerlink" title="21神奇的Modbus"></a>21神奇的Modbus</h5><p>下载下来是一个流量包，用wireshark打开，搜索关键字flag，追踪数据流，这里搜索关键字没用，全部查看下来发现这里有flag，flag为<code>sctf{Easy_Modbus}</code>，要多加一个o</p>
+<p><img src="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20191006175636.png" alt></p>
+<h5 id="22-4-1"><a href="#22-4-1" class="headerlink" title="22.4-1"></a>22.4-1</h5><p>下载下来是一张图片，用binwalk查看一下，有点东西，foremost分离出来两张图片，用盲水印攻击，加密脚本：<a href="https://github.com/chishaxie/BlindWaterMark" target="_blank" rel="noopener">https://github.com/chishaxie/BlindWaterMark</a></p>
+<p><img src="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20191008194236.png" alt></p>
+<h5 id="23-can-has-stdio"><a href="#23-can-has-stdio" class="headerlink" title="23.can_has_stdio?"></a>23.can_has_stdio?</h5><p>下载解压包解压得文件用记事本打开，看到得,+,-,.,[,]等符号组成得五角星，可以猜测是Brainfuck语言了，</p>
+<p><img src="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20191006222959.png" alt></p>
+<p><img src="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20191006222544.png" alt></p>
+<p>到<a href="https://www.splitbrain.org/services/ook" target="_blank" rel="noopener">https://www.splitbrain.org/services/ook</a>这个网站翻译Brainfuck为文本</p>
+<p><img src="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20191006223109.png" alt></p>
+<h5 id="24-5-1"><a href="#24-5-1" class="headerlink" title="24.5-1"></a>24.5-1</h5><p>考察xortool工具的使用，安装python库<code>pip2 install xortool</code>,猜测最有可能得密钥长度为13，</p>
+<pre><code>xortool cd2a80e1b48e44b5a830605e684ffb31  -l 13 -c 20 //-l 指定密钥长度 -表示出现频率最高的字符。 
+</code></pre><p><img src="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20191006230247.png" alt></p>
+<p>使用脚本解密出原文，flag为<code>wdflag{You Are Very Smart}</code></p>
+<p><img src="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20191006230727.png" alt></p>
+<p><img src="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20191006230704.png" alt></p>
+<h5 id="25-MISCal"><a href="#25-MISCal" class="headerlink" title="25.MISCal"></a>25.MISCal</h5><p>下载解压后不知道是什么文件，用file命令查看一下，是bzip2文件，修改文件后缀名为.bz2,解压文件</p>
+<p><img src="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20191006234837.png" alt></p>
+<p>发现是git目录，里面有个flag.txt文件不过flag值.<code>git log</code>查看git日志，<code>git stash list</code>列出所有保存的进度列表，<code>git stash apply</code>恢复暂缓区的内容，有s.py文件，运行一下可以得到flag</p>
+<p><img src="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20191006235042.png" alt></p>
+<h5 id="26-3-1"><a href="#26-3-1" class="headerlink" title="26.3-1"></a>26.3-1</h5><p>下载下来是rar压缩包，不过文件没有文件后缀名，binwalk查看得rar，添加.rar文件后缀名，提取压缩包出来时一个流量包，用wireshark打开，搜索flag关键字，追踪数据流，在第6个流可以看到flag.rar,base64编码</p>
+<p><img src="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20191007002722.png" alt></p>
+<p>导出对象，选择http，flag.rar文件，解压需要密码，可以从数据流中可以看解密脚本多半时压缩包密码</p>
+<p><img src="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20191007003212.png" alt></p>
+<p>提取出来整合修改下</p>
+<pre><code class="python"># coding:utf-8
+from Crypto import Random
+from Crypto.Cipher import AES
+import sys
+import base64
+IV = &#39;QWERTYUIOPASDFGH&#39;
+def decrypt(encrypted):
+
+  aes = AES.new(IV, AES.MODE_CBC, IV)
+  return aes.decrypt(encrypted)
+
+
+
+def encrypt(message):
+
+  length = 16
+
+  count = len(message)
+
+  padding = length - (count % length)
+
+  message = message + &#39;\0&#39; * padding
+
+  aes = AES.new(IV, AES.MODE_CBC, IV)
+
+  return aes.encrypt(message)
+str = &#39;19aaFYsQQKr+hVX6hl2smAUQ5a767TsULEUebWSajEo=&#39;
+example = decrypt(base64.b64decode(str))
+print example
+print decrypt(example)
+</code></pre>
+<p>脚本运行一下，打开flag.txt即可看到flag</p>
+<p><img src="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20191007003510.png" alt></p>
+<h5 id="27-适合作为桌面"><a href="#27-适合作为桌面" class="headerlink" title="27.适合作为桌面"></a>27.适合作为桌面</h5><p>下载压缩包解压是一张图片，放stegsolve弄一下，可以看到一个二维码，扫一下可以看到一串数字</p>
+<p><img src="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20191007193401.png" alt></p>
+<p>这是一串十六进制的数字，在winhex里创建一份文件，把这些数字写进去，保存为.pyc</p>
+<p><img src="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20191007194111.png" alt></p>
+<p>到<a href="https://tool.lu/pyc/" target="_blank" rel="noopener">https://tool.lu/pyc/</a>这个网站解密pyc文件，解密出来python脚本跑一下即为flag</p>
+<p><img src="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20191007194315.png" alt></p>
+<h5 id="28-Banmabanma"><a href="#28-Banmabanma" class="headerlink" title="28.Banmabanma"></a>28.Banmabanma</h5><p>下载下来是一张斑马的图片，猜测是条形码</p>
+<p><img src="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20191007195624.png" alt></p>
+<p>到<a href="https://online-barcode-reader.inliteresearch.com/解码一下，都不用ps一下了，nb" target="_blank" rel="noopener">https://online-barcode-reader.inliteresearch.com/解码一下，都不用ps一下了，nb</a></p>
+<p><img src="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/1570449539291.png" alt></p>
+<h5 id="29-simple-transfer"><a href="#29-simple-transfer" class="headerlink" title="29.simple_transfer"></a>29.simple_transfer</h5><p>下载下来是个流量包，binwalk有点东西，foremost分离出来个pdf，打开pdf即可看到flag</p>
+<p><img src="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20191007202130.png" alt></p>
+<h5 id="30-warmup"><a href="#30-warmup" class="headerlink" title="30.warmup"></a>30.warmup</h5><p>下载下来是一张图片和一个加密的zip包，加密的zip也有一个open_forum.png的文件，把open_forum.png压缩用ARCHPR明文进行攻击，破解出加密的zip包，这里要注意压缩软件要使用winrar</p>
+<p><img src="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20191007232726.png" alt></p>
+<p>解压出来的是两张一样的图，猜测是盲水印，这里使用<a href="https://github.com/chishaxie/BlindWaterMark" target="_blank" rel="noopener">https://github.com/chishaxie/BlindWaterMark</a>解盲水印的脚本跑出水印的图片即为flag</p>
+<p><img src="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/1570463479080.png" alt></p>
+<h5 id="31-我们的秘密是绿色的"><a href="#31-我们的秘密是绿色的" class="headerlink" title="31.我们的秘密是绿色的"></a>31.我们的秘密是绿色的</h5><p>下载下来是张日历图片，这里根据题目名字提示，我们要用到Our secret文件隐藏加密软件，密码即是日历图中绿色数字0405111218192526，</p>
+<p><img src="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20191008112038.png" alt></p>
+<p><img src="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20191008112324.png" alt></p>
+<p>可以得到try压缩包，用记事本打开可以看到有生日提示，那就用生日当作密码进行暴力破解，密码最长8位</p>
+<p><img src="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20191008113237.png" alt></p>
+<p><img src="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20191008112959.png" alt></p>
+<p>有破解的密码解压还是一个带加密的zip包，不过zip也有一个readme.txt，明文攻击走起，得到密码Y29mZmVl</p>
+<p><img src="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20191008114338.png" alt></p>
+<p>解压后又一个加密压缩包，爆破无解，用winhex打开看看，看到伪加密了，把01改成00，解压就不需要密码了</p>
+<p><img src="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20191008115502.png" alt></p>
+<p>解压后得到一个flag.txt文本，内容为<code>qddpqwnpcplen%prqwn_{_zz*d@gq}</code>，猜测栅栏密码，再凯撒密码</p>
+<p><img src="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20191008115831.png" alt></p>
+<p><img src="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20191008120202.png" alt></p>
+<h5 id="32-Just-No-One"><a href="#32-Just-No-One" class="headerlink" title="32.Just-No-One"></a>32.Just-No-One</h5><p>下载下来后是一个.exe程序，安装后提醒flag值再安装许可协议，所以找吧，flag即为ILOVEREADINGEULAS</p>
+<p><img src="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20191008121201.png" alt></p>
+<h5 id="33-Erik-Baleog-and-Olaf"><a href="#33-Erik-Baleog-and-Olaf" class="headerlink" title="33.Erik-Baleog-and-Olaf"></a>33.Erik-Baleog-and-Olaf</h5><p>下载下来是一张图片，用winhex打开看看，可以看到一个图片网址，<a href="http://i.imgur.com/22kUrzm.png" target="_blank" rel="noopener">http://i.imgur.com/22kUrzm.png</a></p>
+<p>到这个网址把图片下载下来，（需要fq）再对比两张图片，这里我用到的软件是beyond compare,可以看到二维码</p>
+<p><img src="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20191008130618.png" alt></p>
+<p><img src="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20191008130947.png" alt></p>
+<h5 id="34-Py-Py-Py"><a href="#34-Py-Py-Py" class="headerlink" title="34.Py-Py-Py"></a>34.Py-Py-Py</h5><h5 id="35-Reverse-it"><a href="#35-Reverse-it" class="headerlink" title="35.Reverse-it"></a>35.Reverse-it</h5><p>下载下来一个不知道是什么文件，binwalk也看不出来，放进winhex看一下，可以文件末尾数字反转过过来就是jpg的文件头FFD8FF 。再结合题目名字，把所有的数字反转过来，winhex新建一个文件，保存jpg</p>
+<p>格式</p>
+<p><img src="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20191008173443.png" alt></p>
+<p>新文件图片如下，有点难看哈，拿一个镜子对着图片照，就容易看了，flag为：<code>SECCON{6in_tex7}</code></p>
+<p><img src="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20191008173905.png" alt></p>
+<h5 id="36-mysql"><a href="#36-mysql" class="headerlink" title="36.mysql"></a>36.mysql</h5><p>下载出来一个压缩包，再解压后的所有文件内容搜索关键字flag，再ib_logfile0文件找到flag，</p>
+<p><img src="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20191008174623.png" alt></p>
+<h5 id="37-4433"><a href="#37-4433" class="headerlink" title="37.4433"></a>37.4433</h5><h5 id="38-4433"><a href="#38-4433" class="headerlink" title="38.4433"></a>38.4433</h5><h5 id="40-心仪的公司"><a href="#40-心仪的公司" class="headerlink" title="40.心仪的公司"></a>40.心仪的公司</h5><p>下载解压时一个流量包，追踪http流可以看到flag，有点难找啊</p>
+<p><img src="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20191008191503.png" alt></p>
+<h5 id="42-很普通的数独"><a href="#42-很普通的数独" class="headerlink" title="42.很普通的数独"></a>42.很普通的数独</h5>
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/ctf/" rel="tag"><i class="fa fa-tag"></i> ctf</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/12/26/php学习笔记/" rel="next" title="php学习笔记">
+                <i class="fa fa-chevron-left"></i> php学习笔记
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+    <div class="comments" id="comments">
+      <div id="lv-container" data-id="city" data-uid="MTAyMC80MzA1OC8xOTYwNA=="></div>
+    </div>
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190424201847.png" alt="Jaie">
+            
+              <p class="site-author-name" itemprop="name">Jaie</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">31</span>
+                  <span class="site-state-item-name">posts</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">5</span>
+                  <span class="site-state-item-name">categories</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/Tags/index.html">
+                  <span class="site-state-item-count">14</span>
+                  <span class="site-state-item-name">tags</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+            <div class="feed-link motion-element">
+              <a href="/rss2.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/Jaie0801" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="jaie0801@outlook.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://www.zhihu.com/people/jay-73-89" target="_blank" title="知乎">
+                      
+                        <i class="fa fa-fw fa-gratipay"></i>知乎</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://weibo.com/2130700007" target="_blank" title="微博">
+                      
+                        <i class="fa fa-fw fa-weibo"></i>微博</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-5"><a class="nav-link" href="#1-easycap"><span class="nav-number">1.</span> <span class="nav-text">1.easycap</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-Avatar"><span class="nav-number">2.</span> <span class="nav-text">2.Avatar</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#3-What-is-this"><span class="nav-number">3.</span> <span class="nav-text">3.What-is-this</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#4-Get-the-key-txt"><span class="nav-number">4.</span> <span class="nav-text">4.Get-the-key.txt</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#5-签到题"><span class="nav-number">5.</span> <span class="nav-text">5.签到题</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#6-Training-Stegano-1"><span class="nav-number">6.</span> <span class="nav-text">6.Training-Stegano-1</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#7-Test-flag-please-ignore"><span class="nav-number">7.</span> <span class="nav-text">7.Test-flag-please-ignore</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#8-Excaliflag"><span class="nav-number">8.</span> <span class="nav-text">8.Excaliflag</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#9-glance-50"><span class="nav-number">9.</span> <span class="nav-text">9.glance-50</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#10-4-2"><span class="nav-number">10.</span> <span class="nav-text">10.4-2</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#11-misc1"><span class="nav-number">11.</span> <span class="nav-text">11.misc1</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#12-eczmbarrass"><span class="nav-number">12.</span> <span class="nav-text">12.eczmbarrass</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#13-肥宅快乐题"><span class="nav-number">13.</span> <span class="nav-text">13.肥宅快乐题</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#14-小小的PDF"><span class="nav-number">14.</span> <span class="nav-text">14.小小的PDF</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#15-Cephalopod"><span class="nav-number">15.</span> <span class="nav-text">15.Cephalopod</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#16-hit-the-core"><span class="nav-number">16.</span> <span class="nav-text">16.hit-the-core</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#17-pure-color"><span class="nav-number">17.</span> <span class="nav-text">17.pure_color</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#18-2-1"><span class="nav-number">18.</span> <span class="nav-text">18.2-1</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#19-Janos-the-Ripper"><span class="nav-number">19.</span> <span class="nav-text">19.Janos-the-Ripper</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#20-2017-Dating-in-Singapore"><span class="nav-number">20.</span> <span class="nav-text">20.2017_Dating_in_Singapore</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#21神奇的Modbus"><span class="nav-number">21.</span> <span class="nav-text">21神奇的Modbus</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#22-4-1"><span class="nav-number">22.</span> <span class="nav-text">22.4-1</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#23-can-has-stdio"><span class="nav-number">23.</span> <span class="nav-text">23.can_has_stdio?</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#24-5-1"><span class="nav-number">24.</span> <span class="nav-text">24.5-1</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#25-MISCal"><span class="nav-number">25.</span> <span class="nav-text">25.MISCal</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#26-3-1"><span class="nav-number">26.</span> <span class="nav-text">26.3-1</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#27-适合作为桌面"><span class="nav-number">27.</span> <span class="nav-text">27.适合作为桌面</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#28-Banmabanma"><span class="nav-number">28.</span> <span class="nav-text">28.Banmabanma</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#29-simple-transfer"><span class="nav-number">29.</span> <span class="nav-text">29.simple_transfer</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#30-warmup"><span class="nav-number">30.</span> <span class="nav-text">30.warmup</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#31-我们的秘密是绿色的"><span class="nav-number">31.</span> <span class="nav-text">31.我们的秘密是绿色的</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#32-Just-No-One"><span class="nav-number">32.</span> <span class="nav-text">32.Just-No-One</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#33-Erik-Baleog-and-Olaf"><span class="nav-number">33.</span> <span class="nav-text">33.Erik-Baleog-and-Olaf</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#34-Py-Py-Py"><span class="nav-number">34.</span> <span class="nav-text">34.Py-Py-Py</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#35-Reverse-it"><span class="nav-number">35.</span> <span class="nav-text">35.Reverse-it</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#36-mysql"><span class="nav-number">36.</span> <span class="nav-text">36.mysql</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#37-4433"><span class="nav-number">37.</span> <span class="nav-text">37.4433</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#38-4433"><span class="nav-number">38.</span> <span class="nav-text">38.4433</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#40-心仪的公司"><span class="nav-number">39.</span> <span class="nav-text">40.心仪的公司</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#42-很普通的数独"><span class="nav-number">40.</span> <span class="nav-text">42.很普通的数独</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Jaie</span>
+
+  
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+    
+      <span class="post-meta-item-text">Site words total count&#58;</span>
+    
+    <span title="Site words total count">14.8k</span>
+  
+</div>
+
+
+  <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Pisces</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+    <script type="text/javascript">
+      (function(d, s) {
+        var j, e = d.getElementsByTagName(s)[0];
+        if (typeof LivereTower === 'function') { return; }
+        j = d.createElement(s);
+        j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+        j.async = true;
+        e.parentNode.insertBefore(j, e);
+      })(document, 'script');
+    </script>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
