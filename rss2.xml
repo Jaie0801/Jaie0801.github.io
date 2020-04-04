@@ -8,28 +8,8 @@
     <atom:link href="/rss2.xml" rel="self" type="application/rss+xml"/>
     
     <description></description>
-    <pubDate>Sat, 04 Apr 2020 16:42:11 GMT</pubDate>
+    <pubDate>Mon, 23 Mar 2020 15:07:20 GMT</pubDate>
     <generator>http://hexo.io/</generator>
-    
-    <item>
-      <title>test</title>
-      <link>https://www.jaie.cc/2020/04/05/test/</link>
-      <guid>https://www.jaie.cc/2020/04/05/test/</guid>
-      <pubDate>Sat, 04 Apr 2020 16:33:12 GMT</pubDate>
-      <description>
-      
-        
-        
-          &lt;p&gt;&lt;img src=&quot;/2020/04/05/test/af0d6b6557ba9d2c523b44e19533f68.png&quot; alt=&quot;af0d6b6557ba9d2c523b44e19533f68&quot;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;/2020/04/05/test/
-        
-      
-      </description>
-      
-      <content:encoded><![CDATA[<p><img src="/2020/04/05/test/af0d6b6557ba9d2c523b44e19533f68.png" alt="af0d6b6557ba9d2c523b44e19533f68"></p><p><img src="/2020/04/05/test/image-20200405004202939.png" alt="image-20200405004202939"></p><p><img src="/2020/04/05/test/image-20200405004121792.png" alt="image-20200405004121792"></p>]]></content:encoded>
-      
-      <comments>https://www.jaie.cc/2020/04/05/test/#disqus_thread</comments>
-    </item>
     
     <item>
       <title>攻防世界misc高手区wp</title>
@@ -201,6 +181,25 @@
       <content:encoded><![CDATA[<h4 id="1-禁用Guest账户和无关账户"><a href="#1-禁用Guest账户和无关账户" class="headerlink" title="1.禁用Guest账户和无关账户"></a>1.禁用Guest账户和无关账户</h4><p>Guest账户为黑客入侵打开了方便之门，黑客使用Guest账户可以进行提权。禁用Guest账户是最好的选择。<br>操作流程：进入“控制面板-&gt;管理工具-&gt;计算机管理-&gt;本地用户和组-&gt;用户-&gt;Guest”<br>“账户已禁用”打勾启用<br><strong>加固后：</strong><br><img src="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190615152823.png" alt>   </p><h4 id="2-密码策略加强"><a href="#2-密码策略加强" class="headerlink" title="2.密码策略加强"></a>2.密码策略加强</h4><p>  操作系统、用户身份鉴别信息应具有不易被冒用的特点，口令应复杂度要求并定期更换。<br>  操作流程：进入“控制面板-&gt;管理工具-&gt;本地安全策略”，在“帐户策略-&gt;密码策略”;<br></p><blockquote><p>“密码必须符合复杂度要求” 设 置为“启用” <br><br>“密码长度最小值”设置为“8个字符”<br><br>“密码最长使用期限”设置为“90天”<br><br>“强制密码历史”设置为“记住5个密码”<br><br>“用可以还原的加密来存储密码”设置为“禁用”<br>  </p></blockquote><p><strong>加固前：</strong><br><img src="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190615153540.png" alt><br><strong>加固后：</strong><br><img src="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190615153659.png" alt>   </p><h4 id="3-账户锁定策略加强"><a href="#3-账户锁定策略加强" class="headerlink" title="3.账户锁定策略加强"></a>3.账户锁定策略加强</h4><p>对于采用静态口令认证技术的设备，应配置当用户连续认证失败次数超过5 次（不含5 次），锁定该用户使用的账号。<br>操作流程：进入“控制面板-&gt;管理工具-&gt;本地安全策略”，在“帐户策略-&gt;帐户锁定策略”：</p><blockquote><p>“账户额锁定阀值”设置为 5 次<br><br>“账户锁定时间”设置为 15分钟<br><br>“复位账户锁定计数器”设置为 15分钟<br></p></blockquote><p><strong>加固前：</strong><br><img src="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190615153915.png" alt><br><strong>加固后</strong><br><img src="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190615154011.png" alt>   </p><h4 id="4-设置安全审计"><a href="#4-设置安全审计" class="headerlink" title="4.设置安全审计"></a>4.设置安全审计</h4><p>在主机的审核策略上设置日志审核策略<br>操作流程：进入“控制面板-&gt;管理工具-&gt;本地安全策略”，在“本地策略-&gt;审核策略”<br>在主机的审核策略上设置日志审核策略：<br></p><blockquote><p>审计帐户登录事件： 成功，失败 <br><br>审计帐户管理： 成功，失败 <br><br>审计目录服务访问： 成功，失败<br><br>审计登录事件： 成功，失败 <br><br>审计对象访问： 成功，失败 <br><br>审计策略更改： 成功，失败 <br><br>审计特权使用： 成功，失败 <br><br>审计系统事件： 成功，失败<br><br>审计过程追踪： 成功，失败</p></blockquote><p><strong>加固前:</strong><br><img src="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190615154341.png" alt><br><strong>加固后:</strong><br><img src="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190615154347.png" alt></p><h4 id="5-设置不显示上次使用的用户名"><a href="#5-设置不显示上次使用的用户名" class="headerlink" title="5.设置不显示上次使用的用户名"></a>5.设置不显示上次使用的用户名</h4><p>在本地安全设置系统登录时不显示上次使用的用户名。<br>进入“控制面板-&gt;管理工具-&gt;本地安全策略”，在“本地策略-&gt;安全选项”；   </p><blockquote><p>“交互式登录：不显示上次的用户名”设置为“已启用”   </p></blockquote><p><strong>加固前：</strong><br><img src="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190615154607.png" alt><br><strong>加固后：</strong><br><img src="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190615154633.png" alt>   </p><h4 id="6启用主机安全选项的”关机前清除虚拟内存页面”"><a href="#6启用主机安全选项的”关机前清除虚拟内存页面”" class="headerlink" title="6启用主机安全选项的”关机前清除虚拟内存页面”"></a>6启用主机安全选项的”关机前清除虚拟内存页面”</h4><p>启用主机安全选项的“关机前清除虚拟内存页面<br>操作流程:进入“控制面板-&gt;管理工具-&gt;本地安全策略”，在“本地策略-&gt;安全选项   </p><blockquote><p>关机：清除虚拟页面文件内存”设置为“已启用”   </p></blockquote><p><strong>加固前：</strong><br><img src="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190615154913.png" alt><br><strong>加固后：</strong><br><img src="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190615155009.png" alt></p><h4 id="7-配置日志文件大小"><a href="#7-配置日志文件大小" class="headerlink" title="7.配置日志文件大小"></a>7.配置日志文件大小</h4><p>   配置日志文件容量，避免受到未预期的删除、修改或覆盖等<br> 操作流程：进入“控制面板-&gt;管理工具-&gt;计算机管理-&gt;事件查看器-&gt;windows日志”，配置<br><strong>加固前：<br> <img src="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190615155216.png" alt><br>加固后：</strong><br><img src="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190615155337.png" alt><br><img src="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190615155348.png" alt><br><img src="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190615155441.png" alt><br><img src="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190615155449.png" alt>   </p><h4 id="8-磁盘配额配置"><a href="#8-磁盘配额配置" class="headerlink" title="8.磁盘配额配置"></a>8.磁盘配额配置</h4><p>磁盘配额可以限制指定账户能够使用的磁盘空间,这样可以避免因某个用户的过度使用磁盘空间造成其他用户无法正常工作甚至影响系统运行<br>操作流程：进入“我的电脑-&gt;C盘-&gt;属性-&gt;配额”，   </p><blockquote><p>“启用磁盘管理”设置为启用<br><br>“磁盘空间限制为”设置为”90GB”<br><br>“将警告等级设为”设置为”90GB”<br><br>“用户超出配额限制时记录事件（G）”打勾启用<br><br>“用户超过警告等级时记录事件（V）”    打勾启用<br></p></blockquote><p><strong>加固前：</strong><br><img src="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190615155700.png" alt><br><strong>加固后：</strong><br><img src="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190615155707.png" alt></p><h4 id="9-远程会话策略"><a href="#9-远程会话策略" class="headerlink" title="9.远程会话策略"></a>9.远程会话策略</h4><p>默认情况下，远程桌面服务允许用户从远程桌面服务会话开连接，而不用注销和结束会话。启用此策略设置，则达到指定时间后将从服务器中删除已断开连接的会话<br>操作流程：进入“运行-&gt;gpedit.msc-&gt;计算机配置-&gt;管理模板-&gt;wondows组件-&gt;远程服务-&gt;远程桌面会话主机-&gt;会话时间限制”，   </p><blockquote><p>“设置已中断会话的时间限制”设置为“已启用”<br><br>“结束已断开连接的会话”设置为“5分钟”    </p></blockquote><p><strong>加固前：</strong><br><img src="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190615155926.png" alt>   <strong>加固后:</strong><br><img src="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190615160011.png" alt>   </p>]]></content:encoded>
       
       <comments>https://www.jaie.cc/2019/06/15/windows%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%BB%E6%9C%BA%E5%8A%A0%E5%9B%BA/#disqus_thread</comments>
+    </item>
+    
+    <item>
+      <title>Bugku-web题，ctf模拟题sql注入神奇的登陆框</title>
+      <link>https://www.jaie.cc/2019/05/17/Bugku-web%E9%A2%98%EF%BC%8Cctf%E6%A8%A1%E6%8B%9F%E9%A2%98sql%E6%B3%A8%E5%85%A5%E7%A5%9E%E5%A5%87%E7%9A%84%E7%99%BB%E9%99%86%E6%A1%86/</link>
+      <guid>https://www.jaie.cc/2019/05/17/Bugku-web%E9%A2%98%EF%BC%8Cctf%E6%A8%A1%E6%8B%9F%E9%A2%98sql%E6%B3%A8%E5%85%A5%E7%A5%9E%E5%A5%87%E7%9A%84%E7%99%BB%E9%99%86%E6%A1%86/</guid>
+      <pubDate>Fri, 17 May 2019 00:43:16 GMT</pubDate>
+      <description>
+      
+        
+        
+          &lt;p&gt;这是Bugku-web题，地址为&lt;a href=&quot;http://123.206.87.240:9001/sql/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;http://123.206.87.240:9001/sql/&lt;/a&gt;&lt;br&gt;登陆网站，打开bu
+        
+      
+      </description>
+      
+      <content:encoded><![CDATA[<p>这是Bugku-web题，地址为<a href="http://123.206.87.240:9001/sql/" target="_blank" rel="noopener">http://123.206.87.240:9001/sql/</a><br>登陆网站，打开burp进行截断，账号密码随便打，burp截取后进行保存。<br><img src="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190429130526.png" alt><br><img src="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190429130714.png" alt><br>使用sqlmap自动注入，可以发现数据库版本，数据库名<br><img src="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190429114029.png" alt><br><img src="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190429114138.png" alt><br>使用sqlmap自动注入，发现表名flag1<br><img src="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190429132601.png" alt><br><img src="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190429132651.png" alt><br>使用sqlmap自动注入，查看表flag1中列flag1的值<br><img src="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190429130920.png" alt><br><img src="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190429131021.png" alt><br><img src="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190429131114.png" alt><br>使用sqlmap自动注入，可以列flag1的值<br><img src="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190429131144.png" alt></p>]]></content:encoded>
+      
+      <comments>https://www.jaie.cc/2019/05/17/Bugku-web%E9%A2%98%EF%BC%8Cctf%E6%A8%A1%E6%8B%9F%E9%A2%98sql%E6%B3%A8%E5%85%A5%E7%A5%9E%E5%A5%87%E7%9A%84%E7%99%BB%E9%99%86%E6%A1%86/#disqus_thread</comments>
     </item>
     
   </channel>
