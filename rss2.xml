@@ -8,8 +8,27 @@
     <atom:link href="/rss2.xml" rel="self" type="application/rss+xml"/>
     
     <description></description>
-    <pubDate>Sat, 04 Apr 2020 17:19:23 GMT</pubDate>
+    <pubDate>Fri, 10 Jul 2020 22:41:01 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>树莓派安装kali2020检测和坑点</title>
+      <link>https://www.jaie.cc/2020/07/05/%E6%A0%91%E8%8E%93%E6%B4%BE%E5%AE%89%E8%A3%85kali2020%E6%95%99%E7%A8%8B%E5%92%8C%E5%9D%91%E7%82%B9/</link>
+      <guid>https://www.jaie.cc/2020/07/05/%E6%A0%91%E8%8E%93%E6%B4%BE%E5%AE%89%E8%A3%85kali2020%E6%95%99%E7%A8%8B%E5%92%8C%E5%9D%91%E7%82%B9/</guid>
+      <pubDate>Sat, 04 Jul 2020 19:53:01 GMT</pubDate>
+      <description>
+      
+        
+        
+          &lt;h4 id=&quot;1-下载刻录系统镜像&quot;&gt;&lt;a href=&quot;#1-下载刻录系统镜像&quot; class=&quot;headerlink&quot; title=&quot;1.下载刻录系统镜像&quot;&gt;&lt;/a&gt;1.下载刻录系统镜像&lt;/h4&gt;&lt;p&gt;到&lt;a href=&quot;https://note.youdao.com/&quot; ta
+        
+      
+      </description>
+      
+      <content:encoded><![CDATA[<h4 id="1-下载刻录系统镜像"><a href="#1-下载刻录系统镜像" class="headerlink" title="1.下载刻录系统镜像"></a>1.下载刻录系统镜像</h4><p>到<a href="https://note.youdao.com/" target="_blank" rel="noopener">https://www.offensive-security.com/kali-linux-arm-images/</a>下载镜像。选择自己的对应的型号。需要注意的是这是国外的地址，自备梯子，用种子下比较快一点。<br><img src="/2020/07/05/树莓派安装kali2020教程和坑点/image-20200711063851424.png" alt="image-20200711063851424"><br>选择<strong>Win32DiskImager</strong>这款软件把系统刻录进sd卡，点击写入，等待写入就完成了，sd卡便写入了系统。<br><img src="/2020/07/05/树莓派安装kali2020教程和坑点/image-20200711063908522.png" alt="image-20200711063908522"></p><h4 id="2-树莓派装机"><a href="#2-树莓派装机" class="headerlink" title="2.树莓派装机"></a>2.树莓派装机</h4><p>我是买带风扇的小机箱装好机子后,我把内存卡插进去后，系统没反应，显示器显示的是黑屏，通过网线把树莓派和路由器连接，也没有在路由器后台发现新增的ip，树莓派看了启动失败啊，在我通过一步步排查后，发现是我的风扇排线插错了，囧。但这插线位置也太奇葩了吧，正确的风扇插线还是看图吧。 排线插对果然可以正常开机了，显示屏也亮起来了<br><img src="/2020/07/05/树莓派安装kali2020教程和坑点/image-20200711063925044.png" alt="image-20200711063925044"></p><h4 id="3-关于树莓派kali2020"><a href="#3-关于树莓派kali2020" class="headerlink" title="3.关于树莓派kali2020"></a>3.关于树莓派kali2020</h4><p>进去系统后，发现用之前的root/toor登录系统失败，原来是官方改了默认密码了，新的账号密码为kali/kali，不能用root登录了，进去之后我想用ifconfig、service等命令查看系统信息的，擦，提示没有这个命令，我就想arm系统的kali阉割了这么多东西嘛，然后我用sudo ifconfig就可以了，老版的kali用习惯了。默认root账号密码就不知道了，不过可以修改root密码用<code>sudo passwd root</code>进行修改就行了。</p>]]></content:encoded>
+      
+      <comments>https://www.jaie.cc/2020/07/05/%E6%A0%91%E8%8E%93%E6%B4%BE%E5%AE%89%E8%A3%85kali2020%E6%95%99%E7%A8%8B%E5%92%8C%E5%9D%91%E7%82%B9/#disqus_thread</comments>
+    </item>
     
     <item>
       <title>攻防世界web 高手区部分Writeup</title>
@@ -181,25 +200,6 @@
       <content:encoded><![CDATA[<p>在修改前在防火墙添加修改远程端口的允许通过的策略，或者暂时关闭防火墙，不然修改完端口号远程连接不上。<br><br>运行regedit找到注册表<br>[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Terminal Server\Wds\rdpwd\Tds\tcp] PortNumber位置，点击十进制，修改远程连接的端口号，这里以4567为列。<br><img src="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190702193333.png" alt><br><br> 找到注册表[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Terminal Server\WinStations\RDP-Tcp] 双击右边 PortNumber-点十进制-更改值为：4567<br> 使其注册表生效，这里windows server2008/2012 为例，重启生效，<br> 或者运行service.msc，找到remote desktop service服务管理重启生效<br><br> 这里以windows server2008/2012 为例，像xp、server2003比较旧的系统是没有remote desktop service服务,需要重启才能生效<br><br> <img src="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/Snipaste_2019-07-02_21-38-17.png" alt><br><img src="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190702215102.png" alt><br><img src="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190702215325.png" alt></p>]]></content:encoded>
       
       <comments>https://www.jaie.cc/2019/07/02/%E4%BF%AE%E6%94%B9%E8%BF%9C%E7%A8%8B%E6%A1%8C%E9%9D%A23389%E7%AB%AF%E5%8F%A3/#disqus_thread</comments>
-    </item>
-    
-    <item>
-      <title>windows服务器主机加固</title>
-      <link>https://www.jaie.cc/2019/06/15/windows%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%BB%E6%9C%BA%E5%8A%A0%E5%9B%BA/</link>
-      <guid>https://www.jaie.cc/2019/06/15/windows%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%BB%E6%9C%BA%E5%8A%A0%E5%9B%BA/</guid>
-      <pubDate>Sat, 15 Jun 2019 12:07:36 GMT</pubDate>
-      <description>
-      
-        
-        
-          &lt;h4 id=&quot;1-禁用Guest账户和无关账户&quot;&gt;&lt;a href=&quot;#1-禁用Guest账户和无关账户&quot; class=&quot;headerlink&quot; title=&quot;1.禁用Guest账户和无关账户&quot;&gt;&lt;/a&gt;1.禁用Guest账户和无关账户&lt;/h4&gt;&lt;p&gt;Guest账户为黑客入侵打开
-        
-      
-      </description>
-      
-      <content:encoded><![CDATA[<h4 id="1-禁用Guest账户和无关账户"><a href="#1-禁用Guest账户和无关账户" class="headerlink" title="1.禁用Guest账户和无关账户"></a>1.禁用Guest账户和无关账户</h4><p>Guest账户为黑客入侵打开了方便之门，黑客使用Guest账户可以进行提权。禁用Guest账户是最好的选择。<br>操作流程：进入“控制面板-&gt;管理工具-&gt;计算机管理-&gt;本地用户和组-&gt;用户-&gt;Guest”<br>“账户已禁用”打勾启用<br><strong>加固后：</strong><br><img src="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190615152823.png" alt>   </p><h4 id="2-密码策略加强"><a href="#2-密码策略加强" class="headerlink" title="2.密码策略加强"></a>2.密码策略加强</h4><p>  操作系统、用户身份鉴别信息应具有不易被冒用的特点，口令应复杂度要求并定期更换。<br>  操作流程：进入“控制面板-&gt;管理工具-&gt;本地安全策略”，在“帐户策略-&gt;密码策略”;<br></p><blockquote><p>“密码必须符合复杂度要求” 设 置为“启用” <br><br>“密码长度最小值”设置为“8个字符”<br><br>“密码最长使用期限”设置为“90天”<br><br>“强制密码历史”设置为“记住5个密码”<br><br>“用可以还原的加密来存储密码”设置为“禁用”<br>  </p></blockquote><p><strong>加固前：</strong><br><img src="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190615153540.png" alt><br><strong>加固后：</strong><br><img src="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190615153659.png" alt>   </p><h4 id="3-账户锁定策略加强"><a href="#3-账户锁定策略加强" class="headerlink" title="3.账户锁定策略加强"></a>3.账户锁定策略加强</h4><p>对于采用静态口令认证技术的设备，应配置当用户连续认证失败次数超过5 次（不含5 次），锁定该用户使用的账号。<br>操作流程：进入“控制面板-&gt;管理工具-&gt;本地安全策略”，在“帐户策略-&gt;帐户锁定策略”：</p><blockquote><p>“账户额锁定阀值”设置为 5 次<br><br>“账户锁定时间”设置为 15分钟<br><br>“复位账户锁定计数器”设置为 15分钟<br></p></blockquote><p><strong>加固前：</strong><br><img src="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190615153915.png" alt><br><strong>加固后</strong><br><img src="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190615154011.png" alt>   </p><h4 id="4-设置安全审计"><a href="#4-设置安全审计" class="headerlink" title="4.设置安全审计"></a>4.设置安全审计</h4><p>在主机的审核策略上设置日志审核策略<br>操作流程：进入“控制面板-&gt;管理工具-&gt;本地安全策略”，在“本地策略-&gt;审核策略”<br>在主机的审核策略上设置日志审核策略：<br></p><blockquote><p>审计帐户登录事件： 成功，失败 <br><br>审计帐户管理： 成功，失败 <br><br>审计目录服务访问： 成功，失败<br><br>审计登录事件： 成功，失败 <br><br>审计对象访问： 成功，失败 <br><br>审计策略更改： 成功，失败 <br><br>审计特权使用： 成功，失败 <br><br>审计系统事件： 成功，失败<br><br>审计过程追踪： 成功，失败</p></blockquote><p><strong>加固前:</strong><br><img src="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190615154341.png" alt><br><strong>加固后:</strong><br><img src="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190615154347.png" alt></p><h4 id="5-设置不显示上次使用的用户名"><a href="#5-设置不显示上次使用的用户名" class="headerlink" title="5.设置不显示上次使用的用户名"></a>5.设置不显示上次使用的用户名</h4><p>在本地安全设置系统登录时不显示上次使用的用户名。<br>进入“控制面板-&gt;管理工具-&gt;本地安全策略”，在“本地策略-&gt;安全选项”；   </p><blockquote><p>“交互式登录：不显示上次的用户名”设置为“已启用”   </p></blockquote><p><strong>加固前：</strong><br><img src="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190615154607.png" alt><br><strong>加固后：</strong><br><img src="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190615154633.png" alt>   </p><h4 id="6启用主机安全选项的”关机前清除虚拟内存页面”"><a href="#6启用主机安全选项的”关机前清除虚拟内存页面”" class="headerlink" title="6启用主机安全选项的”关机前清除虚拟内存页面”"></a>6启用主机安全选项的”关机前清除虚拟内存页面”</h4><p>启用主机安全选项的“关机前清除虚拟内存页面<br>操作流程:进入“控制面板-&gt;管理工具-&gt;本地安全策略”，在“本地策略-&gt;安全选项   </p><blockquote><p>关机：清除虚拟页面文件内存”设置为“已启用”   </p></blockquote><p><strong>加固前：</strong><br><img src="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190615154913.png" alt><br><strong>加固后：</strong><br><img src="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190615155009.png" alt></p><h4 id="7-配置日志文件大小"><a href="#7-配置日志文件大小" class="headerlink" title="7.配置日志文件大小"></a>7.配置日志文件大小</h4><p>   配置日志文件容量，避免受到未预期的删除、修改或覆盖等<br> 操作流程：进入“控制面板-&gt;管理工具-&gt;计算机管理-&gt;事件查看器-&gt;windows日志”，配置<br><strong>加固前：<br> <img src="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190615155216.png" alt><br>加固后：</strong><br><img src="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190615155337.png" alt><br><img src="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190615155348.png" alt><br><img src="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190615155441.png" alt><br><img src="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190615155449.png" alt>   </p><h4 id="8-磁盘配额配置"><a href="#8-磁盘配额配置" class="headerlink" title="8.磁盘配额配置"></a>8.磁盘配额配置</h4><p>磁盘配额可以限制指定账户能够使用的磁盘空间,这样可以避免因某个用户的过度使用磁盘空间造成其他用户无法正常工作甚至影响系统运行<br>操作流程：进入“我的电脑-&gt;C盘-&gt;属性-&gt;配额”，   </p><blockquote><p>“启用磁盘管理”设置为启用<br><br>“磁盘空间限制为”设置为”90GB”<br><br>“将警告等级设为”设置为”90GB”<br><br>“用户超出配额限制时记录事件（G）”打勾启用<br><br>“用户超过警告等级时记录事件（V）”    打勾启用<br></p></blockquote><p><strong>加固前：</strong><br><img src="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190615155700.png" alt><br><strong>加固后：</strong><br><img src="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190615155707.png" alt></p><h4 id="9-远程会话策略"><a href="#9-远程会话策略" class="headerlink" title="9.远程会话策略"></a>9.远程会话策略</h4><p>默认情况下，远程桌面服务允许用户从远程桌面服务会话开连接，而不用注销和结束会话。启用此策略设置，则达到指定时间后将从服务器中删除已断开连接的会话<br>操作流程：进入“运行-&gt;gpedit.msc-&gt;计算机配置-&gt;管理模板-&gt;wondows组件-&gt;远程服务-&gt;远程桌面会话主机-&gt;会话时间限制”，   </p><blockquote><p>“设置已中断会话的时间限制”设置为“已启用”<br><br>“结束已断开连接的会话”设置为“5分钟”    </p></blockquote><p><strong>加固前：</strong><br><img src="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190615155926.png" alt>   <strong>加固后:</strong><br><img src="https://jaie-1256725437.cos.ap-guangzhou.myqcloud.com/pic/20190615160011.png" alt>   </p>]]></content:encoded>
-      
-      <comments>https://www.jaie.cc/2019/06/15/windows%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%BB%E6%9C%BA%E5%8A%A0%E5%9B%BA/#disqus_thread</comments>
     </item>
     
   </channel>
